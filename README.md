@@ -1,1 +1,1 @@
-:shit:
+#GOMOKU PROJECT
