@@ -94,21 +94,29 @@ public class MapComponent : MonoBehaviour
 		
 		
 				// set Weight of a color 
-				public void setWeight (int weight, Color color)
-				{
-			
-				}
-		
-				public bool putPawn (int x, int y, Color type)
-				{
-						return true;
-				}
-		
-				public bool removePawn (int x, int y)
-				{
-						return true;
-				}
-		
+                public void setWeight(int x, int y, int weight, Color color)
+                {
+                    if (color != Color.Empty)
+                    {
+                        for (int cellC = (color == Color.Black) ? 3 : 0, weightC = 0, cellE = cellC + 3; cellC < cellE; cellC++, weightC++)
+                        {
+                            this.map[x * SIZE_MAP + y] |= ((weight & (1 << weightC)) == 0 ? 0 : 1) << cellC;
+                        }
+                    }
+                }
+
+                public bool putPawn(int x, int y, Color type)
+                {
+                    this.map[x * SIZE_MAP + y] = ((char)type << 6);
+                    return true;
+                }
+
+                public bool removePawn(int x, int y)
+                {
+                    this.map[x * SIZE_MAP + y] = 0;
+                    return true;
+                }
+
 				public int getCell (int x, int y)
 				{
 						return map [x * SIZE_MAP + y];
