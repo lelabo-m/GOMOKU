@@ -22,7 +22,7 @@ public class MapComponent : MonoBehaviour
 				bitsMap = new BitsMap ();
 				map = new char[SIZE_MAP];
 				arbiter = GameObject.Find ("Arbiter");
-				rules = (Rules)arbiter.GetComponent ("Rules");
+				rules = (Rules)arbiter.GetComponent<Rules>();
 		}
 	
 		// Update is called once per frame
