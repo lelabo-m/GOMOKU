@@ -4,9 +4,8 @@ using System.Collections.Generic;
 
 public class MapComponent : MonoBehaviour
 {
-	public GameObject TilePrefab;
-	private List <List <Tile>> graphicMap; 
-		
+		public GameObject TilePrefab;
+		private List <List <Tile>> graphicMap;
 		public const int SIZE_MAP = 19;
 		public enum Color
 		{
@@ -15,6 +14,7 @@ public class MapComponent : MonoBehaviour
 				Black }
 		;
 		private GameObject arbiter;
+	private GameManager gameManager;
 		private Rules rules;
 		private BitsMap bitsMap;
 		public char[] map;
@@ -25,7 +25,8 @@ public class MapComponent : MonoBehaviour
 				bitsMap = new BitsMap ();
 				map = new char[SIZE_MAP];
 				arbiter = GameObject.Find ("Arbiter");
-				rules = arbiter.GetComponent<Rules>();
+				rules = arbiter.GetComponent<Rules> ();
+		gameManager = arbiter.GetComponent<GameManager> ();
 
 				generateGraphicMap ();
 		}
@@ -36,7 +37,7 @@ public class MapComponent : MonoBehaviour
 	
 		}
 
-		private void generateGraphicMap() 
+		private void generateGraphicMap ()
 		{
 				graphicMap = new List<List<Tile>> ();
 				for (int i = 0; i < SIZE_MAP; ++i) {
@@ -58,6 +59,8 @@ public class MapComponent : MonoBehaviour
 						return false;
 				bitsMap.putPawn (x, y, type);
 				map [x * SIZE_MAP + y] = (char)type;
+
+		gameManager.setLastColor(type);
 				return true;
 		}
 

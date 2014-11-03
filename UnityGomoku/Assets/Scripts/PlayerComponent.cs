@@ -15,8 +15,9 @@ public class PlayerComponent : MonoBehaviour
 		public int selectedX;
 		public int selectedY;
 		public Color color;
+
 		//Defini si c'est sont tour de jouer
-		public bool active = false;
+		public bool play = false;
 
 
 
@@ -30,7 +31,6 @@ public class PlayerComponent : MonoBehaviour
 		void Update ()
 		{
 		}
-
 
 
 		/*******

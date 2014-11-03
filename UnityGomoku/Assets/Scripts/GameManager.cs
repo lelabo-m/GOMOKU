@@ -3,9 +3,9 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
-
 		public GameObject player1;
 		public GameObject player2;
+		private MapComponent.Color lastColor;
 		private PlayerComponent playerComponent1;
 		private PlayerComponent playerComponent2;
 		private Rules rules;
@@ -21,52 +21,72 @@ public class GameManager : MonoBehaviour
 
 				playerComponent1 = player1.GetComponent<PlayerComponent> ();
 				playerComponent1.color = PlayerComponent.Color.White;
-				playerComponent1.active = true;
+				playerComponent1.play = true;
 
 				playerComponent2 = player2.GetComponent<PlayerComponent> ();
 				playerComponent2.color = PlayerComponent.Color.Black;
-				playerComponent2.active = false;
+				playerComponent2.play = false;
 
 		}
 	
 		// Update is called once per frame
 		void Update ()
 		{
+				takePawn ();
+
 				if ((winner = isScoringWinner ()) != PlayerComponent.Color.Empty)
 						gameDone ();
 
-				/*	if ((winner = isWinner ()) != PlayerComponent.Color.Empty)
-					gameDone ();*/
+				if ((winner = isWinner ()) != PlayerComponent.Color.Empty)
+						gameDone ();
 
-			
+				if (!isEnoughSpace ())
+						gameDone ();
+
 				changeTurn ();
+		}
+
+		private void takePawn ()
+		{
+		}
+
+		public void setLastColor (MapComponent.Color color)
+		{
+				lastColor = color;
 		}
 
 		public PlayerComponent getActivePlayer ()
 		{
-				if (playerComponent1.active)
+				if (playerComponent1.play)
 						return playerComponent1;
 				return playerComponent2;
+		}
+		
+		private bool isEnoughSpace ()
+		{
+				char [] tab = map.getMap ();
+
+				for (int i = 0; i < MapComponent.SIZE_MAP * MapComponent.SIZE_MAP; ++i) {
+						if (tab [i] == (char)MapComponent.Color.Empty)
+								return true;
+				}
+				return false;
 		}
 
 		private void changeTurn ()
 		{
-				playerComponent1.active = !playerComponent1.active;
-				playerComponent2.active = !playerComponent2.active;
+				playerComponent1.play = !playerComponent1.play;
+				playerComponent2.play = !playerComponent2.play;
 		}
 
 		private PlayerComponent.Color isScoringWinner ()
 		{
-				if (rules.scores [PlayerComponent.Color.White] == 10)
-						return PlayerComponent.Color.White;
-				if (rules.scores [PlayerComponent.Color.Black] == 10)
-						return PlayerComponent.Color.Black;
-				return PlayerComponent.Color.Empty;
+				return rules.isScoringWinner ();
 		}
 
 		private PlayerComponent.Color isWinner ()
 		{
-				return PlayerComponent.Color.White;
+				return rules.isWinner (map);
 		}
 
 		private void gameDone ()
