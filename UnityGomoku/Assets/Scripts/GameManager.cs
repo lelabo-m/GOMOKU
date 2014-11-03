@@ -15,15 +15,15 @@ public class GameManager : MonoBehaviour
 		// Use this for initialization
 		void Start ()
 		{
-				rules = (Rules)GameObject.Find ("Arbiter").GetComponent<Rules> ();
-				map = (MapComponent)GameObject.Find ("Map").GetComponent<MapComponent> ();
+				rules = GameObject.Find ("Arbiter").GetComponent<Rules> ();
+				map = GameObject.Find ("Map").GetComponent<MapComponent> ();
 				winner = PlayerComponent.Color.Empty;
 
-				playerComponent1 = (PlayerComponent)player1.GetComponent<PlayerComponent> ();
+				playerComponent1 = player1.GetComponent<PlayerComponent> ();
 				playerComponent1.color = PlayerComponent.Color.White;
 				playerComponent1.active = true;
 
-				playerComponent2 = (PlayerComponent)player2.GetComponent<PlayerComponent> ();
+				playerComponent2 = player2.GetComponent<PlayerComponent> ();
 				playerComponent2.color = PlayerComponent.Color.Black;
 				playerComponent2.active = false;
 
@@ -40,6 +40,13 @@ public class GameManager : MonoBehaviour
 
 			
 				changeTurn ();
+		}
+
+		public PlayerComponent getActivePlayer ()
+		{
+				if (playerComponent1.active)
+						return playerComponent1;
+				return playerComponent2;
 		}
 
 		private void changeTurn ()

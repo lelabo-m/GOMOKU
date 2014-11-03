@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class MapComponent : MonoBehaviour
 {
+	public GameObject TilePrefab;
+	private List <List <Tile>> graphicMap; 
 		
 		public const int SIZE_MAP = 19;
 		public enum Color
@@ -22,7 +25,9 @@ public class MapComponent : MonoBehaviour
 				bitsMap = new BitsMap ();
 				map = new char[SIZE_MAP];
 				arbiter = GameObject.Find ("Arbiter");
-				rules = (Rules)arbiter.GetComponent<Rules>();
+				rules = arbiter.GetComponent<Rules>();
+
+				generateGraphicMap ();
 		}
 	
 		// Update is called once per frame
@@ -30,7 +35,23 @@ public class MapComponent : MonoBehaviour
 		{
 	
 		}
-	
+
+		private void generateGraphicMap() 
+		{
+				graphicMap = new List<List<Tile>> ();
+				for (int i = 0; i < SIZE_MAP; ++i) {
+						List <Tile> row = new List<Tile> ();
+						for (int a = 0; a < SIZE_MAP; ++a) {
+								Tile tile = ((GameObject)Instantiate (TilePrefab, 
+				                                      new Vector3 (i - Mathf.Floor (SIZE_MAP / 2), 0, -a + Mathf.Floor (SIZE_MAP / 2)),
+				                                      Quaternion.Euler (new Vector3 ()))).GetComponent<Tile> ();
+								tile.gridPosition = new Vector2 (i, a);
+								row.Add (tile);
+						}
+						graphicMap.Add (row);
+				}
+		}
+
 		public bool putPawn (int x, int y, Color type)
 		{
 				if (!rules.putPawn (bitsMap, x, y))

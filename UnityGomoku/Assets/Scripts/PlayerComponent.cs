@@ -23,7 +23,7 @@ public class PlayerComponent : MonoBehaviour
 		// Use this for initialization
 		void Start ()
 		{
-				map = (MapComponent)GameObject.Find ("Map").GetComponent<MapComponent>();
+				map = GameObject.Find ("Map").GetComponent<MapComponent>();
 		}
 	
 		// Update is called once per frame

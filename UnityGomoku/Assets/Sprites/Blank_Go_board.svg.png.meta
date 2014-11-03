@@ -1,0 +1,4018 @@
+fileFormatVersion: 2
+guid: 7ead6497ddc6b496db1648cafb3feccb
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Blank_Go_board.svg_0
+    21300002: Blank_Go_board.svg_1
+    21300004: Blank_Go_board.svg_2
+    21300006: Blank_Go_board.svg_3
+    21300008: Blank_Go_board.svg_4
+    21300010: Blank_Go_board.svg_5
+    21300012: Blank_Go_board.svg_6
+    21300014: Blank_Go_board.svg_7
+    21300016: Blank_Go_board.svg_8
+    21300018: Blank_Go_board.svg_9
+    21300020: Blank_Go_board.svg_10
+    21300022: Blank_Go_board.svg_11
+    21300024: Blank_Go_board.svg_12
+    21300026: Blank_Go_board.svg_13
+    21300028: Blank_Go_board.svg_14
+    21300030: Blank_Go_board.svg_15
+    21300032: Blank_Go_board.svg_16
+    21300034: Blank_Go_board.svg_17
+    21300036: Blank_Go_board.svg_18
+    21300038: Blank_Go_board.svg_19
+    21300040: Blank_Go_board.svg_20
+    21300042: Blank_Go_board.svg_21
+    21300044: Blank_Go_board.svg_22
+    21300046: Blank_Go_board.svg_23
+    21300048: Blank_Go_board.svg_24
+    21300050: Blank_Go_board.svg_25
+    21300052: Blank_Go_board.svg_26
+    21300054: Blank_Go_board.svg_27
+    21300056: Blank_Go_board.svg_28
+    21300058: Blank_Go_board.svg_29
+    21300060: Blank_Go_board.svg_30
+    21300062: Blank_Go_board.svg_31
+    21300064: Blank_Go_board.svg_32
+    21300066: Blank_Go_board.svg_33
+    21300068: Blank_Go_board.svg_34
+    21300070: Blank_Go_board.svg_35
+    21300072: Blank_Go_board.svg_36
+    21300074: Blank_Go_board.svg_37
+    21300076: Blank_Go_board.svg_38
+    21300078: Blank_Go_board.svg_39
+    21300080: Blank_Go_board.svg_40
+    21300082: Blank_Go_board.svg_41
+    21300084: Blank_Go_board.svg_42
+    21300086: Blank_Go_board.svg_43
+    21300088: Blank_Go_board.svg_44
+    21300090: Blank_Go_board.svg_45
+    21300092: Blank_Go_board.svg_46
+    21300094: Blank_Go_board.svg_47
+    21300096: Blank_Go_board.svg_48
+    21300098: Blank_Go_board.svg_49
+    21300100: Blank_Go_board.svg_50
+    21300102: Blank_Go_board.svg_51
+    21300104: Blank_Go_board.svg_52
+    21300106: Blank_Go_board.svg_53
+    21300108: Blank_Go_board.svg_54
+    21300110: Blank_Go_board.svg_55
+    21300112: Blank_Go_board.svg_56
+    21300114: Blank_Go_board.svg_57
+    21300116: Blank_Go_board.svg_58
+    21300118: Blank_Go_board.svg_59
+    21300120: Blank_Go_board.svg_60
+    21300122: Blank_Go_board.svg_61
+    21300124: Blank_Go_board.svg_62
+    21300126: Blank_Go_board.svg_63
+    21300128: Blank_Go_board.svg_64
+    21300130: Blank_Go_board.svg_65
+    21300132: Blank_Go_board.svg_66
+    21300134: Blank_Go_board.svg_67
+    21300136: Blank_Go_board.svg_68
+    21300138: Blank_Go_board.svg_69
+    21300140: Blank_Go_board.svg_70
+    21300142: Blank_Go_board.svg_71
+    21300144: Blank_Go_board.svg_72
+    21300146: Blank_Go_board.svg_73
+    21300148: Blank_Go_board.svg_74
+    21300150: Blank_Go_board.svg_75
+    21300152: Blank_Go_board.svg_76
+    21300154: Blank_Go_board.svg_77
+    21300156: Blank_Go_board.svg_78
+    21300158: Blank_Go_board.svg_79
+    21300160: Blank_Go_board.svg_80
+    21300162: Blank_Go_board.svg_81
+    21300164: Blank_Go_board.svg_82
+    21300166: Blank_Go_board.svg_83
+    21300168: Blank_Go_board.svg_84
+    21300170: Blank_Go_board.svg_85
+    21300172: Blank_Go_board.svg_86
+    21300174: Blank_Go_board.svg_87
+    21300176: Blank_Go_board.svg_88
+    21300178: Blank_Go_board.svg_89
+    21300180: Blank_Go_board.svg_90
+    21300182: Blank_Go_board.svg_91
+    21300184: Blank_Go_board.svg_92
+    21300186: Blank_Go_board.svg_93
+    21300188: Blank_Go_board.svg_94
+    21300190: Blank_Go_board.svg_95
+    21300192: Blank_Go_board.svg_96
+    21300194: Blank_Go_board.svg_97
+    21300196: Blank_Go_board.svg_98
+    21300198: Blank_Go_board.svg_99
+    21300200: Blank_Go_board.svg_100
+    21300202: Blank_Go_board.svg_101
+    21300204: Blank_Go_board.svg_102
+    21300206: Blank_Go_board.svg_103
+    21300208: Blank_Go_board.svg_104
+    21300210: Blank_Go_board.svg_105
+    21300212: Blank_Go_board.svg_106
+    21300214: Blank_Go_board.svg_107
+    21300216: Blank_Go_board.svg_108
+    21300218: Blank_Go_board.svg_109
+    21300220: Blank_Go_board.svg_110
+    21300222: Blank_Go_board.svg_111
+    21300224: Blank_Go_board.svg_112
+    21300226: Blank_Go_board.svg_113
+    21300228: Blank_Go_board.svg_114
+    21300230: Blank_Go_board.svg_115
+    21300232: Blank_Go_board.svg_116
+    21300234: Blank_Go_board.svg_117
+    21300236: Blank_Go_board.svg_118
+    21300238: Blank_Go_board.svg_119
+    21300240: Blank_Go_board.svg_120
+    21300242: Blank_Go_board.svg_121
+    21300244: Blank_Go_board.svg_122
+    21300246: Blank_Go_board.svg_123
+    21300248: Blank_Go_board.svg_124
+    21300250: Blank_Go_board.svg_125
+    21300252: Blank_Go_board.svg_126
+    21300254: Blank_Go_board.svg_127
+    21300256: Blank_Go_board.svg_128
+    21300258: Blank_Go_board.svg_129
+    21300260: Blank_Go_board.svg_130
+    21300262: Blank_Go_board.svg_131
+    21300264: Blank_Go_board.svg_132
+    21300266: Blank_Go_board.svg_133
+    21300268: Blank_Go_board.svg_134
+    21300270: Blank_Go_board.svg_135
+    21300272: Blank_Go_board.svg_136
+    21300274: Blank_Go_board.svg_137
+    21300276: Blank_Go_board.svg_138
+    21300278: Blank_Go_board.svg_139
+    21300280: Blank_Go_board.svg_140
+    21300282: Blank_Go_board.svg_141
+    21300284: Blank_Go_board.svg_142
+    21300286: Blank_Go_board.svg_143
+    21300288: Blank_Go_board.svg_144
+    21300290: Blank_Go_board.svg_145
+    21300292: Blank_Go_board.svg_146
+    21300294: Blank_Go_board.svg_147
+    21300296: Blank_Go_board.svg_148
+    21300298: Blank_Go_board.svg_149
+    21300300: Blank_Go_board.svg_150
+    21300302: Blank_Go_board.svg_151
+    21300304: Blank_Go_board.svg_152
+    21300306: Blank_Go_board.svg_153
+    21300308: Blank_Go_board.svg_154
+    21300310: Blank_Go_board.svg_155
+    21300312: Blank_Go_board.svg_156
+    21300314: Blank_Go_board.svg_157
+    21300316: Blank_Go_board.svg_158
+    21300318: Blank_Go_board.svg_159
+    21300320: Blank_Go_board.svg_160
+    21300322: Blank_Go_board.svg_161
+    21300324: Blank_Go_board.svg_162
+    21300326: Blank_Go_board.svg_163
+    21300328: Blank_Go_board.svg_164
+    21300330: Blank_Go_board.svg_165
+    21300332: Blank_Go_board.svg_166
+    21300334: Blank_Go_board.svg_167
+    21300336: Blank_Go_board.svg_168
+    21300338: Blank_Go_board.svg_169
+    21300340: Blank_Go_board.svg_170
+    21300342: Blank_Go_board.svg_171
+    21300344: Blank_Go_board.svg_172
+    21300346: Blank_Go_board.svg_173
+    21300348: Blank_Go_board.svg_174
+    21300350: Blank_Go_board.svg_175
+    21300352: Blank_Go_board.svg_176
+    21300354: Blank_Go_board.svg_177
+    21300356: Blank_Go_board.svg_178
+    21300358: Blank_Go_board.svg_179
+    21300360: Blank_Go_board.svg_180
+    21300362: Blank_Go_board.svg_181
+    21300364: Blank_Go_board.svg_182
+    21300366: Blank_Go_board.svg_183
+    21300368: Blank_Go_board.svg_184
+    21300370: Blank_Go_board.svg_185
+    21300372: Blank_Go_board.svg_186
+    21300374: Blank_Go_board.svg_187
+    21300376: Blank_Go_board.svg_188
+    21300378: Blank_Go_board.svg_189
+    21300380: Blank_Go_board.svg_190
+    21300382: Blank_Go_board.svg_191
+    21300384: Blank_Go_board.svg_192
+    21300386: Blank_Go_board.svg_193
+    21300388: Blank_Go_board.svg_194
+    21300390: Blank_Go_board.svg_195
+    21300392: Blank_Go_board.svg_196
+    21300394: Blank_Go_board.svg_197
+    21300396: Blank_Go_board.svg_198
+    21300398: Blank_Go_board.svg_199
+    21300400: Blank_Go_board.svg_200
+    21300402: Blank_Go_board.svg_201
+    21300404: Blank_Go_board.svg_202
+    21300406: Blank_Go_board.svg_203
+    21300408: Blank_Go_board.svg_204
+    21300410: Blank_Go_board.svg_205
+    21300412: Blank_Go_board.svg_206
+    21300414: Blank_Go_board.svg_207
+    21300416: Blank_Go_board.svg_208
+    21300418: Blank_Go_board.svg_209
+    21300420: Blank_Go_board.svg_210
+    21300422: Blank_Go_board.svg_211
+    21300424: Blank_Go_board.svg_212
+    21300426: Blank_Go_board.svg_213
+    21300428: Blank_Go_board.svg_214
+    21300430: Blank_Go_board.svg_215
+    21300432: Blank_Go_board.svg_216
+    21300434: Blank_Go_board.svg_217
+    21300436: Blank_Go_board.svg_218
+    21300438: Blank_Go_board.svg_219
+    21300440: Blank_Go_board.svg_220
+    21300442: Blank_Go_board.svg_221
+    21300444: Blank_Go_board.svg_222
+    21300446: Blank_Go_board.svg_223
+    21300448: Blank_Go_board.svg_224
+    21300450: Blank_Go_board.svg_225
+    21300452: Blank_Go_board.svg_226
+    21300454: Blank_Go_board.svg_227
+    21300456: Blank_Go_board.svg_228
+    21300458: Blank_Go_board.svg_229
+    21300460: Blank_Go_board.svg_230
+    21300462: Blank_Go_board.svg_231
+    21300464: Blank_Go_board.svg_232
+    21300466: Blank_Go_board.svg_233
+    21300468: Blank_Go_board.svg_234
+    21300470: Blank_Go_board.svg_235
+    21300472: Blank_Go_board.svg_236
+    21300474: Blank_Go_board.svg_237
+    21300476: Blank_Go_board.svg_238
+    21300478: Blank_Go_board.svg_239
+    21300480: Blank_Go_board.svg_240
+    21300482: Blank_Go_board.svg_241
+    21300484: Blank_Go_board.svg_242
+    21300486: Blank_Go_board.svg_243
+    21300488: Blank_Go_board.svg_244
+    21300490: Blank_Go_board.svg_245
+    21300492: Blank_Go_board.svg_246
+    21300494: Blank_Go_board.svg_247
+    21300496: Blank_Go_board.svg_248
+    21300498: Blank_Go_board.svg_249
+    21300500: Blank_Go_board.svg_250
+    21300502: Blank_Go_board.svg_251
+    21300504: Blank_Go_board.svg_252
+    21300506: Blank_Go_board.svg_253
+    21300508: Blank_Go_board.svg_254
+    21300510: Blank_Go_board.svg_255
+    21300512: Blank_Go_board.svg_256
+    21300514: Blank_Go_board.svg_257
+    21300516: Blank_Go_board.svg_258
+    21300518: Blank_Go_board.svg_259
+    21300520: Blank_Go_board.svg_260
+    21300522: Blank_Go_board.svg_261
+    21300524: Blank_Go_board.svg_262
+    21300526: Blank_Go_board.svg_263
+    21300528: Blank_Go_board.svg_264
+    21300530: Blank_Go_board.svg_265
+    21300532: Blank_Go_board.svg_266
+    21300534: Blank_Go_board.svg_267
+    21300536: Blank_Go_board.svg_268
+    21300538: Blank_Go_board.svg_269
+    21300540: Blank_Go_board.svg_270
+    21300542: Blank_Go_board.svg_271
+    21300544: Blank_Go_board.svg_272
+    21300546: Blank_Go_board.svg_273
+    21300548: Blank_Go_board.svg_274
+    21300550: Blank_Go_board.svg_275
+    21300552: Blank_Go_board.svg_276
+    21300554: Blank_Go_board.svg_277
+    21300556: Blank_Go_board.svg_278
+    21300558: Blank_Go_board.svg_279
+    21300560: Blank_Go_board.svg_280
+    21300562: Blank_Go_board.svg_281
+    21300564: Blank_Go_board.svg_282
+    21300566: Blank_Go_board.svg_283
+    21300568: Blank_Go_board.svg_284
+    21300570: Blank_Go_board.svg_285
+    21300572: Blank_Go_board.svg_286
+    21300574: Blank_Go_board.svg_287
+    21300576: Blank_Go_board.svg_288
+    21300578: Blank_Go_board.svg_289
+    21300580: Blank_Go_board.svg_290
+    21300582: Blank_Go_board.svg_291
+    21300584: Blank_Go_board.svg_292
+    21300586: Blank_Go_board.svg_293
+    21300588: Blank_Go_board.svg_294
+    21300590: Blank_Go_board.svg_295
+    21300592: Blank_Go_board.svg_296
+    21300594: Blank_Go_board.svg_297
+    21300596: Blank_Go_board.svg_298
+    21300598: Blank_Go_board.svg_299
+    21300600: Blank_Go_board.svg_300
+    21300602: Blank_Go_board.svg_301
+    21300604: Blank_Go_board.svg_302
+    21300606: Blank_Go_board.svg_303
+    21300608: Blank_Go_board.svg_304
+    21300610: Blank_Go_board.svg_305
+    21300612: Blank_Go_board.svg_306
+    21300614: Blank_Go_board.svg_307
+    21300616: Blank_Go_board.svg_308
+    21300618: Blank_Go_board.svg_309
+    21300620: Blank_Go_board.svg_310
+    21300622: Blank_Go_board.svg_311
+    21300624: Blank_Go_board.svg_312
+    21300626: Blank_Go_board.svg_313
+    21300628: Blank_Go_board.svg_314
+    21300630: Blank_Go_board.svg_315
+    21300632: Blank_Go_board.svg_316
+    21300634: Blank_Go_board.svg_317
+    21300636: Blank_Go_board.svg_318
+    21300638: Blank_Go_board.svg_319
+    21300640: Blank_Go_board.svg_320
+    21300642: Blank_Go_board.svg_321
+    21300644: Blank_Go_board.svg_322
+    21300646: Blank_Go_board.svg_323
+    21300648: Blank_Go_board.svg_324
+    21300650: Blank_Go_board.svg_325
+    21300652: Blank_Go_board.svg_326
+    21300654: Blank_Go_board.svg_327
+    21300656: Blank_Go_board.svg_328
+    21300658: Blank_Go_board.svg_329
+    21300660: Blank_Go_board.svg_330
+    21300662: Blank_Go_board.svg_331
+    21300664: Blank_Go_board.svg_332
+    21300666: Blank_Go_board.svg_333
+    21300668: Blank_Go_board.svg_334
+    21300670: Blank_Go_board.svg_335
+    21300672: Blank_Go_board.svg_336
+    21300674: Blank_Go_board.svg_337
+    21300676: Blank_Go_board.svg_338
+    21300678: Blank_Go_board.svg_339
+    21300680: Blank_Go_board.svg_340
+    21300682: Blank_Go_board.svg_341
+    21300684: Blank_Go_board.svg_342
+    21300686: Blank_Go_board.svg_343
+    21300688: Blank_Go_board.svg_344
+    21300690: Blank_Go_board.svg_345
+    21300692: Blank_Go_board.svg_346
+    21300694: Blank_Go_board.svg_347
+    21300696: Blank_Go_board.svg_348
+    21300698: Blank_Go_board.svg_349
+    21300700: Blank_Go_board.svg_350
+    21300702: Blank_Go_board.svg_351
+    21300704: Blank_Go_board.svg_352
+    21300706: Blank_Go_board.svg_353
+    21300708: Blank_Go_board.svg_354
+    21300710: Blank_Go_board.svg_355
+    21300712: Blank_Go_board.svg_356
+    21300714: Blank_Go_board.svg_357
+    21300716: Blank_Go_board.svg_358
+    21300718: Blank_Go_board.svg_359
+    21300720: Blank_Go_board.svg_360
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Blank_Go_board.svg_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_6
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_7
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_8
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_9
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_10
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_11
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 1800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_12
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_13
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 1800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_14
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_15
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_16
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_17
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 1800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_18
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_20
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_21
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_22
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_23
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_24
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_25
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_26
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_27
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_28
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_29
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_30
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 1700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_31
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_32
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 1700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_33
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_34
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_35
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_36
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 1700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_37
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_39
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_40
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_41
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_42
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_43
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_44
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_45
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_46
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_47
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_48
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_49
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 1600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_50
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_51
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 1600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_52
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_53
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_54
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_55
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 1600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_56
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_58
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_59
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_60
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_61
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_62
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_63
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_64
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_65
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_66
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_67
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_68
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 1500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_69
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_70
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 1500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_71
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_72
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_73
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_74
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 1500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_75
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_76
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_77
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_78
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_79
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_80
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_81
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_82
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_83
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_84
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_85
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_86
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_87
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 1400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_88
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_89
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 1400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_90
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_91
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_92
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_93
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 1400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_94
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_95
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_96
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_97
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_98
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_99
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_100
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_101
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_102
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_103
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_104
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_105
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_106
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 1300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_107
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_108
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 1300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_109
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_110
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_111
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_112
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 1300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_113
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_114
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_115
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_116
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_117
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_118
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_119
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_120
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_121
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_122
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_123
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_124
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_125
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 1200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_126
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_127
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 1200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_128
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_129
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_130
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_131
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 1200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_132
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_133
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_134
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_135
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_136
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_137
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_138
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_139
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_140
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_141
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_142
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_143
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_144
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 1100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_145
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_146
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 1100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_147
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_148
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_149
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_150
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 1100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_151
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_152
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_153
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1000
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_154
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1000
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_155
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1000
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_156
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1000
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_157
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1000
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_158
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1000
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_159
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1000
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_160
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1000
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_161
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1000
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_162
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1000
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_163
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 1000
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_164
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1000
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_165
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 1000
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_166
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1000
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_167
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1000
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_168
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1000
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_169
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 1000
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_170
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1000
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_171
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_172
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_173
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_174
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_175
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_176
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_177
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_178
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_179
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_180
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_181
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_182
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_183
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_184
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_185
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_186
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_187
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_188
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_189
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_190
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_191
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_192
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_193
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_194
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_195
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_196
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_197
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_198
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_199
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_200
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_201
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_202
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_203
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_204
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_205
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_206
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_207
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_208
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_209
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_210
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_211
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_212
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_213
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_214
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_215
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_216
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_217
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_218
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_219
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_220
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_221
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_222
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_223
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_224
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_225
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_226
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_227
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_228
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_229
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_230
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_231
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_232
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_233
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_234
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_235
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_236
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_237
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_238
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_239
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_240
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_241
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_242
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_243
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_244
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_245
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_246
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_247
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_248
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_249
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_250
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_251
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_252
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_253
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_254
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_255
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_256
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_257
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_258
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_259
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_260
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_261
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_262
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_263
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_264
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_265
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_266
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_267
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_268
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_269
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_270
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_271
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_272
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_273
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_274
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_275
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_276
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_277
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_278
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_279
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_280
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_281
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_282
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_283
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_284
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_285
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_286
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_287
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_288
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_289
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_290
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_291
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_292
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_293
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_294
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_295
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_296
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_297
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_298
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_299
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_300
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_301
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_302
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_303
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_304
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_305
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_306
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_307
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_308
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_309
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_310
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_311
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_312
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_313
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_314
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_315
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_316
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_317
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_318
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_319
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_320
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_321
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_322
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_323
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_324
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_325
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_326
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_327
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_328
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_329
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_330
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_331
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_332
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_333
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_334
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_335
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_336
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_337
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_338
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_339
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_340
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_341
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_342
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_343
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_344
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_345
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_346
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_347
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_348
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_349
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_350
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_351
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_352
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_353
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_354
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_355
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_356
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_357
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_358
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_359
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blank_Go_board.svg_360
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
