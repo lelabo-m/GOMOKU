@@ -18,13 +18,14 @@ public class HumanController : MonoBehaviour
 		void Update ()
 		{
 
-				if (player.play) {
-			//Attendre event souris ou clavier
+				if (player.playing && !player.played) {
+			//event souris ou clavier
 						/*
 		 * Pour placer un pion
 		 * 
 		 * player.selectPosition(x, y);
 		 * player.putPawn() <= false si pas possible
+		 * player.played = true;
 		 */
 				}
 	

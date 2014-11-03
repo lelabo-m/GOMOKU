@@ -14,7 +14,7 @@ public class MapComponent : MonoBehaviour
 				Black }
 		;
 		private GameObject arbiter;
-	private GameManager gameManager;
+		private GameManager gameManager;
 		private Rules rules;
 		private BitsMap bitsMap;
 		public char[] map;
@@ -26,7 +26,7 @@ public class MapComponent : MonoBehaviour
 				map = new char[SIZE_MAP];
 				arbiter = GameObject.Find ("Arbiter");
 				rules = arbiter.GetComponent<Rules> ();
-		gameManager = arbiter.GetComponent<GameManager> ();
+				gameManager = arbiter.GetComponent<GameManager> ();
 
 				generateGraphicMap ();
 		}
@@ -60,7 +60,7 @@ public class MapComponent : MonoBehaviour
 				bitsMap.putPawn (x, y, type);
 				map [x * SIZE_MAP + y] = (char)type;
 
-		gameManager.setLastColor(type);
+				gameManager.setLastColor (type);
 				return true;
 		}
 
@@ -94,28 +94,26 @@ public class MapComponent : MonoBehaviour
 		
 		
 				// set Weight of a color 
-                public void setWeight(int x, int y, int weight, Color color)
-                {
-                    if (color != Color.Empty)
-                    {
-                        for (int cellC = (color == Color.Black) ? 3 : 0, weightC = 0, cellE = cellC + 3; cellC < cellE; cellC++, weightC++)
-                        {
-                            this.map[x * SIZE_MAP + y] |= ((weight & (1 << weightC)) == 0 ? 0 : 1) << cellC;
-                        }
-                    }
-                }
+				public void setWeight (int x, int y, int weight, Color color)
+				{
+						if (color != Color.Empty) {
+								for (int cellC = (color == Color.Black) ? 3 : 0, weightC = 0, cellE = cellC + 3; cellC < cellE; cellC++, weightC++) {
+										this.map [x * SIZE_MAP + y] |= ((weight & (1 << weightC)) == 0 ? 0 : 1) << cellC;
+								}
+						}
+				}
 
-                public bool putPawn(int x, int y, Color type)
-                {
-                    this.map[x * SIZE_MAP + y] = ((char)type << 6);
-                    return true;
-                }
+				public bool putPawn (int x, int y, Color type)
+				{
+						this.map [x * SIZE_MAP + y] = ((char)type << 6);
+						return true;
+				}
 
-                public bool removePawn(int x, int y)
-                {
-                    this.map[x * SIZE_MAP + y] = 0;
-                    return true;
-                }
+				public bool removePawn (int x, int y)
+				{
+						this.map [x * SIZE_MAP + y] = 0;
+						return true;
+				}
 
 				public int getCell (int x, int y)
 				{

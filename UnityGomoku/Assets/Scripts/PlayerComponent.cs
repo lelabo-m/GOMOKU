@@ -11,14 +11,15 @@ public class PlayerComponent : MonoBehaviour
 				Black
 		}
 
+		public bool played = false;
 		private MapComponent map;
 		public int selectedX;
 		public int selectedY;
 		public Color color;
 
 		//Defini si c'est sont tour de jouer
-		public bool play = false;
-
+		public bool playing = false;
+		
 
 
 		// Use this for initialization
@@ -79,4 +80,5 @@ public class PlayerComponent : MonoBehaviour
 		{
 				return map.putPawn (selectedX, selectedY, (MapComponent.Color)color);
 		}
+
 }

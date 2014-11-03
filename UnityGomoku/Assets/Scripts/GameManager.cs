@@ -21,29 +21,38 @@ public class GameManager : MonoBehaviour
 
 				playerComponent1 = player1.GetComponent<PlayerComponent> ();
 				playerComponent1.color = PlayerComponent.Color.White;
-				playerComponent1.play = true;
+				playerComponent1.playing = true;
 
 				playerComponent2 = player2.GetComponent<PlayerComponent> ();
 				playerComponent2.color = PlayerComponent.Color.Black;
-				playerComponent2.play = false;
+				playerComponent2.playing = false;
 
 		}
 	
 		// Update is called once per frame
 		void Update ()
 		{
-				takePawn ();
+				if (currentPlayer ().played) {
+						takePawn ();
 
-				if ((winner = isScoringWinner ()) != PlayerComponent.Color.Empty)
-						gameDone ();
+						if ((winner = isScoringWinner ()) != PlayerComponent.Color.Empty)
+								gameDone ();
 
-				if ((winner = isWinner ()) != PlayerComponent.Color.Empty)
-						gameDone ();
+						if ((winner = isWinner ()) != PlayerComponent.Color.Empty)
+								gameDone ();
 
-				if (!isEnoughSpace ())
-						gameDone ();
+						if (!isEnoughSpace ())
+								gameDone ();
 
-				changeTurn ();
+						changeTurn ();
+				}
+		}
+
+		private PlayerComponent currentPlayer ()
+		{
+				if (playerComponent1.playing)
+						return playerComponent1;
+				return playerComponent2;
 		}
 
 		private void takePawn ()
@@ -57,7 +66,7 @@ public class GameManager : MonoBehaviour
 
 		public PlayerComponent getActivePlayer ()
 		{
-				if (playerComponent1.play)
+				if (playerComponent1.playing)
 						return playerComponent1;
 				return playerComponent2;
 		}
@@ -75,8 +84,11 @@ public class GameManager : MonoBehaviour
 
 		private void changeTurn ()
 		{
-				playerComponent1.play = !playerComponent1.play;
-				playerComponent2.play = !playerComponent2.play;
+				playerComponent1.playing = !playerComponent1.playing;
+				playerComponent2.playing = !playerComponent2.playing;
+
+				playerComponent1.played = false;
+				playerComponent2.played = false;
 		}
 
 		private PlayerComponent.Color isScoringWinner ()
