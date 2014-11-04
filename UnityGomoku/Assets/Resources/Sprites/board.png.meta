@@ -1,368 +1,368 @@
 fileFormatVersion: 2
-guid: 7ead6497ddc6b496db1648cafb3feccb
+guid: 50608ddb4984e4144b599fd66fa19125
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Blank_Go_board.svg_0
-    21300002: Blank_Go_board.svg_1
-    21300004: Blank_Go_board.svg_2
-    21300006: Blank_Go_board.svg_3
-    21300008: Blank_Go_board.svg_4
-    21300010: Blank_Go_board.svg_5
-    21300012: Blank_Go_board.svg_6
-    21300014: Blank_Go_board.svg_7
-    21300016: Blank_Go_board.svg_8
-    21300018: Blank_Go_board.svg_9
-    21300020: Blank_Go_board.svg_10
-    21300022: Blank_Go_board.svg_11
-    21300024: Blank_Go_board.svg_12
-    21300026: Blank_Go_board.svg_13
-    21300028: Blank_Go_board.svg_14
-    21300030: Blank_Go_board.svg_15
-    21300032: Blank_Go_board.svg_16
-    21300034: Blank_Go_board.svg_17
-    21300036: Blank_Go_board.svg_18
-    21300038: Blank_Go_board.svg_19
-    21300040: Blank_Go_board.svg_20
-    21300042: Blank_Go_board.svg_21
-    21300044: Blank_Go_board.svg_22
-    21300046: Blank_Go_board.svg_23
-    21300048: Blank_Go_board.svg_24
-    21300050: Blank_Go_board.svg_25
-    21300052: Blank_Go_board.svg_26
-    21300054: Blank_Go_board.svg_27
-    21300056: Blank_Go_board.svg_28
-    21300058: Blank_Go_board.svg_29
-    21300060: Blank_Go_board.svg_30
-    21300062: Blank_Go_board.svg_31
-    21300064: Blank_Go_board.svg_32
-    21300066: Blank_Go_board.svg_33
-    21300068: Blank_Go_board.svg_34
-    21300070: Blank_Go_board.svg_35
-    21300072: Blank_Go_board.svg_36
-    21300074: Blank_Go_board.svg_37
-    21300076: Blank_Go_board.svg_38
-    21300078: Blank_Go_board.svg_39
-    21300080: Blank_Go_board.svg_40
-    21300082: Blank_Go_board.svg_41
-    21300084: Blank_Go_board.svg_42
-    21300086: Blank_Go_board.svg_43
-    21300088: Blank_Go_board.svg_44
-    21300090: Blank_Go_board.svg_45
-    21300092: Blank_Go_board.svg_46
-    21300094: Blank_Go_board.svg_47
-    21300096: Blank_Go_board.svg_48
-    21300098: Blank_Go_board.svg_49
-    21300100: Blank_Go_board.svg_50
-    21300102: Blank_Go_board.svg_51
-    21300104: Blank_Go_board.svg_52
-    21300106: Blank_Go_board.svg_53
-    21300108: Blank_Go_board.svg_54
-    21300110: Blank_Go_board.svg_55
-    21300112: Blank_Go_board.svg_56
-    21300114: Blank_Go_board.svg_57
-    21300116: Blank_Go_board.svg_58
-    21300118: Blank_Go_board.svg_59
-    21300120: Blank_Go_board.svg_60
-    21300122: Blank_Go_board.svg_61
-    21300124: Blank_Go_board.svg_62
-    21300126: Blank_Go_board.svg_63
-    21300128: Blank_Go_board.svg_64
-    21300130: Blank_Go_board.svg_65
-    21300132: Blank_Go_board.svg_66
-    21300134: Blank_Go_board.svg_67
-    21300136: Blank_Go_board.svg_68
-    21300138: Blank_Go_board.svg_69
-    21300140: Blank_Go_board.svg_70
-    21300142: Blank_Go_board.svg_71
-    21300144: Blank_Go_board.svg_72
-    21300146: Blank_Go_board.svg_73
-    21300148: Blank_Go_board.svg_74
-    21300150: Blank_Go_board.svg_75
-    21300152: Blank_Go_board.svg_76
-    21300154: Blank_Go_board.svg_77
-    21300156: Blank_Go_board.svg_78
-    21300158: Blank_Go_board.svg_79
-    21300160: Blank_Go_board.svg_80
-    21300162: Blank_Go_board.svg_81
-    21300164: Blank_Go_board.svg_82
-    21300166: Blank_Go_board.svg_83
-    21300168: Blank_Go_board.svg_84
-    21300170: Blank_Go_board.svg_85
-    21300172: Blank_Go_board.svg_86
-    21300174: Blank_Go_board.svg_87
-    21300176: Blank_Go_board.svg_88
-    21300178: Blank_Go_board.svg_89
-    21300180: Blank_Go_board.svg_90
-    21300182: Blank_Go_board.svg_91
-    21300184: Blank_Go_board.svg_92
-    21300186: Blank_Go_board.svg_93
-    21300188: Blank_Go_board.svg_94
-    21300190: Blank_Go_board.svg_95
-    21300192: Blank_Go_board.svg_96
-    21300194: Blank_Go_board.svg_97
-    21300196: Blank_Go_board.svg_98
-    21300198: Blank_Go_board.svg_99
-    21300200: Blank_Go_board.svg_100
-    21300202: Blank_Go_board.svg_101
-    21300204: Blank_Go_board.svg_102
-    21300206: Blank_Go_board.svg_103
-    21300208: Blank_Go_board.svg_104
-    21300210: Blank_Go_board.svg_105
-    21300212: Blank_Go_board.svg_106
-    21300214: Blank_Go_board.svg_107
-    21300216: Blank_Go_board.svg_108
-    21300218: Blank_Go_board.svg_109
-    21300220: Blank_Go_board.svg_110
-    21300222: Blank_Go_board.svg_111
-    21300224: Blank_Go_board.svg_112
-    21300226: Blank_Go_board.svg_113
-    21300228: Blank_Go_board.svg_114
-    21300230: Blank_Go_board.svg_115
-    21300232: Blank_Go_board.svg_116
-    21300234: Blank_Go_board.svg_117
-    21300236: Blank_Go_board.svg_118
-    21300238: Blank_Go_board.svg_119
-    21300240: Blank_Go_board.svg_120
-    21300242: Blank_Go_board.svg_121
-    21300244: Blank_Go_board.svg_122
-    21300246: Blank_Go_board.svg_123
-    21300248: Blank_Go_board.svg_124
-    21300250: Blank_Go_board.svg_125
-    21300252: Blank_Go_board.svg_126
-    21300254: Blank_Go_board.svg_127
-    21300256: Blank_Go_board.svg_128
-    21300258: Blank_Go_board.svg_129
-    21300260: Blank_Go_board.svg_130
-    21300262: Blank_Go_board.svg_131
-    21300264: Blank_Go_board.svg_132
-    21300266: Blank_Go_board.svg_133
-    21300268: Blank_Go_board.svg_134
-    21300270: Blank_Go_board.svg_135
-    21300272: Blank_Go_board.svg_136
-    21300274: Blank_Go_board.svg_137
-    21300276: Blank_Go_board.svg_138
-    21300278: Blank_Go_board.svg_139
-    21300280: Blank_Go_board.svg_140
-    21300282: Blank_Go_board.svg_141
-    21300284: Blank_Go_board.svg_142
-    21300286: Blank_Go_board.svg_143
-    21300288: Blank_Go_board.svg_144
-    21300290: Blank_Go_board.svg_145
-    21300292: Blank_Go_board.svg_146
-    21300294: Blank_Go_board.svg_147
-    21300296: Blank_Go_board.svg_148
-    21300298: Blank_Go_board.svg_149
-    21300300: Blank_Go_board.svg_150
-    21300302: Blank_Go_board.svg_151
-    21300304: Blank_Go_board.svg_152
-    21300306: Blank_Go_board.svg_153
-    21300308: Blank_Go_board.svg_154
-    21300310: Blank_Go_board.svg_155
-    21300312: Blank_Go_board.svg_156
-    21300314: Blank_Go_board.svg_157
-    21300316: Blank_Go_board.svg_158
-    21300318: Blank_Go_board.svg_159
-    21300320: Blank_Go_board.svg_160
-    21300322: Blank_Go_board.svg_161
-    21300324: Blank_Go_board.svg_162
-    21300326: Blank_Go_board.svg_163
-    21300328: Blank_Go_board.svg_164
-    21300330: Blank_Go_board.svg_165
-    21300332: Blank_Go_board.svg_166
-    21300334: Blank_Go_board.svg_167
-    21300336: Blank_Go_board.svg_168
-    21300338: Blank_Go_board.svg_169
-    21300340: Blank_Go_board.svg_170
-    21300342: Blank_Go_board.svg_171
-    21300344: Blank_Go_board.svg_172
-    21300346: Blank_Go_board.svg_173
-    21300348: Blank_Go_board.svg_174
-    21300350: Blank_Go_board.svg_175
-    21300352: Blank_Go_board.svg_176
-    21300354: Blank_Go_board.svg_177
-    21300356: Blank_Go_board.svg_178
-    21300358: Blank_Go_board.svg_179
-    21300360: Blank_Go_board.svg_180
-    21300362: Blank_Go_board.svg_181
-    21300364: Blank_Go_board.svg_182
-    21300366: Blank_Go_board.svg_183
-    21300368: Blank_Go_board.svg_184
-    21300370: Blank_Go_board.svg_185
-    21300372: Blank_Go_board.svg_186
-    21300374: Blank_Go_board.svg_187
-    21300376: Blank_Go_board.svg_188
-    21300378: Blank_Go_board.svg_189
-    21300380: Blank_Go_board.svg_190
-    21300382: Blank_Go_board.svg_191
-    21300384: Blank_Go_board.svg_192
-    21300386: Blank_Go_board.svg_193
-    21300388: Blank_Go_board.svg_194
-    21300390: Blank_Go_board.svg_195
-    21300392: Blank_Go_board.svg_196
-    21300394: Blank_Go_board.svg_197
-    21300396: Blank_Go_board.svg_198
-    21300398: Blank_Go_board.svg_199
-    21300400: Blank_Go_board.svg_200
-    21300402: Blank_Go_board.svg_201
-    21300404: Blank_Go_board.svg_202
-    21300406: Blank_Go_board.svg_203
-    21300408: Blank_Go_board.svg_204
-    21300410: Blank_Go_board.svg_205
-    21300412: Blank_Go_board.svg_206
-    21300414: Blank_Go_board.svg_207
-    21300416: Blank_Go_board.svg_208
-    21300418: Blank_Go_board.svg_209
-    21300420: Blank_Go_board.svg_210
-    21300422: Blank_Go_board.svg_211
-    21300424: Blank_Go_board.svg_212
-    21300426: Blank_Go_board.svg_213
-    21300428: Blank_Go_board.svg_214
-    21300430: Blank_Go_board.svg_215
-    21300432: Blank_Go_board.svg_216
-    21300434: Blank_Go_board.svg_217
-    21300436: Blank_Go_board.svg_218
-    21300438: Blank_Go_board.svg_219
-    21300440: Blank_Go_board.svg_220
-    21300442: Blank_Go_board.svg_221
-    21300444: Blank_Go_board.svg_222
-    21300446: Blank_Go_board.svg_223
-    21300448: Blank_Go_board.svg_224
-    21300450: Blank_Go_board.svg_225
-    21300452: Blank_Go_board.svg_226
-    21300454: Blank_Go_board.svg_227
-    21300456: Blank_Go_board.svg_228
-    21300458: Blank_Go_board.svg_229
-    21300460: Blank_Go_board.svg_230
-    21300462: Blank_Go_board.svg_231
-    21300464: Blank_Go_board.svg_232
-    21300466: Blank_Go_board.svg_233
-    21300468: Blank_Go_board.svg_234
-    21300470: Blank_Go_board.svg_235
-    21300472: Blank_Go_board.svg_236
-    21300474: Blank_Go_board.svg_237
-    21300476: Blank_Go_board.svg_238
-    21300478: Blank_Go_board.svg_239
-    21300480: Blank_Go_board.svg_240
-    21300482: Blank_Go_board.svg_241
-    21300484: Blank_Go_board.svg_242
-    21300486: Blank_Go_board.svg_243
-    21300488: Blank_Go_board.svg_244
-    21300490: Blank_Go_board.svg_245
-    21300492: Blank_Go_board.svg_246
-    21300494: Blank_Go_board.svg_247
-    21300496: Blank_Go_board.svg_248
-    21300498: Blank_Go_board.svg_249
-    21300500: Blank_Go_board.svg_250
-    21300502: Blank_Go_board.svg_251
-    21300504: Blank_Go_board.svg_252
-    21300506: Blank_Go_board.svg_253
-    21300508: Blank_Go_board.svg_254
-    21300510: Blank_Go_board.svg_255
-    21300512: Blank_Go_board.svg_256
-    21300514: Blank_Go_board.svg_257
-    21300516: Blank_Go_board.svg_258
-    21300518: Blank_Go_board.svg_259
-    21300520: Blank_Go_board.svg_260
-    21300522: Blank_Go_board.svg_261
-    21300524: Blank_Go_board.svg_262
-    21300526: Blank_Go_board.svg_263
-    21300528: Blank_Go_board.svg_264
-    21300530: Blank_Go_board.svg_265
-    21300532: Blank_Go_board.svg_266
-    21300534: Blank_Go_board.svg_267
-    21300536: Blank_Go_board.svg_268
-    21300538: Blank_Go_board.svg_269
-    21300540: Blank_Go_board.svg_270
-    21300542: Blank_Go_board.svg_271
-    21300544: Blank_Go_board.svg_272
-    21300546: Blank_Go_board.svg_273
-    21300548: Blank_Go_board.svg_274
-    21300550: Blank_Go_board.svg_275
-    21300552: Blank_Go_board.svg_276
-    21300554: Blank_Go_board.svg_277
-    21300556: Blank_Go_board.svg_278
-    21300558: Blank_Go_board.svg_279
-    21300560: Blank_Go_board.svg_280
-    21300562: Blank_Go_board.svg_281
-    21300564: Blank_Go_board.svg_282
-    21300566: Blank_Go_board.svg_283
-    21300568: Blank_Go_board.svg_284
-    21300570: Blank_Go_board.svg_285
-    21300572: Blank_Go_board.svg_286
-    21300574: Blank_Go_board.svg_287
-    21300576: Blank_Go_board.svg_288
-    21300578: Blank_Go_board.svg_289
-    21300580: Blank_Go_board.svg_290
-    21300582: Blank_Go_board.svg_291
-    21300584: Blank_Go_board.svg_292
-    21300586: Blank_Go_board.svg_293
-    21300588: Blank_Go_board.svg_294
-    21300590: Blank_Go_board.svg_295
-    21300592: Blank_Go_board.svg_296
-    21300594: Blank_Go_board.svg_297
-    21300596: Blank_Go_board.svg_298
-    21300598: Blank_Go_board.svg_299
-    21300600: Blank_Go_board.svg_300
-    21300602: Blank_Go_board.svg_301
-    21300604: Blank_Go_board.svg_302
-    21300606: Blank_Go_board.svg_303
-    21300608: Blank_Go_board.svg_304
-    21300610: Blank_Go_board.svg_305
-    21300612: Blank_Go_board.svg_306
-    21300614: Blank_Go_board.svg_307
-    21300616: Blank_Go_board.svg_308
-    21300618: Blank_Go_board.svg_309
-    21300620: Blank_Go_board.svg_310
-    21300622: Blank_Go_board.svg_311
-    21300624: Blank_Go_board.svg_312
-    21300626: Blank_Go_board.svg_313
-    21300628: Blank_Go_board.svg_314
-    21300630: Blank_Go_board.svg_315
-    21300632: Blank_Go_board.svg_316
-    21300634: Blank_Go_board.svg_317
-    21300636: Blank_Go_board.svg_318
-    21300638: Blank_Go_board.svg_319
-    21300640: Blank_Go_board.svg_320
-    21300642: Blank_Go_board.svg_321
-    21300644: Blank_Go_board.svg_322
-    21300646: Blank_Go_board.svg_323
-    21300648: Blank_Go_board.svg_324
-    21300650: Blank_Go_board.svg_325
-    21300652: Blank_Go_board.svg_326
-    21300654: Blank_Go_board.svg_327
-    21300656: Blank_Go_board.svg_328
-    21300658: Blank_Go_board.svg_329
-    21300660: Blank_Go_board.svg_330
-    21300662: Blank_Go_board.svg_331
-    21300664: Blank_Go_board.svg_332
-    21300666: Blank_Go_board.svg_333
-    21300668: Blank_Go_board.svg_334
-    21300670: Blank_Go_board.svg_335
-    21300672: Blank_Go_board.svg_336
-    21300674: Blank_Go_board.svg_337
-    21300676: Blank_Go_board.svg_338
-    21300678: Blank_Go_board.svg_339
-    21300680: Blank_Go_board.svg_340
-    21300682: Blank_Go_board.svg_341
-    21300684: Blank_Go_board.svg_342
-    21300686: Blank_Go_board.svg_343
-    21300688: Blank_Go_board.svg_344
-    21300690: Blank_Go_board.svg_345
-    21300692: Blank_Go_board.svg_346
-    21300694: Blank_Go_board.svg_347
-    21300696: Blank_Go_board.svg_348
-    21300698: Blank_Go_board.svg_349
-    21300700: Blank_Go_board.svg_350
-    21300702: Blank_Go_board.svg_351
-    21300704: Blank_Go_board.svg_352
-    21300706: Blank_Go_board.svg_353
-    21300708: Blank_Go_board.svg_354
-    21300710: Blank_Go_board.svg_355
-    21300712: Blank_Go_board.svg_356
-    21300714: Blank_Go_board.svg_357
-    21300716: Blank_Go_board.svg_358
-    21300718: Blank_Go_board.svg_359
-    21300720: Blank_Go_board.svg_360
+    21300000: board_0
+    21300002: board_1
+    21300004: board_2
+    21300006: board_3
+    21300008: board_4
+    21300010: board_5
+    21300012: board_6
+    21300014: board_7
+    21300016: board_8
+    21300018: board_9
+    21300020: board_10
+    21300022: board_11
+    21300024: board_12
+    21300026: board_13
+    21300028: board_14
+    21300030: board_15
+    21300032: board_16
+    21300034: board_17
+    21300036: board_18
+    21300038: board_19
+    21300040: board_20
+    21300042: board_21
+    21300044: board_22
+    21300046: board_23
+    21300048: board_24
+    21300050: board_25
+    21300052: board_26
+    21300054: board_27
+    21300056: board_28
+    21300058: board_29
+    21300060: board_30
+    21300062: board_31
+    21300064: board_32
+    21300066: board_33
+    21300068: board_34
+    21300070: board_35
+    21300072: board_36
+    21300074: board_37
+    21300076: board_38
+    21300078: board_39
+    21300080: board_40
+    21300082: board_41
+    21300084: board_42
+    21300086: board_43
+    21300088: board_44
+    21300090: board_45
+    21300092: board_46
+    21300094: board_47
+    21300096: board_48
+    21300098: board_49
+    21300100: board_50
+    21300102: board_51
+    21300104: board_52
+    21300106: board_53
+    21300108: board_54
+    21300110: board_55
+    21300112: board_56
+    21300114: board_57
+    21300116: board_58
+    21300118: board_59
+    21300120: board_60
+    21300122: board_61
+    21300124: board_62
+    21300126: board_63
+    21300128: board_64
+    21300130: board_65
+    21300132: board_66
+    21300134: board_67
+    21300136: board_68
+    21300138: board_69
+    21300140: board_70
+    21300142: board_71
+    21300144: board_72
+    21300146: board_73
+    21300148: board_74
+    21300150: board_75
+    21300152: board_76
+    21300154: board_77
+    21300156: board_78
+    21300158: board_79
+    21300160: board_80
+    21300162: board_81
+    21300164: board_82
+    21300166: board_83
+    21300168: board_84
+    21300170: board_85
+    21300172: board_86
+    21300174: board_87
+    21300176: board_88
+    21300178: board_89
+    21300180: board_90
+    21300182: board_91
+    21300184: board_92
+    21300186: board_93
+    21300188: board_94
+    21300190: board_95
+    21300192: board_96
+    21300194: board_97
+    21300196: board_98
+    21300198: board_99
+    21300200: board_100
+    21300202: board_101
+    21300204: board_102
+    21300206: board_103
+    21300208: board_104
+    21300210: board_105
+    21300212: board_106
+    21300214: board_107
+    21300216: board_108
+    21300218: board_109
+    21300220: board_110
+    21300222: board_111
+    21300224: board_112
+    21300226: board_113
+    21300228: board_114
+    21300230: board_115
+    21300232: board_116
+    21300234: board_117
+    21300236: board_118
+    21300238: board_119
+    21300240: board_120
+    21300242: board_121
+    21300244: board_122
+    21300246: board_123
+    21300248: board_124
+    21300250: board_125
+    21300252: board_126
+    21300254: board_127
+    21300256: board_128
+    21300258: board_129
+    21300260: board_130
+    21300262: board_131
+    21300264: board_132
+    21300266: board_133
+    21300268: board_134
+    21300270: board_135
+    21300272: board_136
+    21300274: board_137
+    21300276: board_138
+    21300278: board_139
+    21300280: board_140
+    21300282: board_141
+    21300284: board_142
+    21300286: board_143
+    21300288: board_144
+    21300290: board_145
+    21300292: board_146
+    21300294: board_147
+    21300296: board_148
+    21300298: board_149
+    21300300: board_150
+    21300302: board_151
+    21300304: board_152
+    21300306: board_153
+    21300308: board_154
+    21300310: board_155
+    21300312: board_156
+    21300314: board_157
+    21300316: board_158
+    21300318: board_159
+    21300320: board_160
+    21300322: board_161
+    21300324: board_162
+    21300326: board_163
+    21300328: board_164
+    21300330: board_165
+    21300332: board_166
+    21300334: board_167
+    21300336: board_168
+    21300338: board_169
+    21300340: board_170
+    21300342: board_171
+    21300344: board_172
+    21300346: board_173
+    21300348: board_174
+    21300350: board_175
+    21300352: board_176
+    21300354: board_177
+    21300356: board_178
+    21300358: board_179
+    21300360: board_180
+    21300362: board_181
+    21300364: board_182
+    21300366: board_183
+    21300368: board_184
+    21300370: board_185
+    21300372: board_186
+    21300374: board_187
+    21300376: board_188
+    21300378: board_189
+    21300380: board_190
+    21300382: board_191
+    21300384: board_192
+    21300386: board_193
+    21300388: board_194
+    21300390: board_195
+    21300392: board_196
+    21300394: board_197
+    21300396: board_198
+    21300398: board_199
+    21300400: board_200
+    21300402: board_201
+    21300404: board_202
+    21300406: board_203
+    21300408: board_204
+    21300410: board_205
+    21300412: board_206
+    21300414: board_207
+    21300416: board_208
+    21300418: board_209
+    21300420: board_210
+    21300422: board_211
+    21300424: board_212
+    21300426: board_213
+    21300428: board_214
+    21300430: board_215
+    21300432: board_216
+    21300434: board_217
+    21300436: board_218
+    21300438: board_219
+    21300440: board_220
+    21300442: board_221
+    21300444: board_222
+    21300446: board_223
+    21300448: board_224
+    21300450: board_225
+    21300452: board_226
+    21300454: board_227
+    21300456: board_228
+    21300458: board_229
+    21300460: board_230
+    21300462: board_231
+    21300464: board_232
+    21300466: board_233
+    21300468: board_234
+    21300470: board_235
+    21300472: board_236
+    21300474: board_237
+    21300476: board_238
+    21300478: board_239
+    21300480: board_240
+    21300482: board_241
+    21300484: board_242
+    21300486: board_243
+    21300488: board_244
+    21300490: board_245
+    21300492: board_246
+    21300494: board_247
+    21300496: board_248
+    21300498: board_249
+    21300500: board_250
+    21300502: board_251
+    21300504: board_252
+    21300506: board_253
+    21300508: board_254
+    21300510: board_255
+    21300512: board_256
+    21300514: board_257
+    21300516: board_258
+    21300518: board_259
+    21300520: board_260
+    21300522: board_261
+    21300524: board_262
+    21300526: board_263
+    21300528: board_264
+    21300530: board_265
+    21300532: board_266
+    21300534: board_267
+    21300536: board_268
+    21300538: board_269
+    21300540: board_270
+    21300542: board_271
+    21300544: board_272
+    21300546: board_273
+    21300548: board_274
+    21300550: board_275
+    21300552: board_276
+    21300554: board_277
+    21300556: board_278
+    21300558: board_279
+    21300560: board_280
+    21300562: board_281
+    21300564: board_282
+    21300566: board_283
+    21300568: board_284
+    21300570: board_285
+    21300572: board_286
+    21300574: board_287
+    21300576: board_288
+    21300578: board_289
+    21300580: board_290
+    21300582: board_291
+    21300584: board_292
+    21300586: board_293
+    21300588: board_294
+    21300590: board_295
+    21300592: board_296
+    21300594: board_297
+    21300596: board_298
+    21300598: board_299
+    21300600: board_300
+    21300602: board_301
+    21300604: board_302
+    21300606: board_303
+    21300608: board_304
+    21300610: board_305
+    21300612: board_306
+    21300614: board_307
+    21300616: board_308
+    21300618: board_309
+    21300620: board_310
+    21300622: board_311
+    21300624: board_312
+    21300626: board_313
+    21300628: board_314
+    21300630: board_315
+    21300632: board_316
+    21300634: board_317
+    21300636: board_318
+    21300638: board_319
+    21300640: board_320
+    21300642: board_321
+    21300644: board_322
+    21300646: board_323
+    21300648: board_324
+    21300650: board_325
+    21300652: board_326
+    21300654: board_327
+    21300656: board_328
+    21300658: board_329
+    21300660: board_330
+    21300662: board_331
+    21300664: board_332
+    21300666: board_333
+    21300668: board_334
+    21300670: board_335
+    21300672: board_336
+    21300674: board_337
+    21300676: board_338
+    21300678: board_339
+    21300680: board_340
+    21300682: board_341
+    21300684: board_342
+    21300686: board_343
+    21300688: board_344
+    21300690: board_345
+    21300692: board_346
+    21300694: board_347
+    21300696: board_348
+    21300698: board_349
+    21300700: board_350
+    21300702: board_351
+    21300704: board_352
+    21300706: board_353
+    21300708: board_354
+    21300710: board_355
+    21300712: board_356
+    21300714: board_357
+    21300716: board_358
+    21300718: board_359
+    21300720: board_360
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -404,7 +404,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Blank_Go_board.svg_0
+    - name: board_0
       rect:
         serializedVersion: 2
         x: 0
@@ -414,7 +414,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_1
+    - name: board_1
       rect:
         serializedVersion: 2
         x: 100
@@ -424,7 +424,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_2
+    - name: board_2
       rect:
         serializedVersion: 2
         x: 200
@@ -434,7 +434,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_3
+    - name: board_3
       rect:
         serializedVersion: 2
         x: 300
@@ -444,7 +444,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_4
+    - name: board_4
       rect:
         serializedVersion: 2
         x: 400
@@ -454,7 +454,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_5
+    - name: board_5
       rect:
         serializedVersion: 2
         x: 500
@@ -464,7 +464,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_6
+    - name: board_6
       rect:
         serializedVersion: 2
         x: 600
@@ -474,7 +474,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_7
+    - name: board_7
       rect:
         serializedVersion: 2
         x: 700
@@ -484,7 +484,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_8
+    - name: board_8
       rect:
         serializedVersion: 2
         x: 800
@@ -494,7 +494,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_9
+    - name: board_9
       rect:
         serializedVersion: 2
         x: 900
@@ -504,7 +504,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_10
+    - name: board_10
       rect:
         serializedVersion: 2
         x: 1000
@@ -514,7 +514,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_11
+    - name: board_11
       rect:
         serializedVersion: 2
         x: 1100
@@ -524,7 +524,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_12
+    - name: board_12
       rect:
         serializedVersion: 2
         x: 1200
@@ -534,7 +534,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_13
+    - name: board_13
       rect:
         serializedVersion: 2
         x: 1300
@@ -544,7 +544,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_14
+    - name: board_14
       rect:
         serializedVersion: 2
         x: 1400
@@ -554,7 +554,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_15
+    - name: board_15
       rect:
         serializedVersion: 2
         x: 1500
@@ -564,7 +564,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_16
+    - name: board_16
       rect:
         serializedVersion: 2
         x: 1600
@@ -574,7 +574,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_17
+    - name: board_17
       rect:
         serializedVersion: 2
         x: 1700
@@ -584,7 +584,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_18
+    - name: board_18
       rect:
         serializedVersion: 2
         x: 1800
@@ -594,7 +594,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_19
+    - name: board_19
       rect:
         serializedVersion: 2
         x: 0
@@ -604,7 +604,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_20
+    - name: board_20
       rect:
         serializedVersion: 2
         x: 100
@@ -614,7 +614,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_21
+    - name: board_21
       rect:
         serializedVersion: 2
         x: 200
@@ -624,7 +624,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_22
+    - name: board_22
       rect:
         serializedVersion: 2
         x: 300
@@ -634,7 +634,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_23
+    - name: board_23
       rect:
         serializedVersion: 2
         x: 400
@@ -644,7 +644,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_24
+    - name: board_24
       rect:
         serializedVersion: 2
         x: 500
@@ -654,7 +654,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_25
+    - name: board_25
       rect:
         serializedVersion: 2
         x: 600
@@ -664,7 +664,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_26
+    - name: board_26
       rect:
         serializedVersion: 2
         x: 700
@@ -674,7 +674,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_27
+    - name: board_27
       rect:
         serializedVersion: 2
         x: 800
@@ -684,7 +684,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_28
+    - name: board_28
       rect:
         serializedVersion: 2
         x: 900
@@ -694,7 +694,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_29
+    - name: board_29
       rect:
         serializedVersion: 2
         x: 1000
@@ -704,7 +704,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_30
+    - name: board_30
       rect:
         serializedVersion: 2
         x: 1100
@@ -714,7 +714,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_31
+    - name: board_31
       rect:
         serializedVersion: 2
         x: 1200
@@ -724,7 +724,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_32
+    - name: board_32
       rect:
         serializedVersion: 2
         x: 1300
@@ -734,7 +734,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_33
+    - name: board_33
       rect:
         serializedVersion: 2
         x: 1400
@@ -744,7 +744,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_34
+    - name: board_34
       rect:
         serializedVersion: 2
         x: 1500
@@ -754,7 +754,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_35
+    - name: board_35
       rect:
         serializedVersion: 2
         x: 1600
@@ -764,7 +764,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_36
+    - name: board_36
       rect:
         serializedVersion: 2
         x: 1700
@@ -774,7 +774,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_37
+    - name: board_37
       rect:
         serializedVersion: 2
         x: 1800
@@ -784,7 +784,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_38
+    - name: board_38
       rect:
         serializedVersion: 2
         x: 0
@@ -794,7 +794,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_39
+    - name: board_39
       rect:
         serializedVersion: 2
         x: 100
@@ -804,7 +804,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_40
+    - name: board_40
       rect:
         serializedVersion: 2
         x: 200
@@ -814,7 +814,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_41
+    - name: board_41
       rect:
         serializedVersion: 2
         x: 300
@@ -824,7 +824,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_42
+    - name: board_42
       rect:
         serializedVersion: 2
         x: 400
@@ -834,7 +834,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_43
+    - name: board_43
       rect:
         serializedVersion: 2
         x: 500
@@ -844,7 +844,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_44
+    - name: board_44
       rect:
         serializedVersion: 2
         x: 600
@@ -854,7 +854,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_45
+    - name: board_45
       rect:
         serializedVersion: 2
         x: 700
@@ -864,7 +864,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_46
+    - name: board_46
       rect:
         serializedVersion: 2
         x: 800
@@ -874,7 +874,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_47
+    - name: board_47
       rect:
         serializedVersion: 2
         x: 900
@@ -884,7 +884,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_48
+    - name: board_48
       rect:
         serializedVersion: 2
         x: 1000
@@ -894,7 +894,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_49
+    - name: board_49
       rect:
         serializedVersion: 2
         x: 1100
@@ -904,7 +904,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_50
+    - name: board_50
       rect:
         serializedVersion: 2
         x: 1200
@@ -914,7 +914,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_51
+    - name: board_51
       rect:
         serializedVersion: 2
         x: 1300
@@ -924,7 +924,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_52
+    - name: board_52
       rect:
         serializedVersion: 2
         x: 1400
@@ -934,7 +934,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_53
+    - name: board_53
       rect:
         serializedVersion: 2
         x: 1500
@@ -944,7 +944,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_54
+    - name: board_54
       rect:
         serializedVersion: 2
         x: 1600
@@ -954,7 +954,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_55
+    - name: board_55
       rect:
         serializedVersion: 2
         x: 1700
@@ -964,7 +964,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_56
+    - name: board_56
       rect:
         serializedVersion: 2
         x: 1800
@@ -974,7 +974,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_57
+    - name: board_57
       rect:
         serializedVersion: 2
         x: 0
@@ -984,7 +984,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_58
+    - name: board_58
       rect:
         serializedVersion: 2
         x: 100
@@ -994,7 +994,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_59
+    - name: board_59
       rect:
         serializedVersion: 2
         x: 200
@@ -1004,7 +1004,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_60
+    - name: board_60
       rect:
         serializedVersion: 2
         x: 300
@@ -1014,7 +1014,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_61
+    - name: board_61
       rect:
         serializedVersion: 2
         x: 400
@@ -1024,7 +1024,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_62
+    - name: board_62
       rect:
         serializedVersion: 2
         x: 500
@@ -1034,7 +1034,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_63
+    - name: board_63
       rect:
         serializedVersion: 2
         x: 600
@@ -1044,7 +1044,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_64
+    - name: board_64
       rect:
         serializedVersion: 2
         x: 700
@@ -1054,7 +1054,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_65
+    - name: board_65
       rect:
         serializedVersion: 2
         x: 800
@@ -1064,7 +1064,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_66
+    - name: board_66
       rect:
         serializedVersion: 2
         x: 900
@@ -1074,7 +1074,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_67
+    - name: board_67
       rect:
         serializedVersion: 2
         x: 1000
@@ -1084,7 +1084,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_68
+    - name: board_68
       rect:
         serializedVersion: 2
         x: 1100
@@ -1094,7 +1094,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_69
+    - name: board_69
       rect:
         serializedVersion: 2
         x: 1200
@@ -1104,7 +1104,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_70
+    - name: board_70
       rect:
         serializedVersion: 2
         x: 1300
@@ -1114,7 +1114,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_71
+    - name: board_71
       rect:
         serializedVersion: 2
         x: 1400
@@ -1124,7 +1124,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_72
+    - name: board_72
       rect:
         serializedVersion: 2
         x: 1500
@@ -1134,7 +1134,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_73
+    - name: board_73
       rect:
         serializedVersion: 2
         x: 1600
@@ -1144,7 +1144,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_74
+    - name: board_74
       rect:
         serializedVersion: 2
         x: 1700
@@ -1154,7 +1154,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_75
+    - name: board_75
       rect:
         serializedVersion: 2
         x: 1800
@@ -1164,7 +1164,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_76
+    - name: board_76
       rect:
         serializedVersion: 2
         x: 0
@@ -1174,7 +1174,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_77
+    - name: board_77
       rect:
         serializedVersion: 2
         x: 100
@@ -1184,7 +1184,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_78
+    - name: board_78
       rect:
         serializedVersion: 2
         x: 200
@@ -1194,7 +1194,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_79
+    - name: board_79
       rect:
         serializedVersion: 2
         x: 300
@@ -1204,7 +1204,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_80
+    - name: board_80
       rect:
         serializedVersion: 2
         x: 400
@@ -1214,7 +1214,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_81
+    - name: board_81
       rect:
         serializedVersion: 2
         x: 500
@@ -1224,7 +1224,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_82
+    - name: board_82
       rect:
         serializedVersion: 2
         x: 600
@@ -1234,7 +1234,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_83
+    - name: board_83
       rect:
         serializedVersion: 2
         x: 700
@@ -1244,7 +1244,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_84
+    - name: board_84
       rect:
         serializedVersion: 2
         x: 800
@@ -1254,7 +1254,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_85
+    - name: board_85
       rect:
         serializedVersion: 2
         x: 900
@@ -1264,7 +1264,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_86
+    - name: board_86
       rect:
         serializedVersion: 2
         x: 1000
@@ -1274,7 +1274,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_87
+    - name: board_87
       rect:
         serializedVersion: 2
         x: 1100
@@ -1284,7 +1284,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_88
+    - name: board_88
       rect:
         serializedVersion: 2
         x: 1200
@@ -1294,7 +1294,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_89
+    - name: board_89
       rect:
         serializedVersion: 2
         x: 1300
@@ -1304,7 +1304,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_90
+    - name: board_90
       rect:
         serializedVersion: 2
         x: 1400
@@ -1314,7 +1314,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_91
+    - name: board_91
       rect:
         serializedVersion: 2
         x: 1500
@@ -1324,7 +1324,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_92
+    - name: board_92
       rect:
         serializedVersion: 2
         x: 1600
@@ -1334,7 +1334,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_93
+    - name: board_93
       rect:
         serializedVersion: 2
         x: 1700
@@ -1344,7 +1344,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_94
+    - name: board_94
       rect:
         serializedVersion: 2
         x: 1800
@@ -1354,7 +1354,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_95
+    - name: board_95
       rect:
         serializedVersion: 2
         x: 0
@@ -1364,7 +1364,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_96
+    - name: board_96
       rect:
         serializedVersion: 2
         x: 100
@@ -1374,7 +1374,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_97
+    - name: board_97
       rect:
         serializedVersion: 2
         x: 200
@@ -1384,7 +1384,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_98
+    - name: board_98
       rect:
         serializedVersion: 2
         x: 300
@@ -1394,7 +1394,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_99
+    - name: board_99
       rect:
         serializedVersion: 2
         x: 400
@@ -1404,7 +1404,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_100
+    - name: board_100
       rect:
         serializedVersion: 2
         x: 500
@@ -1414,7 +1414,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_101
+    - name: board_101
       rect:
         serializedVersion: 2
         x: 600
@@ -1424,7 +1424,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_102
+    - name: board_102
       rect:
         serializedVersion: 2
         x: 700
@@ -1434,7 +1434,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_103
+    - name: board_103
       rect:
         serializedVersion: 2
         x: 800
@@ -1444,7 +1444,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_104
+    - name: board_104
       rect:
         serializedVersion: 2
         x: 900
@@ -1454,7 +1454,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_105
+    - name: board_105
       rect:
         serializedVersion: 2
         x: 1000
@@ -1464,7 +1464,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_106
+    - name: board_106
       rect:
         serializedVersion: 2
         x: 1100
@@ -1474,7 +1474,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_107
+    - name: board_107
       rect:
         serializedVersion: 2
         x: 1200
@@ -1484,7 +1484,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_108
+    - name: board_108
       rect:
         serializedVersion: 2
         x: 1300
@@ -1494,7 +1494,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_109
+    - name: board_109
       rect:
         serializedVersion: 2
         x: 1400
@@ -1504,7 +1504,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_110
+    - name: board_110
       rect:
         serializedVersion: 2
         x: 1500
@@ -1514,7 +1514,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_111
+    - name: board_111
       rect:
         serializedVersion: 2
         x: 1600
@@ -1524,7 +1524,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_112
+    - name: board_112
       rect:
         serializedVersion: 2
         x: 1700
@@ -1534,7 +1534,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_113
+    - name: board_113
       rect:
         serializedVersion: 2
         x: 1800
@@ -1544,7 +1544,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_114
+    - name: board_114
       rect:
         serializedVersion: 2
         x: 0
@@ -1554,7 +1554,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_115
+    - name: board_115
       rect:
         serializedVersion: 2
         x: 100
@@ -1564,7 +1564,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_116
+    - name: board_116
       rect:
         serializedVersion: 2
         x: 200
@@ -1574,7 +1574,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_117
+    - name: board_117
       rect:
         serializedVersion: 2
         x: 300
@@ -1584,7 +1584,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_118
+    - name: board_118
       rect:
         serializedVersion: 2
         x: 400
@@ -1594,7 +1594,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_119
+    - name: board_119
       rect:
         serializedVersion: 2
         x: 500
@@ -1604,7 +1604,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_120
+    - name: board_120
       rect:
         serializedVersion: 2
         x: 600
@@ -1614,7 +1614,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_121
+    - name: board_121
       rect:
         serializedVersion: 2
         x: 700
@@ -1624,7 +1624,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_122
+    - name: board_122
       rect:
         serializedVersion: 2
         x: 800
@@ -1634,7 +1634,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_123
+    - name: board_123
       rect:
         serializedVersion: 2
         x: 900
@@ -1644,7 +1644,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_124
+    - name: board_124
       rect:
         serializedVersion: 2
         x: 1000
@@ -1654,7 +1654,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_125
+    - name: board_125
       rect:
         serializedVersion: 2
         x: 1100
@@ -1664,7 +1664,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_126
+    - name: board_126
       rect:
         serializedVersion: 2
         x: 1200
@@ -1674,7 +1674,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_127
+    - name: board_127
       rect:
         serializedVersion: 2
         x: 1300
@@ -1684,7 +1684,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_128
+    - name: board_128
       rect:
         serializedVersion: 2
         x: 1400
@@ -1694,7 +1694,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_129
+    - name: board_129
       rect:
         serializedVersion: 2
         x: 1500
@@ -1704,7 +1704,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_130
+    - name: board_130
       rect:
         serializedVersion: 2
         x: 1600
@@ -1714,7 +1714,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_131
+    - name: board_131
       rect:
         serializedVersion: 2
         x: 1700
@@ -1724,7 +1724,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_132
+    - name: board_132
       rect:
         serializedVersion: 2
         x: 1800
@@ -1734,7 +1734,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_133
+    - name: board_133
       rect:
         serializedVersion: 2
         x: 0
@@ -1744,7 +1744,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_134
+    - name: board_134
       rect:
         serializedVersion: 2
         x: 100
@@ -1754,7 +1754,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_135
+    - name: board_135
       rect:
         serializedVersion: 2
         x: 200
@@ -1764,7 +1764,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_136
+    - name: board_136
       rect:
         serializedVersion: 2
         x: 300
@@ -1774,7 +1774,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_137
+    - name: board_137
       rect:
         serializedVersion: 2
         x: 400
@@ -1784,7 +1784,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_138
+    - name: board_138
       rect:
         serializedVersion: 2
         x: 500
@@ -1794,7 +1794,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_139
+    - name: board_139
       rect:
         serializedVersion: 2
         x: 600
@@ -1804,7 +1804,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_140
+    - name: board_140
       rect:
         serializedVersion: 2
         x: 700
@@ -1814,7 +1814,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_141
+    - name: board_141
       rect:
         serializedVersion: 2
         x: 800
@@ -1824,7 +1824,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_142
+    - name: board_142
       rect:
         serializedVersion: 2
         x: 900
@@ -1834,7 +1834,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_143
+    - name: board_143
       rect:
         serializedVersion: 2
         x: 1000
@@ -1844,7 +1844,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_144
+    - name: board_144
       rect:
         serializedVersion: 2
         x: 1100
@@ -1854,7 +1854,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_145
+    - name: board_145
       rect:
         serializedVersion: 2
         x: 1200
@@ -1864,7 +1864,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_146
+    - name: board_146
       rect:
         serializedVersion: 2
         x: 1300
@@ -1874,7 +1874,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_147
+    - name: board_147
       rect:
         serializedVersion: 2
         x: 1400
@@ -1884,7 +1884,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_148
+    - name: board_148
       rect:
         serializedVersion: 2
         x: 1500
@@ -1894,7 +1894,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_149
+    - name: board_149
       rect:
         serializedVersion: 2
         x: 1600
@@ -1904,7 +1904,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_150
+    - name: board_150
       rect:
         serializedVersion: 2
         x: 1700
@@ -1914,7 +1914,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_151
+    - name: board_151
       rect:
         serializedVersion: 2
         x: 1800
@@ -1924,7 +1924,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_152
+    - name: board_152
       rect:
         serializedVersion: 2
         x: 0
@@ -1934,7 +1934,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_153
+    - name: board_153
       rect:
         serializedVersion: 2
         x: 100
@@ -1944,7 +1944,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_154
+    - name: board_154
       rect:
         serializedVersion: 2
         x: 200
@@ -1954,7 +1954,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_155
+    - name: board_155
       rect:
         serializedVersion: 2
         x: 300
@@ -1964,7 +1964,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_156
+    - name: board_156
       rect:
         serializedVersion: 2
         x: 400
@@ -1974,7 +1974,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_157
+    - name: board_157
       rect:
         serializedVersion: 2
         x: 500
@@ -1984,7 +1984,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_158
+    - name: board_158
       rect:
         serializedVersion: 2
         x: 600
@@ -1994,7 +1994,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_159
+    - name: board_159
       rect:
         serializedVersion: 2
         x: 700
@@ -2004,7 +2004,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_160
+    - name: board_160
       rect:
         serializedVersion: 2
         x: 800
@@ -2014,7 +2014,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_161
+    - name: board_161
       rect:
         serializedVersion: 2
         x: 900
@@ -2024,7 +2024,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_162
+    - name: board_162
       rect:
         serializedVersion: 2
         x: 1000
@@ -2034,7 +2034,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_163
+    - name: board_163
       rect:
         serializedVersion: 2
         x: 1100
@@ -2044,7 +2044,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_164
+    - name: board_164
       rect:
         serializedVersion: 2
         x: 1200
@@ -2054,7 +2054,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_165
+    - name: board_165
       rect:
         serializedVersion: 2
         x: 1300
@@ -2064,7 +2064,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_166
+    - name: board_166
       rect:
         serializedVersion: 2
         x: 1400
@@ -2074,7 +2074,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_167
+    - name: board_167
       rect:
         serializedVersion: 2
         x: 1500
@@ -2084,7 +2084,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_168
+    - name: board_168
       rect:
         serializedVersion: 2
         x: 1600
@@ -2094,7 +2094,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_169
+    - name: board_169
       rect:
         serializedVersion: 2
         x: 1700
@@ -2104,7 +2104,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_170
+    - name: board_170
       rect:
         serializedVersion: 2
         x: 1800
@@ -2114,7 +2114,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_171
+    - name: board_171
       rect:
         serializedVersion: 2
         x: 0
@@ -2124,7 +2124,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_172
+    - name: board_172
       rect:
         serializedVersion: 2
         x: 100
@@ -2134,7 +2134,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_173
+    - name: board_173
       rect:
         serializedVersion: 2
         x: 200
@@ -2144,7 +2144,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_174
+    - name: board_174
       rect:
         serializedVersion: 2
         x: 300
@@ -2154,7 +2154,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_175
+    - name: board_175
       rect:
         serializedVersion: 2
         x: 400
@@ -2164,7 +2164,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_176
+    - name: board_176
       rect:
         serializedVersion: 2
         x: 500
@@ -2174,7 +2174,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_177
+    - name: board_177
       rect:
         serializedVersion: 2
         x: 600
@@ -2184,7 +2184,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_178
+    - name: board_178
       rect:
         serializedVersion: 2
         x: 700
@@ -2194,7 +2194,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_179
+    - name: board_179
       rect:
         serializedVersion: 2
         x: 800
@@ -2204,7 +2204,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_180
+    - name: board_180
       rect:
         serializedVersion: 2
         x: 900
@@ -2214,7 +2214,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_181
+    - name: board_181
       rect:
         serializedVersion: 2
         x: 1000
@@ -2224,7 +2224,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_182
+    - name: board_182
       rect:
         serializedVersion: 2
         x: 1100
@@ -2234,7 +2234,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_183
+    - name: board_183
       rect:
         serializedVersion: 2
         x: 1200
@@ -2244,7 +2244,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_184
+    - name: board_184
       rect:
         serializedVersion: 2
         x: 1300
@@ -2254,7 +2254,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_185
+    - name: board_185
       rect:
         serializedVersion: 2
         x: 1400
@@ -2264,7 +2264,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_186
+    - name: board_186
       rect:
         serializedVersion: 2
         x: 1500
@@ -2274,7 +2274,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_187
+    - name: board_187
       rect:
         serializedVersion: 2
         x: 1600
@@ -2284,7 +2284,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_188
+    - name: board_188
       rect:
         serializedVersion: 2
         x: 1700
@@ -2294,7 +2294,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_189
+    - name: board_189
       rect:
         serializedVersion: 2
         x: 1800
@@ -2304,7 +2304,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_190
+    - name: board_190
       rect:
         serializedVersion: 2
         x: 0
@@ -2314,7 +2314,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_191
+    - name: board_191
       rect:
         serializedVersion: 2
         x: 100
@@ -2324,7 +2324,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_192
+    - name: board_192
       rect:
         serializedVersion: 2
         x: 200
@@ -2334,7 +2334,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_193
+    - name: board_193
       rect:
         serializedVersion: 2
         x: 300
@@ -2344,7 +2344,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_194
+    - name: board_194
       rect:
         serializedVersion: 2
         x: 400
@@ -2354,7 +2354,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_195
+    - name: board_195
       rect:
         serializedVersion: 2
         x: 500
@@ -2364,7 +2364,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_196
+    - name: board_196
       rect:
         serializedVersion: 2
         x: 600
@@ -2374,7 +2374,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_197
+    - name: board_197
       rect:
         serializedVersion: 2
         x: 700
@@ -2384,7 +2384,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_198
+    - name: board_198
       rect:
         serializedVersion: 2
         x: 800
@@ -2394,7 +2394,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_199
+    - name: board_199
       rect:
         serializedVersion: 2
         x: 900
@@ -2404,7 +2404,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_200
+    - name: board_200
       rect:
         serializedVersion: 2
         x: 1000
@@ -2414,7 +2414,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_201
+    - name: board_201
       rect:
         serializedVersion: 2
         x: 1100
@@ -2424,7 +2424,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_202
+    - name: board_202
       rect:
         serializedVersion: 2
         x: 1200
@@ -2434,7 +2434,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_203
+    - name: board_203
       rect:
         serializedVersion: 2
         x: 1300
@@ -2444,7 +2444,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_204
+    - name: board_204
       rect:
         serializedVersion: 2
         x: 1400
@@ -2454,7 +2454,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_205
+    - name: board_205
       rect:
         serializedVersion: 2
         x: 1500
@@ -2464,7 +2464,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_206
+    - name: board_206
       rect:
         serializedVersion: 2
         x: 1600
@@ -2474,7 +2474,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_207
+    - name: board_207
       rect:
         serializedVersion: 2
         x: 1700
@@ -2484,7 +2484,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_208
+    - name: board_208
       rect:
         serializedVersion: 2
         x: 1800
@@ -2494,7 +2494,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_209
+    - name: board_209
       rect:
         serializedVersion: 2
         x: 0
@@ -2504,7 +2504,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_210
+    - name: board_210
       rect:
         serializedVersion: 2
         x: 100
@@ -2514,7 +2514,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_211
+    - name: board_211
       rect:
         serializedVersion: 2
         x: 200
@@ -2524,7 +2524,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_212
+    - name: board_212
       rect:
         serializedVersion: 2
         x: 300
@@ -2534,7 +2534,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_213
+    - name: board_213
       rect:
         serializedVersion: 2
         x: 400
@@ -2544,7 +2544,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_214
+    - name: board_214
       rect:
         serializedVersion: 2
         x: 500
@@ -2554,7 +2554,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_215
+    - name: board_215
       rect:
         serializedVersion: 2
         x: 600
@@ -2564,7 +2564,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_216
+    - name: board_216
       rect:
         serializedVersion: 2
         x: 700
@@ -2574,7 +2574,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_217
+    - name: board_217
       rect:
         serializedVersion: 2
         x: 800
@@ -2584,7 +2584,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_218
+    - name: board_218
       rect:
         serializedVersion: 2
         x: 900
@@ -2594,7 +2594,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_219
+    - name: board_219
       rect:
         serializedVersion: 2
         x: 1000
@@ -2604,7 +2604,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_220
+    - name: board_220
       rect:
         serializedVersion: 2
         x: 1100
@@ -2614,7 +2614,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_221
+    - name: board_221
       rect:
         serializedVersion: 2
         x: 1200
@@ -2624,7 +2624,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_222
+    - name: board_222
       rect:
         serializedVersion: 2
         x: 1300
@@ -2634,7 +2634,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_223
+    - name: board_223
       rect:
         serializedVersion: 2
         x: 1400
@@ -2644,7 +2644,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_224
+    - name: board_224
       rect:
         serializedVersion: 2
         x: 1500
@@ -2654,7 +2654,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_225
+    - name: board_225
       rect:
         serializedVersion: 2
         x: 1600
@@ -2664,7 +2664,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_226
+    - name: board_226
       rect:
         serializedVersion: 2
         x: 1700
@@ -2674,7 +2674,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_227
+    - name: board_227
       rect:
         serializedVersion: 2
         x: 1800
@@ -2684,7 +2684,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_228
+    - name: board_228
       rect:
         serializedVersion: 2
         x: 0
@@ -2694,7 +2694,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_229
+    - name: board_229
       rect:
         serializedVersion: 2
         x: 100
@@ -2704,7 +2704,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_230
+    - name: board_230
       rect:
         serializedVersion: 2
         x: 200
@@ -2714,7 +2714,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_231
+    - name: board_231
       rect:
         serializedVersion: 2
         x: 300
@@ -2724,7 +2724,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_232
+    - name: board_232
       rect:
         serializedVersion: 2
         x: 400
@@ -2734,7 +2734,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_233
+    - name: board_233
       rect:
         serializedVersion: 2
         x: 500
@@ -2744,7 +2744,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_234
+    - name: board_234
       rect:
         serializedVersion: 2
         x: 600
@@ -2754,7 +2754,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_235
+    - name: board_235
       rect:
         serializedVersion: 2
         x: 700
@@ -2764,7 +2764,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_236
+    - name: board_236
       rect:
         serializedVersion: 2
         x: 800
@@ -2774,7 +2774,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_237
+    - name: board_237
       rect:
         serializedVersion: 2
         x: 900
@@ -2784,7 +2784,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_238
+    - name: board_238
       rect:
         serializedVersion: 2
         x: 1000
@@ -2794,7 +2794,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_239
+    - name: board_239
       rect:
         serializedVersion: 2
         x: 1100
@@ -2804,7 +2804,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_240
+    - name: board_240
       rect:
         serializedVersion: 2
         x: 1200
@@ -2814,7 +2814,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_241
+    - name: board_241
       rect:
         serializedVersion: 2
         x: 1300
@@ -2824,7 +2824,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_242
+    - name: board_242
       rect:
         serializedVersion: 2
         x: 1400
@@ -2834,7 +2834,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_243
+    - name: board_243
       rect:
         serializedVersion: 2
         x: 1500
@@ -2844,7 +2844,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_244
+    - name: board_244
       rect:
         serializedVersion: 2
         x: 1600
@@ -2854,7 +2854,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_245
+    - name: board_245
       rect:
         serializedVersion: 2
         x: 1700
@@ -2864,7 +2864,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_246
+    - name: board_246
       rect:
         serializedVersion: 2
         x: 1800
@@ -2874,7 +2874,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_247
+    - name: board_247
       rect:
         serializedVersion: 2
         x: 0
@@ -2884,7 +2884,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_248
+    - name: board_248
       rect:
         serializedVersion: 2
         x: 100
@@ -2894,7 +2894,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_249
+    - name: board_249
       rect:
         serializedVersion: 2
         x: 200
@@ -2904,7 +2904,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_250
+    - name: board_250
       rect:
         serializedVersion: 2
         x: 300
@@ -2914,7 +2914,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_251
+    - name: board_251
       rect:
         serializedVersion: 2
         x: 400
@@ -2924,7 +2924,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_252
+    - name: board_252
       rect:
         serializedVersion: 2
         x: 500
@@ -2934,7 +2934,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_253
+    - name: board_253
       rect:
         serializedVersion: 2
         x: 600
@@ -2944,7 +2944,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_254
+    - name: board_254
       rect:
         serializedVersion: 2
         x: 700
@@ -2954,7 +2954,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_255
+    - name: board_255
       rect:
         serializedVersion: 2
         x: 800
@@ -2964,7 +2964,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_256
+    - name: board_256
       rect:
         serializedVersion: 2
         x: 900
@@ -2974,7 +2974,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_257
+    - name: board_257
       rect:
         serializedVersion: 2
         x: 1000
@@ -2984,7 +2984,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_258
+    - name: board_258
       rect:
         serializedVersion: 2
         x: 1100
@@ -2994,7 +2994,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_259
+    - name: board_259
       rect:
         serializedVersion: 2
         x: 1200
@@ -3004,7 +3004,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_260
+    - name: board_260
       rect:
         serializedVersion: 2
         x: 1300
@@ -3014,7 +3014,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_261
+    - name: board_261
       rect:
         serializedVersion: 2
         x: 1400
@@ -3024,7 +3024,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_262
+    - name: board_262
       rect:
         serializedVersion: 2
         x: 1500
@@ -3034,7 +3034,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_263
+    - name: board_263
       rect:
         serializedVersion: 2
         x: 1600
@@ -3044,7 +3044,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_264
+    - name: board_264
       rect:
         serializedVersion: 2
         x: 1700
@@ -3054,7 +3054,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_265
+    - name: board_265
       rect:
         serializedVersion: 2
         x: 1800
@@ -3064,7 +3064,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_266
+    - name: board_266
       rect:
         serializedVersion: 2
         x: 0
@@ -3074,7 +3074,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_267
+    - name: board_267
       rect:
         serializedVersion: 2
         x: 100
@@ -3084,7 +3084,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_268
+    - name: board_268
       rect:
         serializedVersion: 2
         x: 200
@@ -3094,7 +3094,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_269
+    - name: board_269
       rect:
         serializedVersion: 2
         x: 300
@@ -3104,7 +3104,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_270
+    - name: board_270
       rect:
         serializedVersion: 2
         x: 400
@@ -3114,7 +3114,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_271
+    - name: board_271
       rect:
         serializedVersion: 2
         x: 500
@@ -3124,7 +3124,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_272
+    - name: board_272
       rect:
         serializedVersion: 2
         x: 600
@@ -3134,7 +3134,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_273
+    - name: board_273
       rect:
         serializedVersion: 2
         x: 700
@@ -3144,7 +3144,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_274
+    - name: board_274
       rect:
         serializedVersion: 2
         x: 800
@@ -3154,7 +3154,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_275
+    - name: board_275
       rect:
         serializedVersion: 2
         x: 900
@@ -3164,7 +3164,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_276
+    - name: board_276
       rect:
         serializedVersion: 2
         x: 1000
@@ -3174,7 +3174,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_277
+    - name: board_277
       rect:
         serializedVersion: 2
         x: 1100
@@ -3184,7 +3184,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_278
+    - name: board_278
       rect:
         serializedVersion: 2
         x: 1200
@@ -3194,7 +3194,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_279
+    - name: board_279
       rect:
         serializedVersion: 2
         x: 1300
@@ -3204,7 +3204,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_280
+    - name: board_280
       rect:
         serializedVersion: 2
         x: 1400
@@ -3214,7 +3214,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_281
+    - name: board_281
       rect:
         serializedVersion: 2
         x: 1500
@@ -3224,7 +3224,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_282
+    - name: board_282
       rect:
         serializedVersion: 2
         x: 1600
@@ -3234,7 +3234,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_283
+    - name: board_283
       rect:
         serializedVersion: 2
         x: 1700
@@ -3244,7 +3244,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_284
+    - name: board_284
       rect:
         serializedVersion: 2
         x: 1800
@@ -3254,7 +3254,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_285
+    - name: board_285
       rect:
         serializedVersion: 2
         x: 0
@@ -3264,7 +3264,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_286
+    - name: board_286
       rect:
         serializedVersion: 2
         x: 100
@@ -3274,7 +3274,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_287
+    - name: board_287
       rect:
         serializedVersion: 2
         x: 200
@@ -3284,7 +3284,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_288
+    - name: board_288
       rect:
         serializedVersion: 2
         x: 300
@@ -3294,7 +3294,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_289
+    - name: board_289
       rect:
         serializedVersion: 2
         x: 400
@@ -3304,7 +3304,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_290
+    - name: board_290
       rect:
         serializedVersion: 2
         x: 500
@@ -3314,7 +3314,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_291
+    - name: board_291
       rect:
         serializedVersion: 2
         x: 600
@@ -3324,7 +3324,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_292
+    - name: board_292
       rect:
         serializedVersion: 2
         x: 700
@@ -3334,7 +3334,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_293
+    - name: board_293
       rect:
         serializedVersion: 2
         x: 800
@@ -3344,7 +3344,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_294
+    - name: board_294
       rect:
         serializedVersion: 2
         x: 900
@@ -3354,7 +3354,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_295
+    - name: board_295
       rect:
         serializedVersion: 2
         x: 1000
@@ -3364,7 +3364,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_296
+    - name: board_296
       rect:
         serializedVersion: 2
         x: 1100
@@ -3374,7 +3374,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_297
+    - name: board_297
       rect:
         serializedVersion: 2
         x: 1200
@@ -3384,7 +3384,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_298
+    - name: board_298
       rect:
         serializedVersion: 2
         x: 1300
@@ -3394,7 +3394,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_299
+    - name: board_299
       rect:
         serializedVersion: 2
         x: 1400
@@ -3404,7 +3404,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_300
+    - name: board_300
       rect:
         serializedVersion: 2
         x: 1500
@@ -3414,7 +3414,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_301
+    - name: board_301
       rect:
         serializedVersion: 2
         x: 1600
@@ -3424,7 +3424,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_302
+    - name: board_302
       rect:
         serializedVersion: 2
         x: 1700
@@ -3434,7 +3434,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_303
+    - name: board_303
       rect:
         serializedVersion: 2
         x: 1800
@@ -3444,7 +3444,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_304
+    - name: board_304
       rect:
         serializedVersion: 2
         x: 0
@@ -3454,7 +3454,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_305
+    - name: board_305
       rect:
         serializedVersion: 2
         x: 100
@@ -3464,7 +3464,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_306
+    - name: board_306
       rect:
         serializedVersion: 2
         x: 200
@@ -3474,7 +3474,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_307
+    - name: board_307
       rect:
         serializedVersion: 2
         x: 300
@@ -3484,7 +3484,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_308
+    - name: board_308
       rect:
         serializedVersion: 2
         x: 400
@@ -3494,7 +3494,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_309
+    - name: board_309
       rect:
         serializedVersion: 2
         x: 500
@@ -3504,7 +3504,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_310
+    - name: board_310
       rect:
         serializedVersion: 2
         x: 600
@@ -3514,7 +3514,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_311
+    - name: board_311
       rect:
         serializedVersion: 2
         x: 700
@@ -3524,7 +3524,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_312
+    - name: board_312
       rect:
         serializedVersion: 2
         x: 800
@@ -3534,7 +3534,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_313
+    - name: board_313
       rect:
         serializedVersion: 2
         x: 900
@@ -3544,7 +3544,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_314
+    - name: board_314
       rect:
         serializedVersion: 2
         x: 1000
@@ -3554,7 +3554,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_315
+    - name: board_315
       rect:
         serializedVersion: 2
         x: 1100
@@ -3564,7 +3564,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_316
+    - name: board_316
       rect:
         serializedVersion: 2
         x: 1200
@@ -3574,7 +3574,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_317
+    - name: board_317
       rect:
         serializedVersion: 2
         x: 1300
@@ -3584,7 +3584,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_318
+    - name: board_318
       rect:
         serializedVersion: 2
         x: 1400
@@ -3594,7 +3594,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_319
+    - name: board_319
       rect:
         serializedVersion: 2
         x: 1500
@@ -3604,7 +3604,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_320
+    - name: board_320
       rect:
         serializedVersion: 2
         x: 1600
@@ -3614,7 +3614,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_321
+    - name: board_321
       rect:
         serializedVersion: 2
         x: 1700
@@ -3624,7 +3624,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_322
+    - name: board_322
       rect:
         serializedVersion: 2
         x: 1800
@@ -3634,7 +3634,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_323
+    - name: board_323
       rect:
         serializedVersion: 2
         x: 0
@@ -3644,7 +3644,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_324
+    - name: board_324
       rect:
         serializedVersion: 2
         x: 100
@@ -3654,7 +3654,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_325
+    - name: board_325
       rect:
         serializedVersion: 2
         x: 200
@@ -3664,7 +3664,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_326
+    - name: board_326
       rect:
         serializedVersion: 2
         x: 300
@@ -3674,7 +3674,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_327
+    - name: board_327
       rect:
         serializedVersion: 2
         x: 400
@@ -3684,7 +3684,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_328
+    - name: board_328
       rect:
         serializedVersion: 2
         x: 500
@@ -3694,7 +3694,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_329
+    - name: board_329
       rect:
         serializedVersion: 2
         x: 600
@@ -3704,7 +3704,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_330
+    - name: board_330
       rect:
         serializedVersion: 2
         x: 700
@@ -3714,7 +3714,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_331
+    - name: board_331
       rect:
         serializedVersion: 2
         x: 800
@@ -3724,7 +3724,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_332
+    - name: board_332
       rect:
         serializedVersion: 2
         x: 900
@@ -3734,7 +3734,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_333
+    - name: board_333
       rect:
         serializedVersion: 2
         x: 1000
@@ -3744,7 +3744,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_334
+    - name: board_334
       rect:
         serializedVersion: 2
         x: 1100
@@ -3754,7 +3754,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_335
+    - name: board_335
       rect:
         serializedVersion: 2
         x: 1200
@@ -3764,7 +3764,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_336
+    - name: board_336
       rect:
         serializedVersion: 2
         x: 1300
@@ -3774,7 +3774,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_337
+    - name: board_337
       rect:
         serializedVersion: 2
         x: 1400
@@ -3784,7 +3784,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_338
+    - name: board_338
       rect:
         serializedVersion: 2
         x: 1500
@@ -3794,7 +3794,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_339
+    - name: board_339
       rect:
         serializedVersion: 2
         x: 1600
@@ -3804,7 +3804,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_340
+    - name: board_340
       rect:
         serializedVersion: 2
         x: 1700
@@ -3814,7 +3814,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_341
+    - name: board_341
       rect:
         serializedVersion: 2
         x: 1800
@@ -3824,7 +3824,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_342
+    - name: board_342
       rect:
         serializedVersion: 2
         x: 0
@@ -3834,7 +3834,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_343
+    - name: board_343
       rect:
         serializedVersion: 2
         x: 100
@@ -3844,7 +3844,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_344
+    - name: board_344
       rect:
         serializedVersion: 2
         x: 200
@@ -3854,7 +3854,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_345
+    - name: board_345
       rect:
         serializedVersion: 2
         x: 300
@@ -3864,7 +3864,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_346
+    - name: board_346
       rect:
         serializedVersion: 2
         x: 400
@@ -3874,7 +3874,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_347
+    - name: board_347
       rect:
         serializedVersion: 2
         x: 500
@@ -3884,7 +3884,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_348
+    - name: board_348
       rect:
         serializedVersion: 2
         x: 600
@@ -3894,7 +3894,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_349
+    - name: board_349
       rect:
         serializedVersion: 2
         x: 700
@@ -3904,7 +3904,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_350
+    - name: board_350
       rect:
         serializedVersion: 2
         x: 800
@@ -3914,7 +3914,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_351
+    - name: board_351
       rect:
         serializedVersion: 2
         x: 900
@@ -3924,7 +3924,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_352
+    - name: board_352
       rect:
         serializedVersion: 2
         x: 1000
@@ -3934,7 +3934,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_353
+    - name: board_353
       rect:
         serializedVersion: 2
         x: 1100
@@ -3944,7 +3944,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_354
+    - name: board_354
       rect:
         serializedVersion: 2
         x: 1200
@@ -3954,7 +3954,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_355
+    - name: board_355
       rect:
         serializedVersion: 2
         x: 1300
@@ -3964,7 +3964,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_356
+    - name: board_356
       rect:
         serializedVersion: 2
         x: 1400
@@ -3974,7 +3974,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_357
+    - name: board_357
       rect:
         serializedVersion: 2
         x: 1500
@@ -3984,7 +3984,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_358
+    - name: board_358
       rect:
         serializedVersion: 2
         x: 1600
@@ -3994,7 +3994,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_359
+    - name: board_359
       rect:
         serializedVersion: 2
         x: 1700
@@ -4004,7 +4004,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Blank_Go_board.svg_360
+    - name: board_360
       rect:
         serializedVersion: 2
         x: 1800

@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
 				}
 		}
 
-		private PlayerComponent currentPlayer ()
+		public PlayerComponent currentPlayer ()
 		{
 				if (playerComponent1.playing)
 						return playerComponent1;

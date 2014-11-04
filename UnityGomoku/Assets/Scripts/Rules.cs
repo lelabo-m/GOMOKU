@@ -6,6 +6,8 @@ using System.Collections.Generic;
 // Component Arbiter
 public class Rules : MonoBehaviour {
 
+	public bool fiveBreakable = false;
+	public bool doubleThree = false;
 	public const int MAX_SCORE = 10;
 	public System.Collections.Generic.Dictionary<PlayerComponent.Color, int> scores; 
 
