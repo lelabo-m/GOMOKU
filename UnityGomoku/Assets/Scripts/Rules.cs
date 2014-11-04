@@ -30,6 +30,13 @@ public class Rules : MonoBehaviour {
 				return true;
 	}
 
+	// true si possible de poser
+	public bool putPawn(char[] map, int x, int y) {
+		if (map [x * MapComponent.SIZE_MAP + y] != (char) MapComponent.Color.Empty)
+						return false;
+		return true;
+	}
+
 	public void removePawn(PlayerComponent.Color remover) {
 				scores [remover]++;
 	}

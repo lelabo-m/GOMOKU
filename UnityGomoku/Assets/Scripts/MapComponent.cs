@@ -23,7 +23,7 @@ public class MapComponent : MonoBehaviour
 		void Start ()
 		{
 				bitsMap = new BitsMap ();
-				map = new char[SIZE_MAP];
+				map = new char[SIZE_MAP * SIZE_MAP];
 				arbiter = GameObject.Find ("Arbiter");
 				rules = arbiter.GetComponent<Rules> ();
 				gameManager = arbiter.GetComponent<GameManager> ();
@@ -57,7 +57,7 @@ public class MapComponent : MonoBehaviour
 
 		public bool putPawn (int x, int y, Color type)
 		{
-				if (!rules.putPawn (bitsMap, x, y))
+				if (!rules.putPawn (map, x, y))
 						return false;
 				bitsMap.putPawn (x, y, type);
 				map [x * SIZE_MAP + y] = (char)type;
@@ -92,7 +92,7 @@ public class MapComponent : MonoBehaviour
 		public class BitsMap
 		{ 
 		
-				private int[] map = new int[SIZE_MAP];
+				private int[] map = new int[SIZE_MAP * SIZE_MAP];
 		
 		
 				// set Weight of a color 
