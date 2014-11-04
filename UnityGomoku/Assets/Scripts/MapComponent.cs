@@ -47,6 +47,7 @@ public class MapComponent : MonoBehaviour
 								Tile tile = ((GameObject)Instantiate (TilePrefab, 
 				                                      new Vector3 (i - Mathf.Floor (SIZE_MAP / 2), 0, -a + Mathf.Floor (SIZE_MAP / 2)),
 				                                      Quaternion.Euler (new Vector3 ()))).GetComponent<Tile> ();
+				tile.name = "Tile_" + (i * SIZE_MAP + a).ToString();
 								tile.setGridPosition(new Vector2 (i, a), allSprite[i * SIZE_MAP + a]);
 								row.Add (tile);
 						}

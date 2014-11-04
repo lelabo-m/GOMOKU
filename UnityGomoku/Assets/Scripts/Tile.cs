@@ -10,7 +10,7 @@ public class Tile : MonoBehaviour
 		// Use this for initialization
 		void Start ()
 		{
-		manager = GameObject.Find ("Arbiter").GetComponent<GameManager> ();
+			manager = GameObject.Find ("Arbiter").GetComponent<GameManager> ();
 		}
 	
 		// Update is called once per frame
@@ -46,6 +46,7 @@ public class Tile : MonoBehaviour
 
 		void onMouseDown ()
 		{
+		Debug.Log ("click");
 		manager.currentPlayer ().selectedX = (int) gridPosition.x;
 		manager.currentPlayer ().selectedY = (int) gridPosition.y;
 		//if (manager.currentPlayer ().putPawn() == false)
