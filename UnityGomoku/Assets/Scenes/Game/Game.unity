@@ -875,7 +875,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 0}
   mFont: {fileID: 11400000, guid: f89a92532080c2f44b541519f07325ba, type: 2}
-  mText: "Player 1\n\nScore : \nTaken : "
+  mText: "White\n\nScore : \nTaken : "
   mFontSize: 50
   mFontStyle: 0
   mAlignment: 0
@@ -1418,7 +1418,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 0}
   mFont: {fileID: 11400000, guid: f89a92532080c2f44b541519f07325ba, type: 2}
-  mText: "Player 2\n\nScore : \nTaken : "
+  mText: "Black\n\nScore : \nTaken : "
   mFontSize: 50
   mFontStyle: 0
   mAlignment: 0
