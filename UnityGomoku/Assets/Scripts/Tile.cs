@@ -74,8 +74,6 @@ public class Tile : MonoBehaviour
 		{
 				manager.currentPlayer ().selectedX = (int)gridPosition.x;
 				manager.currentPlayer ().selectedY = (int)gridPosition.y;
-		Debug.Log (manager.currentPlayer ().selectedX);
-		Debug.Log (manager.currentPlayer ().selectedY);
 				if (manager.currentPlayer ().putPawn () == false)
 						transform.renderer.material.color = Color.red;
 				else {
@@ -88,9 +86,9 @@ public class Tile : MonoBehaviour
 		private void putPawn()
 		{
 			Pawn pawn = ((GameObject)Instantiate (PawnPrefab, 
-			                                     new Vector3 (gridPosition.x - Mathf.Floor (MapComponent.SIZE_MAP / 2), 1, -gridPosition.y + Mathf.Floor (MapComponent.SIZE_MAP / 2)),
+			                                     new Vector3 (gridPosition.x - Mathf.Floor (MapComponent.SIZE_MAP / 2), 0.7f, -gridPosition.y + Mathf.Floor (MapComponent.SIZE_MAP / 2)),
 			                                     Quaternion.Euler (new Vector3 ()))).GetComponent<Pawn> ();
-		pawn.name = "Pawn_" + (gridPosition.x * MapComponent.SIZE_MAP + gridPosition.y).ToString();
+				pawn.name = "Pawn_" + (gridPosition.x * MapComponent.SIZE_MAP + gridPosition.y).ToString();
 				if (manager.currentPlayer ().color == PlayerComponent.Color.Black)
 							pawn.transform.renderer.material.color = Color.black;
 		}

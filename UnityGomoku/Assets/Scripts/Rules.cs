@@ -14,6 +14,12 @@ public class Rules : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
+		if (PlayerPrefs.GetInt ("5 cassables") > 0) {
+			fiveBreakable = true;
+		}
+		if (PlayerPrefs.GetInt ("double 3") > 0) {
+			doubleThree = true;
+		}
 		scores = new System.Collections.Generic.Dictionary<PlayerComponent.Color, int> ();
 		scores.Add (PlayerComponent.Color.White, 0);
 		scores.Add (PlayerComponent.Color.Black, 0);
@@ -44,7 +50,28 @@ public class Rules : MonoBehaviour {
 	//regarde si alignement de 5
 	public PlayerComponent.Color isWinner(MapComponent map) 
 	{
-		return PlayerComponent.Color.Empty; 
+		PlayerComponent.Color win = PlayerComponent.Color.Empty;
+
+		for (int x = 0; x < MapComponent.SIZE_MAP; ++x) {
+			for (int y = 0; y < MapComponent.SIZE_MAP; ++y) {
+				if ((win = weightToFive(x, y, map)) != PlayerComponent.Color.Empty) {
+					if (!fiveBreakable)
+						return win;
+
+				}
+				
+			}
+		}
+		return  win;
+	}
+
+	private PlayerComponent.Color weightToFive(int x, int y, MapComponent map)
+	{
+		if (map.getBitsMap ().getWeight (x, y, MapComponent.Color.Black) >= 5) 
+						return PlayerComponent.Color.Black;
+		if (map.getBitsMap ().getWeight (x, y, MapComponent.Color.White) >= 5)
+			return PlayerComponent.Color.White;
+		return PlayerComponent.Color.Empty;
 	}
 
 	public PlayerComponent.Color isScoringWinner()
