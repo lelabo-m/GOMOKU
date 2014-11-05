@@ -394,7 +394,7 @@ Transform:
   m_PrefabInternal: {fileID: 1697610290}
   m_GameObject: {fileID: 101587636}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -9.99999809, z: 0}
+  m_LocalPosition: {x: 2.28881836e-05, y: -37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 659376860}
@@ -411,7 +411,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 220, y: 75, z: 0}
+  m_Size: {x: 300, y: 102, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &101587639
 MonoBehaviour:
@@ -426,7 +426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tweenTarget: {fileID: 101587636}
-  hover: {r: 0, g: .762119651, b: .83088237, a: 1}
+  hover: {r: 1, g: 1, b: 1, a: 1}
   pressed: {r: .717647076, g: .639215708, b: .482352942, a: 1}
   disabledColor: {r: .5, g: .5, b: .5, a: 1}
   duration: .200000003
@@ -462,15 +462,15 @@ MonoBehaviour:
   bottomAnchor:
     target: {fileID: 1919060443}
     relative: 0
-    absolute: -10
+    absolute: -40
   topAnchor:
     target: {fileID: 1919060443}
     relative: 0
     absolute: 0
-  mColor: {r: 0, g: .424898684, b: .463235319, a: 1}
+  mColor: {r: .448529422, g: .448529422, b: .448529422, a: 1}
   mPivot: 4
-  mWidth: 220
-  mHeight: 75
+  mWidth: 300
+  mHeight: 102
   mDepth: 0
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
@@ -716,7 +716,7 @@ Transform:
   m_PrefabInternal: {fileID: 1452217253}
   m_GameObject: {fileID: 113711957}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 75, z: 0}
+  m_LocalPosition: {x: 0, y: 105, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2008733751}
@@ -733,7 +733,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 220, y: 75, z: 0}
+  m_Size: {x: 300, y: 102, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &113711960
 MonoBehaviour:
@@ -748,7 +748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tweenTarget: {fileID: 113711957}
-  hover: {r: 0, g: .762119651, b: .83088237, a: 1}
+  hover: {r: 1, g: 1, b: 1, a: 1}
   pressed: {r: .717647076, g: .639215708, b: .482352942, a: 1}
   disabledColor: {r: .5, g: .5, b: .5, a: 1}
   duration: .200000003
@@ -776,23 +776,23 @@ MonoBehaviour:
   leftAnchor:
     target: {fileID: 687552469}
     relative: 0
-    absolute: -110
+    absolute: -150
   rightAnchor:
     target: {fileID: 687552469}
     relative: 1
-    absolute: 110
+    absolute: 150
   bottomAnchor:
     target: {fileID: 687552469}
     relative: 0
-    absolute: 150
+    absolute: 0
   topAnchor:
     target: {fileID: 687552469}
     relative: 1
-    absolute: 0
-  mColor: {r: 0, g: .424898684, b: .463235319, a: 1}
+    absolute: 210
+  mColor: {r: .448529422, g: .448529422, b: .448529422, a: 1}
   mPivot: 4
-  mWidth: 220
-  mHeight: 75
+  mWidth: 300
+  mHeight: 102
   mDepth: 0
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
@@ -836,7 +836,7 @@ Transform:
   m_PrefabInternal: {fileID: 1198939716}
   m_GameObject: {fileID: 325929518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -52.4999962, z: 0}
+  m_LocalPosition: {x: 3.05175781e-05, y: -108, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1052409648}
@@ -853,7 +853,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 220, y: 75, z: 0}
+  m_Size: {x: 300, y: 102, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &325929521
 MonoBehaviour:
@@ -868,7 +868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tweenTarget: {fileID: 325929518}
-  hover: {r: 0, g: .762119651, b: .83088237, a: 1}
+  hover: {r: 1, g: 1, b: 1, a: 1}
   pressed: {r: .717647076, g: .639215708, b: .482352942, a: 1}
   disabledColor: {r: .5, g: .5, b: .5, a: 1}
   duration: .200000003
@@ -904,15 +904,15 @@ MonoBehaviour:
   bottomAnchor:
     target: {fileID: 101587637}
     relative: 0
-    absolute: -10
+    absolute: -40
   topAnchor:
     target: {fileID: 101587637}
     relative: 0
     absolute: 0
-  mColor: {r: 0, g: .424898684, b: .463235319, a: 1}
+  mColor: {r: .448529422, g: .448529422, b: .448529422, a: 1}
   mPivot: 4
-  mWidth: 220
-  mHeight: 75
+  mWidth: 300
+  mHeight: 102
   mDepth: 0
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
@@ -1084,11 +1084,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mHeight
-      value: 67
+      value: 94
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: aspectRatio
-      value: 3.16417909
+      value: 3.10638309
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1105,23 +1105,23 @@ Prefab:
         type: 2}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mFontSize
-      value: 30
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mEffectStyle
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
-      propertyPath: mEffectColor.r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
+      propertyPath: mEffectColor.r
+      value: .625
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mEffectColor.g
-      value: .403498948
+      value: .625
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mEffectColor.b
-      value: .536764741
+      value: .625
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mEffectDistance.x
@@ -1133,15 +1133,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mGradientBottom.r
-      value: 0
+      value: .742647052
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mGradientBottom.g
-      value: .300659359
+      value: .742647052
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mGradientBottom.b
-      value: .360294104
+      value: .742647052
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mGradientTop.r
@@ -1154,6 +1154,10 @@ Prefab:
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mGradientTop.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
+      propertyPath: mWidth
+      value: 292
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
@@ -1386,31 +1390,31 @@ MonoBehaviour:
     absolute: -4
   mColor: {r: .470588207, g: .470588207, b: .470588207, a: 1}
   mPivot: 4
-  mWidth: 212
-  mHeight: 67
+  mWidth: 292
+  mHeight: 94
   mDepth: 1
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.16417909
+  aspectRatio: 3.10638309
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 0}
   mFont: {fileID: 11400000, guid: f89a92532080c2f44b541519f07325ba, type: 2}
   mText: Settings
-  mFontSize: 30
+  mFontSize: 50
   mFontStyle: 0
   mAlignment: 0
   mEncoding: 1
   mMaxLineCount: 0
-  mEffectStyle: 2
-  mEffectColor: {r: 0, g: .403498948, b: .536764741, a: 1}
+  mEffectStyle: 0
+  mEffectColor: {r: .625, g: .625, b: .625, a: 1}
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}
   mOverflow: 0
   mMaterial: {fileID: 0}
   mApplyGradient: 1
   mGradientTop: {r: 1, g: 1, b: 1, a: 1}
-  mGradientBottom: {r: 0, g: .300659359, b: .360294104, a: 1}
+  mGradientBottom: {r: .742647052, g: .742647052, b: .742647052, a: 1}
   mSpacingX: 0
   mSpacingY: 0
   mShrinkToFit: 0
@@ -1441,7 +1445,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 687552468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .386983126, y: 0, z: 0}
+  m_LocalPosition: {x: -.408500403, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 113711958}
@@ -2223,11 +2227,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mHeight
-      value: 67
+      value: 94
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: aspectRatio
-      value: 3.16417909
+      value: 3.10638309
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2244,23 +2248,23 @@ Prefab:
         type: 2}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mFontSize
-      value: 30
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mEffectStyle
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
-      propertyPath: mEffectColor.r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
+      propertyPath: mEffectColor.r
+      value: .625
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mEffectColor.g
-      value: .403498948
+      value: .625
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mEffectColor.b
-      value: .536764741
+      value: .625
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mEffectDistance.x
@@ -2272,15 +2276,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mGradientBottom.r
-      value: 0
+      value: .742647052
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mGradientBottom.g
-      value: .300659359
+      value: .742647052
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mGradientBottom.b
-      value: .360294104
+      value: .742647052
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mGradientTop.r
@@ -2293,6 +2297,10 @@ Prefab:
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mGradientTop.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
+      propertyPath: mWidth
+      value: 292
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
@@ -2601,31 +2609,31 @@ MonoBehaviour:
     absolute: -4
   mColor: {r: .470588207, g: .470588207, b: .470588207, a: 1}
   mPivot: 4
-  mWidth: 212
-  mHeight: 67
+  mWidth: 292
+  mHeight: 94
   mDepth: 1
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.16417909
+  aspectRatio: 3.10638309
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 0}
   mFont: {fileID: 11400000, guid: f89a92532080c2f44b541519f07325ba, type: 2}
   mText: Credits
-  mFontSize: 30
+  mFontSize: 50
   mFontStyle: 0
   mAlignment: 0
   mEncoding: 1
   mMaxLineCount: 0
-  mEffectStyle: 2
-  mEffectColor: {r: 0, g: .403498948, b: .536764741, a: 1}
+  mEffectStyle: 0
+  mEffectColor: {r: .625, g: .625, b: .625, a: 1}
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}
   mOverflow: 0
   mMaterial: {fileID: 0}
   mApplyGradient: 1
   mGradientTop: {r: 1, g: 1, b: 1, a: 1}
-  mGradientBottom: {r: 0, g: .300659359, b: .360294104, a: 1}
+  mGradientBottom: {r: .742647052, g: .742647052, b: .742647052, a: 1}
   mSpacingX: 0
   mSpacingY: 0
   mShrinkToFit: 0
@@ -2723,11 +2731,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3.05175781e-05
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -52.4999962
+      value: -108
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2783,7 +2791,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: bottomAnchor.absolute
-      value: -10
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: topAnchor.target
@@ -2799,11 +2807,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: m_Size.x
-      value: 220
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: m_Size.y
-      value: 75
+      value: 102
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: leftAnchor.relative
@@ -2831,27 +2839,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: mColor.r
-      value: 0
+      value: .448529422
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: mColor.g
-      value: .424898684
+      value: .448529422
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: mColor.b
-      value: .463235319
+      value: .448529422
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: hover.g
-      value: .762119651
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: hover.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: hover.b
-      value: .83088237
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: centerType
@@ -2948,23 +2956,23 @@ Prefab:
         type: 2}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mFontSize
-      value: 30
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mEffectStyle
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
-      propertyPath: mEffectColor.r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
+      propertyPath: mEffectColor.r
+      value: .625
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mEffectColor.g
-      value: .403498948
+      value: .625
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mEffectColor.b
-      value: .536764741
+      value: .625
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mEffectDistance.x
@@ -2976,15 +2984,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mGradientBottom.r
-      value: 0
+      value: .742647052
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mGradientBottom.g
-      value: .300659359
+      value: .742647052
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mGradientBottom.b
-      value: .360294104
+      value: .742647052
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mGradientTop.r
@@ -2997,6 +3005,18 @@ Prefab:
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mGradientTop.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
+      propertyPath: mWidth
+      value: 292
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
+      propertyPath: mHeight
+      value: 94
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
+      propertyPath: aspectRatio
+      value: 3.10638309
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
@@ -3061,31 +3081,31 @@ MonoBehaviour:
     absolute: -4
   mColor: {r: .470588207, g: .470588207, b: .470588207, a: 1}
   mPivot: 4
-  mWidth: 212
-  mHeight: 67
+  mWidth: 292
+  mHeight: 94
   mDepth: 1
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.16417909
+  aspectRatio: 3.10638309
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 0}
   mFont: {fileID: 11400000, guid: f89a92532080c2f44b541519f07325ba, type: 2}
   mText: Rules
-  mFontSize: 30
+  mFontSize: 50
   mFontStyle: 0
   mAlignment: 0
   mEncoding: 1
   mMaxLineCount: 0
-  mEffectStyle: 2
-  mEffectColor: {r: 0, g: .403498948, b: .536764741, a: 1}
+  mEffectStyle: 0
+  mEffectColor: {r: .625, g: .625, b: .625, a: 1}
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}
   mOverflow: 0
   mMaterial: {fileID: 0}
   mApplyGradient: 1
   mGradientTop: {r: 1, g: 1, b: 1, a: 1}
-  mGradientBottom: {r: 0, g: .300659359, b: .360294104, a: 1}
+  mGradientBottom: {r: .742647052, g: .742647052, b: .742647052, a: 1}
   mSpacingX: 0
   mSpacingY: 0
   mShrinkToFit: 0
@@ -3421,7 +3441,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 75
+      value: 105
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3485,7 +3505,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: bottomAnchor.absolute
-      value: 150
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: topAnchor.target
@@ -3493,7 +3513,7 @@ Prefab:
       objectReference: {fileID: 687552469}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: topAnchor.absolute
-      value: 0
+      value: 210
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: mSpriteName
@@ -3501,11 +3521,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: m_Size.x
-      value: 220
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: m_Size.y
-      value: 75
+      value: 102
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: m_Center.x
@@ -3517,31 +3537,47 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: mColor.r
-      value: 0
+      value: .448529422
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: mColor.g
-      value: .424898684
+      value: .448529422
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: mColor.b
-      value: .463235319
+      value: .448529422
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: hover.g
-      value: .762119651
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: hover.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: hover.b
-      value: .83088237
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: centerType
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
+      propertyPath: leftAnchor.absolute
+      value: -150
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
+      propertyPath: rightAnchor.absolute
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
+      propertyPath: mWidth
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
+      propertyPath: mHeight
+      value: 102
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
@@ -3721,11 +3757,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.28881836e-05
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -9.99999809
+      value: -37
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3781,7 +3817,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: bottomAnchor.absolute
-      value: -10
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: topAnchor.target
@@ -3797,11 +3833,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: m_Size.x
-      value: 220
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: m_Size.y
-      value: 75
+      value: 102
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: leftAnchor.relative
@@ -3829,27 +3865,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: mColor.r
-      value: 0
+      value: .448529422
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: mColor.g
-      value: .424898684
+      value: .448529422
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: mColor.b
-      value: .463235319
+      value: .448529422
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: hover.g
-      value: .762119651
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: hover.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: hover.b
-      value: .83088237
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: centerType
@@ -4300,7 +4336,7 @@ Transform:
   m_PrefabInternal: {fileID: 2075287237}
   m_GameObject: {fileID: 1919060442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 32.5, z: 0}
+  m_LocalPosition: {x: 1.52587891e-05, y: 34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1234794536}
@@ -4317,7 +4353,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 220, y: 75, z: 0}
+  m_Size: {x: 300, y: 102, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1919060445
 MonoBehaviour:
@@ -4332,7 +4368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tweenTarget: {fileID: 1919060442}
-  hover: {r: 0, g: .762119651, b: .83088237, a: 1}
+  hover: {r: 1, g: 1, b: 1, a: 1}
   pressed: {r: .717647076, g: .639215708, b: .482352942, a: 1}
   disabledColor: {r: .5, g: .5, b: .5, a: 1}
   duration: .200000003
@@ -4368,15 +4404,15 @@ MonoBehaviour:
   bottomAnchor:
     target: {fileID: 113711958}
     relative: 0
-    absolute: -10
+    absolute: -40
   topAnchor:
     target: {fileID: 113711958}
     relative: 0
     absolute: 0
-  mColor: {r: 0, g: .424898684, b: .463235319, a: 1}
+  mColor: {r: .448529422, g: .448529422, b: .448529422, a: 1}
   mPivot: 4
-  mWidth: 220
-  mHeight: 75
+  mWidth: 300
+  mHeight: 102
   mDepth: 0
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
@@ -4735,23 +4771,23 @@ Prefab:
         type: 2}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mFontSize
-      value: 30
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mEffectStyle
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
-      propertyPath: mEffectColor.r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
+      propertyPath: mEffectColor.r
+      value: .625
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mEffectColor.g
-      value: .403498948
+      value: .625
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mEffectColor.b
-      value: .536764741
+      value: .625
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mEffectDistance.x
@@ -4763,15 +4799,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mGradientBottom.r
-      value: 0
+      value: .742647052
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mGradientBottom.g
-      value: .300659359
+      value: .742647052
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mGradientBottom.b
-      value: .360294104
+      value: .742647052
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mGradientTop.r
@@ -4784,6 +4820,18 @@ Prefab:
     - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
       propertyPath: mGradientTop.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
+      propertyPath: mWidth
+      value: 292
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
+      propertyPath: mHeight
+      value: 94
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
+      propertyPath: aspectRatio
+      value: 3.10638309
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1f843e12610d9c42be5c819b12c21a4, type: 2}
@@ -4848,31 +4896,31 @@ MonoBehaviour:
     absolute: -4
   mColor: {r: .470588207, g: .470588207, b: .470588207, a: 1}
   mPivot: 4
-  mWidth: 212
-  mHeight: 67
+  mWidth: 292
+  mHeight: 94
   mDepth: 1
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.16417909
+  aspectRatio: 3.10638309
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 0}
   mFont: {fileID: 11400000, guid: f89a92532080c2f44b541519f07325ba, type: 2}
   mText: Start game
-  mFontSize: 30
+  mFontSize: 50
   mFontStyle: 0
   mAlignment: 0
   mEncoding: 1
   mMaxLineCount: 0
-  mEffectStyle: 2
-  mEffectColor: {r: 0, g: .403498948, b: .536764741, a: 1}
+  mEffectStyle: 0
+  mEffectColor: {r: .625, g: .625, b: .625, a: 1}
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}
   mOverflow: 0
   mMaterial: {fileID: 0}
   mApplyGradient: 1
   mGradientTop: {r: 1, g: 1, b: 1, a: 1}
-  mGradientBottom: {r: 0, g: .300659359, b: .360294104, a: 1}
+  mGradientBottom: {r: .742647052, g: .742647052, b: .742647052, a: 1}
   mSpacingX: 0
   mSpacingY: 0
   mShrinkToFit: 0
@@ -4942,11 +4990,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.52587891e-05
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 32.5
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5002,7 +5050,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: bottomAnchor.absolute
-      value: -10
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: topAnchor.target
@@ -5018,11 +5066,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: m_Size.x
-      value: 220
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: m_Size.y
-      value: 75
+      value: 102
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: leftAnchor.relative
@@ -5050,27 +5098,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: mColor.r
-      value: 0
+      value: .448529422
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: mColor.g
-      value: .424898684
+      value: .448529422
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: mColor.b
-      value: .463235319
+      value: .448529422
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: hover.g
-      value: .762119651
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: hover.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: hover.b
-      value: .83088237
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: fcdd800a00fa9034db13a94f8c7e159e, type: 2}
       propertyPath: centerType
