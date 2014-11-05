@@ -46,7 +46,6 @@ public class MapComponent : MonoBehaviour
 		private void generateGraphicMap ()
 		{
 				graphicMap = new List<List<Tile>> ();
-				Sprite[] allSprite = Resources.LoadAll<Sprite> ("Sprites/board");
 				for (int i = 0; i < SIZE_MAP; ++i) {
 						List <Tile> row = new List<Tile> ();
 						for (int a = 0; a < SIZE_MAP; ++a) {
@@ -54,7 +53,7 @@ public class MapComponent : MonoBehaviour
 				                                      new Vector3 (i - Mathf.Floor (SIZE_MAP / 2), 0, -a + Mathf.Floor (SIZE_MAP / 2)),
 				                                      Quaternion.Euler (new Vector3 ()))).GetComponent<Tile> ();
 				tile.name = "Tile_" + (i * SIZE_MAP + a).ToString();
-								tile.setGridPosition(new Vector2 (i, a), allSprite[i * SIZE_MAP + a]);
+								tile.setGridPosition(new Vector2 (i, a));
 								row.Add (tile);
 						}
 						graphicMap.Add (row);

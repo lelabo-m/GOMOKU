@@ -20,19 +20,44 @@ public class Tile : MonoBehaviour
 	
 		}
 
-		public void setGridPosition (Vector2 pos, Sprite sprite)
+		public void setGridPosition (Vector2 pos)
 		{
 				gridPosition = pos;
 
-				/*		var croppedTexture = new Texture2D ((int)sprite.rect.width, (int)sprite.rect.height);
-				var pixels = sprite.texture.GetPixels ((int)sprite.textureRect.x, 
-		                                      (int)sprite.textureRect.y, 
-		                                      (int)sprite.textureRect.width, 
-		                                      (int)sprite.textureRect.height);
-		
-				croppedTexture.SetPixels (pixels);
-				croppedTexture.Apply ();*/
-				//transform.renderer.material.SetTexture ("_MainTex", sprite.texture);
+		string type = "C";
+
+		if ((int)pos.x == 0) {
+
+			if ((int) pos.y == 0) {
+				type = "SE";
+			} else if ((int) pos.y == MapComponent.SIZE_MAP - 1) {
+				type = "NE";
+			} else
+				type = "E";
+		}
+
+		if ((int)pos.x == MapComponent.SIZE_MAP - 1) {
+			
+			if ((int) pos.y == 0) {
+				type = "SO";
+			} else if ((int) pos.y == MapComponent.SIZE_MAP - 1) {
+				type = "NO";
+			} else
+				type = "O";
+		}
+
+		if ((int)pos.x != 0 && (int)pos.x != MapComponent.SIZE_MAP - 1) {
+			
+			if ((int) pos.y == 0) {
+				type = "S";
+			} else if ((int) pos.y == MapComponent.SIZE_MAP - 1)
+				type = "N";
+		}
+
+
+
+				Sprite sprite = Resources.Load<Sprite> ("Sprites/board" + type);
+				transform.renderer.material.SetTexture ("_MainTex", sprite.texture);
 		}
 
 		void OnMouseEnter ()
@@ -65,11 +90,13 @@ public class Tile : MonoBehaviour
 			Pawn pawn = ((GameObject)Instantiate (PawnPrefab, 
 			                                     new Vector3 (gridPosition.x - Mathf.Floor (MapComponent.SIZE_MAP / 2), 1, -gridPosition.y + Mathf.Floor (MapComponent.SIZE_MAP / 2)),
 			                                     Quaternion.Euler (new Vector3 ()))).GetComponent<Pawn> ();
+		pawn.name = "Pawn_" + (gridPosition.x * MapComponent.SIZE_MAP + gridPosition.y).ToString();
 				if (manager.currentPlayer ().color == PlayerComponent.Color.Black)
 							pawn.transform.renderer.material.color = Color.black;
 		}
 
 		private void removePawn()
 		{
+			Destroy (GameObject.Find ("Pawn_" + (gridPosition.x * MapComponent.SIZE_MAP + gridPosition.y).ToString()));
 		}
 }
