@@ -22,6 +22,12 @@ public class MapComponent : MonoBehaviour
 		// Use this for initialization
 		void Start ()
 		{
+				if (PlayerPrefs.GetInt ("5 cassables") > 0) {
+					print ("Regle des 5 cassables active !");
+				}
+				if (PlayerPrefs.GetInt ("double 3") > 0) {
+					print ("Regle des double 3 active !");
+				}
 				bitsMap = new BitsMap ();
 				map = new char[SIZE_MAP * SIZE_MAP];
 				arbiter = GameObject.Find ("Arbiter");
