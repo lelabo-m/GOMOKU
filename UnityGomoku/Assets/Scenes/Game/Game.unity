@@ -177,6 +177,14 @@ Prefab:
       propertyPath: player2
       value: 
       objectReference: {fileID: 1363783560}
+    - target: {fileID: 11400000, guid: 851c7bafdc4b748d09eb13014b6bf325, type: 2}
+      propertyPath: fiveBreakable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 851c7bafdc4b748d09eb13014b6bf325, type: 2}
+      propertyPath: doubleThree
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 851c7bafdc4b748d09eb13014b6bf325, type: 2}
   m_RootGameObject: {fileID: 1403308945}

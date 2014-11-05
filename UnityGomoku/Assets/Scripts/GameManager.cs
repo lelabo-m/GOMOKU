@@ -103,6 +103,6 @@ public class GameManager : MonoBehaviour
 
 		private void gameDone ()
 		{
-		print ("test");
+			print ("test");
 		}
 }

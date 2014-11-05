@@ -6,7 +6,7 @@ public class MapComponent : MonoBehaviour
 {
 		public GameObject TilePrefab;
 		private List <List <Tile>> graphicMap;
-		public const int SIZE_MAP = 5;
+		public const int SIZE_MAP = 19;
 		public enum Color
 		{
 				Empty,
@@ -56,62 +56,81 @@ public class MapComponent : MonoBehaviour
 				}
 		}
 
-		public bool putPawn (int x, int y, Color type)
+		public bool putPawn (int x, int y, MapComponent.Color type)
 		{
 				if (!rules.putPawn (map, x, y))
 						return false;
 				bitsMap.putPawn (x, y, type);
-				bitsMap.setWeight (x, y, 1, type);
 
-				weightPropagation (x, y, 0, 1, type);
-				weightPropagation (x, y, 0, -1, type);
-				weightPropagation (x, y, 1, 1, type);
-				weightPropagation (x, y, 1, 0, type);
-				weightPropagation (x, y, -1, 0, type);
-				weightPropagation (x, y, -1, -1, type);
-				weightPropagation (x, y, -1, 1, type);
-				weightPropagation (x, y, 1, -1, type);
-
-
+				currentX = x;
+				currentY = y;
+				weightPropagation (0, 1, type);
+				weightPropagation (1, 1, type);
+				weightPropagation (1, 0, type);
+				weightPropagation (1, -1, type);
 
 				map [x * SIZE_MAP + y] = (char)type;
 				gameManager.setLastColor (type);
 				return true;
 		}
 
-		private void weightPropagation (int x, int y, int wayX, int wayY, Color color)
-		{	
-				currentX = x;
-				currentY = y;
-				if (x + wayX < SIZE_MAP && y + wayY < SIZE_MAP && 
-		   		 x + wayX >= 0 && y + wayY >= 0 && 
-		    		this.bitsMap.getColor (x + wayX, y + wayY) == color) {
-						int weight = this.bitsMap.getWeight (x + wayX, y + wayY, color) + 1;
-						bitsMap.setWeight (x, y, weight, color);
-						print ("x = " + currentX.ToString() + " y = " + currentY.ToString() + " color = " + color.ToString() + " poids = " + weight.ToString());
-						print ("new Weight = " + weight.ToString());
-						propagation (weight, wayX, wayY, color);
-				}
-		}
-
-		private void propagation (int weight, int wayX, int wayY, Color color)
+		private void weightPropagation (int wayX, int wayY, MapComponent.Color color)
 		{
-				if (currentX < SIZE_MAP && currentY < SIZE_MAP && 
-		  			  currentX  >= 0 && currentY >= 0 &&
-		    		this.bitsMap.getColor (currentX, currentY) == color) {
-						if (this.bitsMap.getWeight (currentX, currentY, color) < weight)
-								this.bitsMap.setWeight (currentX, currentY, weight, color);
-						print ("x = " + currentX.ToString() + " y = " + currentY.ToString() + " color = " + color.ToString() + " poids = " + weight.ToString());
-						currentX += wayX;
-						currentY += wayY;
-						propagation (weight, wayX, wayY, color);
+				int x = currentX + wayX;
+				int y = currentY + wayY;
+				int nbPawn = 1;
+
+
+				while (x >= 0 && y >= 0 &&
+		       x < SIZE_MAP && y < SIZE_MAP && bitsMap.getColor(x, y) == color) {
+						nbPawn++;
+						x += wayX;
+						y += wayY;
 				}
+
+				x = currentX - wayX;
+				y = currentY - wayY;
+				while (x >= 0 && y >= 0 &&
+			       x < SIZE_MAP && y < SIZE_MAP && bitsMap.getColor(x, y) == color) {
+						nbPawn++;
+						x -= wayX;
+						y -= wayY;
+				}
+
+				x = currentX + wayX;
+				y = currentY + wayY;
+				while (x >= 0 && y >= 0 &&
+			       x < SIZE_MAP && y < SIZE_MAP && bitsMap.getColor(x, y) == color) {
+						bitsMap.setWeight (x, y, nbPawn, color);
+						x += wayX;
+						y += wayY;
+				}
+			/*	if (x >= 0 && y >= 0 &&
+						x < SIZE_MAP && y < SIZE_MAP && bitsMap.getColor (x, y) == MapComponent.Color.Empty)
+						bitsMap.setWeight (x, y, nbPawn, color);*/
+
+				x = currentX - wayX;
+				y = currentY - wayY;
+				while (x >= 0 && y >= 0 &&
+			       x < SIZE_MAP && y < SIZE_MAP && bitsMap.getColor(x, y) == color) {
+						bitsMap.setWeight (x, y, nbPawn, color);
+						x -= wayX;
+						y -= wayY;
+				}
+				/*if (x >= 0 && y >= 0 &&
+						x < SIZE_MAP && y < SIZE_MAP && bitsMap.getColor (x, y) == MapComponent.Color.Empty)
+						bitsMap.setWeight (x, y, nbPawn, color);*/
+
+
+				if (bitsMap.getWeight(currentX, currentY, color) < nbPawn)
+					bitsMap.setWeight (currentX, currentY, nbPawn, color);
+		print ("x = " + currentX.ToString() + " y = " + currentY.ToString() + " nbPawn = " + nbPawn.ToString() + " weight = " + bitsMap.getWeight(currentX, currentY, color).ToString());
 		}
 
 		public bool removePawn (int x, int y)
 		{
 				bitsMap.removePawn (x, y);
-				map [x * SIZE_MAP + y] = (char)Color.Empty;
+				map [x * SIZE_MAP + y] = (char)MapComponent.Color.Empty;
 				return true;
 		}
 
@@ -133,45 +152,74 @@ public class MapComponent : MonoBehaviour
 
 		public class BitsMap
 		{ 
-		
-				private int[] map = new int[SIZE_MAP * SIZE_MAP];
-		
-		
-				// set Weight of a color 
-				public void setWeight (int x, int y, int weight, Color color)
-				{
-						if (color != Color.Empty) {
-								BitVector32 param = new BitVector32 (weight);
-								BitVector32 cell = new BitVector32 (this.map [x * SIZE_MAP + y]);
 
-								for (int cellC = (color == Color.Black) ? 3 : 0, cellE = cellC + 3, paramC = 0; cellC < cellE; cellC++, paramC++)
-										cell [cellC] = param [paramC];
-								this.map [x * SIZE_MAP + y] = cell.Data;
+				private class Cell
+				{
+						public MapComponent.Color color = MapComponent.Color.Empty;
+						public System.Collections.Generic.Dictionary<MapComponent.Color, int> weight;
+			
+						public Cell ()
+						{		
+								weight = new System.Collections.Generic.Dictionary<MapComponent.Color, int> ();
+								weight.Add (MapComponent.Color.Black, 0);
+								weight.Add (MapComponent.Color.White, 0);
 						}
 				}
 
-				public int getWeight (int x, int y, Color color)
-				{
-						BitVector32 cell;
-						BitVector32 value;
 
-						if (color == Color.Empty)
-								return -1;
-						cell = new BitVector32 (this.map [x * SIZE_MAP + y]);
-						value = new BitVector32 (0);
-						for (int cellC = (color == Color.Black) ? 3 : 0, cellE = cellC + 3, valueC = 0; cellC < cellE; cellC++, valueC++)
-								value [valueC] = cell [cellC];
-						return value.Data;
+				private int[] map = new int[SIZE_MAP * SIZE_MAP];
+				private Cell[] _map = new Cell[SIZE_MAP * SIZE_MAP];
+
+				public BitsMap ()
+				{
+						for (int i = 0; i < SIZE_MAP * SIZE_MAP; ++i) {
+								_map [i] = new Cell ();
+						}
 				}
 
-				public bool putPawn (int x, int y, Color type)
+				// set Weight of a color 
+				public void setWeight (int x, int y, int weight, MapComponent.Color color)
 				{
+						this._map [x * SIZE_MAP + y].weight [color] = weight;
+						/*if (color != MapComponent.Color.Empty) {
+								BitVector32 param = new BitVector32 (weight);
+								BitVector32 cell = new BitVector32 (this.map [x * SIZE_MAP + y]);
+
+								for (int cellC = (color == MapComponent.Color.Black) ? 3 : 0, cellE = cellC + 3, paramC = 0; cellC < cellE; cellC++, paramC++)
+										cell [cellC] = param [paramC];
+								this.map [x * SIZE_MAP + y] = cell.Data;
+						}*/
+				}
+
+				public int getWeight (int x, int y, MapComponent.Color color)
+				{
+						return this._map [x * SIZE_MAP + y].weight [color];
+						/*BitVector32 cell;
+						BitVector32 value;
+
+						if (color == MapComponent.Color.Empty)
+								return 0;
+						cell = new BitVector32 (this.map [x * SIZE_MAP + y]);
+						value = new BitVector32 (0);
+						for (int cellC = (color == MapComponent.Color.Black) ? 3 : 0, cellE = cellC + 3, valueC = 0; cellC < cellE; cellC++, valueC++)
+								value [valueC] = cell [cellC];
+						return value.Data;*/
+				}
+
+				public bool putPawn (int x, int y, MapComponent.Color type)
+				{
+						this._map [x * SIZE_MAP + y].color = type;
 						this.map [x * SIZE_MAP + y] = ((char)type << 6);
+			for (int i = 0; i < SIZE_MAP * SIZE_MAP; ++i) {
+				if (_map[i].weight[type] != 0)
+					print (_map[i].weight[type]);			
+			}
 						return true;
 				}
 
 				public bool removePawn (int x, int y)
 				{
+						this._map [x * SIZE_MAP + y].color = 0;
 						this.map [x * SIZE_MAP + y] = 0;
 						return true;
 				}
@@ -181,10 +229,10 @@ public class MapComponent : MonoBehaviour
 						return map [x * SIZE_MAP + y];
 				}
 
-				public Color getColor (int x, int y)
+				public MapComponent.Color getColor (int x, int y)
 				{
-						return (Color)(this.map [x * SIZE_MAP + y] >> 6);
+						return this._map [x * SIZE_MAP + y].color;
+						//return (MapComponent.Color)(this.map [x * SIZE_MAP + y] >> 6);
 				}
 		}
-
 }

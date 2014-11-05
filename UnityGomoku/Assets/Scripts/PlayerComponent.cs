@@ -78,7 +78,7 @@ public class PlayerComponent : MonoBehaviour
 
 		public bool putPawn ()
 		{
-				return map.putPawn (selectedX, selectedY, (MapComponent.Color)color);
+				return map.putPawn (selectedX, selectedY, (MapComponent.Color) color);
 		}
 
 }
