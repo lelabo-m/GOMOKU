@@ -1963,6 +1963,10 @@ Prefab:
       propertyPath: functionName
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 8298f3014addb4740b073bab416a0335, type: 2}
+      propertyPath: instantTween
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8298f3014addb4740b073bab416a0335, type: 2}
   m_RootGameObject: {fileID: 1973435019}
@@ -2423,6 +2427,10 @@ Prefab:
     - target: {fileID: 11400002, guid: 8298f3014addb4740b073bab416a0335, type: 2}
       propertyPath: functionName
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 8298f3014addb4740b073bab416a0335, type: 2}
+      propertyPath: instantTween
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8298f3014addb4740b073bab416a0335, type: 2}
@@ -4245,7 +4253,7 @@ MonoBehaviour:
   activeSprite: {fileID: 709526114}
   activeAnimation: {fileID: 709526113}
   startsActive: 1
-  instantTween: 0
+  instantTween: 1
   optionCanBeNone: 0
   onChange:
   - mTarget: {fileID: 13264581}
@@ -4488,7 +4496,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2019748263
 Transform:
   m_ObjectHideFlags: 0
@@ -4911,7 +4919,7 @@ MonoBehaviour:
   activeSprite: {fileID: 2094744722}
   activeAnimation: {fileID: 2094744721}
   startsActive: 1
-  instantTween: 0
+  instantTween: 1
   optionCanBeNone: 0
   onChange:
   - mTarget: {fileID: 13264581}
