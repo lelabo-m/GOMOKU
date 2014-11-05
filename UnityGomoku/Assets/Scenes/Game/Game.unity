@@ -454,7 +454,7 @@ MonoBehaviour:
     target: {fileID: 739300963}
     relative: 0
     absolute: 33
-  mColor: {r: 0, g: 0, b: 0, a: .243137255}
+  mColor: {r: 0, g: 0, b: 0, a: .215686277}
   mPivot: 4
   mWidth: 20
   mHeight: 20
@@ -668,7 +668,7 @@ MonoBehaviour:
     target: {fileID: 0}
     relative: 1
     absolute: 0
-  mColor: {r: .477611959, g: .443779707, b: .384940982, a: 1}
+  mColor: {r: .477611959, g: .443779707, b: .384940982, a: .168627456}
   mPivot: 4
   mWidth: 250
   mHeight: 300
@@ -1680,7 +1680,7 @@ MonoBehaviour:
     target: {fileID: 0}
     relative: 1
     absolute: 0
-  mColor: {r: .477611959, g: .443779707, b: .384940982, a: 1}
+  mColor: {r: .477611959, g: .443779707, b: .384940982, a: .152941182}
   mPivot: 4
   mWidth: 250
   mHeight: 300
