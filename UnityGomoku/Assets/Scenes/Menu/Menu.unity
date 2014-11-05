@@ -2688,7 +2688,7 @@ MonoBehaviour:
     target: {fileID: 0}
     relative: 1
     absolute: 0
-  mColor: {r: .852941155, g: .993914783, b: 1, a: 1}
+  mColor: {r: .852941155, g: .993914783, b: 1, a: .631372571}
   mPivot: 4
   mWidth: 1000
   mHeight: 500
