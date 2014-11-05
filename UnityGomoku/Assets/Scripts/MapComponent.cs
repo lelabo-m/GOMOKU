@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 
 public class MapComponent : MonoBehaviour
 {
@@ -98,36 +98,58 @@ public class MapComponent : MonoBehaviour
 		public class BitsMap
 		{ 
 		
-				private int[] map = new int[SIZE_MAP * SIZE_MAP];
+			private int[] map = new int[SIZE_MAP * SIZE_MAP];
 		
 		
-				// set Weight of a color 
-				public void setWeight (int x, int y, int weight, Color color)
-				{
-						if (color != Color.Empty) {
-								for (int cellC = (color == Color.Black) ? 3 : 0, weightC = 0, cellE = cellC + 3; cellC < cellE; cellC++, weightC++) {
-										this.map [x * SIZE_MAP + y] |= ((weight & (1 << weightC)) == 0 ? 0 : 1) << cellC;
-								}
-						}
-				}
+			// set Weight of a color 
+			public void setWeight (int x, int y, int weight, Color color)
+			{
+				if (color != Color.Empty)
+                {
+                    BitVector32 param = new BitVector32(weight);
+                    BitVector32 cell = new BitVector32(this.map[x * SIZE_MAP + y]);
 
-				public bool putPawn (int x, int y, Color type)
-				{
-						this.map [x * SIZE_MAP + y] = ((char)type << 6);
-						return true;
-				}
+                    for (int cellC = (color == Color.Black) ? 3 : 0, cellE = cellC + 3, paramC = 0; cellC < cellE; cellC++, paramC++)
+                        cell[cellC] = param[paramC];
+                    this.map[x*SIZE_MAP + y] = cell.Data;
+                }
+			}
 
-				public bool removePawn (int x, int y)
-				{
-						this.map [x * SIZE_MAP + y] = 0;
-						return true;
-				}
+		    public int getWeight(int x, int y, Color color)
+		    {
+		        BitVector32 cell;
+		        BitVector32 value;
 
-				public int getCell (int x, int y)
-				{
-						return map [x * SIZE_MAP + y];
-				}
-		
+                if (color == Color.Empty)
+		            return -1;
+                cell = new BitVector32(this.map[x * SIZE_MAP + y]);
+                value = new BitVector32(0);
+		        for (int cellC = (color == Color.Black) ? 3 : 0, cellE = cellC + 3, valueC = 0; cellC < cellE; cellC++, valueC++)
+		            value[valueC] = cell[cellC];
+		        return value.Data;
+		    }
+
+			public bool putPawn (int x, int y, Color type)
+			{
+					this.map [x * SIZE_MAP + y] = ((char)type << 6);
+					return true;
+			}
+
+			public bool removePawn (int x, int y)
+			{
+					this.map [x * SIZE_MAP + y] = 0;
+					return true;
+			}
+
+			public int getCell (int x, int y)
+			{
+					return map [x * SIZE_MAP + y];
+			}
+
+		    public Color getColor(int x, int y)
+		    {
+		        return (Color)(this.map[x*SIZE_MAP + y] >> 6);
+		    }
 		}
 
 }
