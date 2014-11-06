@@ -14,12 +14,12 @@ public class Rules : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		/* if (PlayerPrefs.GetInt ("5 cassables") > 0) {
+		 if (PlayerPrefs.GetInt ("5 cassables") > 0) {
 			fiveBreakable = true;
 		}
 		if (PlayerPrefs.GetInt ("double 3") > 0) {
 			doubleThree = true;
-		}*/
+		}
 		scores = new System.Collections.Generic.Dictionary<PlayerComponent.Color, int> ();
 		scores.Add (PlayerComponent.Color.White, 0);
 		scores.Add (PlayerComponent.Color.Black, 0);
@@ -29,7 +29,6 @@ public class Rules : MonoBehaviour {
 	void Update () {
 	
 	}
-
 
 	// true si possible de poser
 	public bool putPawn(MapComponent.BitsMap map, int x, int y) {
@@ -43,8 +42,8 @@ public class Rules : MonoBehaviour {
 		return true;
 	}
 
-	public void removePawn(PlayerComponent.Color remover) {
-				scores [remover]++;
+	public void scoring(PlayerComponent.Color remover, int score) {
+				scores [remover] += score;
 	}
 
 	//regarde si alignement de 5
