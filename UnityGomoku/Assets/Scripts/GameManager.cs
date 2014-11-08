@@ -116,12 +116,19 @@ public class GameManager : MonoBehaviour
 
 		private void gameDone ()
 		{
-				if (winner == PlayerComponent.Color.White)
+				if (winner == PlayerComponent.Color.White) {
 						print ("Victoire Blanc");
-				else if (winner == PlayerComponent.Color.Black)
+						PlayerPrefs.SetInt ("Winner", 0);
+						Application.LoadLevel(3);
+				} else if (winner == PlayerComponent.Color.Black) {
 						print ("Victoire Noir");
-				else
+						PlayerPrefs.SetInt ("Winner", 1);
+						Application.LoadLevel(3);
+				} else {
 						print ("Match Nul");
+						PlayerPrefs.SetInt ("Winner", 2);
+						Application.LoadLevel(3);
+				}
 				
 		}
 }
