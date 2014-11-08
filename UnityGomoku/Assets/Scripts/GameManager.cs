@@ -63,12 +63,8 @@ public class GameManager : MonoBehaviour
 		{
 			foreach (KeyValuePair<int, int[]> entry in MapComponent.ORIENTATION)
 			{
-			if (map.getBitsMap().isTakeable(lastX, lastY, entry.Key) && map.getBitsMap().getColor(lastX + 3 * entry.Value[0], lastY + 3 * entry.Value[1]) == map.getBitsMap().getColor(lastX, lastY)) {
-					rules.scoring((PlayerComponent.Color) map.getBitsMap().getColor(lastX, lastY), 2);
-					map.getBitsMap().setIsTaken(lastX, lastY, entry.Key, (char) 0);
-					map.getBitsMap().setIsTaken(lastX + 3 * entry.Value[0], lastY + 3 * entry.Value[1], entry.Key, (char) 0);
-					map.removePawn(lastX + entry.Value[0], lastY + entry.Value[1]);
-					map.removePawn(lastX + 2 * entry.Value[0], lastY + 2 * entry.Value[1]);
+				if (rules.canTakePawns(map, lastX, lastY, entry.Key)) {
+					rules.takePawns(map, lastX, lastY, entry.Key);
 				}
 					
 			}

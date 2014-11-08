@@ -35,7 +35,7 @@ public class PlayerComponent : MonoBehaviour
 
 
 		/*******
-		 * Player Movements
+		 * Player Movements if keyboard or other controller
 		 * *****/
 
 		public void selectPosition (int x, int y)

@@ -34,7 +34,7 @@ public class MapComponent : MonoBehaviour
 		// Use this for initialization
 		void Start ()
 		{
-		ORIENTATION = new Dictionary<int, int[]> ()
+				ORIENTATION = new Dictionary<int, int[]> ()
 		{
 			{ O_RIGHT , new int[] { 0 , 1 } },
 			{ O_LEFT , new int[] { 0 , -1 } },
@@ -96,31 +96,54 @@ public class MapComponent : MonoBehaviour
 				weightPropagation (ORIENTATION [O_UP] [0], ORIENTATION [O_UP] [1], color);
 				weightPropagation (ORIENTATION [O_RIGHT_UP] [0], ORIENTATION [O_RIGHT_UP] [1], color);
 				weightPropagation (ORIENTATION [O_LEFT_UP] [0], ORIENTATION [O_LEFT_UP] [1], color);
+				
+				setIsTaking(color);
 
-				setIsTakeable (color);
+				MapComponent.Color enemy = (color == MapComponent.Color.White) ? MapComponent.Color.Black : MapComponent.Color.White;
+				foreach (KeyValuePair<int, int[]> entry in MapComponent.ORIENTATION) {
+						currentX = x + entry.Value [0];
+						currentY = y + entry.Value [1];
+						if (currentX >= 0 && currentX < MapComponent.SIZE_MAP && 
+								currentY >= 0 && currentY < MapComponent.SIZE_MAP && 
+								bitsMap.getColor (currentX, currentY) == enemy) {
+								setIsTaking(enemy);
+						}
 
+						currentX = x + 2 * entry.Value [0];
+						currentY = y + 2 * entry.Value [1];
+						if (currentX >= 0 && currentX < MapComponent.SIZE_MAP && 
+						    currentY >= 0 && currentY < MapComponent.SIZE_MAP && 
+						    bitsMap.getColor (currentX, currentY) == enemy) {
+							setIsTaking(enemy);
+						}
+
+				}
 				map [x * SIZE_MAP + y] = (char)color;
-				gameManager.setLastPawn(color, x, y);
+				gameManager.setLastPawn (color, x, y);
 				return true;
 		}
 
-		private void setIsTakeable (MapComponent.Color color)
+		private void setIsTaking (MapComponent.Color color)
 		{
 				MapComponent.Color otherColor = (color == MapComponent.Color.White) ? MapComponent.Color.Black : MapComponent.Color.White;
 			
-				bitsMap.setIsTaken (currentX, currentY, O_RIGHT, isTakeable (ORIENTATION [O_RIGHT] [0], ORIENTATION [O_RIGHT] [1], color, otherColor));
-				bitsMap.setIsTaken (currentX, currentY, O_LEFT, isTakeable (ORIENTATION [O_LEFT] [0], ORIENTATION [O_LEFT] [1], color, otherColor));
-				bitsMap.setIsTaken (currentX, currentY, O_UP, isTakeable (ORIENTATION [O_UP] [0], ORIENTATION [O_UP] [1], color, otherColor));
-				bitsMap.setIsTaken (currentX, currentY, O_DOWN, isTakeable (ORIENTATION [O_DOWN] [0], ORIENTATION [O_DOWN] [1], color, otherColor));
+				bitsMap.setIsTaking (currentX, currentY, O_RIGHT, IsTaking (ORIENTATION [O_RIGHT] [0], ORIENTATION [O_RIGHT] [1], color, otherColor));
+				bitsMap.setIsTaking (currentX, currentY, O_LEFT, IsTaking (ORIENTATION [O_LEFT] [0], ORIENTATION [O_LEFT] [1], color, otherColor));
+				bitsMap.setIsTaking (currentX, currentY, O_UP, IsTaking (ORIENTATION [O_UP] [0], ORIENTATION [O_UP] [1], color, otherColor));
+				bitsMap.setIsTaking (currentX, currentY, O_DOWN, IsTaking (ORIENTATION [O_DOWN] [0], ORIENTATION [O_DOWN] [1], color, otherColor));
 
-				bitsMap.setIsTaken (currentX, currentY, O_RIGHT_UP, isTakeable (ORIENTATION [O_RIGHT_UP] [0], ORIENTATION [O_RIGHT_UP] [1], color, otherColor));
-				bitsMap.setIsTaken (currentX, currentY, O_RIGHT_DOWN, isTakeable (ORIENTATION [O_RIGHT_DOWN] [0], ORIENTATION [O_RIGHT_DOWN] [1], color, otherColor));
-				bitsMap.setIsTaken (currentX, currentY, O_LEFT_UP, isTakeable (ORIENTATION [O_LEFT_UP] [0], ORIENTATION [O_LEFT_UP] [1], color, otherColor));
-				bitsMap.setIsTaken (currentX, currentY, O_LEFT_DOWN, isTakeable (ORIENTATION [O_LEFT_DOWN] [0], ORIENTATION [O_LEFT_DOWN] [1], color, otherColor));
+				bitsMap.setIsTaking (currentX, currentY, O_RIGHT_UP, IsTaking (ORIENTATION [O_RIGHT_UP] [0], ORIENTATION [O_RIGHT_UP] [1], color, otherColor));
+				bitsMap.setIsTaking (currentX, currentY, O_RIGHT_DOWN, IsTaking (ORIENTATION [O_RIGHT_DOWN] [0], ORIENTATION [O_RIGHT_DOWN] [1], color, otherColor));
+				bitsMap.setIsTaking (currentX, currentY, O_LEFT_UP, IsTaking (ORIENTATION [O_LEFT_UP] [0], ORIENTATION [O_LEFT_UP] [1], color, otherColor));
+				bitsMap.setIsTaking (currentX, currentY, O_LEFT_DOWN, IsTaking (ORIENTATION [O_LEFT_DOWN] [0], ORIENTATION [O_LEFT_DOWN] [1], color, otherColor));
 
+		print ("setIsTaking");
+				for (int i = 0; i < 8; i++) {
+					print (bitsMap.isTaking (currentX, currentY, i));
+				}
 		}
 
-		private char isTakeable (int wayX, int wayY, MapComponent.Color color, MapComponent.Color otherColor)
+		private char IsTaking (int wayX, int wayY, MapComponent.Color color, MapComponent.Color otherColor)
 		{
 				int x = currentX + wayX;
 				int y = currentY + wayY;
@@ -128,8 +151,7 @@ public class MapComponent : MonoBehaviour
 
 				while (x >= 0 && y >= 0 &&
 		     		  x < SIZE_MAP && y < SIZE_MAP) {
-						print ("nbColor = " + nbOtherColor);
-						if (nbOtherColor == 2 && bitsMap.getColor (x, y) != otherColor)
+						if (bitsMap.getColor (x, y) != otherColor && nbOtherColor == 2)
 								return (char)1;
 						if (bitsMap.getColor (x, y) != otherColor)
 								return (char)0;
@@ -140,6 +162,7 @@ public class MapComponent : MonoBehaviour
 				return (char)0;
 		}
 
+		// voir pour passer en recursif
 		private void weightPropagation (int wayX, int wayY, MapComponent.Color color)
 		{
 				int x = currentX + wayX;
@@ -171,12 +194,10 @@ public class MapComponent : MonoBehaviour
 						x += wayX;
 						y += wayY;
 				}
-				if (x >= 0 && y >= 0 &&
+				/*if (x >= 0 && y >= 0 &&
 						x < SIZE_MAP && y < SIZE_MAP && bitsMap.getColor (x, y) == MapComponent.Color.Empty) {
 						bitsMap.setWeight (x, y, nbPawn, color);
-						//print ("x = " + x.ToString () + " y = " + y.ToString () + " nbPawn = " + nbPawn.ToString () + " weight = " + bitsMap.getWeight (x, y, color).ToString ());
-
-				}
+					}*/
 			
 				x = currentX - wayX;
 				y = currentY - wayY;
@@ -186,24 +207,22 @@ public class MapComponent : MonoBehaviour
 						x -= wayX;
 						y -= wayY;
 				}
-				if (x >= 0 && y >= 0 &&
+				/*if (x >= 0 && y >= 0 &&
 						x < SIZE_MAP && y < SIZE_MAP && bitsMap.getColor (x, y) == MapComponent.Color.Empty) {
 						bitsMap.setWeight (x, y, nbPawn, color);
-						//print ("x = " + x.ToString () + " y = " + y.ToString () + " nbPawn = " + nbPawn.ToString () + " weight = " + bitsMap.getWeight (x, y, color).ToString ());
-				}
+				}*/
 		
 
 
 				if (bitsMap.getWeight (currentX, currentY, color) < nbPawn)
 						bitsMap.setWeight (currentX, currentY, nbPawn, color);
-				//print ("x = " + currentX.ToString () + " y = " + currentY.ToString () + " nbPawn = " + nbPawn.ToString () + " weight = " + bitsMap.getWeight (currentX, currentY, color).ToString ());
 		}
 	
 		public bool removePawn (int x, int y)
 		{
 				bitsMap.removePawn (x, y);
-				map [x * SIZE_MAP + y] = (char) MapComponent.Color.Empty;
-				Destroy(GameObject.Find("Pawn_" + (x * SIZE_MAP + y).ToString()));
+				map [x * SIZE_MAP + y] = (char)MapComponent.Color.Empty;
+				Destroy (GameObject.Find ("Pawn_" + (x * SIZE_MAP + y).ToString ()));
 				return true;
 		}
 
@@ -221,6 +240,16 @@ public class MapComponent : MonoBehaviour
 		public BitsMap getBitsMap ()
 		{
 				return bitsMap;
+		}
+
+		public static int FindOrientation(int wayX, int wayY)
+		{
+				foreach (KeyValuePair<int, int[]> entry in MapComponent.ORIENTATION)
+				{
+					if (entry.Value[0] == wayX && entry.Value[1] == wayY)
+						return entry.Key;
+				}
+		return -1;
 		}
 
 		public class BitsMap
@@ -266,13 +295,12 @@ public class MapComponent : MonoBehaviour
 						}
 				}
 
-				public void setIsTaken (int x, int y, int orientation, char state)
+				public void setIsTaking (int x, int y, int orientation, char state)
 				{
-						print ("takeable: x = " + x + " y = " + y + " orientation = " + orientation + " state = " + ((int)state));
 						this._map [x * SIZE_MAP + y].takePawns [orientation] = state;
 				}
 
-				public bool isTakeable (int x, int y, int orientation)
+				public bool isTaking (int x, int y, int orientation)
 				{
 						if (this._map [x * SIZE_MAP + y].takePawns [orientation] == 1)
 								return true;
@@ -304,11 +332,10 @@ public class MapComponent : MonoBehaviour
 				public bool removePawn (int x, int y)
 				{
 						this._map [x * SIZE_MAP + y].color = 0;
-						this._map [x * SIZE_MAP + y].weight[Color.Black] = 0;
-						this._map [x * SIZE_MAP + y].weight[Color.White] = 0;
-						foreach (KeyValuePair<int, int[]> entry in MapComponent.ORIENTATION)
-						{
-								setIsTaken(x, y, entry.Key, (char) 0);
+						this._map [x * SIZE_MAP + y].weight [Color.Black] = 0;
+						this._map [x * SIZE_MAP + y].weight [Color.White] = 0;
+						foreach (KeyValuePair<int, int[]> entry in MapComponent.ORIENTATION) {
+								setIsTaking (x, y, entry.Key, (char)0);
 						}
 						this.map [x * SIZE_MAP + y] = 0;
 						return true;
