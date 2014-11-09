@@ -342,11 +342,10 @@ public class MapComponent : MonoBehaviour
 								print ("=====================check======================");
 								/*if (bitsMap.getColor (element [0], element [1]) == MapComponent.Color.Empty)
 										bitsMap.putPawn (element [0], element [1], bitsMap.getColor (x, y));*/
-				if (bitsMap.getColor(element[0], element[1]) != MapComponent.Color.Empty){
+								if (bitsMap.getColor(element[0], element[1]) != MapComponent.Color.Empty) {
 								foreach (KeyValuePair<int, int[]> entry in MapComponent.ORIENTATION) {
 										if (!((entry.Value [0] == MapComponent.ORIENTATION [orientation] [0] && entry.Value [1] == MapComponent.ORIENTATION [orientation] [1]) ||
 												(entry.Value [0] == -(MapComponent.ORIENTATION [orientation] [0]) && entry.Value [1] == -(MapComponent.ORIENTATION [orientation] [1])))) {
-
 												
 													List<List<int[]>> line = threeFree (element [0], element [1], entry.Key, color);
 
@@ -383,16 +382,16 @@ public class MapComponent : MonoBehaviour
 
 
 				foreach (int[] element in emptyCells) {
-						List<int[]> pattern = new List<int[]> ();
+						List<int[]> pattern1 = new List<int[]> ();
+						List<int[]> pattern2 = new List<int[]> ();
 						int[] temp;
 						int countColor;
 						int countEmpty;
-						bool done;
 						bool alreadyEmpty;
 						bool lastEmpty;
 
 						temp = new int[] { element [0], element [1] };
-						pattern.Add (temp);
+						pattern1.Add (temp);
 						alreadyEmpty = false;
 						countColor = 0;
 						countEmpty = 1;
@@ -408,15 +407,15 @@ public class MapComponent : MonoBehaviour
 								if (currentColor == color) {
 										countColor++;
 										temp = new int[] { currentX , currentY };
-										pattern.Add (temp);
+										pattern1.Add (temp);
 								}
 								if (currentColor == MapComponent.Color.Empty) {
-										if (bitsMap.getColor (pattern [pattern.Count - 1] [0], pattern [pattern.Count - 1] [1]) == MapComponent.Color.Empty || 
+										if (bitsMap.getColor (pattern1 [pattern1.Count - 1] [0], pattern1 [pattern1.Count - 1] [1]) == MapComponent.Color.Empty || 
 												(countColor != 3 && alreadyEmpty == true)) {
 												break;
 										}
 										temp = new int[] { currentX , currentY };
-										pattern.Add (temp);
+										pattern1.Add (temp);
 										alreadyEmpty = true;
 										countEmpty++;
 								}
@@ -425,14 +424,13 @@ public class MapComponent : MonoBehaviour
 								currentY += ORIENTATION [orientation] [1];
 						}
 
-						if (countEmpty <= 3 && countColor == 3 && (pattern.Count == 5 || pattern.Count == 6) && bitsMap.getColor(pattern[0][0], pattern[0][1]) == MapComponent.Color.Empty &&
-			 			   bitsMap.getColor(pattern[pattern.Count - 1][0], pattern[pattern.Count - 1][1]) == MapComponent.Color.Empty) {
-								threeFreeList.Add (pattern);
+						if (countEmpty <= 3 && countColor == 3 && (pattern1.Count == 5 || pattern1.Count == 6) && bitsMap.getColor(pattern1[0][0], pattern1[0][1]) == MapComponent.Color.Empty &&
+			 			   bitsMap.getColor(pattern1[pattern1.Count - 1][0], pattern1[pattern1.Count - 1][1]) == MapComponent.Color.Empty) {
+								threeFreeList.Add (pattern1);
 						}
 
-			pattern = new List<int[]>();
 			temp = new int[] { element [0], element [1] };
-			pattern.Add (temp);
+			pattern2.Add (temp);
 			alreadyEmpty = false;
 			countColor = 0;
 			countEmpty = 1;
@@ -448,15 +446,15 @@ public class MapComponent : MonoBehaviour
 				if (currentColor == color) {
 					countColor++;
 					temp = new int[] { currentX , currentY };
-					pattern.Add (temp);
+					pattern2.Add (temp);
 				}
 				if (currentColor == MapComponent.Color.Empty) {
-					if (bitsMap.getColor (pattern [pattern.Count - 1] [0], pattern [pattern.Count - 1] [1]) == MapComponent.Color.Empty || 
+					if (bitsMap.getColor (pattern2 [pattern2.Count - 1] [0], pattern2 [pattern2.Count - 1] [1]) == MapComponent.Color.Empty || 
 					    (countColor != 3 && alreadyEmpty == true)) {
 						break;
 					}
 					temp = new int[] { currentX , currentY };
-					pattern.Add (temp);
+					pattern2.Add (temp);
 					alreadyEmpty = true;
 					countEmpty++;
 				}
@@ -465,9 +463,12 @@ public class MapComponent : MonoBehaviour
 				currentY -= ORIENTATION [orientation] [1];
 			}
 			
-			if (countEmpty <= 3 && countColor == 3 && (pattern.Count == 5 || pattern.Count == 6) && bitsMap.getColor(pattern[0][0], pattern[0][1]) == MapComponent.Color.Empty &&
-			    bitsMap.getColor(pattern[pattern.Count - 1][0], pattern[pattern.Count - 1][1]) == MapComponent.Color.Empty) {
-				threeFreeList.Add (pattern);
+			if (countEmpty <= 3 && countColor == 3 && (pattern2.Count == 5 || pattern2.Count == 6) && bitsMap.getColor(pattern2[0][0], pattern2[0][1]) == MapComponent.Color.Empty &&
+			    bitsMap.getColor(pattern2[pattern2.Count - 1][0], pattern2[pattern2.Count - 1][1]) == MapComponent.Color.Empty) {
+
+				if (!(pattern1[0][0] == pattern2[pattern2.Count - 1][0] && pattern1[0][1] == pattern2[pattern2.Count - 1][1])) {
+					threeFreeList.Add (pattern2);
+				}
 			}
 						
 					
