@@ -82,15 +82,24 @@ public class MapComponent : MonoBehaviour
 						graphicMap.Add (row);
 				}
 		}
+
+		public int getColorMod(int x, int y, MapComponent.Color color){
+			if (bitsMap.getColor (x, y) == color)
+				return 2;
+			else
+				return 0;
+		}
+
 	
 		public bool isDoubleThree (int x, int y, MapComponent.Color color)
 		{
 				bitsMap.putPawn (x, y, color);
-			
+				
+				//allDoubleThree (x, y, color);
 				bool right = isDoubleFree (x, y, O_RIGHT);
 				bool up = isDoubleFree (x, y, O_UP);
-				bool rightUp = false;//isDoubleFree (x, y, O_RIGHT_UP);
-				bool leftUp = false;//isDoubleFree (x, y, O_LEFT_UP);
+				bool rightUp = isDoubleFree (x, y, O_RIGHT_UP);
+				bool leftUp = isDoubleFree (x, y, O_LEFT_UP);
 		       
 				bitsMap.removePawn (x, y);
 		        
@@ -203,28 +212,31 @@ public class MapComponent : MonoBehaviour
 								print ("=====================check======================");
 								/*if (bitsMap.getColor (element [0], element [1]) == MapComponent.Color.Empty)
 										bitsMap.putPawn (element [0], element [1], bitsMap.getColor (x, y));*/
+				if (bitsMap.getColor(element[0], element[1]) != MapComponent.Color.Empty){
 								foreach (KeyValuePair<int, int[]> entry in MapComponent.ORIENTATION) {
 										if (!((entry.Value [0] == MapComponent.ORIENTATION [orientation] [0] && entry.Value [1] == MapComponent.ORIENTATION [orientation] [1]) ||
 												(entry.Value [0] == -(MapComponent.ORIENTATION [orientation] [0]) && entry.Value [1] == -(MapComponent.ORIENTATION [orientation] [1])))) {
 
-												List<List<int[]>> line = threeFree (element [0], element [1], entry.Key, color);
+												
+													List<List<int[]>> line = threeFree (element [0], element [1], entry.Key, color);
 
-												print ("orientation = " + orientation);
-												print ("key = " + entry.Key);
-												print ("=====================Line====================");
-												print (line.Count);
-												foreach (List<int[]> elem in line) {
-														print ("threeFree");
-														print (elem.Count);
-														foreach (int [] cell in elem) {
-																print ("x = " + cell [0] + " y = " + cell [1]);
-														}
-												}
-												if (line.Count > 0) {
-														print ("=========================================\n==================Double=================\n=========================================");
-														//bitsMap.removePawn (element [0], element [1]);
-														return true;
-												}
+													print ("orientation = " + orientation);
+													print ("key = " + entry.Key);
+													print ("=====================Line====================");
+													print (line.Count);
+													foreach (List<int[]> elem in line) {
+															print ("threeFree");
+															print (elem.Count);
+															foreach (int [] cell in elem) {
+																	print ("x = " + cell [0] + " y = " + cell [1]);
+															}
+													}
+													if (line.Count > 0) {
+															print ("=========================================\n==================Double=================\n=========================================");
+															//bitsMap.removePawn (element [0], element [1]);
+															return true;
+													}
+											}
 										}
 								}
 								//bitsMap.removePawn (element [0], element [1]);		
@@ -283,48 +295,52 @@ public class MapComponent : MonoBehaviour
 								currentY += ORIENTATION [orientation] [1];
 						}
 
-						if (countEmpty <= 3 && countColor == 3 && (pattern.Count == 5 || pattern.Count == 6)) {
+						if (countEmpty <= 3 && countColor == 3 && (pattern.Count == 5 || pattern.Count == 6) && bitsMap.getColor(pattern[0][0], pattern[0][1]) == MapComponent.Color.Empty &&
+			 			   bitsMap.getColor(pattern[pattern.Count - 1][0], pattern[pattern.Count - 1][1]) == MapComponent.Color.Empty) {
 								threeFreeList.Add (pattern);
 						}
+
+			pattern = new List<int[]>();
+			temp = new int[] { element [0], element [1] };
+			pattern.Add (temp);
+			alreadyEmpty = false;
+			countColor = 0;
+			countEmpty = 1;
+			currentX = element [0] - ORIENTATION [orientation] [0];
+			currentY = element [1] - ORIENTATION [orientation] [1];
+			while (currentX >= 0 && currentY >= 0 &&
+			       currentX < SIZE_MAP && currentY < SIZE_MAP
+			       && bitsMap.getColor (currentX, currentY) != otherColor &&
+			       countColor < 4) {
+				
+				MapComponent.Color currentColor = bitsMap.getColor (currentX, currentY);
+				
+				if (currentColor == color) {
+					countColor++;
+					temp = new int[] { currentX , currentY };
+					pattern.Add (temp);
+				}
+				if (currentColor == MapComponent.Color.Empty) {
+					if (bitsMap.getColor (pattern [pattern.Count - 1] [0], pattern [pattern.Count - 1] [1]) == MapComponent.Color.Empty || 
+					    (countColor != 3 && alreadyEmpty == true)) {
+						break;
+					}
+					temp = new int[] { currentX , currentY };
+					pattern.Add (temp);
+					alreadyEmpty = true;
+					countEmpty++;
+				}
+				
+				currentX -= ORIENTATION [orientation] [0];
+				currentY -= ORIENTATION [orientation] [1];
+			}
+			
+			if (countEmpty <= 3 && countColor == 3 && (pattern.Count == 5 || pattern.Count == 6) && bitsMap.getColor(pattern[0][0], pattern[0][1]) == MapComponent.Color.Empty &&
+			    bitsMap.getColor(pattern[pattern.Count - 1][0], pattern[pattern.Count - 1][1]) == MapComponent.Color.Empty) {
+				threeFreeList.Add (pattern);
+			}
 						
-						pattern.Clear();
-						temp = new int[] { element [0], element [1] };
-						pattern.Add (temp);
-						alreadyEmpty = false;
-						countColor = 0;
-						countEmpty = 1;
-						currentX = element [0] - ORIENTATION [orientation] [0];
-						currentY = element [1] - ORIENTATION [orientation] [1];
-						while (currentX >= 0 && currentY >= 0 &&
-						       currentX < SIZE_MAP && currentY < SIZE_MAP
-						       && bitsMap.getColor (currentX, currentY) != otherColor &&
-						       countColor < 4) {
-							
-								MapComponent.Color currentColor = bitsMap.getColor (currentX, currentY);
-							
-								if (currentColor == color) {
-										countColor++;
-										temp = new int[] { currentX , currentY };
-										pattern.Add (temp);
-								}
-								if (currentColor == MapComponent.Color.Empty) {
-										if (bitsMap.getColor (pattern [pattern.Count - 1] [0], pattern [pattern.Count - 1] [1]) == MapComponent.Color.Empty || 
-												(countColor != 3 && alreadyEmpty == true)) {
-												break;
-										}
-										temp = new int[] { currentX , currentY };
-										pattern.Add (temp);
-										alreadyEmpty = true;
-										countEmpty++;
-								}
-							
-								currentX -= ORIENTATION [orientation] [0];
-								currentY -= ORIENTATION [orientation] [1];
-						}
-						
-						if (countEmpty <= 3 && countColor == 3 && (pattern.Count == 5 || pattern.Count == 6)) {
-								threeFreeList.Add (pattern);
-						}
+					
 				}
 
 				print ("===================ListthreeFree=================");
