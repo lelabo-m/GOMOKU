@@ -11,8 +11,6 @@ public class MenuSwitcherScript : MonoBehaviour
 
     public void Start()
     {
-		PlayerPrefs.SetInt("5 cassables", 2);
-		PlayerPrefs.SetInt("double 3", 2);
         NGUITools.SetActive(SetupGameMenu, false);
         NGUITools.SetActive(SettingsMenu, false);
         NGUITools.SetActive(CreditsMenu, false);

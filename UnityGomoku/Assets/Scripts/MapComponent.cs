@@ -36,14 +36,14 @@ public class MapComponent : MonoBehaviour
 		{
 				ORIENTATION = new Dictionary<int, int[]> ()
 		{
-			{ O_RIGHT , new int[] { 0 , 1 } },
-			{ O_LEFT , new int[] { 0 , -1 } },
-			{ O_UP , new int[] { 1 , 0 } },
-			{ O_DOWN , new int[] { -1 , 0 } },
-			{ O_RIGHT_UP , new int[] { 1 , 1 } },
-			{ O_RIGHT_DOWN , new int[] { -1 , 1 } },
-			{ O_LEFT_UP , new int[] { 1 , -1 } },
-			{ O_LEFT_DOWN , new int[] { -1 , -1 } }
+			{ O_RIGHT , new int[] { 1 , 0 } },
+			{ O_LEFT , new int[] { -1 , 0 } },
+			{ O_UP , new int[] { 0 , -1 } },
+			{ O_DOWN , new int[] { 0 , 1 } },
+			{ O_RIGHT_UP , new int[] { 1 , -1 } },
+			{ O_RIGHT_DOWN , new int[] { 1 , 1 } },
+			{ O_LEFT_UP , new int[] { -1 , -1 } },
+			{ O_LEFT_DOWN , new int[] { -1 , 1 } }
 		};
 				if (PlayerPrefs.GetInt ("5 cassables") > 1) {
 						print ("Regle des 5 cassables active !");
@@ -236,7 +236,7 @@ public class MapComponent : MonoBehaviour
 		private List<List<int[]>> threeFree (int x, int y, int orientation, MapComponent.Color color)
 		{
 				List<int[]> emptyCells = getEmptyCellsOnLine (x, y, orientation, color);
-				List<List<int[]>> threeFree = new List<List<int[]>> ();
+				List<List<int[]>> threeFreeList = new List<List<int[]>> ();
 				MapComponent.Color otherColor = (color == MapComponent.Color.Black) ? MapComponent.Color.White : MapComponent.Color.Black;
 
 
@@ -265,7 +265,7 @@ public class MapComponent : MonoBehaviour
 
 								if (currentColor == color) {
 										countColor++;
-										temp = new int[] { element [0], element [1] };
+										temp = new int[] { currentX , currentY };
 										pattern.Add (temp);
 								}
 								if (currentColor == MapComponent.Color.Empty) {
@@ -273,7 +273,7 @@ public class MapComponent : MonoBehaviour
 												(countColor != 3 && alreadyEmpty == true)) {
 												break;
 										}
-										temp = new int[] { element [0], element [1] };
+										temp = new int[] { currentX , currentY };
 										pattern.Add (temp);
 										alreadyEmpty = true;
 										countEmpty++;
@@ -283,10 +283,11 @@ public class MapComponent : MonoBehaviour
 								currentY += ORIENTATION [orientation] [1];
 						}
 
-						if (countEmpty <= 3 && countColor == 3 && pattern.Count == 5 || pattern.Count == 6) {
-								threeFree.Add (pattern);
+						if (countEmpty <= 3 && countColor == 3 && (pattern.Count == 5 || pattern.Count == 6)) {
+								threeFreeList.Add (pattern);
 						}
-
+						
+						pattern.Clear();
 						temp = new int[] { element [0], element [1] };
 						pattern.Add (temp);
 						alreadyEmpty = false;
@@ -303,7 +304,7 @@ public class MapComponent : MonoBehaviour
 							
 								if (currentColor == color) {
 										countColor++;
-										temp = new int[] { element [0], element [1] };
+										temp = new int[] { currentX , currentY };
 										pattern.Add (temp);
 								}
 								if (currentColor == MapComponent.Color.Empty) {
@@ -311,7 +312,7 @@ public class MapComponent : MonoBehaviour
 												(countColor != 3 && alreadyEmpty == true)) {
 												break;
 										}
-										temp = new int[] { element [0], element [1] };
+										temp = new int[] { currentX , currentY };
 										pattern.Add (temp);
 										alreadyEmpty = true;
 										countEmpty++;
@@ -321,21 +322,21 @@ public class MapComponent : MonoBehaviour
 								currentY -= ORIENTATION [orientation] [1];
 						}
 						
-						if (countEmpty <= 3 && countColor == 3 && pattern.Count == 5 || pattern.Count == 6) {
-								threeFree.Add (pattern);
+						if (countEmpty <= 3 && countColor == 3 && (pattern.Count == 5 || pattern.Count == 6)) {
+								threeFreeList.Add (pattern);
 						}
 				}
 
 				print ("===================ListthreeFree=================");
-				print (threeFree.Count);
-				foreach (List<int[]> element in threeFree) {
+				print (threeFreeList.Count);
+				foreach (List<int[]> element in threeFreeList) {
 						print ("threeFree");
 						print (element.Count);
 						foreach (int [] cell in element) {
 								print ("x = " + cell [0] + " y = " + cell [1]);
 						}
 				}
-				return threeFree;
+				return threeFreeList;
 		}
 
 		public bool putPawn (int x, int y, MapComponent.Color color)
