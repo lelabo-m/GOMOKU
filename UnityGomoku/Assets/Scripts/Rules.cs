@@ -14,10 +14,10 @@ public class Rules : MonoBehaviour
 		// Use this for initialization
 		void Start ()
 		{
-				if (PlayerPrefs.GetInt ("5 cassables") > 0) {
+				if (PlayerPrefs.GetInt ("5 cassables") > 1) {
 						fiveBreakable = true;
 				}
-				if (PlayerPrefs.GetInt ("double 3") > 0) {
+				if (PlayerPrefs.GetInt ("double 3") > 1) {
 						doubleThree = true;
 				}
 				scores = new System.Collections.Generic.Dictionary<PlayerComponent.Color, int> ();

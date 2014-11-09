@@ -45,10 +45,10 @@ public class MapComponent : MonoBehaviour
 			{ O_LEFT_UP , new int[] { 1 , -1 } },
 			{ O_LEFT_DOWN , new int[] { -1 , -1 } }
 		};
-				if (PlayerPrefs.GetInt ("5 cassables") > 0) {
+				if (PlayerPrefs.GetInt ("5 cassables") > 1) {
 						print ("Regle des 5 cassables active !");
 				}
-				if (PlayerPrefs.GetInt ("double 3") > 0) {
+				if (PlayerPrefs.GetInt ("double 3") > 1) {
 						print ("Regle des double 3 active !");
 				}
 				bitsMap = new BitsMap ();
