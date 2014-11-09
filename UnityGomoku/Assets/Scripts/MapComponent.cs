@@ -211,29 +211,22 @@ public class MapComponent : MonoBehaviour
 			}
 			return false;
 		}
-
-		public bool tabCompare(int[] a, int[] b){
-			for (int j=0; j < a.Length; j++) {
-				if (a[j] != b[j])
-					return false;
-			}
-			return true;
-		}
 	
 		public bool isDoubleThree (int x, int y, MapComponent.Color color)
 		{
 				bitsMap.putPawn (x, y, color);
 				
 				bool ret =  findDoubleThree (x, y, color);
+		/*
 				bool right = false;//isDoubleFree (x, y, O_RIGHT);
 				bool up = false;//isDoubleFree (x, y, O_UP);
 				bool rightUp = false;//isDoubleFree (x, y, O_RIGHT_UP);
 				bool leftUp = false;//isDoubleFree (x, y, O_LEFT_UP);
-		       
+		  */     
 				bitsMap.removePawn (x, y);
 		        
 				return ret;
-				return (right || up || rightUp || leftUp);
+			//	return (right || up || rightUp || leftUp);
 		}
 
 		private List<int[]> getEmptyCellsOnLine (int x, int y, int orientation, MapComponent.Color color)
