@@ -73,6 +73,7 @@ public class Rules : MonoBehaviour
 				for (int x = 0; x < MapComponent.SIZE_MAP; ++x) {
 						for (int y = 0; y < MapComponent.SIZE_MAP; ++y) {
 								if ((win = weightToFive (x, y, map)) != PlayerComponent.Color.Empty) {
+									print ("x = " + x + " y = " + y);
 										if (!fiveBreakable || !checkIsBreakable (map, x, y))
 												return win;
 										return PlayerComponent.Color.Empty;
@@ -100,7 +101,7 @@ public class Rules : MonoBehaviour
 				int countPawn = 0;
 				MapComponent.Color color = map.getBitsMap ().getColor (x, y);
 
-				print ("isBreakable: x = " + x + " y = " + y + " color = " + color + " orientation = " + orientation);
+				//print ("isBreakable: x = " + x + " y = " + y + " color = " + color + " orientation = " + orientation);
 				while (x > 0 && y > 0 &&
 		              y < MapComponent.SIZE_MAP - 1 && x < MapComponent.SIZE_MAP - 1
 		              && map.getBitsMap().getColor(x, y) == color) {
@@ -118,7 +119,7 @@ public class Rules : MonoBehaviour
 				while (x >= 0 && y >= 0 &&
 		       	y < MapComponent.SIZE_MAP && x < MapComponent.SIZE_MAP
 		       	&& map.getBitsMap().getColor(x, y) == color && countPawn < 5) {
-						print ("x = " + x + " y = " + y + " countPawn = " + countPawn);
+						//print ("x = " + x + " y = " + y + " countPawn = " + countPawn);
 						if (isTakingAroundMe (map, x, y))
 								countPawn = 0;
 						else 
@@ -126,7 +127,7 @@ public class Rules : MonoBehaviour
 						x += MapComponent.ORIENTATION [orientation] [0];
 						y += MapComponent.ORIENTATION [orientation] [1];
 				}
-				print ("countPawn = " + countPawn);
+			//	print ("countPawn = " + countPawn);
 				if (countPawn < 5)
 						return true;
 				return false;
@@ -141,8 +142,8 @@ public class Rules : MonoBehaviour
 						if (x - entry.Value [0] >= 0 && x - entry.Value [0] < MapComponent.SIZE_MAP && 
 								y - entry.Value [1] >= 0 && y - entry.Value [1] < MapComponent.SIZE_MAP && 
 								map.getBitsMap ().getColor (x - entry.Value [0], y - entry.Value [1]) == enemy) {
-								print ("enemy found");
-								print ("isTaking = " + map.getBitsMap ().isTaking (x - entry.Value [0], y - entry.Value [1], entry.Key));
+								//print ("enemy found");
+								//print ("isTaking = " + map.getBitsMap ().isTaking (x - entry.Value [0], y - entry.Value [1], entry.Key));
 								for (int i = 0; i < 8; i++) {
 										print (map.getBitsMap ().isTaking (x - entry.Value [0], y - entry.Value [1], i));
 								}

@@ -82,22 +82,275 @@ public class MapComponent : MonoBehaviour
 						graphicMap.Add (row);
 				}
 		}
+	
+		public bool isDoubleThree (int x, int y, MapComponent.Color color)
+		{
+				bitsMap.putPawn (x, y, color);
+			
+				bool right = isDoubleFree (x, y, O_RIGHT);
+				bool up = isDoubleFree (x, y, O_UP);
+				bool rightUp = false;//isDoubleFree (x, y, O_RIGHT_UP);
+				bool leftUp = false;//isDoubleFree (x, y, O_LEFT_UP);
+		       
+				bitsMap.removePawn (x, y);
+		        
+				return (right || up || rightUp || leftUp);
+		}
+
+		private List<int[]> getEmptyCellsOnLine (int x, int y, int orientation, MapComponent.Color color)
+		{
+				List<int []> empty = new List<int[]> ();
+				int nbEmpty;
+				int countColor;
+				bool lastEmpty;
+				bool alreadyEmpty;
+				MapComponent.Color otherColor = (color == MapComponent.Color.Black) ? MapComponent.Color.White : MapComponent.Color.Black;
+
+				
+				print ("beginX = " + x + " beginY = " + y);
+				currentX = x + ORIENTATION [orientation] [0];	
+				currentY = y + ORIENTATION [orientation] [1];
+				nbEmpty = 0;
+				lastEmpty = false;
+				alreadyEmpty = false;
+				countColor = 0;
+				while (currentX >= 0 && currentY >= 0 &&
+		       currentX < SIZE_MAP && currentY < SIZE_MAP && 
+		       bitsMap.getColor (currentX, currentY) != otherColor &&
+		       countColor < 4) {
+
+
+
+						print ("currentX = " + currentX + " currentY = " + currentY);
+						print (bitsMap.getColor (currentX, currentY));
+
+						MapComponent.Color currentColor = bitsMap.getColor (currentX, currentY);
+						
+						if (currentColor == color) {
+								countColor++;
+						}
+						if (currentColor == MapComponent.Color.Empty) {
+								if ((countColor != 3 && alreadyEmpty == true) || 
+										bitsMap.getColor (currentX - ORIENTATION [orientation] [0], currentX - ORIENTATION [orientation] [1]) == MapComponent.Color.Empty) {
+										break;
+								}
+								int [] temp = new int[] { currentX, currentY };
+								empty.Add (temp);
+								alreadyEmpty = true;
+								nbEmpty++;
+						}
+						
+						currentX += ORIENTATION [orientation] [0];
+						currentY += ORIENTATION [orientation] [1];
+				}
+
+				currentX = x - ORIENTATION [orientation] [0];	
+				currentY = y - ORIENTATION [orientation] [1];
+				nbEmpty = 0;
+				lastEmpty = false;
+				alreadyEmpty = false;
+				countColor = 0;
+				while (currentX >= 0 && currentY >= 0 &&
+		       currentX < SIZE_MAP && currentY < SIZE_MAP && 
+		       bitsMap.getColor (currentX, currentY) != otherColor &&
+		       countColor < 4) {
+			
+			
+			
+						print ("currentX = " + currentX + " currentY = " + currentY);
+						print (bitsMap.getColor (currentX, currentY));
+			
+						MapComponent.Color currentColor = bitsMap.getColor (currentX, currentY);
+			
+						if (currentColor == color) {
+								countColor++;
+						}
+						if (currentColor == MapComponent.Color.Empty) {
+								if ((countColor != 3 && alreadyEmpty == true) || 
+										bitsMap.getColor (currentX - ORIENTATION [orientation] [0], currentX - ORIENTATION [orientation] [1]) == MapComponent.Color.Empty) {
+										break;
+								}
+								int [] temp = new int[] { currentX, currentY };
+								empty.Add (temp);
+								alreadyEmpty = true;
+								nbEmpty++;
+						}
+			
+						currentX -= ORIENTATION [orientation] [0];
+						currentY -= ORIENTATION [orientation] [1];
+				}
+
+
+				
+				print ("==================empty==================");
+				print (empty.Count);
+				foreach (int [] cell in empty) {
+						print ("x = " + cell [0] + " y = " + cell [1]);
+				}
+
+				return empty;
+		}
+
+		private bool isDoubleFree (int x, int y, int orientation)
+		{
+				MapComponent.Color color = bitsMap.getColor (x, y);
+				List<List<int[]>> freeLines = threeFree (x, y, orientation, color);
+
+				foreach (List<int[]> threeLine in freeLines) {
+						foreach (int[] element in threeLine) {
+								print ("=====================check======================");
+								/*if (bitsMap.getColor (element [0], element [1]) == MapComponent.Color.Empty)
+										bitsMap.putPawn (element [0], element [1], bitsMap.getColor (x, y));*/
+								foreach (KeyValuePair<int, int[]> entry in MapComponent.ORIENTATION) {
+										if (!((entry.Value [0] == MapComponent.ORIENTATION [orientation] [0] && entry.Value [1] == MapComponent.ORIENTATION [orientation] [1]) ||
+												(entry.Value [0] == -(MapComponent.ORIENTATION [orientation] [0]) && entry.Value [1] == -(MapComponent.ORIENTATION [orientation] [1])))) {
+
+												List<List<int[]>> line = threeFree (element [0], element [1], entry.Key, color);
+
+												print ("orientation = " + orientation);
+												print ("key = " + entry.Key);
+												print ("=====================Line====================");
+												print (line.Count);
+												foreach (List<int[]> elem in line) {
+														print ("threeFree");
+														print (elem.Count);
+														foreach (int [] cell in elem) {
+																print ("x = " + cell [0] + " y = " + cell [1]);
+														}
+												}
+												if (line.Count > 0) {
+														print ("=========================================\n==================Double=================\n=========================================");
+														//bitsMap.removePawn (element [0], element [1]);
+														return true;
+												}
+										}
+								}
+								//bitsMap.removePawn (element [0], element [1]);		
+						}
+				}
+				return false;
+		}
+
+		private List<List<int[]>> threeFree (int x, int y, int orientation, MapComponent.Color color)
+		{
+				List<int[]> emptyCells = getEmptyCellsOnLine (x, y, orientation, color);
+				List<List<int[]>> threeFree = new List<List<int[]>> ();
+				MapComponent.Color otherColor = (color == MapComponent.Color.Black) ? MapComponent.Color.White : MapComponent.Color.Black;
+
+
+				foreach (int[] element in emptyCells) {
+						List<int[]> pattern = new List<int[]> ();
+						int[] temp;
+						int countColor;
+						int countEmpty;
+						bool done;
+						bool alreadyEmpty;
+						bool lastEmpty;
+
+						temp = new int[] { element [0], element [1] };
+						pattern.Add (temp);
+						alreadyEmpty = false;
+						countColor = 0;
+						countEmpty = 1;
+						currentX = element [0] + ORIENTATION [orientation] [0];
+						currentY = element [1] + ORIENTATION [orientation] [1];
+						while (currentX >= 0 && currentY >= 0 &&
+			       				currentX < SIZE_MAP && currentY < SIZE_MAP
+			      				 && bitsMap.getColor (currentX, currentY) != otherColor &&
+			       				countColor < 4) {
+								
+								MapComponent.Color currentColor = bitsMap.getColor (currentX, currentY);
+
+								if (currentColor == color) {
+										countColor++;
+										temp = new int[] { element [0], element [1] };
+										pattern.Add (temp);
+								}
+								if (currentColor == MapComponent.Color.Empty) {
+										if (bitsMap.getColor (pattern [pattern.Count - 1] [0], pattern [pattern.Count - 1] [1]) == MapComponent.Color.Empty || 
+												(countColor != 3 && alreadyEmpty == true)) {
+												break;
+										}
+										temp = new int[] { element [0], element [1] };
+										pattern.Add (temp);
+										alreadyEmpty = true;
+										countEmpty++;
+								}
+
+								currentX += ORIENTATION [orientation] [0];
+								currentY += ORIENTATION [orientation] [1];
+						}
+
+						if (countEmpty <= 3 && countColor == 3 && pattern.Count == 5 || pattern.Count == 6) {
+								threeFree.Add (pattern);
+						}
+
+						temp = new int[] { element [0], element [1] };
+						pattern.Add (temp);
+						alreadyEmpty = false;
+						countColor = 0;
+						countEmpty = 1;
+						currentX = element [0] - ORIENTATION [orientation] [0];
+						currentY = element [1] - ORIENTATION [orientation] [1];
+						while (currentX >= 0 && currentY >= 0 &&
+						       currentX < SIZE_MAP && currentY < SIZE_MAP
+						       && bitsMap.getColor (currentX, currentY) != otherColor &&
+						       countColor < 4) {
+							
+								MapComponent.Color currentColor = bitsMap.getColor (currentX, currentY);
+							
+								if (currentColor == color) {
+										countColor++;
+										temp = new int[] { element [0], element [1] };
+										pattern.Add (temp);
+								}
+								if (currentColor == MapComponent.Color.Empty) {
+										if (bitsMap.getColor (pattern [pattern.Count - 1] [0], pattern [pattern.Count - 1] [1]) == MapComponent.Color.Empty || 
+												(countColor != 3 && alreadyEmpty == true)) {
+												break;
+										}
+										temp = new int[] { element [0], element [1] };
+										pattern.Add (temp);
+										alreadyEmpty = true;
+										countEmpty++;
+								}
+							
+								currentX -= ORIENTATION [orientation] [0];
+								currentY -= ORIENTATION [orientation] [1];
+						}
+						
+						if (countEmpty <= 3 && countColor == 3 && pattern.Count == 5 || pattern.Count == 6) {
+								threeFree.Add (pattern);
+						}
+				}
+
+				print ("===================ListthreeFree=================");
+				print (threeFree.Count);
+				foreach (List<int[]> element in threeFree) {
+						print ("threeFree");
+						print (element.Count);
+						foreach (int [] cell in element) {
+								print ("x = " + cell [0] + " y = " + cell [1]);
+						}
+				}
+				return threeFree;
+		}
 
 		public bool putPawn (int x, int y, MapComponent.Color color)
 		{
-				if (!rules.putPawn (map, x, y))
+				if (!rules.putPawn (map, x, y) || (rules.doubleThree && isDoubleThree (x, y, color)))
 						return false;
 				bitsMap.putPawn (x, y, color);
 
 				currentX = x;
 				currentY = y;
 
-				weightPropagation (ORIENTATION [O_RIGHT] [0], ORIENTATION [O_RIGHT] [1], color);
-				weightPropagation (ORIENTATION [O_UP] [0], ORIENTATION [O_UP] [1], color);
-				weightPropagation (ORIENTATION [O_RIGHT_UP] [0], ORIENTATION [O_RIGHT_UP] [1], color);
-				weightPropagation (ORIENTATION [O_LEFT_UP] [0], ORIENTATION [O_LEFT_UP] [1], color);
+				updateCellData (O_RIGHT, color);
+				updateCellData (O_UP, color);
+				updateCellData (O_RIGHT_UP, color);
+				updateCellData (O_LEFT_UP, color);
 				
-				setIsTaking(color);
+				setIsTaking (color);
 
 				MapComponent.Color enemy = (color == MapComponent.Color.White) ? MapComponent.Color.Black : MapComponent.Color.White;
 				foreach (KeyValuePair<int, int[]> entry in MapComponent.ORIENTATION) {
@@ -106,15 +359,15 @@ public class MapComponent : MonoBehaviour
 						if (currentX >= 0 && currentX < MapComponent.SIZE_MAP && 
 								currentY >= 0 && currentY < MapComponent.SIZE_MAP && 
 								bitsMap.getColor (currentX, currentY) == enemy) {
-								setIsTaking(enemy);
+								setIsTaking (enemy);
 						}
 
 						currentX = x + 2 * entry.Value [0];
 						currentY = y + 2 * entry.Value [1];
 						if (currentX >= 0 && currentX < MapComponent.SIZE_MAP && 
-						    currentY >= 0 && currentY < MapComponent.SIZE_MAP && 
-						    bitsMap.getColor (currentX, currentY) == enemy) {
-							setIsTaking(enemy);
+								currentY >= 0 && currentY < MapComponent.SIZE_MAP && 
+								bitsMap.getColor (currentX, currentY) == enemy) {
+								setIsTaking (enemy);
 						}
 
 				}
@@ -137,10 +390,9 @@ public class MapComponent : MonoBehaviour
 				bitsMap.setIsTaking (currentX, currentY, O_LEFT_UP, IsTaking (ORIENTATION [O_LEFT_UP] [0], ORIENTATION [O_LEFT_UP] [1], color, otherColor));
 				bitsMap.setIsTaking (currentX, currentY, O_LEFT_DOWN, IsTaking (ORIENTATION [O_LEFT_DOWN] [0], ORIENTATION [O_LEFT_DOWN] [1], color, otherColor));
 
-		print ("setIsTaking");
-				for (int i = 0; i < 8; i++) {
+				/*for (int i = 0; i < 8; i++) {
 					print (bitsMap.isTaking (currentX, currentY, i));
-				}
+				}*/
 		}
 
 		private char IsTaking (int wayX, int wayY, MapComponent.Color color, MapComponent.Color otherColor)
@@ -163,59 +415,51 @@ public class MapComponent : MonoBehaviour
 		}
 
 		// voir pour passer en recursif
-		private void weightPropagation (int wayX, int wayY, MapComponent.Color color)
+		private void updateCellData (int orientation, MapComponent.Color color)
 		{
-				int x = currentX + wayX;
-				int y = currentY + wayY;
-				int nbPawn = 1;
+				int x;
+				int y;
+				int weight = 1;
 
-
+				x = currentX + ORIENTATION [orientation] [0];
+				y = currentY + ORIENTATION [orientation] [1];
 				while (x >= 0 && y >= 0 &&
 		       	x < SIZE_MAP && y < SIZE_MAP && bitsMap.getColor(x, y) == color) {
-						nbPawn++;
-						x += wayX;
-						y += wayY;
+						weight++;
+						x += ORIENTATION [orientation] [0];
+						y += ORIENTATION [orientation] [1];
 				}
 
-				x = currentX - wayX;
-				y = currentY - wayY;
+				x = currentX - ORIENTATION [orientation] [0];
+				y = currentY - ORIENTATION [orientation] [1];
 				while (x >= 0 && y >= 0 &&
 			       x < SIZE_MAP && y < SIZE_MAP && bitsMap.getColor(x, y) == color) {
-						nbPawn++;
-						x -= wayX;
-						y -= wayY;
+						weight++;
+						x -= ORIENTATION [orientation] [0];
+						y -= ORIENTATION [orientation] [1];
 				}
 
-				x = currentX + wayX;
-				y = currentY + wayY;
+				x = currentX + ORIENTATION [orientation] [0];
+				y = currentY + ORIENTATION [orientation] [1];
 				while (x >= 0 && y >= 0 &&
 			       x < SIZE_MAP && y < SIZE_MAP && bitsMap.getColor(x, y) == color) {
-						bitsMap.setWeight (x, y, nbPawn, color);
-						x += wayX;
-						y += wayY;
+						bitsMap.setWeight (x, y, weight, color);
+						x += ORIENTATION [orientation] [0];
+						y += ORIENTATION [orientation] [1];
 				}
-				/*if (x >= 0 && y >= 0 &&
-						x < SIZE_MAP && y < SIZE_MAP && bitsMap.getColor (x, y) == MapComponent.Color.Empty) {
-						bitsMap.setWeight (x, y, nbPawn, color);
-					}*/
 			
-				x = currentX - wayX;
-				y = currentY - wayY;
+				x = currentX - ORIENTATION [orientation] [0];
+				y = currentY - ORIENTATION [orientation] [1];
 				while (x >= 0 && y >= 0 &&
 			       x < SIZE_MAP && y < SIZE_MAP && bitsMap.getColor(x, y) == color) {
-						bitsMap.setWeight (x, y, nbPawn, color);
-						x -= wayX;
-						y -= wayY;
+						bitsMap.setWeight (x, y, weight, color);
+						x -= ORIENTATION [orientation] [0];
+						y -= ORIENTATION [orientation] [1];
 				}
-				/*if (x >= 0 && y >= 0 &&
-						x < SIZE_MAP && y < SIZE_MAP && bitsMap.getColor (x, y) == MapComponent.Color.Empty) {
-						bitsMap.setWeight (x, y, nbPawn, color);
-				}*/
-		
 
-
-				if (bitsMap.getWeight (currentX, currentY, color) < nbPawn)
-						bitsMap.setWeight (currentX, currentY, nbPawn, color);
+				if (bitsMap.getWeight (currentX, currentY, color) < weight)
+						bitsMap.setWeight (currentX, currentY, weight, color);
+						
 		}
 	
 		public bool removePawn (int x, int y)
@@ -242,16 +486,17 @@ public class MapComponent : MonoBehaviour
 				return bitsMap;
 		}
 
-		public static int FindOrientation(int wayX, int wayY)
+		public static int FindOrientation (int wayX, int wayY)
 		{
-				foreach (KeyValuePair<int, int[]> entry in MapComponent.ORIENTATION)
-				{
-					if (entry.Value[0] == wayX && entry.Value[1] == wayY)
-						return entry.Key;
+				foreach (KeyValuePair<int, int[]> entry in MapComponent.ORIENTATION) {
+						if (entry.Value [0] == wayX && entry.Value [1] == wayY)
+								return entry.Key;
 				}
-		return -1;
+				return -1;
 		}
 
+
+		
 		public class BitsMap
 		{ 
 
@@ -260,6 +505,7 @@ public class MapComponent : MonoBehaviour
 						public MapComponent.Color color = MapComponent.Color.Empty;
 						public System.Collections.Generic.Dictionary<MapComponent.Color, int> weight;
 						public char[] takePawns = new char[8];
+						public char[] free = new char[8];
 			
 						public Cell ()
 						{		
@@ -302,9 +548,17 @@ public class MapComponent : MonoBehaviour
 
 				public bool isTaking (int x, int y, int orientation)
 				{
-						if (this._map [x * SIZE_MAP + y].takePawns [orientation] == 1)
-								return true;
-						return false;
+						return  (this._map [x * SIZE_MAP + y].takePawns [orientation % 8] == 1);
+				}
+
+				public bool isFree (int x, int y, int orientation)
+				{
+						return  (this._map [x * SIZE_MAP + y].free [orientation % 8] == 1);
+				}
+
+				public void setIsFree (int x, int y, int orientation, char state)
+				{
+						this._map [x * SIZE_MAP + y].free [orientation % 8] = state;
 				}
 
 				public int getWeight (int x, int y, MapComponent.Color color)
