@@ -90,19 +90,149 @@ public class MapComponent : MonoBehaviour
 				return 0;
 		}
 
+		public bool testMask(int[] mask, MapComponent.Color color, int x, int y, int orientation){
+			
+			if (mask [0] != -1 && getColorMod (x + -4 * ORIENTATION [orientation] [0], y + -4 * ORIENTATION [orientation] [1], color) != mask [0])
+				return false;
+			if (mask [1] != -1 && getColorMod (x + -3 * ORIENTATION [orientation] [0], y + -3 * ORIENTATION [orientation] [1], color) != mask [1])
+					return false;
+			if (mask [2] != -1 && getColorMod (x + -2 * ORIENTATION [orientation] [0], y + -2 * ORIENTATION [orientation] [1], color) != mask [2])
+					return false;
+			if (mask [3] != -1 && getColorMod (x + -1 * ORIENTATION [orientation] [0], y + -1 * ORIENTATION [orientation] [1], color) != mask [3])
+					return false;
+			if (mask [5] != -1 && getColorMod (x + 1 * ORIENTATION [orientation] [0], y + 1 * ORIENTATION [orientation] [1], color) != mask [5])
+					return false;
+			if (mask [6] != -1 && getColorMod (x + 2 * ORIENTATION [orientation] [0], y + 2 * ORIENTATION [orientation] [1], color) != mask [6])
+					return false;
+			if (mask [7] != -1 && getColorMod (x + 3 * ORIENTATION [orientation] [0], y + 3 * ORIENTATION [orientation] [1], color) != mask [7])
+					return false;
+			if (mask [8] != -1 && getColorMod (x + 4 * ORIENTATION [orientation] [0], y + 4 * ORIENTATION [orientation] [1], color) != mask [8])
+					return false;
+			return true;
+		}
+
+		public bool findDoubleThree (int x, int y, MapComponent.Color color)
+		{
+			int j;
+			bool findMask = false;
+			bool breako = false;
+			List<int []> masks = new List<int[]> ();
+			List<int []> threeFree = new List<int[]> ();
+			List<int []> threeFreeNext = new List<int[]> ();
+			
+
+			masks.Add(new int[] { -1, 0, 2, 2, 1, 0, -1, -1, -1});
+			masks.Add(new int[] { 0, 2, 2, 0, 1, 0, -1, -1, -1});
+			masks.Add(new int[] { 0, 2, 0, 2, 1, 0, -1, -1, -1});
+			masks.Add(new int[] { -1, -1, 0, 2, 1, 2, 0, -1, -1});
+			masks.Add(new int[] { -1, 0, 2, 0, 1, 2, 0, -1, -1});
+			masks.Add(new int[] { -1, -1, 0, 2, 1, 0, 2, 0, -1});
+			masks.Add(new int[] { -1, -1, -1, 0, 1, 2, 2, 0, -1});
+			masks.Add(new int[] { -1, -1, -1, 0, 1, 2, 0, 2, 0});
+			masks.Add(new int[] { -1, -1, -1, 0, 1, 0, 2, 2, 0});
+
+			foreach (int[] mask in masks) {
+				foreach (KeyValuePair<int, int[]> orientation in ORIENTATION){
+					if (testMask (mask, color, x, y, orientation.Key)){
+						findMask = true;
+						for(j=0; j < mask.Length; j++)
+						{
+							if(mask[j]==2){
+							threeFree.Add(new int[] { x + (j - 4) * ORIENTATION [orientation.Key] [0], y + (j - 4) * ORIENTATION [orientation.Key] [1] });
+							}
+							if (mask[j] == 1){
+								threeFree.Add(new int[] { x, y });
+							}
+						}
+						print ("==========");
+						print ("find three !!");
+						print (orientation.Key);
+						foreach (int [] cell in threeFree) {
+							print ("x = " + cell [0] + " y = " + cell [1]);
+						}
+						print ("==========");
+						breako = true;
+						break;
+					}
+					if (breako)
+						break;
+					threeFree = new List<int[]> ();
+				}
+			}
+			if (!findMask) 
+				return false;
+
+			foreach (int [] cell in threeFree) {
+				foreach (int[] mask in masks) {
+					foreach (KeyValuePair<int, int[]> orientation in ORIENTATION){
+						if (testMask (mask, color, cell [0], cell [1], orientation.Key)){
+							for(j=0; j < mask.Length; j++)
+							{
+								if(mask[j]==2){
+									threeFreeNext.Add(new int[] { cell [0] + (j - 4) * ORIENTATION [orientation.Key] [0], cell [1] + (j - 4) * ORIENTATION [orientation.Key] [1] });
+								}
+								if (mask[j] == 1){
+									threeFreeNext.Add(new int[] { cell[0], cell[1] });
+								}
+							}
+							print ("==========");
+							print ("x = " + cell [0] + " y = " + cell [1]);
+							print ("find three !!");
+							print (orientation.Key);
+							foreach (int [] cell2 in threeFreeNext) {
+								print ("x = " + cell2 [0] + " y = " + cell2 [1]);
+							}
+							print ("==========");
+							if (testPrecThree(threeFree, threeFreeNext)){
+							print ("==========");
+							print ("x = " + cell [0] + " y = " + cell [1]);
+							print ("find three !!");
+							print (orientation.Key);
+							foreach (int [] cell2 in threeFreeNext) {
+								print ("x = " + cell2 [0] + " y = " + cell2 [1]);
+							}
+							print ("==========");
+							
+								return true;
+						}
+						}
+						threeFreeNext = new List<int[]> ();
+					}
+				}
+			}
+
+		return false;
+	}
+
+		public bool testPrecThree(List<int []> a, List<int []> b){
+			for (int j=0; j < a.Count; j++) {
+			if (!((a[j][0] == b[j][0] && a[j][1] == b[j][1]) || (a[j][0] == b[a.Count - j - 1][0] && a[j][1] == b[a.Count - j - 1][1])))
+				return true;
+			}
+			return false;
+		}
+
+		public bool tabCompare(int[] a, int[] b){
+			for (int j=0; j < a.Length; j++) {
+				if (a[j] != b[j])
+					return false;
+			}
+			return true;
+		}
 	
 		public bool isDoubleThree (int x, int y, MapComponent.Color color)
 		{
 				bitsMap.putPawn (x, y, color);
 				
-				//allDoubleThree (x, y, color);
-				bool right = isDoubleFree (x, y, O_RIGHT);
-				bool up = isDoubleFree (x, y, O_UP);
-				bool rightUp = isDoubleFree (x, y, O_RIGHT_UP);
-				bool leftUp = isDoubleFree (x, y, O_LEFT_UP);
+				bool ret =  findDoubleThree (x, y, color);
+				bool right = false;//isDoubleFree (x, y, O_RIGHT);
+				bool up = false;//isDoubleFree (x, y, O_UP);
+				bool rightUp = false;//isDoubleFree (x, y, O_RIGHT_UP);
+				bool leftUp = false;//isDoubleFree (x, y, O_LEFT_UP);
 		       
 				bitsMap.removePawn (x, y);
 		        
+				return ret;
 				return (right || up || rightUp || leftUp);
 		}
 
