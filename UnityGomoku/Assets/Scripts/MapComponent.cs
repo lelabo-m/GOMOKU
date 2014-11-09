@@ -130,8 +130,9 @@ public class MapComponent : MonoBehaviour
 								countColor++;
 						}
 						if (currentColor == MapComponent.Color.Empty) {
-								if ((countColor != 3 && alreadyEmpty == true) || 
-										bitsMap.getColor (currentX - ORIENTATION [orientation] [0], currentX - ORIENTATION [orientation] [1]) == MapComponent.Color.Empty) {
+				if ((countColor != 3 && alreadyEmpty == true) || ( currentX - ORIENTATION [orientation] [0] > 0 && currentY - ORIENTATION [orientation] [1] >= 0 &&
+				                                                  currentX - ORIENTATION [orientation] [0] < SIZE_MAP && currentY - ORIENTATION [orientation] [1] < SIZE_MAP &&
+										bitsMap.getColor (currentX - ORIENTATION [orientation] [0], currentY - ORIENTATION [orientation] [1]) == MapComponent.Color.Empty)) {
 										break;
 								}
 								int [] temp = new int[] { currentX, currentY };
@@ -166,8 +167,9 @@ public class MapComponent : MonoBehaviour
 								countColor++;
 						}
 						if (currentColor == MapComponent.Color.Empty) {
-								if ((countColor != 3 && alreadyEmpty == true) || 
-										bitsMap.getColor (currentX - ORIENTATION [orientation] [0], currentX - ORIENTATION [orientation] [1]) == MapComponent.Color.Empty) {
+				if ((countColor != 3 && alreadyEmpty == true) || ( currentX + ORIENTATION [orientation] [0] > 0 && currentY + ORIENTATION [orientation] [1] >= 0 &&
+				    currentX + ORIENTATION [orientation] [0] < SIZE_MAP && currentY + ORIENTATION [orientation] [1] < SIZE_MAP &&
+										bitsMap.getColor (currentX + ORIENTATION [orientation] [0], currentY + ORIENTATION [orientation] [1]) == MapComponent.Color.Empty)) {
 										break;
 								}
 								int [] temp = new int[] { currentX, currentY };
