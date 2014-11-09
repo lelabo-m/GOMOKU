@@ -84,10 +84,15 @@ public class MapComponent : MonoBehaviour
 		}
 
 		public int getColorMod(int x, int y, MapComponent.Color color){
-			if (bitsMap.getColor (x, y) == color)
-				return 2;
-			else
-				return 0;
+			
+		if (!(x >= 0 && y >= 0 && x < SIZE_MAP && y < SIZE_MAP))
+			return -1;
+		if (bitsMap.getColor (x, y) == color)
+			return 2;
+		else if (bitsMap.getColor (x, y) == MapComponent.Color.Empty)
+			return 0;
+		else
+			return -1;
 		}
 
 		public bool testMask(int[] mask, MapComponent.Color color, int x, int y, int orientation){
@@ -144,20 +149,23 @@ public class MapComponent : MonoBehaviour
 								threeFree.Add(new int[] { x, y });
 							}
 						}
+						/*
 						print ("==========");
-						print ("find three !!");
+						print ("find three !! 1");
 						print (orientation.Key);
 						foreach (int [] cell in threeFree) {
 							print ("x = " + cell [0] + " y = " + cell [1]);
 						}
 						print ("==========");
+						*/
 						breako = true;
 						break;
 					}
-					if (breako)
-						break;
 					threeFree = new List<int[]> ();
 				}
+				if (breako)
+					break;
+				threeFree = new List<int[]> ();
 			}
 			if (!findMask) 
 				return false;
@@ -169,36 +177,34 @@ public class MapComponent : MonoBehaviour
 							for(j=0; j < mask.Length; j++)
 							{
 								if(mask[j]==2){
+								print ("plop");
 									threeFreeNext.Add(new int[] { cell [0] + (j - 4) * ORIENTATION [orientation.Key] [0], cell [1] + (j - 4) * ORIENTATION [orientation.Key] [1] });
 								}
 								if (mask[j] == 1){
+								print ("plop");
 									threeFreeNext.Add(new int[] { cell[0], cell[1] });
 								}
 							}
-							print ("==========");
-							print ("x = " + cell [0] + " y = " + cell [1]);
-							print ("find three !!");
-							print (orientation.Key);
-							foreach (int [] cell2 in threeFreeNext) {
-								print ("x = " + cell2 [0] + " y = " + cell2 [1]);
-							}
-							print ("==========");
 							if (testPrecThree(threeFree, threeFreeNext)){
-							print ("==========");
-							print ("x = " + cell [0] + " y = " + cell [1]);
-							print ("find three !!");
-							print (orientation.Key);
-							foreach (int [] cell2 in threeFreeNext) {
-								print ("x = " + cell2 [0] + " y = " + cell2 [1]);
-							}
-							print ("==========");
-							
+								/*
+								print ("==========");
+								print ("x = " + cell [0] + " y = " + cell [1]);
+								print ("find three !! 2");
+								print (orientation.Key);
+								foreach (int [] cell2 in threeFreeNext) {
+									print ("x = " + cell2 [0] + " y = " + cell2 [1]);
+									print (bitsMap.getColor(cell2 [0], cell2 [1]));
+								}
+								print ("==========");
+								*/
 								return true;
-						}
+							}
 						}
 						threeFreeNext = new List<int[]> ();
 					}
+					threeFreeNext = new List<int[]> ();
 				}
+				threeFreeNext = new List<int[]> ();
 			}
 
 		return false;
@@ -217,12 +223,12 @@ public class MapComponent : MonoBehaviour
 				bitsMap.putPawn (x, y, color);
 				
 				bool ret =  findDoubleThree (x, y, color);
-		/*
+			/*
 				bool right = false;//isDoubleFree (x, y, O_RIGHT);
 				bool up = false;//isDoubleFree (x, y, O_UP);
 				bool rightUp = false;//isDoubleFree (x, y, O_RIGHT_UP);
 				bool leftUp = false;//isDoubleFree (x, y, O_LEFT_UP);
-		  */     
+		  	*/     
 				bitsMap.removePawn (x, y);
 		        
 				return ret;
