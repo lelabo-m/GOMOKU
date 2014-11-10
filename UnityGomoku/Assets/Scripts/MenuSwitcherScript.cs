@@ -6,6 +6,7 @@ public class MenuSwitcherScript : MonoBehaviour
     public GameObject MainMenu;
     public GameObject SetupGameMenu;
 	public GameObject HowtoMenu;
+	public GameObject StartMenu;
     public GameObject SettingsMenu;
     public GameObject CreditsMenu;
 
@@ -15,11 +16,24 @@ public class MenuSwitcherScript : MonoBehaviour
         NGUITools.SetActive(SettingsMenu, false);
         NGUITools.SetActive(CreditsMenu, false);
 		NGUITools.SetActive(HowtoMenu, false);
+		NGUITools.SetActive(StartMenu, false);
     }
+
+	public void LaunchVsIa()
+	{
+		NGUITools.SetActive(StartMenu, false);
+		NGUITools.SetActive(MainMenu, true);
+	}
+
+	public void LaunchVsHuman()
+	{
+		Application.LoadLevel(2);
+	}
 
     public void ShowSetupGame()
     {
-        Application.LoadLevel(2);
+		NGUITools.SetActive(MainMenu, false);
+		NGUITools.SetActive(StartMenu, true);
     }
 
 	public void ShowHowto()

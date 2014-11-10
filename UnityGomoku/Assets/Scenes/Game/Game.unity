@@ -563,20 +563,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftAnchor:
-    target: {fileID: 1053983879}
-    relative: .5
+    target: {fileID: 1113421437}
+    relative: 0
     absolute: -510
   rightAnchor:
-    target: {fileID: 1053983879}
-    relative: .5
+    target: {fileID: 1113421437}
+    relative: 1
     absolute: -300
   bottomAnchor:
-    target: {fileID: 1053983879}
-    relative: .5
+    target: {fileID: 1113421437}
+    relative: 0
     absolute: 160
   topAnchor:
-    target: {fileID: 1053983879}
-    relative: .5
+    target: {fileID: 1113421437}
+    relative: 1
     absolute: 300
   mColor: {r: .477611959, g: .443779707, b: .384940982, a: .168627456}
   mPivot: 4
@@ -586,7 +586,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: .739436626
+  aspectRatio: 1.5
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
   mSpriteName: Window
   mType: 1
@@ -722,7 +722,7 @@ Transform:
   m_GameObject: {fileID: 1053983878}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .00326797389, y: .00326797389, z: .00326797389}
+  m_LocalScale: {x: .0031595577, y: .0031595577, z: .0031595577}
   m_Children:
   - {fileID: 834511914}
   - {fileID: 739300963}
@@ -1489,20 +1489,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftAnchor:
-    target: {fileID: 1053983879}
-    relative: .5
+    target: {fileID: 1113421437}
+    relative: 0
     absolute: 300
   rightAnchor:
-    target: {fileID: 1053983879}
-    relative: .5
+    target: {fileID: 1113421437}
+    relative: 1
     absolute: 510
   bottomAnchor:
-    target: {fileID: 1053983879}
-    relative: .5
+    target: {fileID: 1113421437}
+    relative: 0
     absolute: -300
   topAnchor:
-    target: {fileID: 1053983879}
-    relative: .5
+    target: {fileID: 1113421437}
+    relative: 1
     absolute: -160
   mColor: {r: .477611959, g: .443779707, b: .384940982, a: .152941182}
   mPivot: 4
@@ -1512,7 +1512,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: .739436626
+  aspectRatio: 1.5
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
   mSpriteName: Window
   mType: 1
