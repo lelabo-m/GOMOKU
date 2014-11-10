@@ -12,10 +12,14 @@ public class MenuInGame : MonoBehaviour {
 		menu.SetActive (false);
 		menuOn = false;
 	}
+
+	public void GoMenu() {
+		Application.LoadLevel(1);
+	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey ("tab")) {
+		if (Input.GetKeyUp ("tab")) {
 			if (menuOn == false){
 				menuOn = true;
 				menu.SetActive (true);
