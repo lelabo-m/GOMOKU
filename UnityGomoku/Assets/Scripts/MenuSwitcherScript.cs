@@ -9,6 +9,7 @@ public class MenuSwitcherScript : MonoBehaviour
 	public GameObject StartMenu;
     public GameObject SettingsMenu;
     public GameObject CreditsMenu;
+	public GameObject QuitGam;
 
     public void Start()
     {
@@ -18,6 +19,10 @@ public class MenuSwitcherScript : MonoBehaviour
 		NGUITools.SetActive(HowtoMenu, false);
 		NGUITools.SetActive(StartMenu, false);
     }
+
+	public void QuitGame() {
+		Application.Quit ();
+	}
 
 	public void LaunchVsIa()
 	{
