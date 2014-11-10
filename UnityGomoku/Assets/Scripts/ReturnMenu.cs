@@ -23,6 +23,12 @@ public class ReturnMenu : MonoBehaviour {
 		Application.LoadLevel(1);
 	}
 
+	public void restart () {
+		PlayerPrefs.SetInt ("Winner", -1);
+		Application.LoadLevel(2);
+	}
+
+
 	public void GoQuit (){
 		Application.Quit();
 	}
