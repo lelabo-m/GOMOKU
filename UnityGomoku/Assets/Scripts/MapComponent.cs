@@ -177,11 +177,9 @@ public class MapComponent : MonoBehaviour
 							for(j=0; j < mask.Length; j++)
 							{
 								if(mask[j]==2){
-								print ("plop");
 									threeFreeNext.Add(new int[] { cell [0] + (j - 4) * ORIENTATION [orientation.Key] [0], cell [1] + (j - 4) * ORIENTATION [orientation.Key] [1] });
 								}
 								if (mask[j] == 1){
-								print ("plop");
 									threeFreeNext.Add(new int[] { cell[0], cell[1] });
 								}
 							}
