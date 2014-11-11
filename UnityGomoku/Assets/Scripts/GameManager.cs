@@ -86,11 +86,13 @@ public class GameManager : MonoBehaviour
 		
 		private bool isEnoughSpace ()
 		{
-				char [] tab = map.getMap ();
+				MapComponent.BitsMap tab = map.getBitsMap ();
 
-				for (int i = 0; i < MapComponent.SIZE_MAP * MapComponent.SIZE_MAP; ++i) {
-						if (tab [i] == (char)MapComponent.Color.Empty)
-								return true;
+				for (int x = 0; x < MapComponent.SIZE_MAP; ++x) {
+				for (int y = 0; y < MapComponent.SIZE_MAP; ++y) {
+									if (tab.getColor(x, y) == MapComponent.Color.Empty)
+											return true;
+					}
 				}
 				return false;
 		}
