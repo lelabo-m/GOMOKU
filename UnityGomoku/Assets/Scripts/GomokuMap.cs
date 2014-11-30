@@ -4,11 +4,19 @@ using System.Collections.Specialized;
 namespace Gomoku
 {
 	public enum Color { White = 0, Black, Empty }
-
-
-	//TODO
+	
 	public class PlayerState
 	{
+		public List<ThreeFree> threeFrees;
+		public List<Segment>	doubleThrees;
+		public List<Segment>	bigWeight;
+
+		public PlayerState()
+		{
+			this.threeFrees = new List<ThreeFree> ();
+			this.doubleThrees = new List<Segment> ();
+			this.bigWeight = new List<Segment> ();
+		}
 	}
 	
 	public class PossibleCell
@@ -196,6 +204,7 @@ namespace Gomoku
 		
 		Map(int sz, bool simu = false)
 		{
+
 			this.simulation = simu;
 			Map.size = sz;
 			this.cellsList = new CellsList();
