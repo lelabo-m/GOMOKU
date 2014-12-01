@@ -35,7 +35,9 @@ namespace Gomoku
 		{
 				public int weight;
 				public int pos;
+
 				public char disponibility;
+				public bool[] _disponibility = new bool[2]; //TODO: replace by char disponibility
 		
 				public PossibleCell (int p, int w)
 				{
@@ -46,13 +48,14 @@ namespace Gomoku
 		
 				//TODO
 				public bool IsDisponible (Color color)
-				{
-						return true;
+				{	
+					return this._disponibility [((int)color) % 2];
 				}
 		
 				//TODO
 				public void SetIsDisponible (Color color, bool state)
 				{
+					this._disponibility [((int)color) % 2] = state;
 				}
 		
 				public void Copy (PossibleCell cell)
@@ -60,6 +63,7 @@ namespace Gomoku
 						cell.weight = this.weight;
 						cell.disponibility = this.disponibility;
 						cell.pos = this.pos;
+						cell._disponibility = (bool[])this._disponibility.Clone ();
 				}
 		}
 	
@@ -94,20 +98,20 @@ namespace Gomoku
 						}
 				}
 		
-				public void AddCell (int pos, int weight = 0)
+				public void AddCell (int pos, int weight)
 				{
 						PossibleCell find = this.cells.Find (item => (item.pos == pos));
 						if (find == null) {
-								this.cells.Add (new PossibleCell (pos, weight));
+								this.cells.Add(new PossibleCell (pos, weight));
 						} else {
 								find.weight = weight;			
 						}
 						//TODO updateTotalWeight ?
 				}
 		
-				public void AddCell (int x, int y, int weight = 0)
+				public void AddCell (int x, int y, int weight)
 				{
-						this.cells.Add (x * Map.GetSizeMap () + y, weight);
+						this.AddCell(x * Map.GetSizeMap () + y, weight);
 				}
 		
 				public void Clear ()
@@ -127,11 +131,16 @@ namespace Gomoku
 	
 		public class Cell
 		{
-				public Color Color;
-				public char[] weight;
+				private Color Color;
+				private char[] weight;
+
 				public char take;
+				public bool[] _take = new bool[8]; //TODO: replace by char take
+
 				public bool takeable;
+
 				public char block;
+				public bool[] _block = new bool[2]; //TODO: replace by char block
 		
 				public Cell ()
 				{
@@ -149,6 +158,8 @@ namespace Gomoku
 						cell.take = this.take;
 						cell.takeable = this.takeable;
 						cell.block = this.block;
+						cell._take = (bool[])this._take.Clone ();
+						cell._block = (bool[])this._block.Clone ();
 				}
 
 				// set Weight of a color 
@@ -173,15 +184,15 @@ namespace Gomoku
 				}
 
 				//TODO
-				public void SetIsTaking (int orientation, char state)
+				public void SetIsTaking (Gomoku.Orientation orientation, bool state)
 				{
-			
+					this._take [((int)orientation) % 8] = state;
 				}
 
 				//TODO
-				public bool IsTaking (int orientation)
+				public bool IsTaking (Gomoku.Orientation orientation)
 				{
-						return false;
+					return this._take [((int)orientation) % 8];
 				}
 		
 				public void SetColor (Color type)
@@ -208,13 +219,13 @@ namespace Gomoku
 				//TODO
 				public void SetIsBlock (Color color, bool state)
 				{
-
+					this._block [((int)color) % 2] = state;
 				}
 
 				//TODO
 				public bool IsBlock (Color color)
 				{
-						return false;
+					return this._block [((int)color) % 2];
 				}
 
 		}
@@ -225,8 +236,8 @@ namespace Gomoku
 				static public int size;
 				private Cell[] map;
 				public CellsList cellsList;
-		
-				Map (int sz, bool simu = false)
+
+				public Map (int sz, bool simu = false)
 				{
 
 						this.simulation = simu;
@@ -277,12 +288,12 @@ namespace Gomoku
 						return this.map [x * GetSizeMap () + y].IsTakeable ();
 				}
 		
-				public void SetIsTaking (int x, int y, int orientation, char state)
+				public void SetIsTaking (int x, int y, Gomoku.Orientation orientation, bool state)
 				{
 						this.map [x * GetSizeMap () + y].SetIsTaking (orientation, state);
 				}
 		
-				public bool IsTaking (int x, int y, int orientation)
+				public bool IsTaking (int x, int y, Gomoku.Orientation orientation)
 				{
 						return this.map [x * GetSizeMap () + y].IsTaking (orientation);
 				}
@@ -301,8 +312,8 @@ namespace Gomoku
 				public bool RemovePawn (int x, int y)
 				{
 						this.map [x * GetSizeMap () + y].RemovePawn ();
-						foreach (KeyValuePair<int, int[]> entry in MapComponent.ORIENTATION) {
-								SetIsTaking (x, y, entry.Key, (char)0);
+						foreach (KeyValuePair<Gomoku.Orientation, int[]> entry in MapComponent.ORIENTATION) {
+								SetIsTaking (x, y, entry.Key, false);
 						}
 						return true;
 				}
@@ -324,19 +335,19 @@ namespace Gomoku
 
 				public void UpdatePossibleCells (int x, int y, int radius)
 				{
-						foreach (KeyValuePair<int, int[]> entry in MapComponent.ORIENTATION) {
+						foreach (KeyValuePair<Gomoku.Orientation, int[]> entry in MapComponent.ORIENTATION) {
 								int tmpX = x + entry.Value [0];
 								int tmpY = y + entry.Value [1];
 
 								for (int i = 0; i < radius; ++i, tmpX += entry.Value[0], tmpY += entry.Value[1]) {
 										if (tmpX >= 0 && tmpX < GetSizeMap () &&
 												tmpY >= 0 && tmpY < GetSizeMap () && GetColor (tmpX, tmpY) == Color.Empty) {
-												this.cellsList.AddCell (tmpX, tmpY, GetWeight (tmpX, tmpY));
+												this.cellsList.AddCell (tmpX, tmpY, GetWeight (tmpX, tmpY, GetColor(tmpX, tmpY)));
 										}
 								}
 						}
 
-						this.cellsList.Update (x, y, etWeight (tmpX, tmpY));
+					this.cellsList.Update (x, y, GetWeight (x, y, GetColor(x, y)));
 				}
 
 

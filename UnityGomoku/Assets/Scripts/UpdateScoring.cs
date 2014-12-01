@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Gomoku;
 
 public class UpdateScoring : MonoBehaviour {
 
@@ -13,10 +14,10 @@ public class UpdateScoring : MonoBehaviour {
 		int val;
 		Rules rules = GameObject.Find("Arbiter").GetComponent<Rules>();
 		UILabel c = GameObject.Find("score white").GetComponent<UILabel>();
-		rules.scores.TryGetValue (PlayerComponent.Color.White, out val);
+		rules.scores.TryGetValue (Gomoku.Color.White, out val);
 		c.text = val.ToString();
 		UILabel d = GameObject.Find("score black").GetComponent<UILabel>();
-		rules.scores.TryGetValue (PlayerComponent.Color.Black, out val);
+		rules.scores.TryGetValue (Gomoku.Color.Black, out val);
 		d.text = val.ToString();
 	}
 }
