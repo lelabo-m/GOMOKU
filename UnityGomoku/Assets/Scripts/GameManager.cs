@@ -112,7 +112,7 @@ public class GameManager : MonoBehaviour
 
 		private Gomoku.Color isWinner ()
 		{
-				return rules.IsWinner (map.GetMap());
+				return rules.IsWinner (map.GetMap(), currentPlayer().color);
 		}
 
 		private void GameDone ()

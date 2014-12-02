@@ -17,13 +17,13 @@ namespace Gomoku
 		{
 				public List<ThreeFree> threeFrees;
 				public List<Segment>	doubleThrees;
-				public List<Segment>	bigWeight;
+				public List<Coord>	bigWeight;
 
 				public PlayerState ()
 				{
 						this.threeFrees = new List<ThreeFree> ();
 						this.doubleThrees = new List<Segment> ();
-						this.bigWeight = new List<Segment> ();
+						this.bigWeight = new List<Coord> ();
 				}
 
 				public void Clear ()
@@ -32,9 +32,22 @@ namespace Gomoku
 						this.doubleThrees.Clear ();
 						this.bigWeight.Clear ();
 				}
+			
+				public void Copy(PlayerState player)
+				{
+					foreach (ThreeFree item in this.threeFrees) {
+						player.threeFrees.Add(new ThreeFree() { begin = item.begin, end = item.end, ori = item.ori });
+						}
+					foreach (Segment item in this.doubleThrees) {
+						player.doubleThrees.Add(new Segment() { begin = item.begin, end = item.end, ori = item.ori });
+					}
+					foreach (Coord item in this.bigWeight) {
+						player.bigWeight.Add(new Coord() { x = item.x, y = item.y });
+					}
 		}
+	}
 	
-		public class PossibleCell
+	public class PossibleCell
 		{
 				public int weight;
 				public int pos;
@@ -74,7 +87,7 @@ namespace Gomoku
 		{
 				public List<PossibleCell> cells = new List<PossibleCell> ();
 				public int totalWeight;
-				public PlayerState[] players = new PlayerState[2];
+		public PlayerState[] players = new PlayerState[2] { new PlayerState(), new PlayerState() };
 		
 				public void Copy (CellsList list)
 				{
@@ -85,6 +98,9 @@ namespace Gomoku
 								//copy.disponibility = item.disponibility;
 								list.cells.Add (copy);
 						}
+
+							this.players[0].Copy(list.players[0]);
+							this.players[1].Copy(list.players[1]);
 				}
 
 				public void Update (Gomoku.Map map)
@@ -314,17 +330,18 @@ namespace Gomoku
 						this.map [x * GetSizeMap () + y].SetColor (type);
 						GeneratePossibleCells (x, y, 2);
 
+			/*****************
 				MonoBehaviour.print ("---------------------------------------------");
 				MonoBehaviour.print ("----------------PossibleCells----------------");
 				MonoBehaviour.print ("---------------------------------------------");
 				foreach (PossibleCell possible in this.cellsList.cells) {
-				MonoBehaviour.print("x = " + (possible.pos / GetSizeMap()) + " y = " + (possible.pos % GetSizeMap()));
-						
+					MonoBehaviour.print("x = " + (possible.pos / GetSizeMap()) + " y = " + (possible.pos % GetSizeMap()));
 						}
-			MonoBehaviour.print ("---------------------------------------------");
-			MonoBehaviour.print ("---------------------------------------------");
-			MonoBehaviour.print ("---------------------------------------------");
-			return true;
+				MonoBehaviour.print ("---------------------------------------------");
+				MonoBehaviour.print ("---------------------------------------------");
+				MonoBehaviour.print ("---------------------------------------------");
+				***************/
+					return true;
 				}
 		
 				public bool RemovePawn (int x, int y)
@@ -366,6 +383,20 @@ namespace Gomoku
 					this.cellsList.Update (x, y, GetWeight (x, y, IACOLOR));
 				}
 
+				public void UpdateBigWeight(Gomoku.Color color)
+				{
+					cellsList.players [(int)color].bigWeight.RemoveAll (item => (GetWeight (item.x, item.y, color) < 5));
+				}
+
+				public void SaveWeight(int X, int Y, Gomoku.Color color) 
+				{
+					cellsList.players [(int)color].bigWeight.Add (new Coord () { x = X, y = Y });
+				}
+
+				public List<Coord> GetBigWeight(Gomoku.Color color)
+				{
+					return cellsList.players [(int)color].bigWeight;
+				}
 
 		}
 	
