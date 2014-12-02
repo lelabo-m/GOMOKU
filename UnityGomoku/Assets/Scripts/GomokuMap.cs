@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using Gomoku;
 
 namespace Gomoku
 {
@@ -38,17 +39,17 @@ namespace Gomoku
 				public int weight;
 				public int pos;
 
-				public char disponibility;
-				public bool[] _disponibility = new bool[2]; //TODO: replace by char disponibility
+			/*	public char disponibility;
+				public bool[] _disponibility = new bool[2]; //TODO: replace by char disponibility*/
 		
 				public PossibleCell (int p, int w)
 				{
 						this.pos = p;
 						this.weight = w;
-						this.disponibility = (char)0;
+						//this.disponibility = (char)0;
 				}
 		
-				//TODO
+			/*	//TODO
 				public bool IsDisponible (Color color)
 				{	
 					return this._disponibility [((int)color) % 2];
@@ -58,14 +59,14 @@ namespace Gomoku
 				public void SetIsDisponible (Color color, bool state)
 				{
 					this._disponibility [((int)color) % 2] = state;
-				}
+				}*/
 		
 				public void Copy (PossibleCell cell)
 				{
 						cell.weight = this.weight;
-						cell.disponibility = this.disponibility;
+						//cell.disponibility = this.disponibility;
 						cell.pos = this.pos;
-						cell._disponibility = (bool[])this._disponibility.Clone ();
+						//cell._disponibility = (bool[])this._disponibility.Clone ();
 				}
 		}
 	
@@ -81,23 +82,21 @@ namespace Gomoku
 			
 						foreach (PossibleCell item in this.cells) {
 								PossibleCell copy = new PossibleCell (item.pos, item.weight);
-								copy.disponibility = item.disponibility;
+								//copy.disponibility = item.disponibility;
 								list.cells.Add (copy);
 						}
 				}
 
-				public void Update ()
-				{
-				}
+				public void Update (Gomoku.Map map)
+				{				
+					this.cells.RemoveAll(item => ((map.IsBlock (item.pos / Gomoku.Map.GetSizeMap (), item.pos % Gomoku.Map.GetSizeMap (), 
+			                                            map.GetColor (item.pos / Gomoku.Map.GetSizeMap (), item.pos % Gomoku.Map.GetSizeMap ()))) ||
+				                         map.GetColor (item.pos / Gomoku.Map.GetSizeMap (), item.pos % Gomoku.Map.GetSizeMap ()) == Gomoku.Color.Empty));
+			    }
 
 				public void Update (int x, int y, int weight)
-				{
-						PossibleCell find = this.cells.Find (item => (item.pos == x * Map.GetSizeMap () + y));
-						if (find != null) {
-								this.cells.Remove (find);	
-						} else {
-								find.weight = weight;			
-						}
+				{						
+					this.cells.RemoveAll(item => (item.pos == x * Map.GetSizeMap () + y));
 				}
 		
 				public void AddCell (int pos, int weight)
@@ -230,6 +229,7 @@ namespace Gomoku
 				//TODO
 				public bool IsBlock (Color color)
 				{
+					MonoBehaviour.print (color);
 					return this._block [((int)color)];
 				}
 
@@ -240,7 +240,8 @@ namespace Gomoku
 				public bool simulation;
 				static public int size;
 				private Cell[] map;
-				public CellsList cellsList;
+				private CellsList cellsList;
+				static public Gomoku.Color IACOLOR = Gomoku.Color.Black;
 
 				public Map (int sz, bool simu = false)
 				{
@@ -311,7 +312,19 @@ namespace Gomoku
 				public bool PutPawn (int x, int y, Color type)
 				{
 						this.map [x * GetSizeMap () + y].SetColor (type);
-						return true;
+						GeneratePossibleCells (x, y, 2);
+
+				MonoBehaviour.print ("---------------------------------------------");
+				MonoBehaviour.print ("----------------PossibleCells----------------");
+				MonoBehaviour.print ("---------------------------------------------");
+				foreach (PossibleCell possible in this.cellsList.cells) {
+				MonoBehaviour.print("x = " + (possible.pos / GetSizeMap()) + " y = " + (possible.pos % GetSizeMap()));
+						
+						}
+			MonoBehaviour.print ("---------------------------------------------");
+			MonoBehaviour.print ("---------------------------------------------");
+			MonoBehaviour.print ("---------------------------------------------");
+			return true;
 				}
 		
 				public bool RemovePawn (int x, int y)
@@ -335,7 +348,7 @@ namespace Gomoku
 						return this.map [x * GetSizeMap () + y].IsBlock (color);
 				}
 
-				public void UpdatePossibleCells (int x, int y, int radius)
+				public void GeneratePossibleCells (int x, int y, int radius)
 				{
 						foreach (KeyValuePair<Gomoku.Orientation, int[]> entry in MapComponent.ORIENTATION) {
 								int tmpX = x + entry.Value [0];
@@ -343,13 +356,14 @@ namespace Gomoku
 
 								for (int i = 0; i < radius; ++i, tmpX += entry.Value[0], tmpY += entry.Value[1]) {
 										if (tmpX >= 0 && tmpX < GetSizeMap () &&
-												tmpY >= 0 && tmpY < GetSizeMap () && GetColor (tmpX, tmpY) == Color.Empty) {
-												this.cellsList.AddCell (tmpX, tmpY, GetWeight (tmpX, tmpY, GetColor(tmpX, tmpY)));
+											tmpY >= 0 && tmpY < GetSizeMap () && 
+					    					GetColor (tmpX, tmpY) == Color.Empty &&
+					   						 !IsBlock (tmpX, tmpY, IACOLOR)) {
+												this.cellsList.AddCell (tmpX, tmpY, GetWeight (tmpX, tmpY, IACOLOR));
 										}
 								}
 						}
-
-					this.cellsList.Update (x, y, GetWeight (x, y, GetColor(x, y)));
+					this.cellsList.Update (x, y, GetWeight (x, y, IACOLOR));
 				}
 
 
