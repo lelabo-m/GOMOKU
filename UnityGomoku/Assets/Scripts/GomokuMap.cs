@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 using System.Collections.Specialized;
 
 namespace Gomoku
@@ -6,7 +8,7 @@ namespace Gomoku
 		public enum Color
 		{
 				White = 0,
-				Black,
+				Black = 1,
 				Empty
 		}
 
@@ -131,8 +133,8 @@ namespace Gomoku
 	
 		public class Cell
 		{
-				private Color Color;
-				private char[] weight;
+				public Gomoku.Color Color;
+				public char[] weight;
 
 				public char take;
 				public bool[] _take = new bool[8]; //TODO: replace by char take
@@ -145,16 +147,16 @@ namespace Gomoku
 				public Cell ()
 				{
 						this.weight = new char[2];
-						this.Color = Color.Empty;
-						this.weight [(int)Color.White] = (char)0;
-						this.weight [(int)Color.Black] = (char)0;
+						this.Color = Gomoku.Color.Empty;
+						this.weight [0] = (char)0;
+						this.weight [1] = (char)0;
 				}
 		
 				public void Copy (Cell cell)
 				{
 						cell.Color = this.Color;
-						cell.weight [(int)Color.White] = this.weight [(int)Color.White];
-						cell.weight [(int)Color.Black] = this.weight [(int)Color.Black];
+						cell.weight [(int)Gomoku.Color.White] = this.weight [(int)Gomoku.Color.White];
+						cell.weight [(int)Gomoku.Color.Black] = this.weight [(int)Gomoku.Color.Black];
 						cell.take = this.take;
 						cell.takeable = this.takeable;
 						cell.block = this.block;
@@ -163,19 +165,20 @@ namespace Gomoku
 				}
 
 				// set Weight of a color 
-				public void SetWeight (int weight, Color color)
+				public void SetWeight (int weight, Gomoku.Color color)
 				{
-						this.weight [(int)color] = (char)weight;
+						this.weight [(int)color] = (char) weight;
 				}
 
 				public int GetWeight (Color color)
 				{
-						return (int)this.weight [(int)color];	
+					int tmp = ((int)this.weight [(int)color]);
+					return tmp;	
 				}
 
 				public void SetIsTakeable (bool state)
 				{
-						this.takeable = true;
+						this.takeable = state;
 				}
 
 				public bool IsTakeable ()
@@ -186,13 +189,13 @@ namespace Gomoku
 				//TODO
 				public void SetIsTaking (Gomoku.Orientation orientation, bool state)
 				{
-					this._take [((int)orientation) % 8] = state;
+					this._take [((int)orientation)] = state;
 				}
 
 				//TODO
 				public bool IsTaking (Gomoku.Orientation orientation)
 				{
-					return this._take [((int)orientation) % 8];
+					return this._take [((int)orientation)];
 				}
 		
 				public void SetColor (Color type)
@@ -207,25 +210,27 @@ namespace Gomoku
 
 				public bool RemovePawn ()
 				{
-						if (this.Color != Color.Empty)
-								this.weight [(int)this.Color] -= (char)1;
-						this.Color = Color.Empty;
+						if (this.Color != Gomoku.Color.Empty && GetWeight(this.Color) > 0)
+							this.weight [(int)this.Color] = (char)((int)this.weight [(int)this.Color] - 1);
+						this.Color = Gomoku.Color.Empty;
 						this.take = (char)0;
 						this.takeable = false;
 						this.block = (char)0;
+						this._block = new bool[2];
+						this._take = new bool[8];
 						return true;
 				}
 
 				//TODO
 				public void SetIsBlock (Color color, bool state)
 				{
-					this._block [((int)color) % 2] = state;
+					this._block [((int)color)] = state;
 				}
 
 				//TODO
 				public bool IsBlock (Color color)
 				{
-					return this._block [((int)color) % 2];
+					return this._block [((int)color)];
 				}
 
 		}
@@ -273,7 +278,7 @@ namespace Gomoku
 				}
 
 				// set Weight of a color 
-				public void SetWeight (int x, int y, int weight, Color color)
+				public void SetWeight (int x, int y, int weight, Gomoku.Color color)
 				{
 						this.map [x * GetSizeMap () + y].SetWeight (weight, color);
 				}
@@ -312,9 +317,6 @@ namespace Gomoku
 				public bool RemovePawn (int x, int y)
 				{
 						this.map [x * GetSizeMap () + y].RemovePawn ();
-						foreach (KeyValuePair<Gomoku.Orientation, int[]> entry in MapComponent.ORIENTATION) {
-								SetIsTaking (x, y, entry.Key, false);
-						}
 						return true;
 				}
 

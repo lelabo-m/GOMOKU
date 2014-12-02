@@ -63,14 +63,14 @@ public class GameManager : MonoBehaviour
 		{
 			foreach (KeyValuePair<Gomoku.Orientation, int[]> entry in MapComponent.ORIENTATION)
 			{
-				if (rules.canTakePawns(map, lastX, lastY, entry.Key)) {
-					rules.takePawns(map, lastX, lastY, entry.Key);
+				if (rules.CanTakePawns(map, lastX, lastY, entry.Key)) {
+					rules.TakePawns(map, lastX, lastY, entry.Key);
 				}
 					
 			}
 		}
 
-		public void setLastPawn(int x, int y)
+		public void SetLastPawn(int x, int y)
 		{
 				lastX = x;
 				lastY = y;
@@ -107,12 +107,12 @@ public class GameManager : MonoBehaviour
 
 		private Gomoku.Color isScoringWinner ()
 		{
-				return rules.isScoringWinner ();
+				return rules.IsScoringWinner ();
 		}
 
 		private Gomoku.Color isWinner ()
 		{
-				return rules.isWinner (map);
+				return rules.IsWinner (map.GetMap());
 		}
 
 		private void GameDone ()
