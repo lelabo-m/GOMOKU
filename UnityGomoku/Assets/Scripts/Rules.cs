@@ -375,12 +375,11 @@ public class Rules : MonoBehaviour
 		int j;
 		bool findMask = false;
 		bool breako = false;
-		List<int []> masks = new List<int[]> ();
 		List<int []> threeFree = new List<int[]> ();
 		List<int []> threeFreeNext = new List<int[]> ();
 
 		
-		foreach (int[] mask in masks) {
+		foreach (int[] mask in this.masks) {
 			foreach (KeyValuePair<Gomoku.Orientation, int[]> orientation in MapComponent.ORIENTATION) {
 				if (TestMask (map, mask, color, currentCell, orientation.Key)) {
 					findMask = true;
@@ -417,18 +416,22 @@ public class Rules : MonoBehaviour
 			return false;
 		
 		foreach (int [] cell in threeFree) {
-			foreach (int[] mask in masks) {
+			foreach (int[] mask in this.masks) {
 				foreach (KeyValuePair<Gomoku.Orientation, int[]> orientation in MapComponent.ORIENTATION) {
-					if (TestMask (map, mask, color, new Gomoku.Coord() { x = cell [0], y = cell [1] } , orientation.Key)) {
+					Gomoku.Coord tmpCoord = new Gomoku.Coord();
+					tmpCoord.x = cell[0];
+					tmpCoord.y = cell[1];
+
+					if (TestMask (map, mask, color, tmpCoord, orientation.Key)) {
 						for (j=0; j < mask.Length; j++) {
 							if (mask [j] == 2) {
 								threeFreeNext.Add (new int[] {
-									cell [0] + (j - 4) * MapComponent.ORIENTATION [orientation.Key] [0],
-									cell [1] + (j - 4) * MapComponent.ORIENTATION [orientation.Key] [1]
+									tmpCoord.x + (j - 4) * MapComponent.ORIENTATION [orientation.Key] [0],
+									tmpCoord.y + (j - 4) * MapComponent.ORIENTATION [orientation.Key] [1]
 								});
 							}
 							if (mask [j] == 1) {
-								threeFreeNext.Add (new int[] { cell [0], cell [1] });
+								threeFreeNext.Add (new int[] { tmpCoord.x, tmpCoord.y });
 							}
 						}
 						if (TestPrecThree (threeFree, threeFreeNext)) {
