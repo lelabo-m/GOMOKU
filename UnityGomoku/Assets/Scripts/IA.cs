@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace Gomoku
 {
@@ -77,9 +78,11 @@ namespace Gomoku
     {
         public List<Map>    maps;
         public MCTree       tree;
+        public int          time;
 
-        public  MCTS_IA(int nbthread)
+        public  MCTS_IA(int nbthread, int t)
         {
+            time = t;
             for (int i = 0; i < nbthread; ++i)
 			    maps.Add(new Map(MapComponent.SIZE_MAP, true));
         }
@@ -108,11 +111,20 @@ namespace Gomoku
         public Coord     Simulate(GameManager gm)
         {
             Coord   result = new Coord();
-            // while time
-            //    Find Node
-            //       PlayGame(Node, Map);
-            //   time -= elapsed;
-            // result = Find Best Result
+            Stopwatch s = new Stopwatch();
+            s.Start();
+            while (s.Elapsed < TimeSpan.FromMilliseconds(time))
+            {
+                Node tosimule = tree.Extend();
+                PlayGame(tosimule, maps[0], gm);
+
+            }
+            s.Stop();
+            Node final = tree.Extend();
+            while (final.parent != tree.root)
+                final = final.parent;
+            result.x = final.cell.x;
+            result.y = final.cell.y;
             return result;
         }
         public void     Play(GameManager gm)
