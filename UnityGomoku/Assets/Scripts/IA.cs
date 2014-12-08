@@ -23,11 +23,11 @@ namespace Gomoku
         public Node parent;
         public List<Node> childs;
 
-        public Node(Node p, Coord c)
+        public Node(Node p)
         {
             UCB = -1.0f;
             rank = (p != null) ? (p.rank + 1) : (0);
-            cell = c;
+            cell = new Coord();
             visit = 0;
             reward = 0.0f;
             parent = p;
@@ -48,11 +48,11 @@ namespace Gomoku
         public Node root;
         public void Clear()
         {
-            root = new Node(null, null);
+            root = new Node(null);
         }
         public Node BestNode(Node parent)
         {
-            Node    empty = new Node(parent, null);
+            Node    empty = new Node(parent);
             foreach (Node child in parent.childs)
                 child.UCB = UCB(parent, child);
             empty.UCB = UCB(parent, empty);
