@@ -148,7 +148,6 @@ namespace Gomoku
 				{
 						MonoBehaviour.print (this.TotalWeight [(int)color]);
 						int randomNumber = this.random.Next(0, this.TotalWeight[(int) color]);
-						MonoBehaviour.print ("nm = " + randomNumber);
 
 						foreach (PossibleCell item in this.cells) {
 							randomNumber -= item.Weight[(int) color];

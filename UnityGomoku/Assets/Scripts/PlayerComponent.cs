@@ -10,21 +10,28 @@ public class PlayerComponent : MonoBehaviour
 		public int selectedX;
 		public int selectedY;
 		public Gomoku.Color color;
+		public MCTS_IA Ia = null;
 
 		//Defini si c'est sont tour de jouer
 		public bool playing = false;
+
+		public GameManager gm; 
 		
 
 
 		// Use this for initialization
 		void Start ()
 		{
+				gm = GameObject.Find ("Arbiter").GetComponent<GameManager>();
 				map = GameObject.Find ("Map").GetComponent<MapComponent>();
 		}
 
 		// Update is called once per frame
 		void Update ()
 		{
+			if (Ia != null) {
+				Ia.Play(gm);	
+			}
 		}
 	
 		public bool PutPawn ()

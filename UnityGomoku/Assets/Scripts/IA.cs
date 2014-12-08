@@ -31,6 +31,7 @@ namespace Gomoku
             visit = 0;
             reward = 0.0f;
             parent = p;
+			childs = new List<Node> ();
         }
         public bool HasChild()
         {
@@ -92,6 +93,8 @@ namespace Gomoku
         public  MCTS_IA(int nbthread, int t)
         {
             time = t;
+			this.maps = new List<Map> ();
+			this.tree = new MCTree ();
             for (int i = 0; i < nbthread; ++i)
 			    maps.Add(new Map(MapComponent.SIZE_MAP, true));
         }

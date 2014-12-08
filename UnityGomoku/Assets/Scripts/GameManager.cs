@@ -28,6 +28,9 @@ public class GameManager : MonoBehaviour
 				playerComponent1.playing = true;
 
 				playerComponent2 = player2.GetComponent<PlayerComponent> ();
+				if (PlayerPrefs.GetInt ("IA") > 0) {
+					playerComponent2.Ia = new MCTS_IA(1, 3000);
+				}
 				playerComponent2.color = Gomoku.Color.Black;
 				playerComponent2.playing = false;
 
@@ -44,8 +47,6 @@ public class GameManager : MonoBehaviour
 								GameDone ();
 
 						changeTurn ();
-			print ("Random = " + map.GetMap().RandomCell(Gomoku.Color.White));
-			print ("Random = " + map.GetMap().RandomCell(Gomoku.Color.Black));
 				}
 		}
 
