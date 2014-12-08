@@ -55,7 +55,7 @@ public class Rules : MonoBehaviour
 		}
 
 
-	/**
+		/**
 	 * Mise a Jour Map
 	 * ****/
 
@@ -234,7 +234,7 @@ public class Rules : MonoBehaviour
 				map.removePawn (x + 2 * MapComponent.ORIENTATION [orientation] [0], y + 2 * MapComponent.ORIENTATION [orientation] [1]);
 		}
 
-	/**
+		/**
 	 * Test Victoire
 	 * ****/
 
@@ -246,22 +246,22 @@ public class Rules : MonoBehaviour
 				List<Coord> alreadyCheck = new List<Coord> ();
 
 				foreach (Coord item in map.GetBigWeight(currentColor)) {
-					if (!alreadyCheck.Contains(item)) {
-				alreadyCheck.Add(item);
-						if (!FiveBreakable || !CheckIsBreakable (map, item.x, item.y))
-							return currentColor;
-					}
+						if (!alreadyCheck.Contains (item)) {
+								alreadyCheck.Add (item);
+								if (!FiveBreakable || !CheckIsBreakable (map, item.x, item.y))
+										return currentColor;
+						}
 				}
 
 				foreach (Coord item in map.GetBigWeight(ennemy)) {
-				if (!alreadyCheck.Contains(item)) {
-					alreadyCheck.Add(item);
-					if (!FiveBreakable || !CheckIsBreakable (map, item.x, item.y))
-								return ennemy;
+						if (!alreadyCheck.Contains (item)) {
+								alreadyCheck.Add (item);
+								if (!FiveBreakable || !CheckIsBreakable (map, item.x, item.y))
+										return ennemy;
 						}
 				}
 		
-		return  Gomoku.Color.Empty;
+				return  Gomoku.Color.Empty;
 		}
 
 		private bool CheckIsBreakable (Gomoku.Map map, int x, int y)
