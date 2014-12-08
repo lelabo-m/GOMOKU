@@ -29,7 +29,7 @@ public class PlayerComponent : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-			if (Ia != null) {
+			if (Ia != null && playing) {
 				Ia.Play(gm);	
 			}
 		}
