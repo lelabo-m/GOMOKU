@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 		private int lastY;
 		private PlayerComponent playerComponent1;
 		private PlayerComponent playerComponent2;
-		private Rules rules;
+		public Rules rules;
 		public MapComponent map;
 		private Gomoku.Color winner;
 	

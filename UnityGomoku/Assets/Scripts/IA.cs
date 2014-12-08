@@ -83,19 +83,27 @@ namespace Gomoku
             for (int i = 0; i < nbthread; ++i)
 			    maps.Add(new Map(MapComponent.SIZE_MAP, true));
         }
-        public void         PlayGame(Node current, Map map)
+        public void         OrderPawn(Node current, ref List<Node> l)
         {
-            //Node it = current;
-            //List<Node>  l;
-            //while (it != tree.root)
-            //{
-                
-            //}
-
-            //if (!rules.PutPawn(map, x, y) || (rules.DoubleThree && rules.IsDoubleThree(map, x, y, color)))
-            //    return false;
-            //map.PutPawn(x, y, color);
-            //rules.UpdateMap(map, x, y);
+            if (current.parent != tree.root)
+                OrderPawn(current.parent, ref l);
+            l.Add(current.parent);
+        }
+        public void         PlayGame(Node current, Map map, GameManager gm)
+        {
+            List<Node> l = new List<Node>();
+            OrderPawn(current, ref l);
+            foreach (Node it in l)
+            {
+                Color   c = (it.WhoPlay() == Who.IA) ? (Color.Black) : (Color.White);
+                map.PutPawn(it.cell.x, it.cell.y, c);
+                gm.rules.UpdateMap(map, it.cell.x, it.cell.y);
+            }
+            // while game not finish
+            // play pawn
+            // state of game
+            // -------------
+            // fill the node
         }
         public Coord     Simulate(GameManager gm)
         {
