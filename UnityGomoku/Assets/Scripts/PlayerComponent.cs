@@ -21,7 +21,7 @@ public class PlayerComponent : MonoBehaviour
 		{
 				map = GameObject.Find ("Map").GetComponent<MapComponent>();
 		}
-	
+
 		// Update is called once per frame
 		void Update ()
 		{
@@ -29,7 +29,7 @@ public class PlayerComponent : MonoBehaviour
 	
 		public bool PutPawn ()
 		{
-				return map.putPawn (selectedX, selectedY, (Gomoku.Color) color);
+				return map.PutPawn (selectedX, selectedY, (Gomoku.Color) color);
 		}
 
 }
