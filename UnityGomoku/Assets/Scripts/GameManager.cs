@@ -37,13 +37,15 @@ public class GameManager : MonoBehaviour
 		void Update ()
 		{
 				if (currentPlayer ().played) {
-						if ((winner = CheckMap(this.lastX, this.lastY, map.GetMap())))
+						if ((winner = CheckMap(this.lastX, this.lastY, map.GetMap())) != Gomoku.Color.Empty)
 								GameDone ();
 
 						if (!isEnoughSpace ())
 								GameDone ();
 
 						changeTurn ();
+			/*print ("Random = " + map.GetMap().RandomCell(Gomoku.Color.White));
+			print ("Random = " + map.GetMap().RandomCell(Gomoku.Color.Black));*/
 				}
 		}
 

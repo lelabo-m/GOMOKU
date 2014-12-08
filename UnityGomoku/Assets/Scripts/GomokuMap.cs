@@ -49,15 +49,16 @@ namespace Gomoku
 	
     public class PossibleCell
 	{
-		public int Weight;
+		public int[] Weight = new int[2] { 0, 0 };
 		public int Pos;
 
         public byte Availability = 0;
 		
-		public PossibleCell(int p, int w)
+		public PossibleCell(int p, int weightWhite, int weightBlack)
 		{
 			this.Pos = p;
-			this.Weight = w;
+			this.Weight[(int) Gomoku.Color.White] = weightWhite;
+			this.Weight[(int) Gomoku.Color.Black] = weightBlack;
 		}
 
         public void SetAvailability(Color color, bool state)
@@ -73,7 +74,7 @@ namespace Gomoku
 		
 		public void Copy(PossibleCell cell)
 		{
-			cell.Weight = this.Weight;
+			cell.Weight = (int[]) this.Weight.Clone();
 		    cell.Availability = this.Availability;
 			cell.Pos = this.Pos;
 		}
@@ -84,13 +85,14 @@ namespace Gomoku
 				public List<PossibleCell> cells = new List<PossibleCell> ();
 				public int[] TotalWeight = new int[2] {0, 0};
 				public PlayerState[] Players = new PlayerState[2] { new PlayerState(), new PlayerState() };
+				private System.Random random = new System.Random();
 		
 				public void Copy (CellsList list)
 				{
 						list.TotalWeight = (int[]) this.TotalWeight.Clone ();
 			
 						foreach (PossibleCell item in this.cells) {
-								PossibleCell copy = new PossibleCell (item.Pos, item.Weight);
+								PossibleCell copy = new PossibleCell (item.Pos, item.Weight[(int) Gomoku.Color.White], item.Weight[(int) Gomoku.Color.Black]);
 								//copy.disponibility = item.disponibility;
 								list.cells.Add (copy);
 						}
@@ -121,7 +123,10 @@ namespace Gomoku
 						Gomoku.Color otherColor = (color == Gomoku.Color.White) ? Gomoku.Color.Black : Gomoku.Color.White;
 
 						if (find == null) {
-								this.cells.Add(new PossibleCell (pos, map.GetCell(pos).GetWeight(color)));
+								this.cells.Add(new PossibleCell (pos, map.GetCell(pos).GetWeight(color), map.GetCell(pos).GetWeight(otherColor)));
+
+								MonoBehaviour.print("ADD = " + map.GetCell(pos).GetWeight(color));
+								MonoBehaviour.print("ADD = " + map.GetCell(pos).GetWeight(otherColor));
 								this.TotalWeight[(int) color] += map.GetCell(pos).GetWeight(color);
 								this.TotalWeight[(int) otherColor] += map.GetCell(pos).GetWeight(otherColor);
 						}
@@ -144,8 +149,16 @@ namespace Gomoku
 
 				public int RandomCell (Gomoku.Map map, Gomoku.Color color)
 				{
-						
-						return 0;
+						MonoBehaviour.print (this.TotalWeight [(int)color]);
+						int randomNumber = this.random.Next(0, this.TotalWeight[(int) color]);
+						MonoBehaviour.print ("nm = " + randomNumber);
+
+						foreach (PossibleCell item in this.cells) {
+							randomNumber -= item.Weight[(int) color];
+							if (randomNumber <= 0)
+								return item.Pos;
+						}
+						return -1;
 				}
 		}
 	
@@ -327,19 +340,6 @@ namespace Gomoku
 		public bool PutPawn(int x, int y, Color type)
 		{
 			this.map[x * GetSizeMap() + y].SetColor(type);
-			GeneratePossibleCells(x, y, 2);
-
-	/*****************
-		MonoBehaviour.print ("---------------------------------------------");
-		MonoBehaviour.print ("----------------PossibleCells----------------");
-		MonoBehaviour.print ("---------------------------------------------");
-		foreach (PossibleCell possible in this.cellsList.cells) {
-			MonoBehaviour.print("x = " + (possible.pos / GetSizeMap()) + " y = " + (possible.pos % GetSizeMap()));
-				}
-		MonoBehaviour.print ("---------------------------------------------");
-		MonoBehaviour.print ("---------------------------------------------");
-		MonoBehaviour.print ("---------------------------------------------");
-		***************/
 			return true;
 		}
 
@@ -365,7 +365,6 @@ namespace Gomoku
 			return this.map[x * GetSizeMap() + y].IsBlock(color);
 		}
 
-
 		public void GeneratePossibleCells(int x, int y, int radius)
 		{
 			foreach (KeyValuePair<Gomoku.Orientation, int[]> entry in MapComponent.ORIENTATION) {
@@ -383,6 +382,17 @@ namespace Gomoku
 		
 
 			this.cellsList.Update (x, y, this);
+/*
+			MonoBehaviour.print ("---------------------------------------------");
+			MonoBehaviour.print ("----------------PossibleCells----------------");
+			MonoBehaviour.print ("---------------------------------------------");
+			foreach (PossibleCell possible in this.cellsList.cells) {
+				MonoBehaviour.print("x = " + (possible.Pos / GetSizeMap()) + " y = " + (possible.Pos % GetSizeMap()) + " weight = " + possible.Weight[(int) Gomoku.Color.White]);
+			}
+			MonoBehaviour.print ("---------------------------------------------");
+			MonoBehaviour.print ("---------------------------------------------");
+			MonoBehaviour.print ("---------------------------------------------");
+*/
 		}
 
 		public void UpdateBigWeight(Gomoku.Color color)
@@ -398,6 +408,10 @@ namespace Gomoku
 		public List<Coord> GetBigWeight(Gomoku.Color color)
 		{
 			return cellsList.Players[(int)color].BigWeight;
+		}
+
+		public int RandomCell (Gomoku.Color color) {
+			return this.cellsList.RandomCell (this, color);
 		}
 	}
 }

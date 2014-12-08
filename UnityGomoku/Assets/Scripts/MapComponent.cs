@@ -76,6 +76,8 @@ public class MapComponent : MonoBehaviour
 
 				rules.UpdateMap (map, x, y);
 
+				map.GeneratePossibleCells(x, y, 2);
+				
 				gameManager.SetLastPawn (x, y);
 				return true;
 		}
