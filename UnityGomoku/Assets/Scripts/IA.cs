@@ -128,6 +128,8 @@ namespace Gomoku
                 gm.rules.PutPawn(map, lastpawn.x, lastpawn.y, lastcolor);
                 winner = gm.CheckMap(lastpawn.x, lastpawn.y, map);
             }
+            current.cell.x = lastpawn.x;
+            current.cell.y = lastpawn.y;
             current.reward = (winner == Color.Empty) ? (0.0f) : (winner == Color.Black) ? (1.0f) : (-1.0f);
             current.visit = 1;
         }
