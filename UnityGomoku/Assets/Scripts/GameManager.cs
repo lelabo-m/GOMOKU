@@ -37,12 +37,7 @@ public class GameManager : MonoBehaviour
 		void Update ()
 		{
 				if (currentPlayer ().played) {
-						TakePawns ();
-
-						if ((winner = isScoringWinner ()) != Gomoku.Color.Empty)
-								GameDone ();
-
-						if ((winner = isWinner ()) != Gomoku.Color.Empty)
+						if ((winner = CheckMap(this.lastX, this.lastY, map.GetMap())))
 								GameDone ();
 
 						if (!isEnoughSpace ())
@@ -52,6 +47,21 @@ public class GameManager : MonoBehaviour
 				}
 		}
 
+		public Gomoku.Color CheckMap(int lastX, int lastY, Gomoku.Map map) 
+		{
+			Gomoku.Color win = Gomoku.Color.Empty;
+
+			CheckTakePawns (lastX, lastY);
+
+			if ((win = isScoringWinner ()) != Gomoku.Color.Empty)
+						return win;
+			
+			if ((win = isWinner (map)) != Gomoku.Color.Empty)
+						return win;
+			
+			return win;
+		}
+
 		public PlayerComponent currentPlayer ()
 		{
 				if (playerComponent1.playing)
@@ -59,7 +69,7 @@ public class GameManager : MonoBehaviour
 				return playerComponent2;
 		}
 
-		private void TakePawns ()
+		private void CheckTakePawns (int lastX, int lastY)
 		{
 			foreach (KeyValuePair<Gomoku.Orientation, int[]> entry in MapComponent.ORIENTATION)
 			{
@@ -110,9 +120,9 @@ public class GameManager : MonoBehaviour
 				return rules.IsScoringWinner ();
 		}
 
-		private Gomoku.Color isWinner ()
+		private Gomoku.Color isWinner (Gomoku.Map map)
 		{
-				return rules.IsWinner (map.GetMap(), currentPlayer().color);
+				return rules.IsWinner (map, currentPlayer().color);
 		}
 
 		private void GameDone ()
