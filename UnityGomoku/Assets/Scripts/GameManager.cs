@@ -44,8 +44,8 @@ public class GameManager : MonoBehaviour
 								GameDone ();
 
 						changeTurn ();
-			/*print ("Random = " + map.GetMap().RandomCell(Gomoku.Color.White));
-			print ("Random = " + map.GetMap().RandomCell(Gomoku.Color.Black));*/
+			print ("Random = " + map.GetMap().RandomCell(Gomoku.Color.White));
+			print ("Random = " + map.GetMap().RandomCell(Gomoku.Color.Black));
 				}
 		}
 

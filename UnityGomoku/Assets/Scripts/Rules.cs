@@ -46,12 +46,22 @@ public class Rules : MonoBehaviour
 		}
 	
 
-		// true si possible de poser
-		public bool PutPawn (Gomoku.Map map, int x, int y)
+		public bool IsFree(Gomoku.Map map, int x, int y) 
 		{
-				if (map.GetColor (x, y) != Gomoku.Color.Empty)
-						return false;
-				return true;
+			if (map.GetColor (x, y) != Gomoku.Color.Empty)
+				return false;
+			return true;
+		}
+	
+		public bool PutPawn (Gomoku.Map map, int x, int y, Gomoku.Color color, bool simulation = false)
+		{
+			if (!this.IsFree (map, x, y) || (simulation && this.DoubleThree && this.IsDoubleThree (map, x, y, color)))
+				return false;
+
+			map.PutPawn (x, y, color);
+			this.UpdateMap (map, x, y);
+			map.GeneratePossibleCells(x, y, 2);
+			return true;
 		}
 
 

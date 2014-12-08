@@ -70,7 +70,7 @@ public class MapComponent : MonoBehaviour
 		
 		public bool PutPawn (int x, int y, Gomoku.Color color)
 		{
-				if (!rules.PutPawn (map, x, y) || (rules.DoubleThree && rules.IsDoubleThree (map, x, y, color)))
+				if (!rules.IsFree (map, x, y) || (rules.DoubleThree && rules.IsDoubleThree (map, x, y, color)))
 						return false;
 				map.PutPawn (x, y, color);
 

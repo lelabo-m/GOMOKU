@@ -124,9 +124,6 @@ namespace Gomoku
 
 						if (find == null) {
 								this.cells.Add(new PossibleCell (pos, map.GetCell(pos).GetWeight(color), map.GetCell(pos).GetWeight(otherColor)));
-
-								MonoBehaviour.print("ADD = " + map.GetCell(pos).GetWeight(color));
-								MonoBehaviour.print("ADD = " + map.GetCell(pos).GetWeight(otherColor));
 								this.TotalWeight[(int) color] += map.GetCell(pos).GetWeight(color);
 								this.TotalWeight[(int) otherColor] += map.GetCell(pos).GetWeight(otherColor);
 						}
