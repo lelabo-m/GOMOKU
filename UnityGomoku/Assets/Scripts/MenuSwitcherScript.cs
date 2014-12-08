@@ -26,12 +26,13 @@ public class MenuSwitcherScript : MonoBehaviour
 
 	public void LaunchVsIa()
 	{
-		NGUITools.SetActive(StartMenu, false);
-		NGUITools.SetActive(MainMenu, true);
+		PlayerPrefs.SetInt("IA", 1);
+		Application.LoadLevel(2);
 	}
 
 	public void LaunchVsHuman()
 	{
+		PlayerPrefs.SetInt("IA", 0);
 		Application.LoadLevel(2);
 	}
 
