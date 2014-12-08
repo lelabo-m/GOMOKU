@@ -117,7 +117,6 @@ namespace Gomoku
             {
                 Node tosimule = tree.Extend();
                 PlayGame(tosimule, maps[0], gm);
-
             }
             s.Stop();
             Node final = tree.Extend();
@@ -133,7 +132,7 @@ namespace Gomoku
                 m.Copy(gm.map.GetMap());
             tree.Clear();
             Coord res = Simulate(gm);
-            gm.map.PutPawn(res.x, res.y, gm.currentPlayer().color);
+            gm.map.PutPawn(res.x, res.y, Color.Black);
         }
     }
 }
