@@ -61,16 +61,25 @@ namespace Gomoku
                     result = child;                            
             return ((result == null || result.UCB < empty.UCB) ? (empty) : (result));
         }
-        public double UCB(Node parent, Node n)
+        public double UCB(Node parent, Node n) // Possible change n.reward / n.visit
         {
             return (n.reward + Exploration.constante * Math.Sqrt(Math.Log(parent.visit) / n.visit));
         }
-        public Node Extend()
+        public Node Selection()
         {
             Node    current = root;
             while (current.HasChild() || current == root)
                 current = BestNode(current);
             return current;
+        }
+        public void BackProagation(Node last)
+        {
+            Node it = last.parent;
+            while (it != null)
+            {
+                it.reward += last.reward;
+                it.visit += 1;
+            }
         }
     }
 
@@ -107,6 +116,9 @@ namespace Gomoku
             // state of game
             // -------------
             // fill the node
+
+            /*print ("Random = " + map.GetMap().RandomCell(Gomoku.Color.White));
+            print ("Random = " + map.GetMap().RandomCell(Gomoku.Color.Black));*/
         }
         public Coord     Simulate(GameManager gm)
         {
@@ -115,11 +127,11 @@ namespace Gomoku
             s.Start();
             while (s.Elapsed < TimeSpan.FromMilliseconds(time))
             {
-                Node tosimule = tree.Extend();
+                Node tosimule = tree.Selection();
                 PlayGame(tosimule, maps[0], gm);
             }
             s.Stop();
-            Node final = tree.Extend();
+            Node final = tree.Selection();
             while (final.parent != tree.root)
                 final = final.parent;
             result.x = final.cell.x;
