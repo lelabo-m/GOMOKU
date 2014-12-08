@@ -1,21 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Gomoku;
 
 public class PlayerComponent : MonoBehaviour
 {
-
-		public enum Color
-		{
-				Empty,
-				White,
-				Black
-		}
 
 		public bool played = false;
 		private MapComponent map;
 		public int selectedX;
 		public int selectedY;
-		public Color color;
+		public Gomoku.Color color;
 
 		//Defini si c'est sont tour de jouer
 		public bool playing = false;
@@ -32,53 +26,10 @@ public class PlayerComponent : MonoBehaviour
 		void Update ()
 		{
 		}
-
-
-		/*******
-		 * Player Movements if keyboard or other controller
-		 * *****/
-
-		public void selectPosition (int x, int y)
+	
+		public bool PutPawn ()
 		{
-				selectedX = x;
-				selectedY = y;
-		}
-
-		public void moveUp ()
-		{
-				if (selectedX == 0)
-						selectedX = 18;
-				else
-						selectedX--;
-		}
-
-		public void moveDown ()
-		{
-				if (selectedX == 18)
-						selectedX = 0;
-				else
-						selectedX++;
-		}
-
-		public void moveRight ()
-		{
-				if (selectedY == 18)
-						selectedY = 0;
-				else
-						selectedY++;
-		}
-
-		public void moveLeft ()
-		{
-				if (selectedY == 0)
-						selectedY = 18;
-				else
-						selectedY--;
-		}
-
-		public bool putPawn ()
-		{
-				return map.putPawn (selectedX, selectedY, (MapComponent.Color) color);
+				return map.putPawn (selectedX, selectedY, (Gomoku.Color) color);
 		}
 
 }

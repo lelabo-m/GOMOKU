@@ -1,34 +1,34 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Gomoku;
 
 
 public class GameManager : MonoBehaviour
 {
 		public GameObject player1;
 		public GameObject player2;
-		private MapComponent.Color lastColor;
 		private int lastX;
 		private int lastY;
 		private PlayerComponent playerComponent1;
 		private PlayerComponent playerComponent2;
 		private Rules rules;
 		private MapComponent map;
-		private PlayerComponent.Color winner;
+		private Gomoku.Color winner;
 	
 		// Use this for initialization
 		void Start ()
 		{
 				rules = GameObject.Find ("Arbiter").GetComponent<Rules> ();
 				map = GameObject.Find ("Map").GetComponent<MapComponent> ();
-				winner = PlayerComponent.Color.Empty;
+				winner = Gomoku.Color.Empty;
 
 				playerComponent1 = player1.GetComponent<PlayerComponent> ();
-				playerComponent1.color = PlayerComponent.Color.White;
+				playerComponent1.color = Gomoku.Color.White;
 				playerComponent1.playing = true;
 
 				playerComponent2 = player2.GetComponent<PlayerComponent> ();
-				playerComponent2.color = PlayerComponent.Color.Black;
+				playerComponent2.color = Gomoku.Color.Black;
 				playerComponent2.playing = false;
 
 		}
@@ -37,16 +37,16 @@ public class GameManager : MonoBehaviour
 		void Update ()
 		{
 				if (currentPlayer ().played) {
-						takePawns ();
+						TakePawns ();
 
-						if ((winner = isScoringWinner ()) != PlayerComponent.Color.Empty)
-								gameDone ();
+						if ((winner = isScoringWinner ()) != Gomoku.Color.Empty)
+								GameDone ();
 
-						if ((winner = isWinner ()) != PlayerComponent.Color.Empty)
-								gameDone ();
+						if ((winner = isWinner ()) != Gomoku.Color.Empty)
+								GameDone ();
 
 						if (!isEnoughSpace ())
-								gameDone ();
+								GameDone ();
 
 						changeTurn ();
 				}
@@ -59,9 +59,9 @@ public class GameManager : MonoBehaviour
 				return playerComponent2;
 		}
 
-		private void takePawns ()
+		private void TakePawns ()
 		{
-			foreach (KeyValuePair<int, int[]> entry in MapComponent.ORIENTATION)
+			foreach (KeyValuePair<Gomoku.Orientation, int[]> entry in MapComponent.ORIENTATION)
 			{
 				if (rules.canTakePawns(map, lastX, lastY, entry.Key)) {
 					rules.takePawns(map, lastX, lastY, entry.Key);
@@ -70,9 +70,8 @@ public class GameManager : MonoBehaviour
 			}
 		}
 
-		public void setLastPawn(MapComponent.Color color, int x, int y)
+		public void setLastPawn(int x, int y)
 		{
-				lastColor = color;
 				lastX = x;
 				lastY = y;
 		}
@@ -86,11 +85,11 @@ public class GameManager : MonoBehaviour
 		
 		private bool isEnoughSpace ()
 		{
-				MapComponent.BitsMap tab = map.getBitsMap ();
+				Gomoku.Map tab = map.GetMap ();
 
 				for (int x = 0; x < MapComponent.SIZE_MAP; ++x) {
 				for (int y = 0; y < MapComponent.SIZE_MAP; ++y) {
-									if (tab.getColor(x, y) == MapComponent.Color.Empty)
+									if (tab.GetColor(x, y) == Gomoku.Color.Empty)
 											return true;
 					}
 				}
@@ -106,23 +105,23 @@ public class GameManager : MonoBehaviour
 				playerComponent2.played = false;
 		}
 
-		private PlayerComponent.Color isScoringWinner ()
+		private Gomoku.Color isScoringWinner ()
 		{
 				return rules.isScoringWinner ();
 		}
 
-		private PlayerComponent.Color isWinner ()
+		private Gomoku.Color isWinner ()
 		{
 				return rules.isWinner (map);
 		}
 
-		private void gameDone ()
+		private void GameDone ()
 		{
-				if (winner == PlayerComponent.Color.White) {
+				if (winner == Gomoku.Color.White) {
 						print ("Victoire Blanc");
 						PlayerPrefs.SetInt ("Winner", 0);
 						Application.LoadLevel(3);
-				} else if (winner == PlayerComponent.Color.Black) {
+				} else if (winner == Gomoku.Color.Black) {
 						print ("Victoire Noir");
 						PlayerPrefs.SetInt ("Winner", 1);
 						Application.LoadLevel(3);

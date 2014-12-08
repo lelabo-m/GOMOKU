@@ -74,7 +74,7 @@ public class Tile : MonoBehaviour
 		{
 				manager.currentPlayer ().selectedX = (int)gridPosition.x;
 				manager.currentPlayer ().selectedY = (int)gridPosition.y;
-				if (manager.currentPlayer ().putPawn () == false)
+				if (manager.currentPlayer ().PutPawn () == false)
 						transform.renderer.material.color = Color.red;
 				else {
 						putPawn ();
@@ -89,7 +89,7 @@ public class Tile : MonoBehaviour
 			                                     new Vector3 (gridPosition.x - Mathf.Floor (MapComponent.SIZE_MAP / 2), 0.7f, -gridPosition.y + Mathf.Floor (MapComponent.SIZE_MAP / 2)),
 			                                     Quaternion.Euler (new Vector3 ()))).GetComponent<Pawn> ();
 				pawn.name = "Pawn_" + (gridPosition.x * MapComponent.SIZE_MAP + gridPosition.y).ToString();
-				if (manager.currentPlayer ().color == PlayerComponent.Color.Black)
+				if (manager.currentPlayer ().color == Gomoku.Color.Black)
 							pawn.transform.renderer.material.color = Color.black;
 		}
 
