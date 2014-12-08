@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace Gomoku
 {
@@ -84,11 +85,16 @@ namespace Gomoku
         }
     }
 
-    public class ThreeFree : Vector
+    public class DoubleThree
     {
-    }
+        public Vector       three;
+        public Vector       two;
+        public List<Coord>  cellblocked;
 
-    public class Segment : Vector
-    {
+        public DoubleThree(Vector th, Vector tw)
+        {
+            three = th;
+            two = tw;
+        }
     }
 }
