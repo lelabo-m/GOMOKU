@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 		private PlayerComponent playerComponent1;
 		private PlayerComponent playerComponent2;
 		private Rules rules;
-		private MapComponent map;
+		public MapComponent map;
 		private Gomoku.Color winner;
 	
 		// Use this for initialization

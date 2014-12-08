@@ -25,7 +25,7 @@ namespace Gomoku
         public Node(Node p, Coord c)
         {
             UCB = -1.0f;
-            rank = (p) ? (p.rank + 1) : (0);
+            rank = (p != null) ? (p.rank + 1) : (0);
             cell = c;
             visit = 0;
             reward = 0.0f;
@@ -83,10 +83,37 @@ namespace Gomoku
             for (int i = 0; i < nbthread; ++i)
 			    maps.Add(new Map(MapComponent.SIZE_MAP, true));
         }
-        public void     Play(MapComponent mc)
+        public void         PlayGame(Node current, Map map)
         {
-             foreach (Map m in maps)
-                 m.Copy(mc);
+            //Node it = current;
+            //List<Node>  l;
+            //while (it != tree.root)
+            //{
+                
+            //}
+
+            //if (!rules.PutPawn(map, x, y) || (rules.DoubleThree && rules.IsDoubleThree(map, x, y, color)))
+            //    return false;
+            //map.PutPawn(x, y, color);
+            //rules.UpdateMap(map, x, y);
+        }
+        public Coord     Simulate(GameManager gm)
+        {
+            Coord   result = new Coord();
+            // while time
+            //    Find Node
+            //       PlayGame(Node, Map);
+            //   time -= elapsed;
+            // result = Find Best Result
+            return result;
+        }
+        public void     Play(GameManager gm)
+        {
+            foreach (Map m in maps)
+                m.Copy(gm.map.GetMap());
+            tree.Clear();
+            Coord res = Simulate(gm);
+            gm.map.PutPawn(res.x, res.y, gm.currentPlayer().color);
         }
     }
 }
