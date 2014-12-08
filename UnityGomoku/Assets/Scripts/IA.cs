@@ -103,22 +103,33 @@ namespace Gomoku
         }
         public void         PlayGame(Node current, Map map, GameManager gm)
         {
+            Coord   lastpawn = new Coord();
+            Color   lastcolor = Color.Empty;
             List<Node> l = new List<Node>();
             OrderPawn(current, ref l);
             foreach (Node it in l)
             {
-                Color   c = (it.WhoPlay() == Who.IA) ? (Color.Black) : (Color.White);
-                map.PutPawn(it.cell.x, it.cell.y, c);
-                gm.rules.UpdateMap(map, it.cell.x, it.cell.y);
+                lastcolor = (it.WhoPlay() == Who.IA) ? (Color.Black) : (Color.White);
+                lastpawn = it.cell;
+                gm.rules.PutPawn(map, it.cell.x, it.cell.y, lastcolor);
             }
-            // while game not finish
-            // play pawn
-            // state of game
-            // -------------
-            // fill the node
-
-            /*print ("Random = " + map.GetMap().RandomCell(Gomoku.Color.White));
-            print ("Random = " + map.GetMap().RandomCell(Gomoku.Color.Black));*/
+            Color winner = gm.CheckMap(lastpawn.x, lastpawn.y, map);
+            while (winner == Color.Empty)
+            {
+                lastcolor = (lastcolor == Color.Black) ? (Color.White) : (Color.Black);
+                int pawn = map.RandomCell(lastcolor);
+                if (pawn == -1)
+                {
+                    winner = Color.Empty;
+                    break;
+                }
+                lastpawn.x = pawn / MapComponent.SIZE_MAP;
+                lastpawn.y = pawn % MapComponent.SIZE_MAP;
+                gm.rules.PutPawn(map, lastpawn.x, lastpawn.y, lastcolor);
+                winner = gm.CheckMap(lastpawn.x, lastpawn.y, map);
+            }
+            current.reward = (winner == Color.Empty) ? (0.0f) : (winner == Color.Black) ? (1.0f) : (-1.0f);
+            current.visit = 1;
         }
         public Coord     Simulate(GameManager gm)
         {
@@ -129,6 +140,7 @@ namespace Gomoku
             {
                 Node tosimule = tree.Selection();
                 PlayGame(tosimule, maps[0], gm);
+                tree.BackProagation(tosimule);
             }
             s.Stop();
             Node final = tree.Selection();
