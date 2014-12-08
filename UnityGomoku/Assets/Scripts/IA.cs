@@ -114,11 +114,7 @@ namespace Gomoku
             {
                 lastcolor = (it.WhoPlay() == Who.IA) ? (Color.Black) : (Color.White);
                 lastpawn = it.cell;
-                gm.rules.PutPawn(
-					map, 
-					it.cell.x, 
-					it.cell.y, 
-					lastcolor);
+                gm.rules.PutPawn(map, it.cell.x, it.cell.y, lastcolor);
             }
             Color winner = gm.CheckMap(lastpawn.x, lastpawn.y, map);
             while (winner == Color.Empty)
@@ -132,11 +128,7 @@ namespace Gomoku
                 }
                 lastpawn.x = pawn / MapComponent.SIZE_MAP;
                 lastpawn.y = pawn % MapComponent.SIZE_MAP;
-                gm.rules.PutPawn(
-					map, 
-					lastpawn.x, 
-					lastpawn.y, 
-					lastcolor);
+                gm.rules.PutPawn(map, lastpawn.x, lastpawn.y, lastcolor);
                 winner = gm.CheckMap(lastpawn.x, lastpawn.y, map);
             }
             current.cell.x = lastpawn.x;
