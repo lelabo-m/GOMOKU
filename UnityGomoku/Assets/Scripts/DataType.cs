@@ -48,7 +48,7 @@ namespace Gomoku
             Coord BoxUV = new Coord();
             Coord BoxIJ = new Coord();
             BoxUV.x = end.x - begin.x;
-            BoxUV.y = end.y - begin.x;
+            BoxUV.y = end.y - begin.y;
             BoxIJ.x = other.end.x - other.begin.x;
             BoxIJ.y = other.end.y - other.begin.y;
 
