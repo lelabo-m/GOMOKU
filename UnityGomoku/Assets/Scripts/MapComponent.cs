@@ -67,6 +67,10 @@ public class MapComponent : MonoBehaviour
 						graphicMap.Add (row);
 				}
 		}
+
+		public bool PlayOnTile(int x, int y) {
+			return this.graphicMap [x] [y].PutPawn ();
+		}
 		
 		public bool PutPawn (int x, int y, Gomoku.Color color)
 		{

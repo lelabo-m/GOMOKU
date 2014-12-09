@@ -241,7 +241,9 @@ public class Rules : MonoBehaviour
 				map.GetMap ().SetIsTaking (x, y, orientation, false);
 				map.GetMap ().SetIsTaking (x + 3 * MapComponent.ORIENTATION [orientation] [0], y + 3 * MapComponent.ORIENTATION [orientation] [1], orientation, false);
 				map.removePawn (x + MapComponent.ORIENTATION [orientation] [0], y + MapComponent.ORIENTATION [orientation] [1]);
+				map.GetMap ().AddPossibleCell (x + MapComponent.ORIENTATION [orientation] [0], y + MapComponent.ORIENTATION [orientation] [1]);
 				map.removePawn (x + 2 * MapComponent.ORIENTATION [orientation] [0], y + 2 * MapComponent.ORIENTATION [orientation] [1]);
+				map.GetMap ().AddPossibleCell (x + 2 * MapComponent.ORIENTATION [orientation] [0], y + 2 * MapComponent.ORIENTATION [orientation] [1]);
 		}
 
 		/**

@@ -121,6 +121,7 @@ namespace Gomoku
             {
                 lastcolor = (lastcolor == Color.Black) ? (Color.White) : (Color.Black);
                 int pawn = map.RandomCell(lastcolor);
+				MonoBehaviour.print("Random = " + pawn);
                 if (pawn == -1)
                 {
                     winner = Color.Empty;
@@ -159,9 +160,12 @@ namespace Gomoku
         {
             foreach (Map m in maps)
                 m.Copy(gm.map.GetMap());
+
+
             tree.Clear();
             Coord res = Simulate(gm);
-            gm.map.PutPawn(res.x, res.y, Color.Black);
+			gm.map.PlayOnTile (1, 1);
+           // gm.map.PutPawn(res.x, res.y, Color.Black);*/
         }
     }
 }
