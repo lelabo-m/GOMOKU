@@ -6,6 +6,7 @@ public class PlayerComponent : MonoBehaviour
 {
 
 		public bool played = false;
+        public bool isplaying = false;
 		private MapComponent map;
 		public int selectedX;
 		public int selectedY;
@@ -29,7 +30,8 @@ public class PlayerComponent : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-			if (Ia != null && playing) {
+			if (Ia != null && playing && isplaying == false) {
+                isplaying = true;
 				Ia.Play(gm);	
 			}
 		}

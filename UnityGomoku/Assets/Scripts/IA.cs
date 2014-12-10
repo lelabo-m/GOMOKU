@@ -160,7 +160,7 @@ namespace Gomoku
 			this.maps = new List<Map> ();
 			this.tree = new MCTree ();
             for (int i = 0; i < nbthread; ++i)
-			    maps.Add(new Map(MapComponent.SIZE_MAP, true));
+			    maps.Add(new Map(MapComponent.SIZE_MAP));
         }
         public void         OrderPawn(Node current, ref List<Node> l)
         {
@@ -184,14 +184,15 @@ namespace Gomoku
             }
             Color winner = Color.Empty;
             int pawn = map.RandomCell(lastcolor);
-            DebugConsole.Log("Random = " + pawn + " Who = " + lastcolor + " " + current.Repr(), "warning");
+            lastpawn.x = pawn / MapComponent.SIZE_MAP;
+            lastpawn.y = pawn % MapComponent.SIZE_MAP; 
+            DebugConsole.Log("Random = " + pawn + " X = " + lastpawn.x + " Y = " + lastpawn.y + " Who = " + lastcolor + " " + current.Repr(), "warning");
             if (pawn == -1)
             {
                 current.Supr();
                 return;
             }
-            lastpawn.x = pawn / MapComponent.SIZE_MAP;
-            lastpawn.y = pawn % MapComponent.SIZE_MAP;
+
             current.cell.x = lastpawn.x;
             current.cell.y = lastpawn.y;
             current.visit = 1;
@@ -245,8 +246,11 @@ namespace Gomoku
         public void     Play(GameManager gm)
         {
             tree.Clear();
+            DebugConsole.Log("Begin IA", "warning");
             Coord res = Simulate(gm);
+            DebugConsole.Log("EXIT IA", "warning");
 			gm.map.PlayOnTile (res.x, res.y);
+            gm.currentPlayer().isplaying = false;
         }
     }
 }
