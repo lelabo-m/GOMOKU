@@ -72,7 +72,9 @@ public class Tile : MonoBehaviour
 
 		void OnMouseDown ()
 		{
-				PutPawn ();
+			if (manager.currentPlayer ().Ia == null) {
+						PutPawn ();
+				}
 		}
 
 		public bool PutPawn()

@@ -184,17 +184,25 @@ namespace Gomoku
                 lastcolor = (lastcolor == Color.Black) ? (Color.White) : (Color.Black);
             }
             Color winner = Color.Empty;
-            int pawn = map.RandomCell(lastcolor);
-            lastpawn.x = pawn / MapComponent.SIZE_MAP;
+            Coord pawn = map.RandomCell(lastcolor);
+			if (pawn == null) {
+								current.Supr ();
+								return;
+						}
+			lastpawn.x = pawn.x;
+			lastpawn.y = pawn.y;
+			current.cell.x = lastpawn.x;
+			current.cell.y = lastpawn.y;
+			/*lastpawn.x = pawn / MapComponent.SIZE_MAP;
             lastpawn.y = pawn % MapComponent.SIZE_MAP;
             current.cell.x = lastpawn.x;
             current.cell.y = lastpawn.y;
             DebugConsole.Log("Random = " + pawn + " X = " + lastpawn.x + " Y = " + lastpawn.y + " Who = " + lastcolor + " " + current.Repr(), "warning");
-            if (pawn == -1)
+            if (pawn == null)
             {
                 current.Supr();
                 return;
-            }
+            }*/
             current.visit = 1;
             gm.rules.PutPawn(map, lastpawn.x, lastpawn.y, lastcolor);
             winner = gm.CheckMap(lastpawn.x, lastpawn.y, map);
@@ -204,13 +212,17 @@ namespace Gomoku
             while (winner == Color.Empty && i++ < 100)
             {
                 pawn = map.RandomCell(lastcolor);
-                if (pawn == -1)
+				if (pawn == null)
+					break;
+					/* if (pawn == -1)
                     break;
                 lastpawn.x = pawn / MapComponent.SIZE_MAP;
-                lastpawn.y = pawn % MapComponent.SIZE_MAP;
-                gm.rules.PutPawn(map, lastpawn.x, lastpawn.y, lastcolor);
-                winner = gm.CheckMap(lastpawn.x, lastpawn.y, map);
-                lastcolor = (lastcolor == Color.Black) ? (Color.White) : (Color.Black);
+                lastpawn.y = pawn % MapComponent.SIZE_MAP;*/
+                /*gm.rules.PutPawn(map, lastpawn.x, lastpawn.y, lastcolor);
+                winner = gm.CheckMap(lastpawn.x, lastpawn.y, map);*/
+				gm.rules.PutPawn(map, pawn.x, pawn.y, lastcolor);
+				winner = gm.CheckMap(pawn.x, pawn.y, map);
+				lastcolor = (lastcolor == Color.Black) ? (Color.White) : (Color.Black);
             }
             current.reward = (winner == Color.Empty) ? (0.0f) : (winner == Color.Black) ? (1.0f) : (-1.0f);
             DebugConsole.Log("INFO = id = " + current.id + " Rank = " + current.rank + " Reward = " + current.reward + " VISIT = " + current.visit + " CELL = " + current.cell.x + " " + current.cell.y);

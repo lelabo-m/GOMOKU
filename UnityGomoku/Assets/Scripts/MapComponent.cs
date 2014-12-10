@@ -89,6 +89,7 @@ public class MapComponent : MonoBehaviour
 		
 		public bool removePawn (int x, int y)
 		{
+		print ("Remove");
 			if (map.GetColor (x, y) != Gomoku.Color.Empty) {
 						map.RemovePawn (x, y);
 				}
