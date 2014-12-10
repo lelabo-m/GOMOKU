@@ -12,12 +12,12 @@ public class UpdateScoring : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		int val;
-		Rules rules = GameObject.Find("Arbiter").GetComponent<Rules>();
+		MapComponent map = GameObject.Find("Map").GetComponent<MapComponent>();
 		UILabel c = GameObject.Find("score white").GetComponent<UILabel>();
-		rules.scores.TryGetValue (Gomoku.Color.White, out val);
+		val = map.GetMap().scores[(int) Gomoku.Color.White];
 		c.text = val.ToString();
 		UILabel d = GameObject.Find("score black").GetComponent<UILabel>();
-		rules.scores.TryGetValue (Gomoku.Color.Black, out val);
+		val = map.GetMap().scores[(int) Gomoku.Color.Black];
 		d.text = val.ToString();
 	}
 }

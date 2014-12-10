@@ -299,6 +299,8 @@ namespace Gomoku
 		private CellsList cellsList;
 // ReSharper disable once InconsistentNaming
 		static public Gomoku.Color IACOLOR = Gomoku.Color.Black;
+		public const int MAX_SCORE = 10;
+		public int[] scores;
 
 		public Map(int sz, bool simu = false)
 		{
@@ -309,6 +311,9 @@ namespace Gomoku
 			for (int i = 0; i < GetSizeMap() * GetSizeMap(); ++i) {
 					this.map[i] = new Cell();
 			}
+			scores = new int[2];
+			scores[(int) Gomoku.Color.White] =  0;
+			scores[(int) Gomoku.Color.Black] =  0;
 		}
 		
 		static public int GetSizeMap()
@@ -378,7 +383,9 @@ namespace Gomoku
 
 		public bool RemovePawn (int x, int y)
 		{
+				Gomoku.Color color = GetColor (x, y);
 				this.map [x * GetSizeMap () + y].RemovePawn ();
+				UpdateBigWeight (color);
 				return true;
 		}
 

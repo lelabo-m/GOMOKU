@@ -9,8 +9,7 @@ public class Rules : MonoBehaviour
 
 		public bool FiveBreakable = false;
 		public bool DoubleThree = false;
-		public const int MAX_SCORE = 10;
-		public System.Collections.Generic.Dictionary<Gomoku.Color, int> scores;
+
 		private List<int[]> masks;
 
 		// Use this for initialization
@@ -34,9 +33,7 @@ public class Rules : MonoBehaviour
 				masks.Add (new int[] { -1, -1, -1, 0, 1, 2, 2, 0, -1});
 				masks.Add (new int[] { -1, -1, -1, 0, 1, 2, 0, 2, 0});
 				masks.Add (new int[] { -1, -1, -1, 0, 1, 0, 2, 2, 0});
-				scores = new System.Collections.Generic.Dictionary<Gomoku.Color, int> ();
-				scores.Add (Gomoku.Color.White, 0);
-				scores.Add (Gomoku.Color.Black, 0);
+
 		}
 	
 		// Update is called once per frame
@@ -224,26 +221,26 @@ public class Rules : MonoBehaviour
 						map.SetWeight (currentCell.x, currentCell.y, weight, color);
 		}
 
-		public void Scoring (Gomoku.Color remover, int score)
+		public void Scoring (Gomoku.Color remover, int score , Gomoku.Map map)
 		{
-				scores [remover] += score;
+				map.scores [(int) remover] += score;
 		}
 
-		public bool CanTakePawns (MapComponent map, int x, int y, Gomoku.Orientation orientation)
+		public bool CanTakePawns (Gomoku.Map map, int x, int y, Gomoku.Orientation orientation)
 		{
-				return (map.GetMap ().IsTaking (x, y, orientation) && 
-						map.GetMap ().GetColor (x + 3 * MapComponent.ORIENTATION [orientation] [0], y + 3 * MapComponent.ORIENTATION [orientation] [1]) == map.GetMap ().GetColor (x, y));
+				return (map.IsTaking (x, y, orientation) && 
+						map.GetColor (x + 3 * MapComponent.ORIENTATION [orientation] [0], y + 3 * MapComponent.ORIENTATION [orientation] [1]) == map.GetColor (x, y));
 		}
 
-		public void TakePawns (MapComponent map, int x, int y, Gomoku.Orientation orientation)
+		public void TakePawns (Gomoku.Map map, int x, int y, Gomoku.Orientation orientation)
 		{
-				Scoring ((Gomoku.Color)map.GetMap ().GetColor (x, y), 2);
-				map.GetMap ().SetIsTaking (x, y, orientation, false);
-				map.GetMap ().SetIsTaking (x + 3 * MapComponent.ORIENTATION [orientation] [0], y + 3 * MapComponent.ORIENTATION [orientation] [1], orientation, false);
-				map.removePawn (x + MapComponent.ORIENTATION [orientation] [0], y + MapComponent.ORIENTATION [orientation] [1]);
-				map.GetMap ().AddPossibleCell (x + MapComponent.ORIENTATION [orientation] [0], y + MapComponent.ORIENTATION [orientation] [1]);
-				map.removePawn (x + 2 * MapComponent.ORIENTATION [orientation] [0], y + 2 * MapComponent.ORIENTATION [orientation] [1]);
-				map.GetMap ().AddPossibleCell (x + 2 * MapComponent.ORIENTATION [orientation] [0], y + 2 * MapComponent.ORIENTATION [orientation] [1]);
+				Scoring ((Gomoku.Color)map.GetColor (x, y), 2, map);
+				map.SetIsTaking (x, y, orientation, false);
+				map.SetIsTaking (x + 3 * MapComponent.ORIENTATION [orientation] [0], y + 3 * MapComponent.ORIENTATION [orientation] [1], orientation, false);
+				map.RemovePawn (x + 1 * MapComponent.ORIENTATION [orientation] [0], y + 1 * MapComponent.ORIENTATION [orientation] [1]);
+				map.AddPossibleCell (x + MapComponent.ORIENTATION [orientation] [0], y + MapComponent.ORIENTATION [orientation] [1]);
+				map.RemovePawn (x + 2 * MapComponent.ORIENTATION [orientation] [0], y + 2 * MapComponent.ORIENTATION [orientation] [1]);
+				map.AddPossibleCell (x + 2 * MapComponent.ORIENTATION [orientation] [0], y + 2 * MapComponent.ORIENTATION [orientation] [1]);
 		}
 
 		/**
@@ -349,11 +346,11 @@ public class Rules : MonoBehaviour
 				return Gomoku.Color.Empty;
 		}
 
-		public Gomoku.Color IsScoringWinner ()
+		public Gomoku.Color IsScoringWinner (Gomoku.Map map)
 		{
-				if (scores [Gomoku.Color.White] == MAX_SCORE)
+				if (map.scores [(int) Gomoku.Color.White] == Gomoku.Map.MAX_SCORE)
 						return Gomoku.Color.White;
-				if (scores [Gomoku.Color.Black] == MAX_SCORE)
+				if (map.scores [(int) Gomoku.Color.Black] == Gomoku.Map.MAX_SCORE)
 						return Gomoku.Color.Black;
 				return Gomoku.Color.Empty;
 		}

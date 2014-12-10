@@ -89,9 +89,9 @@ public class MapComponent : MonoBehaviour
 		
 		public bool removePawn (int x, int y)
 		{
-				Gomoku.Color color = map.GetColor (x, y);
-				map.RemovePawn (x, y);
-				map.UpdateBigWeight (color);
+			if (map.GetColor (x, y) != Gomoku.Color.Empty) {
+						map.RemovePawn (x, y);
+				}
 				Destroy (GameObject.Find ("Pawn_" + (x * SIZE_MAP + y).ToString ()));
 				return true;
 		}
