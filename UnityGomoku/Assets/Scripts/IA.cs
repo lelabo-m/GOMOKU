@@ -204,6 +204,8 @@ namespace Gomoku
             DebugConsole.Log("Begin Loop simulation", "warning");
             while (s.Elapsed < TimeSpan.FromMilliseconds(time))
             {
+                foreach (Map m in maps)
+                    m.Copy(gm.map.GetMap());
                 DebugConsole.Log("Loop Simulation", "warning");
                 Node tosimule = tree.Selection();
                 PlayGame(tosimule, maps[0], gm);
@@ -222,8 +224,6 @@ namespace Gomoku
         }
         public void     Play(GameManager gm)
         {
-            foreach (Map m in maps)
-                m.Copy(gm.map.GetMap());
             tree.Clear();
             //DebugConsole.Log("Begin simulation", "warning");
             Coord res = Simulate(gm);
