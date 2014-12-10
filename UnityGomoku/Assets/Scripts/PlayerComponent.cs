@@ -36,10 +36,7 @@ public class PlayerComponent : MonoBehaviour
 	
 		public bool PutPawn ()
 		{
-				bool state = map.PutPawn (selectedX, selectedY, (Gomoku.Color) color);
-				if (state == true)
-						this.played = true;
-				return state;
+				return map.PutPawn (selectedX, selectedY, (Gomoku.Color) color);
 		}
 
 }
