@@ -74,7 +74,8 @@ namespace Gomoku
 		
 		public void Copy(PossibleCell cell)
 		{
-			this.Weight = (int[]) cell.Weight.Clone();
+			this.Weight [0] = cell.Weight [0];
+			this.Weight [1] = cell.Weight [1];
 		    this.Availability = cell.Availability;
 			this.Pos = cell.Pos;
 		}
@@ -242,14 +243,12 @@ namespace Gomoku
 			return	this.Takeable;
 		}
 
-		//TODO
 		public void SetIsTaking(Gomoku.Orientation orientation, bool state)
 		{
 		    if (this.IsTaking(orientation) != state)
 		        this.Take ^= (byte)(1 << (int)orientation);
 		}
 
-		//TODO
 		public bool IsTaking(Gomoku.Orientation orientation)
 		{
 		    return Convert.ToBoolean(this.Take & (1 << (int)orientation));
@@ -276,24 +275,20 @@ namespace Gomoku
 			return true;
 		}
 
-		//TODO
 		public void SetBlock(Color color, bool state)
 		{
             if (this.IsBlock(color) != state)
                 this.Block ^= (byte)(1 << (int)color);
         }
 
-		//TODO
 		public bool IsBlock(Color color)
 		{
-			MonoBehaviour.print(color);
             return Convert.ToBoolean(this.Block & (1 << (int)color));
 		}
 	}
 	
 	public class Map
 	{
-		public bool Simulation;
 		static public int Size;
 		private Cell[] map;
 		private CellsList cellsList;
@@ -302,9 +297,8 @@ namespace Gomoku
 		public const int MAX_SCORE = 10;
 		public int[] scores;
 
-		public Map(int sz, bool simu = false)
+		public Map(int sz)
 		{
-			this.Simulation = simu;
 			Map.Size = sz;
 			this.cellsList = new CellsList();
 			this.map = new Cell[GetSizeMap() * GetSizeMap()];
@@ -327,6 +321,8 @@ namespace Gomoku
 					this.GetCell (i).Copy(map.GetCell (i));
 			}
 			this.cellsList.Copy(map.cellsList);
+			this.scores [0] = map.scores [0];
+			this.scores [1] = map.scores [1];
 		}
 
 		public void AddPossibleCell(int x, int y)
