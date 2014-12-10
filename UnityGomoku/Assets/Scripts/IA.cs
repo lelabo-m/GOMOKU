@@ -201,17 +201,19 @@ namespace Gomoku
             Coord   result = new Coord();
             Stopwatch s = new Stopwatch();
             s.Start();
+            // Simulation
             DebugConsole.Log("Begin Loop simulation", "warning");
             while (s.Elapsed < TimeSpan.FromMilliseconds(time))
             {
                 foreach (Map m in maps)
                     m.Copy(gm.map.GetMap());
-                DebugConsole.Log("Loop Simulation", "warning");
                 Node tosimule = tree.Selection();
                 PlayGame(tosimule, maps[0], gm);
                 tree.BackProagation(tosimule);
             }
             s.Stop();
+
+            // Final choice
             DebugConsole.Log("Exit loop simulation", "warning");
             Node final = tree.Final();
             while (final.parent != tree.root)
@@ -225,9 +227,7 @@ namespace Gomoku
         public void     Play(GameManager gm)
         {
             tree.Clear();
-            //DebugConsole.Log("Begin simulation", "warning");
             Coord res = Simulate(gm);
-            //DebugConsole.Log("End Simulation", "warning");
 			gm.map.PlayOnTile (res.x, res.y);
         }
     }
