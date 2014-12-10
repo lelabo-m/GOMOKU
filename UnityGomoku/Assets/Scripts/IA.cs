@@ -173,7 +173,6 @@ namespace Gomoku
         }
         public void         PlayGame(Node current, Map map, GameManager gm)
         {
-            Coord   lastpawn = new Coord();
             Color   lastcolor = Color.Black;
             List<Node> l = new List<Node>();
             OrderPawn(current, ref l);
@@ -185,27 +184,17 @@ namespace Gomoku
             }
             Color winner = Color.Empty;
             Coord pawn = map.RandomCell(lastcolor);
-			if (pawn == null) {
-								current.Supr ();
-								return;
-						}
-			lastpawn.x = pawn.x;
-			lastpawn.y = pawn.y;
-			current.cell.x = lastpawn.x;
-			current.cell.y = lastpawn.y;
-			/*lastpawn.x = pawn / MapComponent.SIZE_MAP;
-            lastpawn.y = pawn % MapComponent.SIZE_MAP;
-            current.cell.x = lastpawn.x;
-            current.cell.y = lastpawn.y;
-            DebugConsole.Log("Random = " + pawn + " X = " + lastpawn.x + " Y = " + lastpawn.y + " Who = " + lastcolor + " " + current.Repr(), "warning");
-            if (pawn == null)
+			if (pawn == null)
             {
-                current.Supr();
-                return;
-            }*/
+			    current.Supr();
+				return;
+			}
+			current.cell.x = pawn.x;
+			current.cell.y = pawn.y;
             current.visit = 1;
-            gm.rules.PutPawn(map, lastpawn.x, lastpawn.y, lastcolor);
-            winner = gm.CheckMap(lastpawn.x, lastpawn.y, map);
+            //DebugConsole.Log("Random = " + pawn + " X = " + pawn.x + " Y = " + pawn.y + " Who = " + lastcolor + " " + current.Repr(), "warning");
+            gm.rules.PutPawn(map, pawn.x, pawn.y, lastcolor);
+            winner = gm.CheckMap(pawn.x, pawn.y, map);
             lastcolor = (lastcolor == Color.Black) ? (Color.White) : (Color.Black);
 
             int i = 0;
@@ -214,18 +203,12 @@ namespace Gomoku
                 pawn = map.RandomCell(lastcolor);
 				if (pawn == null)
 					break;
-					/* if (pawn == -1)
-                    break;
-                lastpawn.x = pawn / MapComponent.SIZE_MAP;
-                lastpawn.y = pawn % MapComponent.SIZE_MAP;*/
-                /*gm.rules.PutPawn(map, lastpawn.x, lastpawn.y, lastcolor);
-                winner = gm.CheckMap(lastpawn.x, lastpawn.y, map);*/
 				gm.rules.PutPawn(map, pawn.x, pawn.y, lastcolor);
 				winner = gm.CheckMap(pawn.x, pawn.y, map);
 				lastcolor = (lastcolor == Color.Black) ? (Color.White) : (Color.Black);
             }
             current.reward = (winner == Color.Empty) ? (0.0f) : (winner == Color.Black) ? (1.0f) : (-1.0f);
-            DebugConsole.Log("INFO = id = " + current.id + " Rank = " + current.rank + " Reward = " + current.reward + " VISIT = " + current.visit + " CELL = " + current.cell.x + " " + current.cell.y);
+            //DebugConsole.Log("INFO = id = " + current.id + " Rank = " + current.rank + " Reward = " + current.reward + " VISIT = " + current.visit + " CELL = " + current.cell.x + " " + current.cell.y);
         }
         public Coord     Simulate(GameManager gm)
         {
@@ -233,25 +216,25 @@ namespace Gomoku
             Stopwatch s = new Stopwatch();
             s.Start();
             // Simulation
-            DebugConsole.Log("Begin Loop simulation", "warning");
-         //   while (s.Elapsed < TimeSpan.FromMilliseconds(time))
-            //{
+            //DebugConsole.Log("Begin Loop simulation", "warning");
+            while (s.Elapsed < TimeSpan.FromMilliseconds(time))
+            {
                 foreach (Map m in maps)
                     m.Copy(gm.map.GetMap());
                 Node tosimule = tree.Selection();
                 PlayGame(tosimule, maps[0], gm);
                 tree.BackProagation(tosimule);
-           // }
+            }
             s.Stop();
 
             // Final choice
-            DebugConsole.Log("Exit loop simulation", "warning");
+            //DebugConsole.Log("Exit loop simulation", "warning");
             Node final = tree.Final();
             while (final.parent != tree.root)
                 final = final.parent;
             Coord result = final.cell;
-            DebugConsole.Log("FINAL INFO = id = " + final.id + " Rank = " + final.rank + " Reward = " + final.reward + " VISIT = " + final.visit + " CELL = " + final.cell.x + " " + final.cell.y);
-            DebugConsole.Log(tree.Representation());
+            //DebugConsole.Log("FINAL INFO = id = " + final.id + " Rank = " + final.rank + " Reward = " + final.reward + " VISIT = " + final.visit + " CELL = " + final.cell.x + " " + final.cell.y);
+            //DebugConsole.Log(tree.Representation());
             return result;
         }
         public void     Play(GameManager gm)
