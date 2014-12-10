@@ -201,7 +201,7 @@ namespace Gomoku
             lastcolor = (lastcolor == Color.Black) ? (Color.White) : (Color.Black);
 
             int i = 0;
-            while (winner == Color.Empty && i++ < 20)
+            while (winner == Color.Empty && i++ < 100)
             {
                 pawn = map.RandomCell(lastcolor);
                 if (pawn == -1)
