@@ -13,6 +13,8 @@ namespace Gomoku
         public static double constante = 1.0f;
     }
 
+
+
     public class Node
     {
         // TMP
@@ -56,7 +58,22 @@ namespace Gomoku
                 child.Repr(ref s);
             repr += s;
         }
+        public string Repr()
+        {
+            string s = (id) + " = [ father = " + ((this.parent != null) ? this.parent.id : 0) + " rank = " + rank + " = reward : " + reward + " visit : " + visit + " cell {" + cell.x + " " + cell.y + "} ]\n";
+            foreach (Node child in childs)
+                child.Repr(ref s);
+            return s;
+        }
+        public void Supr()
+        {
+            if (parent != null)
+                parent.childs.Remove(this);
+            parent = null;
+        }
     }
+
+
 
     public class MCTree
     {
@@ -120,7 +137,6 @@ namespace Gomoku
                 it = it.parent;
             }
         }
-
         public string Representation()
         {
             string repr = "Tree representation :";
@@ -128,6 +144,9 @@ namespace Gomoku
             return repr;
         }
     }
+
+
+
 
     public class MCTS_IA
     {
@@ -153,45 +172,44 @@ namespace Gomoku
         public void         PlayGame(Node current, Map map, GameManager gm)
         {
             Coord   lastpawn = new Coord();
-            Color   lastcolor = Color.Empty;
+            Color   lastcolor = Color.Black;
             List<Node> l = new List<Node>();
             OrderPawn(current, ref l);
             // PastPlay
             foreach (Node it in l)
             {
-                DebugConsole.Log("Replay pawn", "warning");
-                lastcolor = (it.WhoPlay() == Who.IA) ? (Color.Black) : (Color.White);
                 lastpawn = it.cell;
                 gm.rules.PutPawn(map, it.cell.x, it.cell.y, lastcolor);
-            }
-            Color winner = gm.CheckMap(lastpawn.x, lastpawn.y, map);
-            // Current Play
-            if (winner == Color.Empty)
-            {
                 lastcolor = (lastcolor == Color.Black) ? (Color.White) : (Color.Black);
-                int pawn = map.RandomCell(lastcolor);
-                if (pawn == -1)
-                    return;
-                lastpawn.x = pawn / MapComponent.SIZE_MAP;
-                lastpawn.y = pawn % MapComponent.SIZE_MAP;
-                current.cell.x = lastpawn.x;
-                current.cell.y = lastpawn.y;
-                current.visit = 1;
-                gm.rules.PutPawn(map, lastpawn.x, lastpawn.y, lastcolor);
-                winner = gm.CheckMap(lastpawn.x, lastpawn.y, map);
             }
+            Color winner = Color.Empty;
+            int pawn = map.RandomCell(lastcolor);
+            DebugConsole.Log("Random = " + pawn + " Who = " + lastcolor + " " + current.Repr(), "warning");
+            if (pawn == -1)
+            {
+                current.Supr();
+                return;
+            }
+            lastpawn.x = pawn / MapComponent.SIZE_MAP;
+            lastpawn.y = pawn % MapComponent.SIZE_MAP;
+            current.cell.x = lastpawn.x;
+            current.cell.y = lastpawn.y;
+            current.visit = 1;
+            gm.rules.PutPawn(map, lastpawn.x, lastpawn.y, lastcolor);
+            winner = gm.CheckMap(lastpawn.x, lastpawn.y, map);
+            lastcolor = (lastcolor == Color.Black) ? (Color.White) : (Color.Black);
+
             int i = 0;
             while (winner == Color.Empty && i++ < 20)
             {
-                lastcolor = (lastcolor == Color.Black) ? (Color.White) : (Color.Black);
-                int pawn = map.RandomCell(lastcolor);
-                //DebugConsole.Log("Random = " + pawn + " Who = " + lastcolor, "warning");
+                pawn = map.RandomCell(lastcolor);
                 if (pawn == -1)
                     return;
                 lastpawn.x = pawn / MapComponent.SIZE_MAP;
                 lastpawn.y = pawn % MapComponent.SIZE_MAP;
                 gm.rules.PutPawn(map, lastpawn.x, lastpawn.y, lastcolor);
                 winner = gm.CheckMap(lastpawn.x, lastpawn.y, map);
+                lastcolor = (lastcolor == Color.Black) ? (Color.White) : (Color.Black);
             }
             current.reward = (winner == Color.Empty) ? (0.0f) : (winner == Color.Black) ? (1.0f) : (-1.0f);
             //DebugConsole.Log("INFO = id = " + current.id + " Rank = " + current.rank + " Reward = " + current.reward + " VISIT = " + current.visit + " CELL = " + current.cell.x + " " + current.cell.y);
