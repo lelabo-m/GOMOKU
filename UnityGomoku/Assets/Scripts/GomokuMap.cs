@@ -160,7 +160,7 @@ namespace Gomoku
 		
 				public void AddCell (int x, int y, Gomoku.Map map)
 				{
-						MonoBehaviour.print ("x = " + x + " y = " + y + " weightWhite = " + map.GetWeight(x, y, Gomoku.Color.White) + " weightBlack = " +  map.GetWeight(x, y, Gomoku.Color.Black));
+				//		MonoBehaviour.print ("x = " + x + " y = " + y + " weightWhite = " + map.GetWeight(x, y, Gomoku.Color.White) + " weightBlack = " +  map.GetWeight(x, y, Gomoku.Color.Black));
 					
 						PossibleCell find = this.cells.Find (item => (item.coord.x == x && item.coord.y == y));
 			
@@ -168,7 +168,7 @@ namespace Gomoku
 						Gomoku.Color otherColor = (color == Gomoku.Color.White) ? Gomoku.Color.Black : Gomoku.Color.White;
 			
 						if (find == null) {
-				MonoBehaviour.print ("ADD");
+			//	MonoBehaviour.print ("ADD");
 								this.cells.Add (new PossibleCell (x, y, map.GetWeight (x, y, color), map.GetWeight (x, y, otherColor)));
 								this.TotalWeight [(int)color] += map.GetWeight (x, y, color);
 								this.TotalWeight [(int)otherColor] += map.GetWeight (x, y, otherColor);
@@ -418,8 +418,8 @@ namespace Gomoku
 
 				public void GeneratePossibleCells (int x, int y, int radius)
 				{
-						MonoBehaviour.print ("Generate");
-						MonoBehaviour.print ("cellX = " + x + " y = " + y);
+						//MonoBehaviour.print ("Generate");
+						//MonoBehaviour.print ("cellX = " + x + " y = " + y);
 						foreach (KeyValuePair<Gomoku.Orientation, int[]> entry in MapComponent.ORIENTATION) {
 								int tmpX = x + entry.Value [0];
 								int tmpY = y + entry.Value [1];

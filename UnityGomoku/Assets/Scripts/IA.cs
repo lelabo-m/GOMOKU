@@ -234,14 +234,14 @@ namespace Gomoku
             s.Start();
             // Simulation
             DebugConsole.Log("Begin Loop simulation", "warning");
-            while (s.Elapsed < TimeSpan.FromMilliseconds(time))
-            {
+         //   while (s.Elapsed < TimeSpan.FromMilliseconds(time))
+            //{
                 foreach (Map m in maps)
                     m.Copy(gm.map.GetMap());
                 Node tosimule = tree.Selection();
                 PlayGame(tosimule, maps[0], gm);
                 tree.BackProagation(tosimule);
-            }
+           // }
             s.Stop();
 
             // Final choice

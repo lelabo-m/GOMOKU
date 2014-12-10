@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
 					rules.TakePawns(m, x, y, entry.Key);
 				if(m.id == 1) {
 					map.removePawn (x + MapComponent.ORIENTATION [entry.Key] [0], y + MapComponent.ORIENTATION [entry.Key] [1]);
-					map.removePawn (x + MapComponent.ORIENTATION [entry.Key] [0], y + MapComponent.ORIENTATION [entry.Key] [1]);
+					map.removePawn (x + 2 * MapComponent.ORIENTATION [entry.Key] [0], y + 2 * MapComponent.ORIENTATION [entry.Key] [1]);
 				}
 				}
 					
