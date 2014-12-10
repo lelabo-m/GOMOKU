@@ -94,6 +94,7 @@ namespace Gomoku
                     result = child;
             if (result == null || result.UCB < empty.UCB)
             {
+                DebugConsole.Log("Create node " + empty.id);
                 parent.childs.Add(empty);
                 return empty;
             }
@@ -116,9 +117,10 @@ namespace Gomoku
         public Node Selection()
         {
             Node    current = root;
+            current = BestNodeUCB(current);
             while (current.HasChild())
                 current = BestNodeUCB(current);
-            return BestNodeUCB(current);
+            return (current.visit != 0) ? (new Node(current)) : (current);
         }
         public Node Final()
         {
@@ -178,23 +180,21 @@ namespace Gomoku
             // PastPlay
             foreach (Node it in l)
             {
-                lastpawn = it.cell;
                 gm.rules.PutPawn(map, it.cell.x, it.cell.y, lastcolor);
                 lastcolor = (lastcolor == Color.Black) ? (Color.White) : (Color.Black);
             }
             Color winner = Color.Empty;
             int pawn = map.RandomCell(lastcolor);
             lastpawn.x = pawn / MapComponent.SIZE_MAP;
-            lastpawn.y = pawn % MapComponent.SIZE_MAP; 
+            lastpawn.y = pawn % MapComponent.SIZE_MAP;
+            current.cell.x = lastpawn.x;
+            current.cell.y = lastpawn.y;
             DebugConsole.Log("Random = " + pawn + " X = " + lastpawn.x + " Y = " + lastpawn.y + " Who = " + lastcolor + " " + current.Repr(), "warning");
             if (pawn == -1)
             {
                 current.Supr();
                 return;
             }
-
-            current.cell.x = lastpawn.x;
-            current.cell.y = lastpawn.y;
             current.visit = 1;
             gm.rules.PutPawn(map, lastpawn.x, lastpawn.y, lastcolor);
             winner = gm.CheckMap(lastpawn.x, lastpawn.y, map);
@@ -205,7 +205,7 @@ namespace Gomoku
             {
                 pawn = map.RandomCell(lastcolor);
                 if (pawn == -1)
-                    return;
+                    break;
                 lastpawn.x = pawn / MapComponent.SIZE_MAP;
                 lastpawn.y = pawn % MapComponent.SIZE_MAP;
                 gm.rules.PutPawn(map, lastpawn.x, lastpawn.y, lastcolor);
@@ -217,7 +217,7 @@ namespace Gomoku
         }
         public Coord     Simulate(GameManager gm)
         {
-            Coord   result = new Coord();
+
             Stopwatch s = new Stopwatch();
             s.Start();
             // Simulation
@@ -237,9 +237,8 @@ namespace Gomoku
             Node final = tree.Final();
             while (final.parent != tree.root)
                 final = final.parent;
-            result.x = final.cell.x;
-            result.y = final.cell.y;
-            //DebugConsole.Log("FINAL INFO = id = " + final.id + " Rank = " + final.rank + " Reward = " + final.reward + " VISIT = " + final.visit + " CELL = " + final.cell.x + " " + final.cell.y);
+            Coord result = final.cell;
+            DebugConsole.Log("FINAL INFO = id = " + final.id + " Rank = " + final.rank + " Reward = " + final.reward + " VISIT = " + final.visit + " CELL = " + final.cell.x + " " + final.cell.y);
             DebugConsole.Log(tree.Representation());
             return result;
         }
