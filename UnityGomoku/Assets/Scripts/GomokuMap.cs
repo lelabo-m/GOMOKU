@@ -160,7 +160,7 @@ namespace Gomoku
 		
 				public void AddCell (int x, int y, Gomoku.Map map)
 				{
-				//		MonoBehaviour.print ("x = " + x + " y = " + y + " weightWhite = " + map.GetWeight(x, y, Gomoku.Color.White) + " weightBlack = " +  map.GetWeight(x, y, Gomoku.Color.Black));
+						//		MonoBehaviour.print ("x = " + x + " y = " + y + " weightWhite = " + map.GetWeight(x, y, Gomoku.Color.White) + " weightBlack = " +  map.GetWeight(x, y, Gomoku.Color.Black));
 					
 						PossibleCell find = this.cells.Find (item => (item.coord.x == x && item.coord.y == y));
 			
@@ -168,7 +168,7 @@ namespace Gomoku
 						Gomoku.Color otherColor = (color == Gomoku.Color.White) ? Gomoku.Color.Black : Gomoku.Color.White;
 			
 						if (find == null) {
-			//	MonoBehaviour.print ("ADD");
+								//	MonoBehaviour.print ("ADD");
 								this.cells.Add (new PossibleCell (x, y, map.GetWeight (x, y, color), map.GetWeight (x, y, otherColor)));
 								this.TotalWeight [(int)color] += map.GetWeight (x, y, color);
 								this.TotalWeight [(int)otherColor] += map.GetWeight (x, y, otherColor);
@@ -186,24 +186,32 @@ namespace Gomoku
 						this.Players [1].Clear ();
 				}
 
-				public Coord RandomCell (Gomoku.Map map, Gomoku.Color color)
-				{
-						//	MonoBehaviour.print ("RANDOM totalWeight" + color + " = " + this.TotalWeight [(int)color]);
-						int randomNumber = this.random.Next (0, this.TotalWeight [(int)color]);
+		
+		public Coord RandomCell (Gomoku.Map map, Gomoku.Color color)
+		{
 
-						//	MonoBehaviour.print ("randomNumber = " + randomNumber);
-						foreach (PossibleCell item in this.cells) {
-								randomNumber -= item.Weight [(int)color];
-								if (randomNumber <= 0) {
-										//	MonoBehaviour.print ("item.Pos = " + item.Pos);
-								
-										if (map.GetColor (item.coord.x, item.coord.y) != Gomoku.Color.Empty) {
-												//	MonoBehaviour.print("COLOR = " + map.GetCell(item.Pos).GetColor());
-										}
-										return item.coord;
+			List<PossibleCell> list = this.cells.FindAll (delegate (PossibleCell item) {
+				return (map.GetWeight (item.coord.x, item.coord.y, color) > 5 && map.GetColor(item.coord.x, item.coord.y) == Gomoku.Color.Empty);
+			});
+					
+						if (list.Count > 0) {
+								int randomNumber = this.random.Next (0, list.Count);
+								return list [randomNumber].coord;
+						}
+						
+
+						for (int i = 5; i >= 0; --i) {
+						list = this.cells.FindAll (delegate (PossibleCell item) {
+							return (map.GetWeight (item.coord.x, item.coord.y, color) == i && map.GetColor(item.coord.x, item.coord.y) == Gomoku.Color.Empty);
+						});
+							
+								if (list.Count > 0) {
+										int randomNumber = this.random.Next (0, list.Count);
+										return list [randomNumber].coord;
 								}
 						}
-						MonoBehaviour.print ("null");
+			
+						
 						return null;
 				}
 		}
