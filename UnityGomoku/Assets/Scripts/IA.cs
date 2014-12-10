@@ -212,7 +212,7 @@ namespace Gomoku
                 lastcolor = (lastcolor == Color.Black) ? (Color.White) : (Color.Black);
             }
             current.reward = (winner == Color.Empty) ? (0.0f) : (winner == Color.Black) ? (1.0f) : (-1.0f);
-            //DebugConsole.Log("INFO = id = " + current.id + " Rank = " + current.rank + " Reward = " + current.reward + " VISIT = " + current.visit + " CELL = " + current.cell.x + " " + current.cell.y);
+            DebugConsole.Log("INFO = id = " + current.id + " Rank = " + current.rank + " Reward = " + current.reward + " VISIT = " + current.visit + " CELL = " + current.cell.x + " " + current.cell.y);
         }
         public Coord     Simulate(GameManager gm)
         {
