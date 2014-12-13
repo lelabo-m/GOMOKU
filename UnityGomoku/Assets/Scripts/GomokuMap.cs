@@ -224,36 +224,34 @@ namespace Gomoku
 
             if (this.cells.Count == 0)
                 return null;
-			List<PossibleCell> list = new List<PossibleCell>();
+		/*	List<PossibleCell> list = new List<PossibleCell>();
 			list.AddRange(this.cells.FindAll(delegate(PossibleCell item)
 			                          {
-				return (map.GetWeight(item.coord.x, item.coord.y, color) >= 4);
+				return (map.GetWeight(item.coord.x, item.coord.y, otherColor) >= 3);
 			}));
 			list.AddRange(this.cells.FindAll(delegate(PossibleCell item)
 			                          {
-				return (map.GetWeight(item.coord.x, item.coord.y, color) > 0);
-			}));
+				return (map.GetWeight(item.coord.x, item.coord.y, color) > 0 && !(map.GetWeight(item.coord.x, item.coord.y, otherColor) >= 3));
+			}));*/
 
-            Shuffle(ref list);
+            Shuffle(ref this.cells);
 			this.TotalWeight [(int)color] = 0;
-			foreach (PossibleCell item in list) {
-				item.Weight[(int) color] = (int)Math.Pow(map.GetWeight(item.coord.x, item.coord.y, otherColor), 2) + map.GetWeight(item.coord.x, item.coord.y, color);
+			foreach (PossibleCell item in this.cells) {
+				item.Weight[(int) color] = (int)Math.Pow(map.GetWeight(item.coord.x, item.coord.y, otherColor), 4) + map.GetWeight(item.coord.x, item.coord.y, color);
 				this.TotalWeight[(int) color] += item.Weight[(int) color];
 			}
 
-			randomNumber = this.rnd.Rand().Next (0, this.cells.Count);
+			randomNumber = this.rnd.Rand().Next (0, this.TotalWeight[(int) color]);
 			int i;
-			for (i = 0; i < list.Count && randomNumber > 0; ++i, --randomNumber) {
-				randomNumber -= list[i].Weight[(int) color];			
-			}
+			for (i = 0; i < this.cells.Count; ++i) {
+				randomNumber -= this.cells[i].Weight[(int) color];
+				if (randomNumber < 0) {
+					return this.cells[i].coord;
+				}
 
-			if (list.Count > i)
-			{
-				return list[i].coord;
 			}
-
 						
-				randomNumber = this.rnd.Rand().Next (0, this.cells.Count);
+			randomNumber = this.rnd.Rand().Next (0, this.cells.Count);
 			return this.cells[randomNumber].coord;
 			
 						/*for (int i = 5; i >= 0; --i) {
@@ -498,7 +496,7 @@ namespace Gomoku
 						this.cellsList.Update (x, y, this);
 
 
-						if (this.id == 1) {
+						/*if (this.id == 1) {
 								MonoBehaviour.print ("---------------------------------------------");
 								MonoBehaviour.print ("----------------PossibleCells----------------");
 								MonoBehaviour.print ("---------------------------------------------");
@@ -508,7 +506,7 @@ namespace Gomoku
 								MonoBehaviour.print ("---------------------------------------------");
 								MonoBehaviour.print ("---------------------------------------------");
 								MonoBehaviour.print ("---------------------------------------------");
-						}
+						}*/
 
 				}
 

@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-				if (currentPlayer().playing && currentPlayer ().played) {
+				if (map != null && currentPlayer().playing && currentPlayer ().played) {
 						if ((winner = CheckMap(this.lastX, this.lastY, map.GetMap())) != Gomoku.Color.Empty)
 								GameDone ();
 
@@ -66,12 +66,12 @@ public class GameManager : MonoBehaviour
 			CheckTakePawns (x, y, map);
 
 			if ((win = isScoringWinner (map)) != Gomoku.Color.Empty) {
-			MonoBehaviour.print("ScoringWinner");
+		//	MonoBehaviour.print("ScoringWinner");
 						return win;
 				}
 			
 			if ((win = isWinner (map)) != Gomoku.Color.Empty) {
-						MonoBehaviour.print("AlignmentWinner");
+			//			MonoBehaviour.print("AlignmentWinner");
 						return win;
 				}
 			
