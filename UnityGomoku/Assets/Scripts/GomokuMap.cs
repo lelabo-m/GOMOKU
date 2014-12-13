@@ -98,6 +98,7 @@ namespace Gomoku
 						this.TotalWeight [(int)Gomoku.Color.White] = list.TotalWeight [(int)Gomoku.Color.White];
 						this.TotalWeight [(int)Gomoku.Color.Black] = list.TotalWeight [(int)Gomoku.Color.Black];
 
+                        this.cells.Clear();
 						foreach (PossibleCell item in list.cells) {
 								PossibleCell copy = new PossibleCell (item.coord.x, item.coord.y, item.Weight [(int)Gomoku.Color.White], item.Weight [(int)Gomoku.Color.Black]);
 								
