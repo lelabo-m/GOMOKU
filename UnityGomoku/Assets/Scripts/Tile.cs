@@ -83,7 +83,6 @@ public class Tile : MonoBehaviour
 
 		public bool PutPawn()
 	{
-		if (manager.currentPlayer ().playing && manager.currentPlayer ().Ia == null) {
 						manager.currentPlayer ().selectedX = (int)gridPosition.x;
 						manager.currentPlayer ().selectedY = (int)gridPosition.y;
 						if (manager.currentPlayer ().PutPawn () == false) {
@@ -100,7 +99,6 @@ public class Tile : MonoBehaviour
 								manager.currentPlayer ().played = true;
 								return true;
 						}
-				}
 			return false;
 		}
 

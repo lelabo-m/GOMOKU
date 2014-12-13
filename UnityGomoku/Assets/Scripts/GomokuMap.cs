@@ -98,6 +98,7 @@ namespace Gomoku
 						this.TotalWeight [(int)Gomoku.Color.White] = list.TotalWeight [(int)Gomoku.Color.White];
 						this.TotalWeight [(int)Gomoku.Color.Black] = list.TotalWeight [(int)Gomoku.Color.Black];
 
+                        this.cells.Clear();
 						foreach (PossibleCell item in list.cells) {
 								PossibleCell copy = new PossibleCell (item.coord.x, item.coord.y, item.Weight [(int)Gomoku.Color.White], item.Weight [(int)Gomoku.Color.Black]);
 								
@@ -189,18 +190,26 @@ namespace Gomoku
 		
 		public Coord RandomCell (Gomoku.Map map, Gomoku.Color color)
 		{
+			this.cells.RemoveAll (delegate(PossibleCell item) {
+				return (map.GetColor (item.coord.x, item.coord.y) != Gomoku.Color.Empty);
+			});
+			int randomNumber;
 
-			List<PossibleCell> list = this.cells.FindAll (delegate (PossibleCell item) {
-				return (map.GetWeight (item.coord.x, item.coord.y, color) > 5 && map.GetColor(item.coord.x, item.coord.y) == Gomoku.Color.Empty);
+			if (this.cells.Count == 0)
+								return null;
+				List<PossibleCell> list = this.cells.FindAll (delegate (PossibleCell item) {
+				return (map.GetWeight (item.coord.x, item.coord.y, color) > 0 && map.GetColor(item.coord.x, item.coord.y) == Gomoku.Color.Empty);
 			});
 					
 						if (list.Count > 0) {
-								int randomNumber = this.random.Next (0, list.Count);
+								randomNumber = this.random.Next (0, list.Count);
 								return list [randomNumber].coord;
 						}
 						
-
-						for (int i = 5; i >= 0; --i) {
+			randomNumber = this.random.Next (0, this.cells.Count);
+			return this.cells[randomNumber].coord;
+			
+						/*for (int i = 5; i >= 0; --i) {
 						list = this.cells.FindAll (delegate (PossibleCell item) {
 							return (map.GetWeight (item.coord.x, item.coord.y, color) == i && map.GetColor(item.coord.x, item.coord.y) == Gomoku.Color.Empty);
 						});
@@ -209,8 +218,8 @@ namespace Gomoku
 										int randomNumber = this.random.Next (0, list.Count);
 										return list [randomNumber].coord;
 								}
-						}
-						return null;
+						}*/
+						//return null;
 				}
 		}
 	
