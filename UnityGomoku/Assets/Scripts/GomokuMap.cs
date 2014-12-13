@@ -210,8 +210,6 @@ namespace Gomoku
 										return list [randomNumber].coord;
 								}
 						}
-			
-						
 						return null;
 				}
 		}
