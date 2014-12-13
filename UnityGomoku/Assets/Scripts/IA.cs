@@ -10,7 +10,7 @@ namespace Gomoku
 
     public static class Exploration
     {
-        public static double constante = 1.5f;
+        public static double constante = 1.0f;
     }
 
 
@@ -50,21 +50,21 @@ namespace Gomoku
         {
             return ((rank == 0 || rank % 2 == 1) ? (Who.IA) : (Who.PLAYER));
         }
-        //public void Repr(ref string repr)
-        //{
-        //    repr += (id) + " = [ father = " + ((this.parent != null) ? this.parent.id : 0) + " rank = " + rank + " = reward : " + reward + " visit : " + visit + " cell {" + cell.x + " " + cell.y + "} ]\n";
-        //    string s = "";
-        //    foreach (Node child in childs)
-        //        child.Repr(ref s);
-        //    repr += s;
-        //}
-        //public string Repr()
-        //{
-        //    string s = (id) + " = [ father = " + ((this.parent != null) ? this.parent.id : 0) + " rank = " + rank + " = reward : " + reward + " visit : " + visit + " cell {" + cell.x + " " + cell.y + "} ]\n";
-        //    foreach (Node child in childs)
-        //        child.Repr(ref s);
-        //    return s;
-        //}
+        public void Repr(ref string repr)
+        {
+            repr += (id) + " = [ father = " + ((this.parent != null) ? this.parent.id : 0) + " rank = " + rank + " = reward : " + reward + " visit : " + visit + " cell {" + cell.x + " " + cell.y + "} ]\n";
+            string s = "";
+            foreach (Node child in childs)
+                child.Repr(ref s);
+            repr += s;
+        }
+        public string Repr()
+        {
+            string s = (id) + " = [ father = " + ((this.parent != null) ? this.parent.id : 0) + " rank = " + rank + " = reward : " + reward + " visit : " + visit + " cell {" + cell.x + " " + cell.y + "} ]\n";
+            foreach (Node child in childs)
+                child.Repr(ref s);
+            return s;
+        }
         public void Supr()
         {
             if (parent != null)
@@ -100,10 +100,7 @@ namespace Gomoku
                 if (result == null || result.UCB < child.UCB)
                     result = child;
             if (result == null || result.UCB < empty.UCB)
-            {
-                parent.childs.Add(empty);
                 return empty;
-            }
             return (result);
         }
         public Node BestNode(Node parent)
@@ -118,7 +115,7 @@ namespace Gomoku
         }
         public double UCB(Node parent, Node n) // Possible change n.reward / n.visit
         {
-            return (n.reward + Exploration.constante * Math.Sqrt(Math.Log(parent.visit) / n.visit));
+            return (n.reward / n.visit + Exploration.constante * Math.Sqrt(Math.Log(parent.visit) / n.visit));
         }
         public Node Selection()
         {
@@ -137,6 +134,8 @@ namespace Gomoku
         }
         public void BackProagation(Node last)
         {
+            if (last.parent != null)
+                last.parent.childs.Add(last);
             Node it = last.parent;
             while (it != null)
             {
@@ -145,12 +144,12 @@ namespace Gomoku
                 it = it.parent;
             }
         }
-        //public string Representation()
-        //{
-        //    string repr = "Tree representation :";
-        //    root.Repr(ref repr);
-        //    return repr;
-        //}
+        public string Representation()
+        {
+            string repr = "Tree representation :";
+            root.Repr(ref repr);
+            return repr;
+        }
         public int Size()
         {
             return root.Size();
@@ -257,6 +256,7 @@ namespace Gomoku
 
             // Final choice
             DebugConsole.Log("Exit loop! Tree size = " + tree.Size(), "warning");
+            DebugConsole.Log(tree.Representation());
             Node final = tree.Final();
             while (final.parent != tree.root)
                 final = final.parent;

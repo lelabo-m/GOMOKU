@@ -195,16 +195,18 @@ namespace Gomoku
 			});
 			int randomNumber;
 
-			if (this.cells.Count == 0)
-								return null;
-				List<PossibleCell> list = this.cells.FindAll (delegate (PossibleCell item) {
-				return (map.GetWeight (item.coord.x, item.coord.y, color) > 0 && map.GetColor(item.coord.x, item.coord.y) == Gomoku.Color.Empty);
-			});
-					
-						if (list.Count > 0) {
-								randomNumber = this.random.Next (0, list.Count);
-								return list [randomNumber].coord;
-						}
+            if (this.cells.Count == 0)
+                return null;
+            List<PossibleCell> list = this.cells.FindAll(delegate(PossibleCell item)
+            {
+                return (map.GetWeight(item.coord.x, item.coord.y, color) > 0 && map.GetColor(item.coord.x, item.coord.y) == Gomoku.Color.Empty);
+            });
+
+            if (list.Count > 0)
+            {
+                randomNumber = this.random.Next(0, list.Count);
+                return list[randomNumber].coord;
+            }
 						
 			randomNumber = this.random.Next (0, this.cells.Count);
 			return this.cells[randomNumber].coord;
