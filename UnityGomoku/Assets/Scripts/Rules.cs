@@ -257,7 +257,7 @@ public class Rules : MonoBehaviour
 				foreach (Coord item in map.GetBigWeight(currentColor)) {
 						if (!alreadyCheck.Contains (item)) {
 								alreadyCheck.Add (item);
-								if (!FiveBreakable || !CheckIsBreakable (map, item.x, item.y))
+								if (!FiveBreakable || !CheckIsBreakable (map, item.x, item.y, alreadyCheck))
 										return currentColor;
 						}
 				}
@@ -265,7 +265,7 @@ public class Rules : MonoBehaviour
 				foreach (Coord item in map.GetBigWeight(ennemy)) {
 						if (!alreadyCheck.Contains (item)) {
 								alreadyCheck.Add (item);
-								if (!FiveBreakable || !CheckIsBreakable (map, item.x, item.y))
+								if (!FiveBreakable || !CheckIsBreakable (map, item.x, item.y, alreadyCheck))
 										return ennemy;
 						}
 				}
@@ -273,19 +273,19 @@ public class Rules : MonoBehaviour
 				return  Gomoku.Color.Empty;
 		}
 
-		private bool CheckIsBreakable (Gomoku.Map map, int x, int y)
+		private bool CheckIsBreakable (Gomoku.Map map, int x, int y, List<Coord> alreadyCheck)
 		{
-				bool right = IsBreakable (map, x, y, Gomoku.Orientation.EAST);
-				bool up = IsBreakable (map, x, y, Gomoku.Orientation.NORTH);
-				bool rightUp = IsBreakable (map, x, y, Gomoku.Orientation.NORTHEAST);
-				bool leftUp = IsBreakable (map, x, y, Gomoku.Orientation.NORTHWEST);
+				bool right = IsBreakable (map, x, y, Gomoku.Orientation.EAST, alreadyCheck);
+				bool up = IsBreakable (map, x, y, Gomoku.Orientation.NORTH, alreadyCheck);
+				bool rightUp = IsBreakable (map, x, y, Gomoku.Orientation.NORTHEAST, alreadyCheck);
+				bool leftUp = IsBreakable (map, x, y, Gomoku.Orientation.NORTHWEST, alreadyCheck);
 
 				if (!right || !up || !rightUp || !leftUp)
 						return false;
 				return true;
 		}
 
-		private bool IsBreakable (Gomoku.Map map, int x, int y, Gomoku.Orientation orientation)
+		private bool IsBreakable (Gomoku.Map map, int x, int y, Gomoku.Orientation orientation, List<Coord> alreadyCheck)
 		{
 				int countPawn = 0;
 				Gomoku.Color color = map.GetColor (x, y);
@@ -306,12 +306,12 @@ public class Rules : MonoBehaviour
 				while (x >= 0 && y >= 0 &&
 		       		y < Gomoku.Map.GetSizeMap() && x < Gomoku.Map.GetSizeMap()
 		      	 	&& map.GetColor(x, y) == color && countPawn < 5) {
-						//	print ("x = " + x + " y = " + y + " countPawn = " + countPawn);
-						//if (IsTakingAroundMe (map, x, y))
-						if (map.IsTakeable (x, y))
-								countPawn = 0;
+						
+			if (map.IsTakeable (x, y) || IsTakingAroundMe (map, x, y))
+				countPawn = 0;
 						else 
 								countPawn++;
+						alreadyCheck.Add(new Coord() {x, y});
 						x += MapComponent.ORIENTATION [orientation] [0];
 						y += MapComponent.ORIENTATION [orientation] [1];
 				}
@@ -320,7 +320,9 @@ public class Rules : MonoBehaviour
 				return false;
 		}
 
-		private bool IsTakingAroundMe (MapComponent map, int x, int y)
+
+	
+	private bool IsTakingAroundMe (MapComponent map, int x, int y)
 		{
 				Gomoku.Color color = map.GetMap ().GetColor (x, y);
 				Gomoku.Color enemy = (color == Gomoku.Color.Black) ? Gomoku.Color.White : Gomoku.Color.Black;
