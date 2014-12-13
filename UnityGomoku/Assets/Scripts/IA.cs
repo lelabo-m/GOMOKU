@@ -10,7 +10,7 @@ namespace Gomoku
 
     public static class Exploration
     {
-        public static double constante = 1.0f;
+        public static double constante = 5.0f;
     }
 
 
@@ -97,8 +97,11 @@ namespace Gomoku
             empty.UCB = UCB(parent, empty);
             Node    result = null;
             foreach (Node child in parent.childs)
+            {
                 if (result == null || result.UCB < child.UCB)
                     result = child;
+                child.UCB = -1.0f;
+            }
             if (result == null || result.UCB < empty.UCB)
                 return empty;
             return (result);
@@ -109,13 +112,16 @@ namespace Gomoku
                 child.UCB = UCB(parent, child);
             Node result = null;
             foreach (Node child in parent.childs)
+            {
                 if (result == null || result.UCB < child.UCB)
                     result = child;
+                child.UCB = -1.0f;
+            }
             return (result);
         }
         public double UCB(Node parent, Node n) // Possible change n.reward / n.visit
         {
-            return (n.reward / n.visit + Exploration.constante * Math.Sqrt(Math.Log(parent.visit) / n.visit));
+            return (Math.Abs(n.reward / n.visit) + (Exploration.constante * Math.Sqrt(Math.Log(parent.visit) / n.visit)));
         }
         public Node Selection()
         {
