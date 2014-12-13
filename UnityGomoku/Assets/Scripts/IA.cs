@@ -10,10 +10,8 @@ namespace Gomoku
 
     public static class Exploration
     {
-        public static double constante = 1.0f;
+        public static double constante = 1.5f;
     }
-
-
 
     public class Node
     {
@@ -41,6 +39,20 @@ namespace Gomoku
 
             
             id = SuperId++;
+        }
+
+        public void Shuffle()
+        {
+            Randomizer rnd = new Randomizer();
+            int n = childs.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = rnd.Rand().Next(n + 1);
+                Node value = childs[k];
+                childs[k] = childs[n];
+                childs[n] = value;
+            }
         }
         public bool HasChild()
         {
@@ -80,8 +92,6 @@ namespace Gomoku
         }
     }
 
-
-
     public class MCTree
     {
         public Node root;
@@ -91,31 +101,39 @@ namespace Gomoku
         }
         public Node BestNodeUCB(Node parent)
         {
+            parent.Shuffle();
             Node    empty = new Node(parent);
             foreach (Node child in parent.childs)
                 child.UCB = UCB(parent, child);
             empty.UCB = UCB(parent, empty);
             Node    result = null;
             foreach (Node child in parent.childs)
+            {
                 if (result == null || result.UCB < child.UCB)
                     result = child;
+                child.UCB = -1.0f;
+            }
             if (result == null || result.UCB < empty.UCB)
                 return empty;
             return (result);
         }
         public Node BestNode(Node parent)
         {
+            parent.Shuffle();
             foreach (Node child in parent.childs)
                 child.UCB = UCB(parent, child);
             Node result = null;
             foreach (Node child in parent.childs)
+            {
                 if (result == null || result.UCB < child.UCB)
                     result = child;
+                child.UCB = -1.0f;
+            }
             return (result);
         }
         public double UCB(Node parent, Node n) // Possible change n.reward / n.visit
         {
-            return (n.reward / n.visit + Exploration.constante * Math.Sqrt(Math.Log(parent.visit) / n.visit));
+            return (Math.Abs(n.reward / n.visit) + (Exploration.constante * Math.Sqrt(Math.Log(parent.visit) / n.visit)));
         }
         public Node Selection()
         {

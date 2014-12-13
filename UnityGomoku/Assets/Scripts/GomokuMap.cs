@@ -83,7 +83,21 @@ namespace Gomoku
 				}
 		}
 
-		public class CellsList
+        public class Randomizer
+        {
+            static System.Random    random;
+            public Randomizer()
+            {
+                if (random == null)
+                    random = new System.Random();
+            }
+            public System.Random Rand()
+            {
+                return random;
+            }
+        }
+
+    public class CellsList
 		{
 				public List<PossibleCell> cells = new List<PossibleCell> ();
 				public int[] TotalWeight = new int[2] {0, 0};
@@ -91,8 +105,7 @@ namespace Gomoku
 						new PlayerState (),
 						new PlayerState ()
 				};
-				private System.Random random = new System.Random ();
-		
+                public Randomizer rnd = new Randomizer();
 				public void Copy (CellsList list)
 				{
 						this.TotalWeight [(int)Gomoku.Color.White] = list.TotalWeight [(int)Gomoku.Color.White];
@@ -187,28 +200,60 @@ namespace Gomoku
 						this.Players [1].Clear ();
 				}
 
-		
+                public void Shuffle(ref List<PossibleCell> list)
+                {
+                    Randomizer rnd = new Randomizer();
+                    int n = list.Count;
+                    while (n > 1)
+                    {
+                        n--;
+                        int k = rnd.Rand().Next(n + 1);
+                        PossibleCell value = list[k];
+                        list[k] = list[n];
+                        list[n] = value;
+                    }
+                }
+
 		public Coord RandomCell (Gomoku.Map map, Gomoku.Color color)
 		{
 			this.cells.RemoveAll (delegate(PossibleCell item) {
 				return (map.GetColor (item.coord.x, item.coord.y) != Gomoku.Color.Empty);
 			});
 			int randomNumber;
+			Gomoku.Color otherColor = (color == Gomoku.Color.White) ? Gomoku.Color.Black : Gomoku.Color.White;
 
             if (this.cells.Count == 0)
                 return null;
-            List<PossibleCell> list = this.cells.FindAll(delegate(PossibleCell item)
-            {
-                return (map.GetWeight(item.coord.x, item.coord.y, color) > 0 && map.GetColor(item.coord.x, item.coord.y) == Gomoku.Color.Empty);
-            });
+			List<PossibleCell> list = new List<PossibleCell>();
+			list.AddRange(this.cells.FindAll(delegate(PossibleCell item)
+			                          {
+				return (map.GetWeight(item.coord.x, item.coord.y, color) >= 4);
+			}));
+			list.AddRange(this.cells.FindAll(delegate(PossibleCell item)
+			                          {
+				return (map.GetWeight(item.coord.x, item.coord.y, color) > 0);
+			}));
 
-            if (list.Count > 0)
-            {
-                randomNumber = this.random.Next(0, list.Count);
-                return list[randomNumber].coord;
-            }
+            Shuffle(ref list);
+			this.TotalWeight [(int)color] = 0;
+			foreach (PossibleCell item in list) {
+				item.Weight[(int) color] = (int)Math.Pow(map.GetWeight(item.coord.x, item.coord.y, otherColor), 2) + map.GetWeight(item.coord.x, item.coord.y, color);
+				this.TotalWeight[(int) color] += item.Weight[(int) color];
+			}
+
+			randomNumber = this.rnd.Rand().Next (0, this.cells.Count);
+			int i;
+			for (i = 0; i < list.Count && randomNumber > 0; ++i, --randomNumber) {
+				randomNumber -= list[i].Weight[(int) color];			
+			}
+
+			if (list.Count > i)
+			{
+				return list[i].coord;
+			}
+
 						
-			randomNumber = this.random.Next (0, this.cells.Count);
+				randomNumber = this.rnd.Rand().Next (0, this.cells.Count);
 			return this.cells[randomNumber].coord;
 			
 						/*for (int i = 5; i >= 0; --i) {
