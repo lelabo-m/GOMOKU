@@ -16,9 +16,9 @@ public class UpdateScoring : MonoBehaviour {
 		MapComponent map = GameObject.Find("Map").GetComponent<MapComponent>();
 		Text c = GameObject.Find("score white").GetComponent<Text>();
 		val = map.GetMap().scores[(int) Gomoku.Color.White];
-		c.text = "White " + val.ToString();
+		c.text = val.ToString();
 		Text d = GameObject.Find("score black").GetComponent<Text>();
 		val = map.GetMap().scores[(int) Gomoku.Color.Black];
-		d.text = "Black " + val.ToString();
+		d.text = val.ToString();
 	}
 }
