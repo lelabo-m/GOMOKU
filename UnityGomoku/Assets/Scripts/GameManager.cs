@@ -22,19 +22,23 @@ public class GameManager : MonoBehaviour
 		{
 				rules = GameObject.Find ("Arbiter").GetComponent<Rules> ();
 				map = GameObject.Find ("Map").GetComponent<MapComponent> ();
+				Image imgW = GameObject.Find("imgW").GetComponent<Image>();
+				Image imgB = GameObject.Find("imgB").GetComponent<Image>();
+				
 				map.GetMap ().id = 1;
 				winner = Gomoku.Color.Empty;
 
 				playerComponent1 = player1.GetComponent<PlayerComponent> ();
 				playerComponent1.color = Gomoku.Color.White;
 				playerComponent1.playing = true;
+				imgW.enabled = true;
 
 				playerComponent2 = player2.GetComponent<PlayerComponent> ();
 				if (PlayerPrefs.GetInt ("IA") > 0)
 					playerComponent2.Ia = new MCTS_IA(1, 1000);
 				playerComponent2.color = Gomoku.Color.Black;
 				playerComponent2.playing = false;
-
+				imgB.enabled = false;
 		}
 	
 		// Update is called once per frame
@@ -120,13 +124,24 @@ public class GameManager : MonoBehaviour
 
 		private void changeTurn ()
 		{
+				Image imgW = GameObject.Find ("imgW").GetComponent<Image> ();
+				Image imgB = GameObject.Find("imgB").GetComponent<Image>();
 				playerComponent1.playing = !playerComponent1.playing;
 				playerComponent2.playing = !playerComponent2.playing;
 
 				playerComponent1.played = false;
 				playerComponent2.played = false;
-				Image imgB = GameObject.Find("imgB").GetComponent<Image>();
-				
+
+				if (playerComponent1.playing) {
+					
+					imgW.enabled = true;
+					imgB.enabled = false;	
+				} 
+				else {
+					
+					imgW.enabled = false;
+					imgB.enabled = true;	
+				}
 		}
 
 		private Gomoku.Color isScoringWinner (Gomoku.Map map)

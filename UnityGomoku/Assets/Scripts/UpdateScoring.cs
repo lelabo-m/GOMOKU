@@ -7,11 +7,7 @@ public class UpdateScoring : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Image imgW = GameObject.Find("imgW").GetComponent<Image>();
-		Image imgB = GameObject.Find("imgB").GetComponent<Image>();
-	
-		imgW.enabled = false;
-		imgB.enabled = false;
+
 	}
 
 	// Update is called once per frame
