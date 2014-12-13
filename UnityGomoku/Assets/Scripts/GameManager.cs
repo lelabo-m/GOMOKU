@@ -159,15 +159,15 @@ public class GameManager : MonoBehaviour
 				if (winner == Gomoku.Color.White) {
 						print ("Victoire Blanc");
 						PlayerPrefs.SetInt ("Winner", 0);
-						Application.LoadLevel(3);
+						//Application.LoadLevel(3);
 				} else if (winner == Gomoku.Color.Black) {
 						print ("Victoire Noir");
 						PlayerPrefs.SetInt ("Winner", 1);
-						Application.LoadLevel(3);
+						//Application.LoadLevel(3);
 				} else {
 						print ("Match Nul");
 						PlayerPrefs.SetInt ("Winner", 2);
-						Application.LoadLevel(3);
+						//Application.LoadLevel(3);
 				}
 				
 		}
