@@ -10,10 +10,8 @@ namespace Gomoku
 
     public static class Exploration
     {
-        public static double constante = 5.0f;
+        public static double constante = 1.5f;
     }
-
-
 
     public class Node
     {
@@ -276,7 +274,7 @@ namespace Gomoku
 
             // Final choice
             DebugConsole.Log("Exit loop! Tree size = " + tree.Size(), "warning");
-            //DebugConsole.Log(tree.Representation());
+            DebugConsole.Log(tree.Representation());
             Node final = tree.Final();
             while (final.parent != tree.root)
                 final = final.parent;
