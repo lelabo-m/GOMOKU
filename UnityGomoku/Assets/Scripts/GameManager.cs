@@ -164,8 +164,10 @@ public class GameManager : MonoBehaviour
 				this.playerComponent2.playing = false;
 				Image imgW = GameObject.Find ("imgW").GetComponent<Image> ();
 				Image imgB = GameObject.Find("imgB").GetComponent<Image>();
+				Image bB = GameObject.Find("backG").GetComponent<Image>();
 				imgW.enabled = false;
 				imgB.enabled = false;
+				bB.enabled = false;
 				MapComponent map = GameObject.Find("Map").GetComponent<MapComponent>();
 				Text c = GameObject.Find("score white").GetComponent<Text>();
 				c.enabled = false;
