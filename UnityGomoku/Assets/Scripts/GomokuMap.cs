@@ -200,7 +200,20 @@ namespace Gomoku
 						this.Players [1].Clear ();
 				}
 
-		
+                public void Shuffle(ref List<PossibleCell> list)
+                {
+                    Randomizer rnd = new Randomizer();
+                    int n = list.Count;
+                    while (n > 1)
+                    {
+                        n--;
+                        int k = rnd.Rand().Next(n + 1);
+                        PossibleCell value = list[k];
+                        list[k] = list[n];
+                        list[n] = value;
+                    }
+                }
+
 		public Coord RandomCell (Gomoku.Map map, Gomoku.Color color)
 		{
 			this.cells.RemoveAll (delegate(PossibleCell item) {
@@ -211,25 +224,26 @@ namespace Gomoku
 
             if (this.cells.Count == 0)
                 return null;
-			List<PossibleCell> list;
+			List<PossibleCell> list = new List<PossibleCell>();
 			list.AddRange(this.cells.FindAll(delegate(PossibleCell item)
 			                          {
 				return (map.GetWeight(item.coord.x, item.coord.y, color) >= 4);
 			}));
 			list.AddRange(this.cells.FindAll(delegate(PossibleCell item)
 			                          {
-				return (map.GetWeight(item.coord.x, item.coord.y, color) > 0 && map.GetWeight(item.coord.x, item.coord.y, color) < 4);
+				return (map.GetWeight(item.coord.x, item.coord.y, color) > 0);
 			}));
 
+            Shuffle(ref list);
 			this.TotalWeight [(int)color] = 0;
 			foreach (PossibleCell item in list) {
-				item.Weight[(int) color] = Math.Pow(map.GetWeight(item.coord.x, item.coord.y, otherColor), 2) + map.GetWeight(item.coord.x, item.coord.y, color);
+				item.Weight[(int) color] = (int)Math.Pow(map.GetWeight(item.coord.x, item.coord.y, otherColor), 2) + map.GetWeight(item.coord.x, item.coord.y, color);
 				this.TotalWeight[(int) color] += item.Weight[(int) color];
 			}
 
 			randomNumber = this.rnd.Rand().Next (0, this.cells.Count);
 			int i;
-			for (i = 0; i < list.Count && randomNumber; ++i, --randomNumber) {
+			for (i = 0; i < list.Count && randomNumber > 0; ++i, --randomNumber) {
 				randomNumber -= list[i].Weight[(int) color];			
 			}
 
