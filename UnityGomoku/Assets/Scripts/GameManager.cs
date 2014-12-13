@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
 		{
 				rules = GameObject.Find ("Arbiter").GetComponent<Rules> ();
 				map = GameObject.Find ("Map").GetComponent<MapComponent> ();
+				map.GetMap ().id = 1;
 				winner = Gomoku.Color.Empty;
 
 				playerComponent1 = player1.GetComponent<PlayerComponent> ();
@@ -29,9 +30,8 @@ public class GameManager : MonoBehaviour
 				playerComponent1.playing = true;
 
 				playerComponent2 = player2.GetComponent<PlayerComponent> ();
-				if (PlayerPrefs.GetInt ("IA") > 0) {
-					playerComponent2.Ia = new MCTS_IA(1, 200);
-				}
+				if (PlayerPrefs.GetInt ("IA") > 0)
+					playerComponent2.Ia = new MCTS_IA(1, 1000);
 				playerComponent2.color = Gomoku.Color.Black;
 				playerComponent2.playing = false;
 
@@ -51,17 +51,21 @@ public class GameManager : MonoBehaviour
 				}
 		}
 
-		public Gomoku.Color CheckMap(int lastX, int lastY, Gomoku.Map map) 
+		public Gomoku.Color CheckMap(int x, int y, Gomoku.Map map) 
 		{
 			Gomoku.Color win = Gomoku.Color.Empty;
 
-			CheckTakePawns (lastX, lastY, map);
+			CheckTakePawns (x, y, map);
 
-			if ((win = isScoringWinner (map)) != Gomoku.Color.Empty)
+			if ((win = isScoringWinner (map)) != Gomoku.Color.Empty) {
+			MonoBehaviour.print("ScoringWinner");
 						return win;
+				}
 			
-			if ((win = isWinner (map)) != Gomoku.Color.Empty)
+			if ((win = isWinner (map)) != Gomoku.Color.Empty) {
+						MonoBehaviour.print("AlignmentWinner");
 						return win;
+				}
 			
 			return win;
 		}
@@ -73,14 +77,16 @@ public class GameManager : MonoBehaviour
 				return playerComponent2;
 		}
 
-		private void CheckTakePawns (int lastX, int lastY, Gomoku.Map m)
+		private void CheckTakePawns (int x, int y, Gomoku.Map m)
 		{
 			foreach (KeyValuePair<Gomoku.Orientation, int[]> entry in MapComponent.ORIENTATION)
 			{
-				if (rules.CanTakePawns(m, lastX, lastY, entry.Key)) {
-					rules.TakePawns(m, lastX, lastY, entry.Key);
-					map.removePawn (lastX + MapComponent.ORIENTATION [entry.Key] [0], lastY + MapComponent.ORIENTATION [entry.Key] [1]);
-					map.removePawn (lastX + MapComponent.ORIENTATION [entry.Key] [0], lastY + MapComponent.ORIENTATION [entry.Key] [1]);
+				if (rules.CanTakePawns(m, x, y, entry.Key)) {
+					rules.TakePawns(m, x, y, entry.Key);
+				if(m.id == 1) {
+					map.removePawn (x + MapComponent.ORIENTATION [entry.Key] [0], y + MapComponent.ORIENTATION [entry.Key] [1]);
+					map.removePawn (x + 2 * MapComponent.ORIENTATION [entry.Key] [0], y + 2 * MapComponent.ORIENTATION [entry.Key] [1]);
+				}
 				}
 					
 			}

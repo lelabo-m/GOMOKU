@@ -72,15 +72,20 @@ public class Tile : MonoBehaviour
 
 		void OnMouseDown ()
 		{
-				PutPawn ();
+			if (manager.currentPlayer ().Ia == null) {
+						PutPawn ();
+				}
 		}
 
 		public bool PutPawn()
 		{
 			manager.currentPlayer ().selectedX = (int)gridPosition.x;
 			manager.currentPlayer ().selectedY = (int)gridPosition.y;
-			if (manager.currentPlayer ().PutPawn () == false)
-				transform.renderer.material.color = Color.red;
+			if (manager.currentPlayer ().PutPawn () == false) {
+						if (manager.currentPlayer ().Ia == null) {
+								transform.renderer.material.color = Color.red;
+						}
+				}
 			else {
 			Pawn pawn = ((GameObject)Instantiate (PawnPrefab, 
 			                                     new Vector3 (gridPosition.x - Mathf.Floor (MapComponent.SIZE_MAP / 2), 0.7f, -gridPosition.y + Mathf.Floor (MapComponent.SIZE_MAP / 2)),
