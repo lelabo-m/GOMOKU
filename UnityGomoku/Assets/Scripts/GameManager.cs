@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Gomoku;
+using UnityEngine.UI;
 
 
 public class GameManager : MonoBehaviour
@@ -118,6 +119,8 @@ public class GameManager : MonoBehaviour
 
 				playerComponent1.played = false;
 				playerComponent2.played = false;
+				Image imgB = GameObject.Find("imgB").GetComponent<Image>();
+				
 		}
 
 		private Gomoku.Color isScoringWinner (Gomoku.Map map)
