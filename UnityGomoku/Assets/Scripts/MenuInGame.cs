@@ -7,10 +7,7 @@ public class MenuInGame : MonoBehaviour {
 	public static bool menuOn;
 	// Use this for initialization
 	void Start () {
-		GameObject tm = GameObject.Find("UI Root");
-		menu = tm;
-		menu.SetActive (false);
-		menuOn = false;
+
 	}
 
 	public void GoMenu() {
@@ -19,15 +16,5 @@ public class MenuInGame : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyUp ("tab")) {
-			if (menuOn == false){
-				menuOn = true;
-				menu.SetActive (true);
-			}
-			else{
-				menuOn = false;
-				menu.SetActive (false);
-			}
-		}
 	}
 }
