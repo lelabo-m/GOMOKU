@@ -194,19 +194,37 @@ namespace Gomoku
 				return (map.GetColor (item.coord.x, item.coord.y) != Gomoku.Color.Empty);
 			});
 			int randomNumber;
+			Gomoku.Color otherColor = (color == Gomoku.Color.White) ? Gomoku.Color.Black : Gomoku.Color.White;
 
             if (this.cells.Count == 0)
                 return null;
-            List<PossibleCell> list = this.cells.FindAll(delegate(PossibleCell item)
-            {
-                return (map.GetWeight(item.coord.x, item.coord.y, color) > 0 && map.GetColor(item.coord.x, item.coord.y) == Gomoku.Color.Empty);
-            });
+			List<PossibleCell> list;
+			list.AddRange(this.cells.FindAll(delegate(PossibleCell item)
+			                          {
+				return (map.GetWeight(item.coord.x, item.coord.y, color) >= 4);
+			}));
+			list.AddRange(this.cells.FindAll(delegate(PossibleCell item)
+			                          {
+				return (map.GetWeight(item.coord.x, item.coord.y, color) > 0 && map.GetWeight(item.coord.x, item.coord.y, color) < 4);
+			}));
 
-            if (list.Count > 0)
-            {
-                randomNumber = this.random.Next(0, list.Count);
-                return list[randomNumber].coord;
-            }
+			this.TotalWeight [(int)color] = 0;
+			foreach (PossibleCell item in list) {
+				item.Weight[(int) color] = Math.Pow(map.GetWeight(item.coord.x, item.coord.y, otherColor), 2) + map.GetWeight(item.coord.x, item.coord.y, color);
+				this.TotalWeight[(int) color] += item.Weight[(int) color];
+			}
+
+			randomNumber = this.random.Next(0, randomNumber);
+			int i;
+			for (i = 0; i < list.Count && randomNumber; ++i, --randomNumber) {
+				randomNumber -= list[i].Weight[(int) color];			
+			}
+
+			if (list.Count > i)
+			{
+				return list[i].coord;
+			}
+
 						
 			randomNumber = this.random.Next (0, this.cells.Count);
 			return this.cells[randomNumber].coord;
