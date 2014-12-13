@@ -307,11 +307,11 @@ public class Rules : MonoBehaviour
 		       		y < Gomoku.Map.GetSizeMap() && x < Gomoku.Map.GetSizeMap()
 		      	 	&& map.GetColor(x, y) == color && countPawn < 5) {
 						
-			if (map.IsTakeable (x, y) || IsTakingAroundMe (map, x, y))
+			if (IsTakingAroundMe (map, x, y))
 				countPawn = 0;
 						else 
 								countPawn++;
-						alreadyCheck.Add(new Coord() {x, y});
+						alreadyCheck.Add(new Coord() {x = x, y = y});
 						x += MapComponent.ORIENTATION [orientation] [0];
 						y += MapComponent.ORIENTATION [orientation] [1];
 				}
@@ -322,16 +322,16 @@ public class Rules : MonoBehaviour
 
 
 	
-	private bool IsTakingAroundMe (MapComponent map, int x, int y)
+	private bool IsTakingAroundMe (Gomoku.Map map, int x, int y)
 		{
-				Gomoku.Color color = map.GetMap ().GetColor (x, y);
+				Gomoku.Color color = map.GetColor (x, y);
 				Gomoku.Color enemy = (color == Gomoku.Color.Black) ? Gomoku.Color.White : Gomoku.Color.Black;
 
 				foreach (KeyValuePair<Gomoku.Orientation, int[]> entry in MapComponent.ORIENTATION) {
 						if (x - entry.Value [0] >= 0 && x - entry.Value [0] < Gomoku.Map.GetSizeMap () && 
 								y - entry.Value [1] >= 0 && y - entry.Value [1] < Gomoku.Map.GetSizeMap () && 
-								map.GetMap ().GetColor (x - entry.Value [0], y - entry.Value [1]) == enemy) {
-								if (map.GetMap ().IsTaking (x - entry.Value [0], y - entry.Value [1], entry.Key)) {
+								map.GetColor (x - entry.Value [0], y - entry.Value [1]) == enemy) {
+								if (map.IsTaking (x - entry.Value [0], y - entry.Value [1], entry.Key)) {
 										return true;
 								}	
 						}
