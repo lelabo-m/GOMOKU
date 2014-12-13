@@ -16,10 +16,14 @@ public class GameManager : MonoBehaviour
 		public Rules rules;
 		public MapComponent map;
 		private Gomoku.Color winner;
+		private GameObject end;
 	
 		// Use this for initialization
 		void Start ()
 		{
+				end = GameObject.Find ("EndGame");
+				NGUITools.SetActive (end, false);
+				
 				rules = GameObject.Find ("Arbiter").GetComponent<Rules> ();
 				map = GameObject.Find ("Map").GetComponent<MapComponent> ();
 				Image imgW = GameObject.Find("imgW").GetComponent<Image>();
@@ -44,13 +48,13 @@ public class GameManager : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-				if (currentPlayer ().played) {
+				if (currentPlayer().playing && currentPlayer ().played) {
 						if ((winner = CheckMap(this.lastX, this.lastY, map.GetMap())) != Gomoku.Color.Empty)
 								GameDone ();
 
-						if (!isEnoughSpace ())
+						else if (!isEnoughSpace ())
 								GameDone ();
-
+					else 
 						changeTurn ();
 				}
 		}
@@ -156,19 +160,27 @@ public class GameManager : MonoBehaviour
 
 		private void GameDone ()
 		{
+				this.playerComponent1.playing = false;
+				this.playerComponent2.playing = false;
+				Image imgW = GameObject.Find ("imgW").GetComponent<Image> ();
+				Image imgB = GameObject.Find("imgB").GetComponent<Image>();
+				imgW.enabled = false;
+				imgB.enabled = false;
+				MapComponent map = GameObject.Find("Map").GetComponent<MapComponent>();
+				Text c = GameObject.Find("score white").GetComponent<Text>();
+				c.enabled = false;
+				Text d = GameObject.Find("score black").GetComponent<Text>();
+				d.enabled = false;
+				NGUITools.SetActive (end, true);
 				if (winner == Gomoku.Color.White) {
 						print ("Victoire Blanc");
 						PlayerPrefs.SetInt ("Winner", 0);
-						//Application.LoadLevel(3);
 				} else if (winner == Gomoku.Color.Black) {
 						print ("Victoire Noir");
 						PlayerPrefs.SetInt ("Winner", 1);
-						//Application.LoadLevel(3);
 				} else {
 						print ("Match Nul");
 						PlayerPrefs.SetInt ("Winner", 2);
-						//Application.LoadLevel(3);
 				}
-				
 		}
 }

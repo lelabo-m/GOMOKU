@@ -62,40 +62,45 @@ public class Tile : MonoBehaviour
 
 		void OnMouseEnter ()
 		{
-				transform.renderer.material.color = Color.blue;
+		if (manager.currentPlayer ().playing && manager.currentPlayer ().Ia == null) {
+						transform.renderer.material.color = Color.blue;
+				}
 		}
 
 		void OnMouseExit ()
 		{
+			
 				transform.renderer.material.color = Color.grey;
+			
 		}
 
 		void OnMouseDown ()
 		{
-			if (manager.currentPlayer ().Ia == null) {
+			if (manager.currentPlayer().playing && manager.currentPlayer ().Ia == null) {
 						PutPawn ();
 				}
 		}
 
 		public bool PutPawn()
-		{
-			manager.currentPlayer ().selectedX = (int)gridPosition.x;
-			manager.currentPlayer ().selectedY = (int)gridPosition.y;
-			if (manager.currentPlayer ().PutPawn () == false) {
-						if (manager.currentPlayer ().Ia == null) {
-								transform.renderer.material.color = Color.red;
-						}
-				}
-			else {
-			Pawn pawn = ((GameObject)Instantiate (PawnPrefab, 
+	{
+		if (manager.currentPlayer ().playing && manager.currentPlayer ().Ia == null) {
+						manager.currentPlayer ().selectedX = (int)gridPosition.x;
+						manager.currentPlayer ().selectedY = (int)gridPosition.y;
+						if (manager.currentPlayer ().PutPawn () == false) {
+								if (manager.currentPlayer ().Ia == null) {
+										transform.renderer.material.color = Color.red;
+								}
+						} else {
+								Pawn pawn = ((GameObject)Instantiate (PawnPrefab, 
 			                                     new Vector3 (gridPosition.x - Mathf.Floor (MapComponent.SIZE_MAP / 2), 0.7f, -gridPosition.y + Mathf.Floor (MapComponent.SIZE_MAP / 2)),
 			                                     Quaternion.Euler (new Vector3 ()))).GetComponent<Pawn> ();
-				pawn.name = "Pawn_" + (gridPosition.x * MapComponent.SIZE_MAP + gridPosition.y).ToString();
-				if (manager.currentPlayer ().color == Gomoku.Color.Black)
-							pawn.transform.renderer.material.color = Color.black;
-				manager.currentPlayer ().played = true;
-				return true;
-			}
+								pawn.name = "Pawn_" + (gridPosition.x * MapComponent.SIZE_MAP + gridPosition.y).ToString ();
+								if (manager.currentPlayer ().color == Gomoku.Color.Black)
+										pawn.transform.renderer.material.color = Color.black;
+								manager.currentPlayer ().played = true;
+								return true;
+						}
+				}
 			return false;
 		}
 
