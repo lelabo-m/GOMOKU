@@ -83,7 +83,21 @@ namespace Gomoku
 				}
 		}
 
-		public class CellsList
+        public class Randomizer
+        {
+            static System.Random    random;
+            public Randomizer()
+            {
+                if (random == null)
+                    random = new System.Random();
+            }
+            public System.Random Rand()
+            {
+                return random;
+            }
+        }
+
+    public class CellsList
 		{
 				public List<PossibleCell> cells = new List<PossibleCell> ();
 				public int[] TotalWeight = new int[2] {0, 0};
@@ -91,8 +105,7 @@ namespace Gomoku
 						new PlayerState (),
 						new PlayerState ()
 				};
-				private System.Random random = new System.Random ();
-		
+                public Randomizer rnd = new Randomizer();
 				public void Copy (CellsList list)
 				{
 						this.TotalWeight [(int)Gomoku.Color.White] = list.TotalWeight [(int)Gomoku.Color.White];
@@ -214,7 +227,7 @@ namespace Gomoku
 				this.TotalWeight[(int) color] += item.Weight[(int) color];
 			}
 
-			randomNumber = this.random.Next(0, randomNumber);
+			randomNumber = this.rnd.Rand().Next (0, this.cells.Count);
 			int i;
 			for (i = 0; i < list.Count && randomNumber; ++i, --randomNumber) {
 				randomNumber -= list[i].Weight[(int) color];			
@@ -226,7 +239,7 @@ namespace Gomoku
 			}
 
 						
-			randomNumber = this.random.Next (0, this.cells.Count);
+				randomNumber = this.rnd.Rand().Next (0, this.cells.Count);
 			return this.cells[randomNumber].coord;
 			
 						/*for (int i = 5; i >= 0; --i) {
