@@ -10,7 +10,7 @@ namespace Gomoku
 
     public static class Exploration
     {
-        public static double constante = 1.0f;
+        public static double constante = 0.1;
     }
 
 
@@ -71,6 +71,13 @@ namespace Gomoku
                 parent.childs.Remove(this);
             parent = null;
         }
+        public int Size()
+        {
+            int i = 0;
+            foreach (Node child in childs)
+                i += child.Size();
+            return i + 1;
+        }
     }
 
 
@@ -94,7 +101,6 @@ namespace Gomoku
                     result = child;
             if (result == null || result.UCB < empty.UCB)
             {
-                DebugConsole.Log("Create node " + empty.id);
                 parent.childs.Add(empty);
                 return empty;
             }
@@ -145,6 +151,10 @@ namespace Gomoku
             root.Repr(ref repr);
             return repr;
         }
+        public int Size()
+        {
+            return root.Size();
+        }
     }
 
 
@@ -155,13 +165,15 @@ namespace Gomoku
         public List<Map>    maps;
         public MCTree       tree;
         public int          time;
+        public int nbthreads;
 
-        public  MCTS_IA(int nbthread, int t)
+        public  MCTS_IA(int nb, int t)
         {
             time = t;
+            nbthreads = nb;
 			this.maps = new List<Map> ();
 			this.tree = new MCTree ();
-            for (int i = 0; i < nbthread; ++i)
+            for (int i = 0; i < nbthreads; ++i)
 			    maps.Add(new Map(MapComponent.SIZE_MAP));
         }
         public void         OrderPawn(Node current, ref List<Node> l)
@@ -176,7 +188,6 @@ namespace Gomoku
             Color   lastcolor = Color.Black;
             List<Node> l = new List<Node>();
             OrderPawn(current, ref l);
-            // PastPlay
             foreach (Node it in l)
             {
                 gm.rules.PutPawn(map, it.cell.x, it.cell.y, lastcolor);
@@ -192,13 +203,12 @@ namespace Gomoku
 			current.cell.x = pawn.x;
 			current.cell.y = pawn.y;
             current.visit = 1;
-            //DebugConsole.Log("Random = " + pawn + " X = " + pawn.x + " Y = " + pawn.y + " Who = " + lastcolor + " " + current.Repr(), "warning");
             gm.rules.PutPawn(map, pawn.x, pawn.y, lastcolor);
             winner = gm.CheckMap(pawn.x, pawn.y, map);
             lastcolor = (lastcolor == Color.Black) ? (Color.White) : (Color.Black);
 
             int i = 0;
-            while (winner == Color.Empty && i++ < 100)
+            while (winner == Color.Empty && ++i < 365)
             {
                 pawn = map.RandomCell(lastcolor);
 				if (pawn == null)
@@ -208,41 +218,55 @@ namespace Gomoku
 				lastcolor = (lastcolor == Color.Black) ? (Color.White) : (Color.Black);
             }
             current.reward = (winner == Color.Empty) ? (0.0f) : (winner == Color.Black) ? (1.0f) : (-1.0f);
-            //DebugConsole.Log("INFO = id = " + current.id + " Rank = " + current.rank + " Reward = " + current.reward + " VISIT = " + current.visit + " CELL = " + current.cell.x + " " + current.cell.y);
         }
         public Coord     Simulate(GameManager gm)
         {
 
             Stopwatch s = new Stopwatch();
             s.Start();
-            // Simulation
-            //DebugConsole.Log("Begin Loop simulation", "warning");
             while (s.Elapsed < TimeSpan.FromMilliseconds(time))
             {
+                List<Simulation>    threads = new List<Simulation>();
+                List<Node>          tosimule = new List<Node>();
+                Counter             val = new Counter();
                 foreach (Map m in maps)
                     m.Copy(gm.map.GetMap());
-                Node tosimule = tree.Selection();
-                PlayGame(tosimule, maps[0], gm);
-                tree.BackProagation(tosimule);
+                for (int i = 0; i < nbthreads - 1; ++i)
+                {
+                    Node todo = tree.Selection();
+                    tosimule.Add(todo);
+                    threads.Add(new Simulation(this, todo, maps[i], gm, val));
+                    threads[i].Start();
+                }
+                Node current = tree.Selection();
+                tosimule.Add(current);
+                PlayGame(current, maps[nbthreads - 1], gm);
+                val.Inc();
+                while (val.Get() != nbthreads)
+                {
+                    foreach (Simulation thread in threads)
+                        thread.Update();
+                }
+                foreach (Simulation thread in threads)
+                    thread.Abort();
+                threads.Clear();
+                foreach (Node todo in tosimule)
+                     tree.BackProagation(todo);
             }
             s.Stop();
 
             // Final choice
-            //DebugConsole.Log("Exit loop simulation", "warning");
+            DebugConsole.Log("Exit loop! Tree size = " + tree.Size(), "warning");
             Node final = tree.Final();
             while (final.parent != tree.root)
                 final = final.parent;
             Coord result = final.cell;
-            //DebugConsole.Log("FINAL INFO = id = " + final.id + " Rank = " + final.rank + " Reward = " + final.reward + " VISIT = " + final.visit + " CELL = " + final.cell.x + " " + final.cell.y);
-            //DebugConsole.Log(tree.Representation());
             return result;
         }
         public void     Play(GameManager gm)
         {
             tree.Clear();
-            DebugConsole.Log("Begin IA", "warning");
             Coord res = Simulate(gm);
-            DebugConsole.Log("EXIT IA", "warning");
 			gm.map.PlayOnTile (res.x, res.y);
             gm.currentPlayer().isplaying = false;
         }

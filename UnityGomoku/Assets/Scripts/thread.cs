@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ThreadedJob
 {
@@ -58,22 +59,57 @@ public class ThreadedJob
 }
 
 
-public class Job : ThreadedJob
+namespace Gomoku
 {
-	public Vector3[] InData;  // arbitary job data
-	public Vector3[] OutData; // arbitary job data
-	
-	protected override void ThreadFunction()
-	{
-		// Do your threaded task. DON'T use the Unity API here
-		for (int i = 0; i < 100000000; i++)
-		{
-			InData[i % InData.Length] += InData[(i+1) % InData.Length];
-		}
-	}
-	protected override void OnFinished()
-	{
+    public class Counter
+    {
+        private object m_Handle = new object();
+        public int value;
+        public Counter()
+        {
+            value = 0;
+        }
+        public int Get()
+        {
+            int val;
+            lock (m_Handle)
+            {
+                val = value;
+            }
+            return val;
+        }
+        public void Inc()
+        {
+            lock (m_Handle)
+            {
+                value++;
+            }
+        }
+    }
 
-	}
+    public class Simulation : ThreadedJob
+    {
+        public MCTS_IA ia;
+        public Node current;
+        public Map map;
+        public GameManager gm;
+        public Counter mycount;
+        public Simulation(MCTS_IA i, Node c, Map m, GameManager g, Counter val)
+        {
+            ia = i;
+            current = c;
+            map = m;
+            gm = g;
+            mycount = val;
+        }
+        protected override void ThreadFunction()
+	    {
+            ia.PlayGame(current, map, gm);
+            mycount.Inc();
+	    }
+	    protected override void OnFinished()
+        {
+        }
+    }
 }
 
