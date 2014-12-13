@@ -10,7 +10,7 @@ namespace Gomoku
 
     public static class Exploration
     {
-        public static double constante = 1.0f;
+        public static double constante = 1.5f;
     }
 
 
