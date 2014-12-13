@@ -10,7 +10,7 @@ namespace Gomoku
 
     public static class Exploration
     {
-        public static double constante = 0.1;
+        public static double constante = 1.0f;
     }
 
 
@@ -50,21 +50,21 @@ namespace Gomoku
         {
             return ((rank == 0 || rank % 2 == 1) ? (Who.IA) : (Who.PLAYER));
         }
-        public void Repr(ref string repr)
-        {
-            repr += (id) + " = [ father = " + ((this.parent != null) ? this.parent.id : 0) + " rank = " + rank + " = reward : " + reward + " visit : " + visit + " cell {" + cell.x + " " + cell.y + "} ]\n";
-            string s = "";
-            foreach (Node child in childs)
-                child.Repr(ref s);
-            repr += s;
-        }
-        public string Repr()
-        {
-            string s = (id) + " = [ father = " + ((this.parent != null) ? this.parent.id : 0) + " rank = " + rank + " = reward : " + reward + " visit : " + visit + " cell {" + cell.x + " " + cell.y + "} ]\n";
-            foreach (Node child in childs)
-                child.Repr(ref s);
-            return s;
-        }
+        //public void Repr(ref string repr)
+        //{
+        //    repr += (id) + " = [ father = " + ((this.parent != null) ? this.parent.id : 0) + " rank = " + rank + " = reward : " + reward + " visit : " + visit + " cell {" + cell.x + " " + cell.y + "} ]\n";
+        //    string s = "";
+        //    foreach (Node child in childs)
+        //        child.Repr(ref s);
+        //    repr += s;
+        //}
+        //public string Repr()
+        //{
+        //    string s = (id) + " = [ father = " + ((this.parent != null) ? this.parent.id : 0) + " rank = " + rank + " = reward : " + reward + " visit : " + visit + " cell {" + cell.x + " " + cell.y + "} ]\n";
+        //    foreach (Node child in childs)
+        //        child.Repr(ref s);
+        //    return s;
+        //}
         public void Supr()
         {
             if (parent != null)
@@ -145,12 +145,12 @@ namespace Gomoku
                 it = it.parent;
             }
         }
-        public string Representation()
-        {
-            string repr = "Tree representation :";
-            root.Repr(ref repr);
-            return repr;
-        }
+        //public string Representation()
+        //{
+        //    string repr = "Tree representation :";
+        //    root.Repr(ref repr);
+        //    return repr;
+        //}
         public int Size()
         {
             return root.Size();
