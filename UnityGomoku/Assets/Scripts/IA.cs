@@ -42,6 +42,20 @@ namespace Gomoku
             
             id = SuperId++;
         }
+
+        public void Shuffle()
+        {
+            Randomizer rnd = new Randomizer();
+            int n = childs.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = rnd.Rand().Next(n + 1);
+                Node value = childs[k];
+                childs[k] = childs[n];
+                childs[n] = value;
+            }
+        }
         public bool HasChild()
         {
             return ((childs.Count != 0) ? (true) : (false));
@@ -80,8 +94,6 @@ namespace Gomoku
         }
     }
 
-
-
     public class MCTree
     {
         public Node root;
@@ -91,6 +103,7 @@ namespace Gomoku
         }
         public Node BestNodeUCB(Node parent)
         {
+            parent.Shuffle();
             Node    empty = new Node(parent);
             foreach (Node child in parent.childs)
                 child.UCB = UCB(parent, child);
@@ -108,6 +121,7 @@ namespace Gomoku
         }
         public Node BestNode(Node parent)
         {
+            parent.Shuffle();
             foreach (Node child in parent.childs)
                 child.UCB = UCB(parent, child);
             Node result = null;
@@ -262,7 +276,7 @@ namespace Gomoku
 
             // Final choice
             DebugConsole.Log("Exit loop! Tree size = " + tree.Size(), "warning");
-            DebugConsole.Log(tree.Representation());
+            //DebugConsole.Log(tree.Representation());
             Node final = tree.Final();
             while (final.parent != tree.root)
                 final = final.parent;
