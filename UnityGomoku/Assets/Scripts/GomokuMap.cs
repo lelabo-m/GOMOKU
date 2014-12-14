@@ -234,16 +234,17 @@ namespace Gomoku
 				return (map.GetWeight(item.coord.x, item.coord.y, color) > 0 && !(map.GetWeight(item.coord.x, item.coord.y, otherColor) >= 3));
 			}));*/
 
-            Shuffle(this.cells);
+           // Shuffle(this.cells);
             this.TotalWeight[(int)color] = 0;
             foreach (PossibleCell item in this.cells)
             {
-                int weight = map.GetWeight(item.coord.x, item.coord.y, color);
-                int otherWeight = map.GetWeight(item.coord.x, item.coord.y, otherColor);
+				Gomoku.Cell cell = map.GetCell(item.coord.x, item.coord.y);
+                int weight = cell.GetWeight( color);
+                int otherWeight = cell.GetWeight( otherColor);
 
-                if (weight >= 4 || otherWeight >= 3)
+                if (weight >= 4 || otherWeight >= 3 || cell.IsTaking())
                     return item.coord;
-                item.Weight[(int)color] = (int)Math.Pow(weight, 2) + otherWeight;
+                item.Weight[(int)color] = weight + 2 * otherWeight;
                 this.TotalWeight[(int)color] += item.Weight[(int)color];
             }
 
@@ -252,7 +253,7 @@ namespace Gomoku
             for (i = 0; i < this.cells.Count; ++i)
             {
                 randomNumber -= this.cells[i].Weight[(int)color];
-                if (randomNumber <= 0)
+                if (randomNumber < 0)
                 {
                     return this.cells[i].coord;
                 }
@@ -329,6 +330,11 @@ namespace Gomoku
 				{
 						if (this.IsTaking (orientation) != state)
 								this.Take ^= (byte)(1 << (int)orientation);
+				}
+
+				public bool IsTaking ()
+				{
+					return this.Take != byte.MinValue;
 				}
 
 				public bool IsTaking (Gomoku.Orientation orientation)
@@ -442,7 +448,10 @@ namespace Gomoku
 		
 				public void SetIsTaking (int x, int y, Gomoku.Orientation orientation, bool state)
 				{
+						int oIdx = (x + 3 * MapComponent.ORIENTATION [orientation] [0]) * GetSizeMap () + (y + 3 * MapComponent.ORIENTATION [orientation] [1]);
 						this.map [x * GetSizeMap () + y].SetIsTaking (orientation, state);
+						if (oIdx >= 0 && oIdx < GetSizeMap() * GetSizeMap())
+							this.map [oIdx].SetIsTaking (orientation, state);
 				}
 		
 				public bool IsTaking (int x, int y, Gomoku.Orientation orientation)

@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
 
 				playerComponent2 = player2.GetComponent<PlayerComponent> ();
 				if (PlayerPrefs.GetInt ("IA") > 0)
-					playerComponent2.Ia = new MCTS_IA(SystemInfo.processorCount + 1, 1000);
+					playerComponent2.Ia = new MCTS_IA(SystemInfo.processorCount * 2, 2000);
 				playerComponent2.color = Gomoku.Color.Black;
 				playerComponent2.playing = false;
 				imgB.enabled = false;

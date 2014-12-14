@@ -307,8 +307,9 @@ public class Rules : MonoBehaviour
 		       		y < Gomoku.Map.GetSizeMap() && x < Gomoku.Map.GetSizeMap()
 		      	 	&& map.GetColor(x, y) == color && countPawn < 5) {
 						
-			if (IsTakingAroundMe (map, x, y))
-				countPawn = 0;
+						//if (IsTakingAroundMe (map, x, y))
+						if (map.IsTakeable(x, y))
+							countPawn = 0;
 						else 
 								countPawn++;
 						alreadyCheck.Add(new Coord() {x = x, y = y});
