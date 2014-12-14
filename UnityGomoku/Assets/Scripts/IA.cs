@@ -26,6 +26,7 @@ namespace Gomoku
         public Coord cell;
         public Node parent;
         public List<Node> childs;
+        public bool final;
 
         public Node(Node p)
         {
@@ -36,6 +37,7 @@ namespace Gomoku
             reward = 0.0f;
             parent = p;
 			childs = new List<Node> ();
+            final = false;
 
             
             id = SuperId++;
@@ -150,8 +152,16 @@ namespace Gomoku
                 current = BestNode(current);
             return current;
         }
-        public void BackProagation(Node last)
+        public bool BackProagation(Node last)
         {
+            if (last.final == true)
+            {
+                root = new Node(null);
+                root.childs.Add(last);
+                root.visit = 1;
+                root.reward = 1.0f;
+                return true;
+            }
             if (last.parent != null)
                 last.parent.childs.Add(last);
             Node it = last.parent;
@@ -161,6 +171,7 @@ namespace Gomoku
                 it.visit += 1;
                 it = it.parent;
             }
+            return false;
         }
         public string Representation()
         {
@@ -173,8 +184,6 @@ namespace Gomoku
             return root.Size();
         }
     }
-
-
 
 
     public class MCTS_IA
@@ -223,7 +232,8 @@ namespace Gomoku
             gm.rules.PutPawn(map, pawn.x, pawn.y, lastcolor);
             winner = gm.CheckMap(pawn.x, pawn.y, map);
             lastcolor = (lastcolor == Color.Black) ? (Color.White) : (Color.Black);
-
+            if (winner == Color.Black)
+                current.final = true;
             int i = 0;
             while (winner == Color.Empty && ++i < 365)
             {
@@ -267,8 +277,15 @@ namespace Gomoku
                 foreach (Simulation thread in threads)
                     thread.Abort();
                 threads.Clear();
+                bool end = false;
                 foreach (Node todo in tosimule)
-                     tree.BackProagation(todo);
+                {
+                    end = tree.BackProagation(todo);
+                    if (end == true)
+                        break;
+                }
+                if (end == true)
+                    break;
             }
             s.Stop();
 
