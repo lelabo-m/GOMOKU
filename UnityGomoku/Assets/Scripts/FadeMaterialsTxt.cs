@@ -3,8 +3,8 @@ using System.Collections;
 using Gomoku;
 using UnityEngine.UI;
 
-class FadeMaterials : MonoBehaviour {
- 
+class FadeMaterialsTxt : MonoBehaviour {
+	
 	public Text _myTexture;    //The guiTexture you want to manipulate. Set this up in the inspector.
 	public float stayTime = 2f;   // Time before fading starts
 	public float fadeTime = 2f;   // How long we want to fade
@@ -17,13 +17,13 @@ class FadeMaterials : MonoBehaviour {
 	void AnimateImage(){
 		float t = (Time.time - lastStartTime - stayTime)/fadeTime;
 		if(t <= 0f){
-			UnityEngine.Color fullColor = UnityEngine.Color.black;
-			UnityEngine.Color noColor = new UnityEngine.Color(0f,0f,0f,0f);
+			UnityEngine.Color fullColor = UnityEngine.Color.white;
+			UnityEngine.Color noColor = new UnityEngine.Color(1f,1f,1f,0f);
 			_myTexture.color = UnityEngine.Color.Lerp(noColor, fullColor, 1 + t) ;
 		}
-		 else if(t <= 1f){
-			UnityEngine.Color fullColor = UnityEngine.Color.black;
-			UnityEngine.Color noColor = new UnityEngine.Color(0f,0f,0f,0f);
+		else if(t <= 1f){
+			UnityEngine.Color fullColor = UnityEngine.Color.white;
+			UnityEngine.Color noColor = new UnityEngine.Color(1f,1f,1f,0f);
 			_myTexture.color = UnityEngine.Color.Lerp(fullColor, noColor, t) ;
 		} else {    //Once we faded out we shut the texture off, in order to save memory
 			_myTexture.enabled = false;
@@ -31,11 +31,11 @@ class FadeMaterials : MonoBehaviour {
 	}
 	public void ShowImage(){    //Call this to start the effect
 		_myTexture.enabled = true;
-		_myTexture.color = new UnityEngine.Color(0f,0f,0f,0f);
+		_myTexture.color = new UnityEngine.Color(1f,1f,1f,0f);
 		lastStartTime = Time.time;
 	}  
- 
- }
+	
+}
 
 //220 - 200 - 40 / 20
 
