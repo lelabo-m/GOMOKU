@@ -26,6 +26,7 @@ namespace Gomoku
         public Coord cell;
         public Node parent;
         public List<Node> childs;
+        public bool final;
 
         public Node(Node p)
         {
@@ -36,6 +37,7 @@ namespace Gomoku
             reward = 0.0f;
             parent = p;
 			childs = new List<Node> ();
+            final = false;
 
             
             id = SuperId++;
@@ -150,17 +152,21 @@ namespace Gomoku
                 current = BestNode(current);
             return current;
         }
-        public void BackProagation(Node last)
+        public bool BackProagation(Node last)
         {
+            Node it = last;
+            if (last.final == true)
+                last.reward += 1.0f;
             if (last.parent != null)
                 last.parent.childs.Add(last);
-            Node it = last.parent;
+            it = last.parent;
             while (it != null)
             {
                 it.reward += last.reward;
                 it.visit += 1;
                 it = it.parent;
             }
+            return false;
         }
         public string Representation()
         {
@@ -173,8 +179,6 @@ namespace Gomoku
             return root.Size();
         }
     }
-
-
 
 
     public class MCTS_IA
@@ -223,7 +227,8 @@ namespace Gomoku
             gm.rules.PutPawn(map, pawn.x, pawn.y, lastcolor);
             winner = gm.CheckMap(pawn.x, pawn.y, map);
             lastcolor = (lastcolor == Color.Black) ? (Color.White) : (Color.Black);
-
+            if (winner == Color.Black)
+                current.final = true;
             int i = 0;
             while (winner == Color.Empty && ++i < 365)
             {
@@ -268,13 +273,13 @@ namespace Gomoku
                     thread.Abort();
                 threads.Clear();
                 foreach (Node todo in tosimule)
-                     tree.BackProagation(todo);
+                    tree.BackProagation(todo);
             }
             s.Stop();
 
             // Final choice
-            DebugConsole.Log("Exit loop! Tree size = " + tree.Size(), "warning");
-            DebugConsole.Log(tree.Representation());
+            //DebugConsole.Log("Exit loop! Tree size = " + tree.Size(), "warning");
+            //DebugConsole.Log(tree.Representation());
             Node final = tree.Final();
             while (final.parent != tree.root)
                 final = final.parent;

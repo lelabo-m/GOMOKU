@@ -62,7 +62,8 @@ public class Tile : MonoBehaviour
 
 		void OnMouseEnter ()
 		{
-		if (manager.currentPlayer ().playing && manager.currentPlayer ().Ia == null) {
+				if (manager != null && manager.currentPlayer() != null && 
+		    		manager.currentPlayer ().playing && manager.currentPlayer ().Ia == null) {
 						transform.renderer.material.color = Color.blue;
 				}
 		}
