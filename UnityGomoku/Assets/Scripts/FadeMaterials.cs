@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 class FadeMaterials : MonoBehaviour {
  
-	public Text _myTexture;    //The guiTexture you want to manipulate. Set this up in the inspector.
+	public UILabel _myTexture;    //The guiTexture you want to manipulate. Set this up in the inspector.
 	public float stayTime = 2f;   // Time before fading starts
 	public float fadeTime = 2f;   // How long we want to fade
 	public float startTime = 2f;
