@@ -31,12 +31,6 @@ public class MapComponent : MonoBehaviour
 			{ Orientation.SOUTHWEST , new int[] { -1 , -1 } },
 			{ Orientation.NORTHWEST , new int[] { -1 , 1 } }
 		};
-				if (PlayerPrefs.GetInt ("5 cassables") > 1) {
-						print ("Regle des 5 cassables active !");
-				}
-				if (PlayerPrefs.GetInt ("double 3") > 1) {
-						print ("Regle des double 3 active !");
-				}
 				this.map = new Gomoku.Map (SIZE_MAP);
 				arbiter = GameObject.Find ("Arbiter");
 				rules = arbiter.GetComponent<Rules> ();

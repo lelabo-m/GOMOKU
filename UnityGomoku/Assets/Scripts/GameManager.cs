@@ -168,7 +168,6 @@ public class GameManager : MonoBehaviour
 				imgW.enabled = false;
 				imgB.enabled = false;
 				bB.enabled = false;
-				MapComponent map = GameObject.Find("Map").GetComponent<MapComponent>();
 				Text c = GameObject.Find("score white").GetComponent<Text>();
 				c.enabled = false;
 				Text d = GameObject.Find("score black").GetComponent<Text>();
