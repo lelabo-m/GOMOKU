@@ -156,18 +156,7 @@ namespace Gomoku
         {
             Node it = last;
             if (last.final == true)
-            {
-                while (it.parent != root)
-                    it = it.parent;
-                root = new Node(null);
-                it.parent = root;
-                root.childs.Add(it);
-                root.visit = 1;
-                root.reward = 1.0f;
-                it.visit = 1;
-                it.reward = 1.0f;
-                return true;
-            }
+                last.reward += 1.0f;
             if (last.parent != null)
                 last.parent.childs.Add(last);
             it = last.parent;
@@ -283,21 +272,14 @@ namespace Gomoku
                 foreach (Simulation thread in threads)
                     thread.Abort();
                 threads.Clear();
-                bool end = false;
                 foreach (Node todo in tosimule)
-                {
-                    end = tree.BackProagation(todo);
-                    if (end == true)
-                        break;
-                }
-                if (end == true)
-                    break;
+                    tree.BackProagation(todo);
             }
             s.Stop();
 
             // Final choice
-            DebugConsole.Log("Exit loop! Tree size = " + tree.Size(), "warning");
-            DebugConsole.Log(tree.Representation());
+            //DebugConsole.Log("Exit loop! Tree size = " + tree.Size(), "warning");
+            //DebugConsole.Log(tree.Representation());
             Node final = tree.Final();
             while (final.parent != tree.root)
                 final = final.parent;
