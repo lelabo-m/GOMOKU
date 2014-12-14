@@ -3690,7 +3690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c6dafb7a1236cc4c946ca79b0c7148b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _myTexture: {fileID: 0}
+  _myTexture: {fileID: 1573815094}
   stayTime: .5
   fadeTime: 1
   startTime: 2
@@ -4540,7 +4540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c73f767e8e5e9e43b5e9223f563742c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _myTexture: {fileID: 0}
+  _myTexture: {fileID: 1896629964}
   stayTime: .5
   fadeTime: 1
   startTime: 2
