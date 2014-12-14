@@ -237,7 +237,12 @@ namespace Gomoku
             Shuffle(ref this.cells);
 			this.TotalWeight [(int)color] = 0;
 			foreach (PossibleCell item in this.cells) {
-				item.Weight[(int) color] = (int)Math.Pow(map.GetWeight(item.coord.x, item.coord.y, otherColor), 3) + map.GetWeight(item.coord.x, item.coord.y, color);
+				int weight = map.GetWeight(item.coord.x, item.coord.y, color);
+				int otherWeight = map.GetWeight(item.coord.x, item.coord.y, otherColor);
+
+				if (weight >= 4 || otherWeight >= 3)
+					return item.coord;
+				item.Weight[(int) color] = (int) Math.Pow(weight, 2) + otherWeight;
 				this.TotalWeight[(int) color] += item.Weight[(int) color];
 			}
 

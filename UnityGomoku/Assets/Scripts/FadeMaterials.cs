@@ -12,7 +12,7 @@ class FadeMaterials : MonoBehaviour {
 	private float lastStartTime = -100f;
 	
 	void Update(){
-		if (_myTexture.enabled == true) AnimateImage(); //Animate the texture if it is enabled
+		//if (_myTexture.enabled == true) AnimateImage(); //Animate the texture if it is enabled
 	}
 	void AnimateImage(){
 		float t = (Time.time - lastStartTime - stayTime)/fadeTime;
