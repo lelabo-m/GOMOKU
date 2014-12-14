@@ -200,14 +200,14 @@ namespace Gomoku
 						this.Players [1].Clear ();
 				}
 
-                public void Shuffle(ref List<PossibleCell> list)
+                public void Shuffle(List<PossibleCell> list)
                 {
-                    Randomizer rnd = new Randomizer();
                     int n = list.Count;
+                    Randomizer random = new Randomizer();
                     while (n > 1)
                     {
+                        int k = (random.Rand().Next(0, n) % n);
                         n--;
-                        int k = rnd.Rand().Next(n + 1);
                         PossibleCell value = list[k];
                         list[k] = list[n];
                         list[n] = value;
@@ -234,27 +234,30 @@ namespace Gomoku
 				return (map.GetWeight(item.coord.x, item.coord.y, color) > 0 && !(map.GetWeight(item.coord.x, item.coord.y, otherColor) >= 3));
 			}));*/
 
-            Shuffle(ref this.cells);
-			this.TotalWeight [(int)color] = 0;
-			foreach (PossibleCell item in this.cells) {
-				int weight = map.GetWeight(item.coord.x, item.coord.y, color);
-				int otherWeight = map.GetWeight(item.coord.x, item.coord.y, otherColor);
+            Shuffle(this.cells);
+            this.TotalWeight[(int)color] = 0;
+            foreach (PossibleCell item in this.cells)
+            {
+                int weight = map.GetWeight(item.coord.x, item.coord.y, color);
+                int otherWeight = map.GetWeight(item.coord.x, item.coord.y, otherColor);
 
-				if (weight >= 4 || otherWeight >= 3)
-					return item.coord;
-				item.Weight[(int) color] = (int) Math.Pow(weight, 2) + otherWeight;
-				this.TotalWeight[(int) color] += item.Weight[(int) color];
-			}
+                if (weight >= 4 || otherWeight >= 3)
+                    return item.coord;
+                item.Weight[(int)color] = (int)Math.Pow(weight, 2) + otherWeight;
+                this.TotalWeight[(int)color] += item.Weight[(int)color];
+            }
 
-			randomNumber = this.rnd.Rand().Next (0, this.TotalWeight[(int) color]);
-			int i;
-			for (i = 0; i < this.cells.Count; ++i) {
-				randomNumber -= this.cells[i].Weight[(int) color];
-				if (randomNumber <= 0) {
-					return this.cells[i].coord;
-				}
+            randomNumber = this.rnd.Rand().Next(0, this.TotalWeight[(int)color]);
+            int i;
+            for (i = 0; i < this.cells.Count; ++i)
+            {
+                randomNumber -= this.cells[i].Weight[(int)color];
+                if (randomNumber <= 0)
+                {
+                    return this.cells[i].coord;
+                }
 
-			}
+            }
 						
 			randomNumber = this.rnd.Rand().Next (0, this.cells.Count);
 			return this.cells[randomNumber].coord;
