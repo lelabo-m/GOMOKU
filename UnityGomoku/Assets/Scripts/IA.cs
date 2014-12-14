@@ -157,6 +157,7 @@ namespace Gomoku
             if (last.final == true)
             {
                 root = new Node(null);
+                last.parent = root;
                 root.childs.Add(last);
                 root.visit = 1;
                 root.reward = 1.0f;
