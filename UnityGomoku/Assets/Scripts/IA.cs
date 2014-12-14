@@ -154,18 +154,23 @@ namespace Gomoku
         }
         public bool BackProagation(Node last)
         {
+            Node it = last;
             if (last.final == true)
             {
+                while (it.parent != root)
+                    it = it.parent;
                 root = new Node(null);
-                last.parent = root;
-                root.childs.Add(last);
+                it.parent = root;
+                root.childs.Add(it);
                 root.visit = 1;
                 root.reward = 1.0f;
+                it.visit = 1;
+                it.reward = 1.0f;
                 return true;
             }
             if (last.parent != null)
                 last.parent.childs.Add(last);
-            Node it = last.parent;
+            it = last.parent;
             while (it != null)
             {
                 it.reward += last.reward;
