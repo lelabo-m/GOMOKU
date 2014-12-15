@@ -216,37 +216,38 @@ namespace Gomoku
 
 		public Coord RandomCell (Gomoku.Map map, Gomoku.Color color)
 		{
-			this.cells.RemoveAll (delegate(PossibleCell item) {
-				return (map.GetColor (item.coord.x, item.coord.y) != Gomoku.Color.Empty);
-			});
 			int randomNumber;
 			Gomoku.Color otherColor = (color == Gomoku.Color.White) ? Gomoku.Color.Black : Gomoku.Color.White;
 
             if (this.cells.Count == 0)
                 return null;
-		/*	List<PossibleCell> list = new List<PossibleCell>();
-			list.AddRange(this.cells.FindAll(delegate(PossibleCell item)
-			                          {
-				return (map.GetWeight(item.coord.x, item.coord.y, otherColor) >= 3);
-			}));
-			list.AddRange(this.cells.FindAll(delegate(PossibleCell item)
-			                          {
-				return (map.GetWeight(item.coord.x, item.coord.y, color) > 0 && !(map.GetWeight(item.coord.x, item.coord.y, otherColor) >= 3));
-			}));*/
-
-           // Shuffle(this.cells);
+	
+            Shuffle(this.cells);
             this.TotalWeight[(int)color] = 0;
+			Gomoku.Coord FourAlignement = null;
+			Gomoku.Coord BlockEnemy = null;
             foreach (PossibleCell item in this.cells)
             {
 				Gomoku.Cell cell = map.GetCell(item.coord.x, item.coord.y);
                 int weight = cell.GetWeight( color);
                 int otherWeight = cell.GetWeight( otherColor);
 
-                if (weight >= 4 || otherWeight >= 3 || cell.IsTaking())
+				if (weight == 3 && FourAlignement == null)
+					FourAlignement = new Coord() { x = item.coord.x, y = item.coord.y };
+				if (otherWeight == 3 && BlockEnemy == null)
+					BlockEnemy = new Coord() { x = item.coord.x, y = item.coord.y };
+
+                if (weight >= 4 || otherWeight >= 4 && cell.IsTaking())
                     return item.coord;
-                item.Weight[(int)color] = weight + 2 * otherWeight;
-                this.TotalWeight[(int)color] += item.Weight[(int)color];
+                item.Weight[(int)color] = weight + (int) Math.Pow(otherWeight, 3);
+               this.TotalWeight[(int)color] += item.Weight[(int)color];
             }
+
+			if (FourAlignement != null)
+								return FourAlignement;
+						else if (BlockEnemy != null)
+								return BlockEnemy;
+
 
             randomNumber = this.rnd.Rand().Next(0, this.TotalWeight[(int)color]);
             int i;
@@ -450,7 +451,7 @@ namespace Gomoku
 				{
 						int oIdx = (x + 3 * MapComponent.ORIENTATION [orientation] [0]) * GetSizeMap () + (y + 3 * MapComponent.ORIENTATION [orientation] [1]);
 						this.map [x * GetSizeMap () + y].SetIsTaking (orientation, state);
-						if (oIdx >= 0 && oIdx < GetSizeMap() * GetSizeMap())
+						if (oIdx >= 0 && oIdx < GetSizeMap() * GetSizeMap() )
 							this.map [oIdx].SetIsTaking (orientation, state);
 				}
 		
