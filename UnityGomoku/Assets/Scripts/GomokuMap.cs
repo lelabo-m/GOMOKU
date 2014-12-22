@@ -83,21 +83,23 @@ namespace Gomoku
 				}
 		}
 
-        public class Randomizer
-        {
-            static System.Random    random;
-            public Randomizer()
-            {
-                if (random == null)
-                    random = new System.Random();
-            }
-            public System.Random Rand()
-            {
-                return random;
-            }
-        }
+		public class Randomizer
+		{
+				static System.Random    random;
 
-    public class CellsList
+				public Randomizer ()
+				{
+						if (random == null)
+								random = new System.Random ();
+				}
+
+				public System.Random Rand ()
+				{
+						return random;
+				}
+		}
+
+		public class CellsList
 		{
 				public List<PossibleCell> cells = new List<PossibleCell> ();
 				public int[] TotalWeight = new int[2] {0, 0};
@@ -105,13 +107,14 @@ namespace Gomoku
 						new PlayerState (),
 						new PlayerState ()
 				};
-                public Randomizer rnd = new Randomizer();
+				public Randomizer rnd = new Randomizer ();
+
 				public void Copy (CellsList list)
 				{
 						this.TotalWeight [(int)Gomoku.Color.White] = list.TotalWeight [(int)Gomoku.Color.White];
 						this.TotalWeight [(int)Gomoku.Color.Black] = list.TotalWeight [(int)Gomoku.Color.Black];
 
-                        this.cells.Clear();
+						this.cells.Clear ();
 						foreach (PossibleCell item in list.cells) {
 								PossibleCell copy = new PossibleCell (item.coord.x, item.coord.y, item.Weight [(int)Gomoku.Color.White], item.Weight [(int)Gomoku.Color.Black]);
 								
@@ -200,69 +203,66 @@ namespace Gomoku
 						this.Players [1].Clear ();
 				}
 
-                public void Shuffle(List<PossibleCell> list)
-                {
-                    int n = list.Count;
-                    Randomizer random = new Randomizer();
-                    while (n > 1)
-                    {
-                        int k = (random.Rand().Next(0, n) % n);
-                        n--;
-                        PossibleCell value = list[k];
-                        list[k] = list[n];
-                        list[n] = value;
-                    }
-                }
+				public void Shuffle (List<PossibleCell> list)
+				{
+						int n = list.Count;
+						Randomizer random = new Randomizer ();
+						while (n > 1) {
+								int k = (random.Rand ().Next (0, n) % n);
+								n--;
+								PossibleCell value = list [k];
+								list [k] = list [n];
+								list [n] = value;
+						}
+				}
 
-		public Coord RandomCell (Gomoku.Map map, Gomoku.Color color)
-		{
-			int randomNumber;
-			Gomoku.Color otherColor = (color == Gomoku.Color.White) ? Gomoku.Color.Black : Gomoku.Color.White;
+				public Coord RandomCell (Gomoku.Map map, Gomoku.Color color)
+				{
+						int randomNumber;
+						Gomoku.Color otherColor = (color == Gomoku.Color.White) ? Gomoku.Color.Black : Gomoku.Color.White;
 
-            if (this.cells.Count == 0)
-                return null;
+						if (this.cells.Count == 0)
+								return null;
 	
-            Shuffle(this.cells);
-            this.TotalWeight[(int)color] = 0;
-			Gomoku.Coord FourAlignement = null;
-			Gomoku.Coord BlockEnemy = null;
-            foreach (PossibleCell item in this.cells)
-            {
-				Gomoku.Cell cell = map.GetCell(item.coord.x, item.coord.y);
-                int weight = cell.GetWeight( color);
-                int otherWeight = cell.GetWeight( otherColor);
+						Shuffle (this.cells);
+						this.TotalWeight [(int)color] = 0;
+						Gomoku.Coord FourAlignement = null;
+						Gomoku.Coord BlockEnemy = null;
+						foreach (PossibleCell item in this.cells) {
+								Gomoku.Cell cell = map.GetCell (item.coord.x, item.coord.y);
+								int weight = cell.GetWeight (color);
+								int otherWeight = cell.GetWeight (otherColor);
 
-				if (weight == 3 && FourAlignement == null)
-					FourAlignement = new Coord() { x = item.coord.x, y = item.coord.y };
-				if (otherWeight == 3 && BlockEnemy == null)
-					BlockEnemy = new Coord() { x = item.coord.x, y = item.coord.y };
+								if (weight == 3 && FourAlignement == null)
+										FourAlignement = new Coord () { x = item.coord.x, y = item.coord.y };
+								if (otherWeight == 3 && BlockEnemy == null)
+										BlockEnemy = new Coord () { x = item.coord.x, y = item.coord.y };
 
-                if (weight >= 4 || otherWeight >= 4 && cell.IsTaking())
-                    return item.coord;
-                item.Weight[(int)color] = weight + (int) Math.Pow(otherWeight, 3);
-               this.TotalWeight[(int)color] += item.Weight[(int)color];
-            }
+								if (weight >= 4 || otherWeight >= 4 && cell.IsTaking ())
+										return item.coord;
+								item.Weight [(int)color] = weight + (int)Math.Pow (otherWeight, 3);
+								this.TotalWeight [(int)color] += item.Weight [(int)color];
+						}
 
-			if (FourAlignement != null)
+						if (BlockEnemy != null)
+							return BlockEnemy;
+						if (FourAlignement != null)
 								return FourAlignement;
-						else if (BlockEnemy != null)
-								return BlockEnemy;
-
-
-            randomNumber = this.rnd.Rand().Next(0, this.TotalWeight[(int)color]);
-            int i;
-            for (i = 0; i < this.cells.Count; ++i)
-            {
-                randomNumber -= this.cells[i].Weight[(int)color];
-                if (randomNumber < 0)
-                {
-                    return this.cells[i].coord;
-                }
-
-            }
 						
-			randomNumber = this.rnd.Rand().Next (0, this.cells.Count);
-			return this.cells[randomNumber].coord;
+			//MonoBehaviour.print ("random");
+
+						randomNumber = this.rnd.Rand ().Next (0, this.TotalWeight [(int)color]);
+						int i;
+						for (i = 0; i < this.cells.Count; ++i) {
+								randomNumber -= this.cells [i].Weight [(int)color];
+								if (randomNumber < 0) {
+										return this.cells [i].coord;
+								}
+
+						}
+						
+						randomNumber = this.rnd.Rand ().Next (0, this.cells.Count);
+						return this.cells [randomNumber].coord;
 			
 						/*for (int i = 5; i >= 0; --i) {
 						list = this.cells.FindAll (delegate (PossibleCell item) {
@@ -335,7 +335,7 @@ namespace Gomoku
 
 				public bool IsTaking ()
 				{
-					return this.Take != byte.MinValue;
+						return this.Take != byte.MinValue;
 				}
 
 				public bool IsTaking (Gomoku.Orientation orientation)
@@ -434,64 +434,111 @@ namespace Gomoku
 				// set Weight of a color 
 				public void SetWeight (int x, int y, int weight, Gomoku.Color color)
 				{
-						this.map [x * GetSizeMap () + y].SetWeight (weight, color);
+						if (x * GetSizeMap () + y >= 0 && x * GetSizeMap () + y < GetSizeMap () * GetSizeMap ())
+								this.map [x * GetSizeMap () + y].SetWeight (weight, color);
 				}
 		
 				public void SetIsTakeable (int x, int y, bool state)
 				{
-						this.map [x * GetSizeMap () + y].SetIsTakeable (state);
+						if (x * GetSizeMap () + y >= 0 && x * GetSizeMap () + y < GetSizeMap () * GetSizeMap () && GetColor(x, y) != Gomoku.Color.Empty)
+								this.map [x * GetSizeMap () + y].SetIsTakeable (state);
 				}
 		
 				public bool IsTakeable (int x, int y)
 				{
-						return this.map [x * GetSizeMap () + y].IsTakeable ();
+						if (x * GetSizeMap () + y >= 0 && x * GetSizeMap () + y < GetSizeMap () * GetSizeMap ())
+								return this.map [x * GetSizeMap () + y].IsTakeable ();
+						return false;
 				}
 		
 				public void SetIsTaking (int x, int y, Gomoku.Orientation orientation, bool state)
 				{
-						int oIdx = (x + 3 * MapComponent.ORIENTATION [orientation] [0]) * GetSizeMap () + (y + 3 * MapComponent.ORIENTATION [orientation] [1]);
-						this.map [x * GetSizeMap () + y].SetIsTaking (orientation, state);
-						if (oIdx >= 0 && oIdx < GetSizeMap() * GetSizeMap() )
-							this.map [oIdx].SetIsTaking (orientation, state);
+					int oIdx = (x + 3 * MapComponent.ORIENTATION [orientation] [0]) * GetSizeMap () + (y + 3 * MapComponent.ORIENTATION [orientation] [1]);
+			Gomoku.Color color = GetColor (x, y);
+			Gomoku.Color enemy = (color == Gomoku.Color.White) ? Gomoku.Color.Black : Gomoku.Color.White;
+					
+					if (oIdx >= 0 && oIdx < GetSizeMap () * GetSizeMap ()) {
+								this.map [x * GetSizeMap () + y].SetIsTaking (orientation, state);
+								
+								x += MapComponent.ORIENTATION[orientation][0];
+								y += MapComponent.ORIENTATION[orientation][1];
+								while (x  >= 0 && x < GetSizeMap () && y  >= 0 && y < GetSizeMap ()) {
+									if (this.GetColor(x, y) != enemy)
+						break;
+									this.SetIsTakeable(x, y, state);
+									x += MapComponent.ORIENTATION[orientation][0];
+									y += MapComponent.ORIENTATION[orientation][1];
+									if (x * GetSizeMap () + y == oIdx && GetColor(x, y) == color) {
+									
+										this.map [x * GetSizeMap () + y].SetIsTaking (MapComponent.inverseOrientation(orientation), state);
+										break;
+									}	
+								}
+						}
+
+						/*if (x * GetSizeMap () + y >= 0 && x * GetSizeMap () + y < GetSizeMap () * GetSizeMap ()) {
+								
+								this.map [x * GetSizeMap () + y].SetIsTaking (orientation, state);
+								if (oIdx >= 0 && oIdx < GetSizeMap () * GetSizeMap ()) {
+										if (state == true) {
+											MonoBehaviour.print ("SetIsTaking");
+						MonoBehaviour.print("orientation = " + orientation + " x = " + x + " y = " + y + " state = " + state);
+						MonoBehaviour.print("orientation = " + MapComponent.inverseOrientation (orientation) + " x = " + (x + 3 * MapComponent.ORIENTATION [orientation] [0]) + " y = " + (y + 3 * MapComponent.ORIENTATION [orientation] [1]) + " state = " + state);			
+					}
+										this.map [oIdx].SetIsTaking (MapComponent.inverseOrientation (orientation), state);
+								}
+						}*/
 				}
 		
 				public bool IsTaking (int x, int y, Gomoku.Orientation orientation)
 				{
-						return this.map [x * GetSizeMap () + y].IsTaking (orientation);
+						if (x * GetSizeMap () + y >= 0 && x * GetSizeMap () + y < GetSizeMap () * GetSizeMap ())
+								return this.map [x * GetSizeMap () + y].IsTaking (orientation);
+						return false;
 				}
 		
 				public int GetWeight (int x, int y, Color color)
 				{
-						return this.map [x * GetSizeMap () + y].GetWeight (color);
+						if (x * GetSizeMap () + y >= 0 && x * GetSizeMap () + y < GetSizeMap () * GetSizeMap ())
+								return this.map [x * GetSizeMap () + y].GetWeight (color);
+						return 0;
 				}
 		
 				public bool PutPawn (int x, int y, Color type)
 				{
-						this.map [x * GetSizeMap () + y].SetColor (type);
+						if (x * GetSizeMap () + y >= 0 && x * GetSizeMap () + y < GetSizeMap () * GetSizeMap ())
+								this.map [x * GetSizeMap () + y].SetColor (type);
 						return true;
 				}
 
 				public bool RemovePawn (int x, int y)
 				{
-						Gomoku.Color color = GetColor (x, y);
-						this.map [x * GetSizeMap () + y].RemovePawn ();
-						UpdateBigWeight (color);
+						if (x * GetSizeMap () + y >= 0 && x * GetSizeMap () + y < GetSizeMap () * GetSizeMap ()) {
+								Gomoku.Color color = GetColor (x, y);
+								this.map [x * GetSizeMap () + y].RemovePawn ();
+								UpdateBigWeight (color);
+						}
 						return true;
 				}
 
 				public Color GetColor (int x, int y)
 				{
-						return this.map [x * GetSizeMap () + y].GetColor ();
+						if (x * GetSizeMap () + y >= 0 && x * GetSizeMap () + y < GetSizeMap () * GetSizeMap ())
+								return this.map [x * GetSizeMap () + y].GetColor ();
+						return Gomoku.Color.Empty;
 				}
 
 				public void SetIsBlock (int x, int y, Color color, bool state)
 				{
-						this.map [x * GetSizeMap () + y].SetBlock (color, state);
+						if (x * GetSizeMap () + y >= 0 && x * GetSizeMap () + y < GetSizeMap () * GetSizeMap ())
+								this.map [x * GetSizeMap () + y].SetBlock (color, state);
 				}
 
 				public bool IsBlock (int x, int y, Color color)
 				{
-						return this.map [x * GetSizeMap () + y].IsBlock (color);
+						if (x * GetSizeMap () + y >= 0 && x * GetSizeMap () + y < GetSizeMap () * GetSizeMap ())
+								return this.map [x * GetSizeMap () + y].IsBlock (color);
+						return false;
 				}
 
 				public void GeneratePossibleCells (int x, int y, int radius)
@@ -535,7 +582,8 @@ namespace Gomoku
 
 				public void SaveWeight (int X, int Y, Gomoku.Color color)
 				{
-						cellsList.Players [(int)color].BigWeight.Add (new Coord () { x = X, y = Y });
+						if (!cellsList.Players [(int)color].BigWeight.Exists (item => (item.x == X && item.y == Y)))
+								cellsList.Players [(int)color].BigWeight.Add (new Coord () { x = X, y = Y });
 				}
 
 				public List<Coord> GetBigWeight (Gomoku.Color color)

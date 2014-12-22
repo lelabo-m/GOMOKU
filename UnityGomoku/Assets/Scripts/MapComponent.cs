@@ -45,6 +45,16 @@ public class MapComponent : MonoBehaviour
 	
 		}
 
+		static public Gomoku.Orientation inverseOrientation(Gomoku.Orientation orientation) 
+		{	
+			foreach (KeyValuePair<Gomoku.Orientation, int[]> entry in MapComponent.ORIENTATION) 
+			{
+			if (entry.Value[0] == -ORIENTATION[orientation][0] && entry.Value[1] == -ORIENTATION[orientation][1])
+				return entry.Key;
+			}
+		return orientation;
+		}
+
 		private void generateGraphicMap ()
 		{
 				graphicMap = new List<List<Tile>> ();
