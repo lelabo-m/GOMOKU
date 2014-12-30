@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using System.Collections.Specialized;
 
 namespace Gomoku
 {
@@ -44,7 +43,21 @@ namespace Gomoku
         // u->v * i->j
         public bool IntersectSegment(Vector other, ref Coord inter)
         {
-            float s_numer, t_numer, denom, t;
+			float dir_a, dir_p, ori_b, ori_d;
+
+			dir_a = (end.y - begin.y) / (end.x - begin.x);
+			ori_b = end.y - dir_a * end.x;
+			dir_p = (other.end.y - other.begin.y) / (other.end.x - other.begin.x);
+			ori_d = other.end.y - dir_p * other.end.x;
+
+			inter.x = (int)((ori_d - ori_b) / (dir_a - dir_p));
+			inter.y = (int)(dir_a * inter.x + ori_b);
+
+
+
+
+
+			float s_numer, t_numer, denom, t;
             // Boundingbox
             Coord BoxUV = new Coord();
             Coord BoxIJ = new Coord();
