@@ -159,15 +159,18 @@ public class Rules : MonoBehaviour
 		}
 
 		private void SetIsTaking (Gomoku.Map map, Gomoku.Coord currentCell, Gomoku.Color color)
+
 		{	
 				foreach (KeyValuePair<Gomoku.Orientation, int[]> entry in MapComponent.ORIENTATION) {
-						map.SetIsTaking (currentCell.x, currentCell.y, entry.Key, IsTaking (map, entry.Value [0], entry.Value [1], currentCell, color));
+						IsTaking (map, entry.Key, currentCell, color);
 				}
 		}
 
-		private bool IsTaking (Gomoku.Map map, int wayX, int wayY, Gomoku.Coord currentCell, Gomoku.Color color)
+		private bool IsTaking (Gomoku.Map map, Orientation orientation, Gomoku.Coord currentCell, Gomoku.Color color)
 		{
 				Gomoku.Color ennemy = (color == Gomoku.Color.White) ? Gomoku.Color.Black : Gomoku.Color.White;
+				int wayX = MapComponent.ORIENTATION [orientation] [0];
+				int wayY = MapComponent.ORIENTATION [orientation] [1];
 				int x = currentCell.x + wayX;
 				int y = currentCell.y + wayY;
 				int nbEnnemy = 0;
@@ -175,17 +178,23 @@ public class Rules : MonoBehaviour
 				while (x >= 0 && y >= 0 &&
 		       x < Gomoku.Map.GetSizeMap() && y < Gomoku.Map.GetSizeMap()) {
 						if (map.GetColor (currentCell.x, currentCell.y) == color && map.GetColor (x, y) != ennemy && nbEnnemy == 2) {
+								map.SetIsTaking(currentCell.x, currentCell.y, orientation, true);
 								map.SetIsTakeable (x - wayX, y - wayY, true);
 								map.SetIsTakeable (x - 2 * wayX, y - 2 * wayY, true);
+								map.SetIsTaking(x, y, MapComponent.inverseOrientation(orientation), true);
 								return true;
 						}
 						if (map.GetColor (x, y) != ennemy)
-								return false;
+						{
+							map.SetIsTaking(currentCell.x, currentCell.y, orientation, false);
+											return false;
+						}
 						
 						nbEnnemy++;
 						x += wayX;
 						y += wayY;
 				}
+		map.SetIsTaking(currentCell.x, currentCell.y, orientation, false);
 				return false;
 		}
 

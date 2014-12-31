@@ -237,19 +237,18 @@ namespace Gomoku
 										FourAlignement = new Coord () { x = item.coord.x, y = item.coord.y };
 								if (otherWeight == 3 && BlockEnemy == null)
 										BlockEnemy = new Coord () { x = item.coord.x, y = item.coord.y };
-
-								if (weight >= 4 || otherWeight >= 4 && cell.IsTaking ())
+								if (weight >= 4 || otherWeight >= 4 || cell.IsTaking ())
 										return item.coord;
 								item.Weight [(int)color] = weight + (int)Math.Pow (otherWeight, 3);
 								this.TotalWeight [(int)color] += item.Weight [(int)color];
 						}
 
 						if (BlockEnemy != null)
-							return BlockEnemy;
+								return BlockEnemy;
 						if (FourAlignement != null)
 								return FourAlignement;
 						
-			//MonoBehaviour.print ("random");
+						//MonoBehaviour.print ("random");
 
 						randomNumber = this.rnd.Rand ().Next (0, this.TotalWeight [(int)color]);
 						int i;
@@ -440,7 +439,7 @@ namespace Gomoku
 		
 				public void SetIsTakeable (int x, int y, bool state)
 				{
-						if (x * GetSizeMap () + y >= 0 && x * GetSizeMap () + y < GetSizeMap () * GetSizeMap () && GetColor(x, y) != Gomoku.Color.Empty)
+						if (x * GetSizeMap () + y >= 0 && x * GetSizeMap () + y < GetSizeMap () * GetSizeMap () && GetColor (x, y) != Gomoku.Color.Empty)
 								this.map [x * GetSizeMap () + y].SetIsTakeable (state);
 				}
 		
@@ -453,41 +452,7 @@ namespace Gomoku
 		
 				public void SetIsTaking (int x, int y, Gomoku.Orientation orientation, bool state)
 				{
-					int oIdx = (x + 3 * MapComponent.ORIENTATION [orientation] [0]) * GetSizeMap () + (y + 3 * MapComponent.ORIENTATION [orientation] [1]);
-			Gomoku.Color color = GetColor (x, y);
-			Gomoku.Color enemy = (color == Gomoku.Color.White) ? Gomoku.Color.Black : Gomoku.Color.White;
-					
-					if (oIdx >= 0 && oIdx < GetSizeMap () * GetSizeMap ()) {
-								this.map [x * GetSizeMap () + y].SetIsTaking (orientation, state);
-								
-								x += MapComponent.ORIENTATION[orientation][0];
-								y += MapComponent.ORIENTATION[orientation][1];
-								while (x  >= 0 && x < GetSizeMap () && y  >= 0 && y < GetSizeMap ()) {
-									if (this.GetColor(x, y) != enemy)
-						break;
-									this.SetIsTakeable(x, y, state);
-									x += MapComponent.ORIENTATION[orientation][0];
-									y += MapComponent.ORIENTATION[orientation][1];
-									if (x * GetSizeMap () + y == oIdx && GetColor(x, y) == color) {
-									
-										this.map [x * GetSizeMap () + y].SetIsTaking (MapComponent.inverseOrientation(orientation), state);
-										break;
-									}	
-								}
-						}
-
-						/*if (x * GetSizeMap () + y >= 0 && x * GetSizeMap () + y < GetSizeMap () * GetSizeMap ()) {
-								
-								this.map [x * GetSizeMap () + y].SetIsTaking (orientation, state);
-								if (oIdx >= 0 && oIdx < GetSizeMap () * GetSizeMap ()) {
-										if (state == true) {
-											MonoBehaviour.print ("SetIsTaking");
-						MonoBehaviour.print("orientation = " + orientation + " x = " + x + " y = " + y + " state = " + state);
-						MonoBehaviour.print("orientation = " + MapComponent.inverseOrientation (orientation) + " x = " + (x + 3 * MapComponent.ORIENTATION [orientation] [0]) + " y = " + (y + 3 * MapComponent.ORIENTATION [orientation] [1]) + " state = " + state);			
-					}
-										this.map [oIdx].SetIsTaking (MapComponent.inverseOrientation (orientation), state);
-								}
-						}*/
+						this.map [x * GetSizeMap () + y].SetIsTaking (orientation, state);
 				}
 		
 				public bool IsTaking (int x, int y, Gomoku.Orientation orientation)
@@ -543,8 +508,6 @@ namespace Gomoku
 
 				public void GeneratePossibleCells (int x, int y, int radius)
 				{
-						//MonoBehaviour.print ("Generate");
-						//MonoBehaviour.print ("cellX = " + x + " y = " + y);
 						foreach (KeyValuePair<Gomoku.Orientation, int[]> entry in MapComponent.ORIENTATION) {
 								int tmpX = x + entry.Value [0];
 								int tmpY = y + entry.Value [1];
@@ -559,20 +522,6 @@ namespace Gomoku
 						}
 		
 						this.cellsList.Update (x, y, this);
-
-
-						/*if (this.id == 1) {
-								MonoBehaviour.print ("---------------------------------------------");
-								MonoBehaviour.print ("----------------PossibleCells----------------");
-								MonoBehaviour.print ("---------------------------------------------");
-								foreach (PossibleCell possible in this.cellsList.cells) {
-										MonoBehaviour.print ("x = " + possible.coord.x + " y = " + possible.coord.y + " weight = " + possible.Weight [(int)Gomoku.Color.White]);
-								}
-								MonoBehaviour.print ("---------------------------------------------");
-								MonoBehaviour.print ("---------------------------------------------");
-								MonoBehaviour.print ("---------------------------------------------");
-						}*/
-
 				}
 
 				public void UpdateBigWeight (Gomoku.Color color)

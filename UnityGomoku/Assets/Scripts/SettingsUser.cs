@@ -44,7 +44,9 @@
 			GameObject tes = GameObject.Find("Label_ia");
 			statIA = tes.GetComponent<UILabel> ();
 			UIPopupList opop = GameObject.Find("ia").GetComponent<UIPopupList> ();
-			opop.value = ia_lvls [PlayerPrefs.GetInt ("IaLevel") - 1];;
+			if (PlayerPrefs.GetInt ("IaLevel") < 1) 
+				PlayerPrefs.SetInt ("IaLevel", 1);
+			opop.value = ia_lvls [PlayerPrefs.GetInt ("IaLevel") - 1];
 		
 			GameObject tes2 = GameObject.Find("Label_opts");
 			statGameSett = tes2.GetComponent<UILabel> ();
