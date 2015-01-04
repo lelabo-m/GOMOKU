@@ -226,19 +226,25 @@ namespace Gomoku
 	
 						this.TotalWeight [(int)color] = 0;
 						List<Gomoku.Coord> Coords = new List<Gomoku.Coord> ();
+						Gomoku.Coord Win = null;
 						foreach (PossibleCell item in this.cells) {
 								Gomoku.Cell cell = map.GetCell (item.coord.x, item.coord.y);
 								int weight = cell.GetWeight (color);
 								int otherWeight = cell.GetWeight (otherColor);
 
-								if (weight >= 3 ||  cell.IsTaking() || otherWeight >= 3)
+								if (weight >= 3 ||  cell.IsTaking() || otherWeight >= 3) {
 									Coords.Add(new Coord () { x = item.coord.x, y = item.coord.y });
+									if (weight >= 4 && Win == null)
+										Win = new Coord () { x = item.coord.x, y = item.coord.y };
+								}
 								if (otherWeight == 4)
 									return item.coord;
 								item.Weight [(int)color] = weight + (int)Math.Pow (otherWeight, 3);
 								this.TotalWeight [(int)color] += item.Weight [(int)color];
 						}
 
+						if (Win != null)
+								return Win;
 						if (Coords.Count > 0) {
 							randomNumber = this.rnd.Rand ().Next (0, Coords.Count);
 							return Coords [randomNumber];
