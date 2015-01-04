@@ -224,32 +224,25 @@ namespace Gomoku
 						if (this.cells.Count == 0)
 								return null;
 	
-						Shuffle (this.cells);
 						this.TotalWeight [(int)color] = 0;
-						Gomoku.Coord FourAlignement = null;
-						Gomoku.Coord BlockEnemy = null;
+						List<Gomoku.Coord> Coords = new List<Gomoku.Coord> ();
 						foreach (PossibleCell item in this.cells) {
 								Gomoku.Cell cell = map.GetCell (item.coord.x, item.coord.y);
 								int weight = cell.GetWeight (color);
 								int otherWeight = cell.GetWeight (otherColor);
 
-								if (weight == 3 && FourAlignement == null)
-										FourAlignement = new Coord () { x = item.coord.x, y = item.coord.y };
-								if (otherWeight == 3 && BlockEnemy == null)
-										BlockEnemy = new Coord () { x = item.coord.x, y = item.coord.y };
-								if (weight >= 4 || otherWeight >= 4 || cell.IsTaking ())
-										return item.coord;
+								if (weight >= 3 ||  cell.IsTaking() || otherWeight >= 3)
+									Coords.Add(new Coord () { x = item.coord.x, y = item.coord.y });
+								if (otherWeight == 4)
+									return item.coord;
 								item.Weight [(int)color] = weight + (int)Math.Pow (otherWeight, 3);
 								this.TotalWeight [(int)color] += item.Weight [(int)color];
 						}
 
-						if (BlockEnemy != null)
-								return BlockEnemy;
-						if (FourAlignement != null)
-								return FourAlignement;
-						
-						//MonoBehaviour.print ("random");
-
+						if (Coords.Count > 0) {
+							randomNumber = this.rnd.Rand ().Next (0, Coords.Count);
+							return Coords [randomNumber];
+						}
 						randomNumber = this.rnd.Rand ().Next (0, this.TotalWeight [(int)color]);
 						int i;
 						for (i = 0; i < this.cells.Count; ++i) {

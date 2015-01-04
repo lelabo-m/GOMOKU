@@ -360,7 +360,7 @@ public class Rules : MonoBehaviour
 		       		y < Gomoku.Map.GetSizeMap() && x < Gomoku.Map.GetSizeMap()
 		      	 	&& map.GetColor(x, y) == color && countPawn < 5) {
 						
-						if (map.IsTakeable (x, y) && Takeable (map, x, y, orientation))
+						if (IsTakeable (map, x, y, orientation))
 								countPawn = 0;
 						else {
 								map.SetIsTakeable (x, y, false);
@@ -375,7 +375,7 @@ public class Rules : MonoBehaviour
 				return false;
 		}
 
-		private bool Takeable (Gomoku.Map map, int x, int y, Gomoku.Orientation orientation)
+		private bool IsTakeable (Gomoku.Map map, int x, int y, Gomoku.Orientation orientation)
 		{	
 				Gomoku.Color ennemy = (map.GetColor (x, y) == Gomoku.Color.Black) ? Gomoku.Color.White : Gomoku.Color.Black;
 
