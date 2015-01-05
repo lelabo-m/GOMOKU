@@ -15,9 +15,7 @@ public class MapComponent : MonoBehaviour
 		private int currentX;
 		private int currentY;
 		public static Dictionary<Gomoku.Orientation , int[]> ORIENTATION ;
-
 	
-		// Use this for initialization
 		void Start ()
 		{
 				ORIENTATION = new Dictionary<Gomoku.Orientation, int[]> ()
@@ -38,21 +36,19 @@ public class MapComponent : MonoBehaviour
 
 				generateGraphicMap ();
 		}
-
-		// Update is called once per frame
+	
 		void Update ()
 		{
 	
 		}
 
-		static public Gomoku.Orientation inverseOrientation(Gomoku.Orientation orientation) 
+		static public Gomoku.Orientation inverseOrientation (Gomoku.Orientation orientation)
 		{	
-			foreach (KeyValuePair<Gomoku.Orientation, int[]> entry in MapComponent.ORIENTATION) 
-			{
-			if (entry.Value[0] == -ORIENTATION[orientation][0] && entry.Value[1] == -ORIENTATION[orientation][1])
-				return entry.Key;
-			}
-		return orientation;
+				foreach (KeyValuePair<Gomoku.Orientation, int[]> entry in MapComponent.ORIENTATION) {
+						if (entry.Value [0] == -ORIENTATION [orientation] [0] && entry.Value [1] == -ORIENTATION [orientation] [1])
+								return entry.Key;
+				}
+				return orientation;
 		}
 
 		private void generateGraphicMap ()
@@ -72,8 +68,9 @@ public class MapComponent : MonoBehaviour
 				}
 		}
 
-		public bool PlayOnTile(int x, int y) {
-			return this.graphicMap [x] [y].PutPawn ();
+		public bool PlayOnTile (int x, int y)
+		{
+				return this.graphicMap [x] [y].PutPawn ();
 		}
 		
 		public bool PutPawn (int x, int y, Gomoku.Color color)
@@ -84,16 +81,15 @@ public class MapComponent : MonoBehaviour
 
 				rules.UpdateMap (map, x, y);
 
-				map.GeneratePossibleCells(x, y, 2);
+				map.GeneratePossibleCells (x, y, 2);
 				
 				gameManager.SetLastPawn (x, y);
 				return true;
 		}
-
 		
 		public bool removePawn (int x, int y)
 		{
-			if (map.GetColor (x, y) != Gomoku.Color.Empty) {
+				if (map.GetColor (x, y) != Gomoku.Color.Empty) {
 						map.RemovePawn (x, y);
 				}
 				Destroy (GameObject.Find ("Pawn_" + (x * SIZE_MAP + y).ToString ()));

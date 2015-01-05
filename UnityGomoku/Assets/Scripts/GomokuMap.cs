@@ -123,11 +123,6 @@ namespace Gomoku
 
 						this.Players [0].Copy (list.Players [0]);
 						this.Players [1].Copy (list.Players [1]);
-						/*	MonoBehaviour.print ("Copy");
-					MonoBehaviour.print("totalWeight" + Gomoku.Color.White + " = " + this.TotalWeight[(int) Gomoku.Color.White]);
-					MonoBehaviour.print("totalWeight" + Gomoku.Color.Black + " = " + this.TotalWeight[(int) Gomoku.Color.Black]);
-					MonoBehaviour.print("CopytotalWeight" + Gomoku.Color.White + " = " + list.TotalWeight[(int) Gomoku.Color.White]);
-					MonoBehaviour.print("CopytotalWeight" + Gomoku.Color.Black + " = " + list.TotalWeight[(int) Gomoku.Color.Black]);*/
 				}
 		 
 				public void Update (int x, int y, Gomoku.Map map)
@@ -137,7 +132,6 @@ namespace Gomoku
 						PossibleCell find = this.cells.Find (item => (item.coord.x == x && item.coord.y == y));
 							
 						if (find != null && color != Gomoku.Color.Empty) {
-								//	MonoBehaviour.print ("RemovePossibleCells : color = " + color + " pos = " + find.Pos);
 								this.TotalWeight [(int)color] -= map.GetWeight (x, y, color);
 								this.TotalWeight [(int)otherColor] -= map.GetWeight (x, y, otherColor);
 
@@ -147,9 +141,6 @@ namespace Gomoku
 								if (this.TotalWeight [(int)otherColor] < 0) {
 										this.TotalWeight [(int)otherColor] = 0;
 								} 
-
-								//	MonoBehaviour.print("totalWeight" + color + " = " + this.TotalWeight[(int) color]);
-								//	MonoBehaviour.print("totalWeight" + otherColor + " = " + this.TotalWeight[(int) otherColor]);
 								this.cells.Remove (find);
 						}
 
@@ -157,40 +148,18 @@ namespace Gomoku
 								return (map.GetColor (item.coord.x, item.coord.y) != Gomoku.Color.Empty);
 						});
 				}
-
-				/*public void AddCell (int pos, Gomoku.Map map)
-				{
-						PossibleCell find = this.cells.Find (item => (item.Ps == pos));
-
-						Gomoku.Color color = Gomoku.Map.IACOLOR;
-						Gomoku.Color otherColor = (color == Gomoku.Color.White) ? Gomoku.Color.Black : Gomoku.Color.White;
-
-						if (find == null) {
-								this.cells.Add(new PossibleCell (pos, map.GetCell(pos).GetWeight(color), map.GetCell(pos).GetWeight(otherColor)));
-								this.TotalWeight[(int) color] += map.GetCell(pos).GetWeight(color);
-								this.TotalWeight[(int) otherColor] += map.GetCell(pos).GetWeight(otherColor);
-							//	MonoBehaviour.print("totalWeight" + color + " = " + this.TotalWeight[(int) color]);
-							//	MonoBehaviour.print("totalWeight" + otherColor + " = " + this.TotalWeight[(int) otherColor]);
-						}
-						
-				}*/
 		
 				public void AddCell (int x, int y, Gomoku.Map map)
 				{
-						//		MonoBehaviour.print ("x = " + x + " y = " + y + " weightWhite = " + map.GetWeight(x, y, Gomoku.Color.White) + " weightBlack = " +  map.GetWeight(x, y, Gomoku.Color.Black));
-					
 						PossibleCell find = this.cells.Find (item => (item.coord.x == x && item.coord.y == y));
 			
 						Gomoku.Color color = Gomoku.Map.IACOLOR;
 						Gomoku.Color otherColor = (color == Gomoku.Color.White) ? Gomoku.Color.Black : Gomoku.Color.White;
 			
 						if (find == null) {
-								//	MonoBehaviour.print ("ADD");
 								this.cells.Add (new PossibleCell (x, y, map.GetWeight (x, y, color), map.GetWeight (x, y, otherColor)));
 								this.TotalWeight [(int)color] += map.GetWeight (x, y, color);
 								this.TotalWeight [(int)otherColor] += map.GetWeight (x, y, otherColor);
-								//	MonoBehaviour.print("totalWeight" + color + " = " + this.TotalWeight[(int) color]);
-								//	MonoBehaviour.print("totalWeight" + otherColor + " = " + this.TotalWeight[(int) otherColor]);
 						}
 				}
 		
@@ -232,13 +201,13 @@ namespace Gomoku
 								int weight = cell.GetWeight (color);
 								int otherWeight = cell.GetWeight (otherColor);
 
-								if (weight >= 3 ||  cell.IsTaking() || otherWeight >= 3) {
-									Coords.Add(new Coord () { x = item.coord.x, y = item.coord.y });
-									if (weight >= 4 && Win == null)
-										Win = new Coord () { x = item.coord.x, y = item.coord.y };
+								if (weight >= 3 || cell.IsTaking () || otherWeight >= 3) {
+										Coords.Add (new Coord () { x = item.coord.x, y = item.coord.y });
+										if (weight >= 4 && Win == null)
+												Win = new Coord () { x = item.coord.x, y = item.coord.y };
 								}
 								if (otherWeight == 4)
-									return item.coord;
+										return item.coord;
 								item.Weight [(int)color] = weight + (int)Math.Pow (otherWeight, 3);
 								this.TotalWeight [(int)color] += item.Weight [(int)color];
 						}
@@ -246,8 +215,8 @@ namespace Gomoku
 						if (Win != null)
 								return Win;
 						if (Coords.Count > 0) {
-							randomNumber = this.rnd.Rand ().Next (0, Coords.Count);
-							return Coords [randomNumber];
+								randomNumber = this.rnd.Rand ().Next (0, Coords.Count);
+								return Coords [randomNumber];
 						}
 						randomNumber = this.rnd.Rand ().Next (0, this.TotalWeight [(int)color]);
 						int i;
@@ -259,20 +228,8 @@ namespace Gomoku
 
 						}
 						
-						randomNumber = this.rnd.Rand ().Next (0, this.cells.Count);
+						randomNumber = this.rnd.Rand ().Next (0, this.cells.Count) % this.cells.Count;
 						return this.cells [randomNumber].coord;
-			
-						/*for (int i = 5; i >= 0; --i) {
-						list = this.cells.FindAll (delegate (PossibleCell item) {
-							return (map.GetWeight (item.coord.x, item.coord.y, color) == i && map.GetColor(item.coord.x, item.coord.y) == Gomoku.Color.Empty);
-						});
-							
-								if (list.Count > 0) {
-										int randomNumber = this.random.Next (0, list.Count);
-										return list [randomNumber].coord;
-								}
-						}*/
-						//return null;
 				}
 		}
 	
@@ -303,7 +260,6 @@ namespace Gomoku
 						this.Take = cell.Take;
 				}
 
-				// set Weight of a color 
 				public void SetWeight (int weight, Gomoku.Color color)
 				{
 						this.Weight [(int)color] = (char)weight;
@@ -379,7 +335,6 @@ namespace Gomoku
 				static public int Size;
 				private Cell[] map;
 				private CellsList cellsList;
-// ReSharper disable once InconsistentNaming
 				static public Gomoku.Color IACOLOR = Gomoku.Color.Black;
 				public const int MAX_SCORE = 10;
 				public int[] scores;
@@ -429,7 +384,6 @@ namespace Gomoku
 						return map [idx];
 				}
 
-				// set Weight of a color 
 				public void SetWeight (int x, int y, int weight, Gomoku.Color color)
 				{
 						if (x * GetSizeMap () + y >= 0 && x * GetSizeMap () + y < GetSizeMap () * GetSizeMap ())

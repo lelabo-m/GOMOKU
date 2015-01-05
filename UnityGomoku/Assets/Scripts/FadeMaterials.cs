@@ -3,39 +3,43 @@ using System.Collections;
 using Gomoku;
 using UnityEngine.UI;
 
-class FadeMaterials : MonoBehaviour {
+class FadeMaterials : MonoBehaviour
+{
  
-	public UILabel _myTexture;    //The guiTexture you want to manipulate. Set this up in the inspector.
-	public float stayTime = 2f;   // Time before fading starts
-	public float fadeTime = 2f;   // How long we want to fade
-	public float startTime = 2f;
-	private float lastStartTime = -100f;
+		public UILabel _myTexture;
+		public float stayTime = 2f;
+		public float fadeTime = 2f;
+		public float startTime = 2f;
+		private float lastStartTime = -100f;
 	
-	void Update(){
-		if (_myTexture.enabled == true) AnimateImage(); //Animate the texture if it is enabled
-	}
-	void AnimateImage(){
-		float t = (Time.time - lastStartTime - stayTime)/fadeTime;
-		if(t <= 0f){
-			UnityEngine.Color fullColor = UnityEngine.Color.black;
-			UnityEngine.Color noColor = new UnityEngine.Color(0f,0f,0f,0f);
-			_myTexture.color = UnityEngine.Color.Lerp(noColor, fullColor, 1 + t) ;
+		void Update ()
+		{
+				if (_myTexture.enabled == true)
+						AnimateImage ();
 		}
-		 else if(t <= 1f){
-			UnityEngine.Color fullColor = UnityEngine.Color.black;
-			UnityEngine.Color noColor = new UnityEngine.Color(0f,0f,0f,0f);
-			_myTexture.color = UnityEngine.Color.Lerp(fullColor, noColor, t) ;
-		} else {    //Once we faded out we shut the texture off, in order to save memory
-			_myTexture.enabled = false;
-		}
-	}
-	public void ShowImage(){    //Call this to start the effect
-		_myTexture.enabled = true;
-		_myTexture.color = new UnityEngine.Color(0f,0f,0f,0f);
-		lastStartTime = Time.time;
-	}  
- 
- }
 
-//220 - 200 - 40 / 20
+		void AnimateImage ()
+		{
+				float t = (Time.time - lastStartTime - stayTime) / fadeTime;
+				if (t <= 0f) {
+						UnityEngine.Color fullColor = UnityEngine.Color.black;
+						UnityEngine.Color noColor = new UnityEngine.Color (0f, 0f, 0f, 0f);
+						_myTexture.color = UnityEngine.Color.Lerp (noColor, fullColor, 1 + t);
+				} else if (t <= 1f) {
+						UnityEngine.Color fullColor = UnityEngine.Color.black;
+						UnityEngine.Color noColor = new UnityEngine.Color (0f, 0f, 0f, 0f);
+						_myTexture.color = UnityEngine.Color.Lerp (fullColor, noColor, t);
+				} else {
+						_myTexture.enabled = false;
+				}
+		}
+
+		public void ShowImage ()
+		{ 
+				_myTexture.enabled = true;
+				_myTexture.color = new UnityEngine.Color (0f, 0f, 0f, 0f);
+				lastStartTime = Time.time;
+		}  
+ 
+}
 

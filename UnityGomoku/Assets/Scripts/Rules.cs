@@ -3,24 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using Gomoku;
 
-// Component Arbiter
 public class Rules : MonoBehaviour
 {
 
 		public bool FiveBreakable = false;
 		public bool DoubleThree = false;
 		private List<int[]> masks;
-
-		// Use this for initialization
+	
 		void Start ()
 		{
 				if (PlayerPrefs.GetInt ("5 cassables") > 1) {
 						FiveBreakable = true;
-						print ("five breakable active");
 				}
 				if (PlayerPrefs.GetInt ("double 3") > 1) {
 						DoubleThree = true;
-						print ("double 3 active");
 				}
 				masks = new List<int[]> ();
 				masks.Add (new int[] { -1, 0, 2, 2, 1, 0, -1, -1, -1});
@@ -34,8 +30,7 @@ public class Rules : MonoBehaviour
 				masks.Add (new int[] { -1, -1, -1, 0, 1, 0, 2, 2, 0});
 
 		}
-	
-		// Update is called once per frame
+
 		void Update ()
 		{
 	
@@ -58,11 +53,6 @@ public class Rules : MonoBehaviour
 				map.GeneratePossibleCells (x, y, 2);
 				return true;
 		}
-
-
-		/**
-	 * Mise a Jour Map
-	 * ****/
 
 		public bool UpdateMap (Gomoku.Map map, int x, int y)
 		{
@@ -98,7 +88,6 @@ public class Rules : MonoBehaviour
 			       y >= 0 && y < Gomoku.Map.GetSizeMap ()) {
 						if (it == 0 && map.GetColor (x, y) != color)
 								break;
-						print ("NoBreakable");
 						if (map.GetColor (x, y) == color)
 								map.SetIsTakeable (x, y, false);
 						else if (map.GetColor (x, y) != color) {
@@ -117,14 +106,6 @@ public class Rules : MonoBehaviour
 				Gomoku.Color enemy = (color == Gomoku.Color.White) ? Gomoku.Color.Black : Gomoku.Color.White;
 				Gomoku.Coord currentCell = new Gomoku.Coord ();
 
-				/*foreach (KeyValuePair<Gomoku.Orientation, int[]> entry in MapComponent.ORIENTATION) {
-
-						if (map.IsTaking (baseCell.x, baseCell.y, entry.Key)) {
-								print ("IsTaking");
-								NoBreakeable (map, baseCell.x, baseCell.y, entry.Key);
-						}
-				}*/
-						
 				foreach (KeyValuePair<Gomoku.Orientation, int[]> entry in MapComponent.ORIENTATION) {
 						currentCell.x = baseCell.x + entry.Value [0];
 						currentCell.y = baseCell.y + entry.Value [1];
@@ -195,9 +176,7 @@ public class Rules : MonoBehaviour
 				map.SetIsTaking (currentCell.x, currentCell.y, orientation, false);
 				return false;
 		}
-
-
-		// voir pour passer en recursif
+	
 		private void UpdateCellData (Gomoku.Orientation orientation, Gomoku.Coord currentCell, Gomoku.Map map)
 		{
 				Gomoku.Color color = map.GetColor (currentCell.x, currentCell.y);
@@ -292,16 +271,6 @@ public class Rules : MonoBehaviour
 				}
 		}
 
-		public void SetIsTakeable (Gomoku.Map map, int X, int Y)
-		{
-			
-		}
-		/**
-	 * Test Victoire
-	 * ****/
-
-
-		//regarde si alignement de 5
 		public Gomoku.Color IsWinner (Gomoku.Map map, Gomoku.Color currentColor)
 		{
 				Gomoku.Color ennemy = (currentColor == Gomoku.Color.Black) ? Gomoku.Color.White : Gomoku.Color.Black;
@@ -433,11 +402,6 @@ public class Rules : MonoBehaviour
 				return Gomoku.Color.Empty;
 		}
 
-
-		/**
-		 * Test DoubleThree
-		 * ***/
-
 		private int GetColorMod (Gomoku.Map map, int x, int y, Gomoku.Color color)
 		{
 		
@@ -497,15 +461,6 @@ public class Rules : MonoBehaviour
 														threeFree.Add (new int[] { currentCell.x, currentCell.y });
 												}
 										}
-										/*
-						print ("==========");
-						print ("find three !! 1");
-						print (orientation.Key);
-						foreach (int [] cell in threeFree) {
-							print ("x = " + cell [0] + " y = " + cell [1]);
-						}
-						print ("==========");
-						*/
 										breako = true;
 										break;
 								}
@@ -538,17 +493,6 @@ public class Rules : MonoBehaviour
 														}
 												}
 												if (TestPrecThree (threeFree, threeFreeNext)) {
-														/*
-								print ("==========");
-								print ("x = " + cell [0] + " y = " + cell [1]);
-								print ("find three !! 2");
-								print (orientation.Key);
-								foreach (int [] cell2 in threeFreeNext) {
-									print ("x = " + cell2 [0] + " y = " + cell2 [1]);
-									print (map.GetColor(cell2 [0], cell2 [1]));
-								}
-								print ("==========");
-								*/
 														return true;
 												}
 										}

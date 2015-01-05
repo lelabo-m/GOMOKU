@@ -58,7 +58,6 @@ namespace Gomoku
 
 
 			float s_numer, t_numer, denom, t;
-            // Boundingbox
             Coord BoxUV = new Coord();
             Coord BoxIJ = new Coord();
             BoxUV.x = end.x - begin.x;
@@ -66,13 +65,11 @@ namespace Gomoku
             BoxIJ.x = other.end.x - other.begin.x;
             BoxIJ.y = other.end.y - other.begin.y;
 
-            // Check Collinear
             denom = BoxUV.x * BoxIJ.y - BoxIJ.x * BoxUV.y;
             if (denom == 0)
                 return false;
             bool denomPositive = denom > 0;
 
-            // Check Collision
             Coord distance = new Coord();
             distance.x = begin.x - other.begin.x;
             distance.y = begin.y - other.begin.y;
@@ -85,12 +82,10 @@ namespace Gomoku
             if (((s_numer > denom) == denomPositive) || ((t_numer > denom) == denomPositive))
                 return false;
 
-            // Collision detected
             t = t_numer / denom;
             float x, y;
             x = begin.x + (t * BoxUV.x);
             y = begin.y + (t * BoxUV.y);
-            // Specific case for a boardgame
             if (x != (int)x || y != (int)y)
                 return false;
             inter.x = (int)x;
