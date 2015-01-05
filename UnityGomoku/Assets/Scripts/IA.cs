@@ -259,33 +259,12 @@ namespace Gomoku
 						Stopwatch s = new Stopwatch ();
 						s.Start ();
 						while (s.Elapsed < TimeSpan.FromMilliseconds(time)) {
-								List<Simulation> threads = new List<Simulation> ();
-								List<Node> tosimule = new List<Node> ();
-								Counter val = new Counter ();
-								foreach (Map m in maps)
-										m.Copy (gm.map.GetMap ());
-								for (int i = 0; i < nbthreads - 1; ++i) {
-										Node todo = tree.Selection ();
-										tosimule.Add (todo);
-										threads.Add (new Simulation (this, todo, maps [i], gm, val));
-										threads [i].Start ();
-								}
-								Node current = tree.Selection ();
-								tosimule.Add (current);
-								PlayGame (current, maps [nbthreads - 1], gm);
-								val.Inc ();
-								while (val.Get() != nbthreads) {
-										foreach (Simulation thread in threads)
-												thread.Update ();
-								}
-								foreach (Simulation thread in threads)
-										thread.Abort ();
-								threads.Clear ();
-								foreach (Node todo in tosimule)
-										tree.BackProagation (todo);
+                            maps[0].Copy(gm.map.GetMap());
+							Node current = tree.Selection ();
+							PlayGame (current, maps [0], gm);
+                            tree.BackProagation (current);
 						}
 						s.Stop ();
-
 						Node final = tree.Final ();
 						while (final.parent != tree.root)
 								final = final.parent;
